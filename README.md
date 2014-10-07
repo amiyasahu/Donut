@@ -1,6 +1,5 @@
 # Donut #
-
-The most advanced and lightenning fast theme for [Question2Answer](www.queryhandlers.com) websites 
+Clean Minimal Responsive theme for Question2Answer ( Q2A ) websites 
 
 ### What is this repository for? ###
 
@@ -16,8 +15,3 @@ The most advanced and lightenning fast theme for [Question2Answer](www.queryhand
 * Help me in testing 
 * Code review
 * Other guidelines
-
-### Contact Information ###
-
-* Repo owner or admin
-* Other community or team contact
