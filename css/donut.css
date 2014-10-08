@@ -5412,3 +5412,8 @@ fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button.
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.vk {
   background-color: #587ea3 ;
 }
+
+.navbar.navbar-default .dropdown-menu {
+	right:0;
+	left:auto;	
+}
