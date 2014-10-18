@@ -579,14 +579,7 @@ table .table {
   font-size: 29px;
   margin: 0;
 }
-/* 
-.qa-template-questions ,
-.qa-template-qa {
-	.page-title h1 {
-		clear: both ;
-	}
-}
- */
+
 .qa-main-wrapper h1 {
   padding-bottom: 9px;
   margin: 40px 0 20px;
