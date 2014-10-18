@@ -66,6 +66,3 @@ if (isset($this->content['navigation']['user']['updates'])) {
 		</li>
 	</ul>
 </li>
-<li class="logout visible-xs">
-	<a href="<?php echo qa_path_html('logout'); ?>"><?php echo qa_lang_html('main/nav_logout'); ?> <span class="fa fa-sign-out"></span></a>
-</li>

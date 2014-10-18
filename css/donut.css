@@ -167,9 +167,11 @@ footer.donut-footer .container {
   font-size: 30px;
   padding: 21px 35px;
 }
+/* body padding for the sticky navbar on the top */
 body {
   padding-top: 50px;
 }
+/* clearing the wrappers */
 #qa-login-group:after:before,
 .qa-header:after:before,
 .qa-main-shadow:after:before,
@@ -222,6 +224,7 @@ body {
 .qa-nav-cat-item:after:after {
   clear: both;
 }
+/* clearing the main items */
 .qa-nav-main-clear:before,
 .qa-nav-sub-clear:before,
 .qa-q-item-clear:before,
@@ -280,6 +283,7 @@ body {
 .qa-page-links-clear:after {
   clear: both;
 }
+/* styling for the input forms */
 input[type="text"],
 input[type="password"],
 textarea,
@@ -380,6 +384,7 @@ textarea {
 textarea.qa-form-tall-text {
   height: 100px;
 }
+/* reducing the default shadow of BS */
 input[type="text"]:focus,
 input[type="password"]:focus,
 textarea:focus,
@@ -390,6 +395,10 @@ radio:focus {
   outline: 0;
   -webkit-box-shadow: none ;
   box-shadow: none ;
+}
+input[name="file"] {
+  display: inline;
+  margin-left: 10px;
 }
 table {
   width: 100%;
@@ -425,22 +434,159 @@ table > tbody + tbody {
 table .table {
   background-color: #ffffff;
 }
+/* light border below navbar */
 .navbar {
   border-bottom: 1px solid #e2e2e2;
 }
+.navbar-toggle {
+  margin-left: 8px;
+  margin-right: 0px;
+  float: left !important;
+  float: left;
+}
+.navbar-login-button {
+  font-size: 20px ;
+}
+@media only screen and (max-width: 767px) {
+  .navbar-nav.navbar-collapse {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-header {
+    float: left;
+  }
+  .main-nav {
+    clear: both ;
+    padding-top: 5px;
+  }
+  .main-nav li.active > a,
+  .main-nav li > a:hover {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .main-nav li {
+    border-bottom: 1px solid #e2e2e2;
+  }
+  .main-nav li:first-child {
+    border-top: 1px solid #e2e2e2;
+  }
+  .main-nav li:last-child {
+    border-bottom: none ;
+  }
+  .main-nav .inner-drop-nav {
+    padding-top: 50px;
+  }
+  .main-nav .navbar-form.pull-right {
+    float: none !important;
+  }
+  .navbar-right {
+    float: right !important;
+  }
+  .nav.navbar-nav.navbar-right.user-nav {
+    clear: none ;
+  }
+  .user-nav {
+    margin: 0;
+  }
+  .user-nav > li {
+    position: relative;
+    display: block;
+    float: left ;
+  }
+  .user-nav > li.user-name > a,
+  .user-nav > li.login > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .user-nav > li.logout a {
+    font-size: 20px;
+  }
+  #login-dropdown-menu.dropdown-menu,
+  #user-dropdown-menu.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    float: left;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #ffffff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #e2e2e2;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  }
+  #login-dropdown-menu.dropdown-menu li .span-or,
+  #user-dropdown-menu.dropdown-menu li .span-or {
+    background-color: #ffffff;
+  }
+  #login-dropdown-menu.dropdown-menu {
+    width: 250px;
+    left: -195px;
+  }
+  #user-dropdown-menu.dropdown-menu {
+    width: 200px;
+    left: -150px;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:active {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+  }
+  .navbar-form {
+    width: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .qa-search-field {
+    float: right !important;
+    float: right;
+  }
+}
+/* top portion of the body */
 .donut-masthead {
   position: relative;
   border-bottom: 1px solid #e2e2e2;
   margin-bottom: 20px;
   color: #428bca;
 }
+/* 
+.donut-breadcrumb{
+	position: relative;
+	border-bottom: 1px solid @light-border ;
+	margin-bottom: 20px;
+	color: @brand-primary ;
+}
+ */
+/* page title */
 .page-title {
   position: relative;
   padding: 30px 0px ;
 }
 .page-title h1 {
-  clear: both ;
+  clear: none;
+  font-size: 29px;
+  margin: 0;
 }
+/* 
+.qa-template-questions ,
+.qa-template-qa {
+	.page-title h1 {
+		clear: both ;
+	}
+}
+ */
 .qa-main-wrapper h1 {
   padding-bottom: 9px;
   margin: 40px 0 20px;
@@ -508,6 +654,15 @@ img {
 	padding:15px 10px 5px;
 	height:auto;
 } */
+.qa-logo {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  /* Fix for IE7 */
+  *display: inline;
+  /* Fix for IE7 */
+  float: right ;
+}
 .qa-logo-link {
   float: left;
   padding: 15px 15px;
@@ -645,6 +800,15 @@ div .header-banner {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+/* .navbar{
+	&.navbar-default ,
+	&.navbar-inverse {
+		.dropdown-menu {
+			right:0;
+			left:auto;
+		}	
+	}
+} */
 /* .navbar {
     .nav {
         & > li {
@@ -665,8 +829,59 @@ div .header-banner {
         }
     }
 } */
+/* reduce padding for the userimage at the navbar */
 .navbar-nav > li > a.navbar-user-img {
   padding: 10px;
+}
+/* small caret at the dropdown menu */
+.navbar-nav:not(.navbar-right) li .dropdown-menu {
+  margin-top: 7px;
+}
+.navbar-nav:not(.navbar-right) li .dropdown-menu:before {
+  position: absolute;
+  top: -7px;
+  left: 9px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-left: 7px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+.navbar-nav:not(.navbar-right) li .dropdown-menu::after {
+  position: absolute;
+  top: -6px;
+  left: 10px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-left: 6px solid transparent;
+  content: '';
+}
+/* small caret at the dropdown right menu */
+.navbar-nav.navbar-right li .dropdown-menu {
+  margin-top: 7px;
+}
+.navbar-nav.navbar-right li .dropdown-menu:before {
+  position: absolute;
+  top: -7px;
+  right: 15px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-left: 7px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+.navbar-nav.navbar-right li .dropdown-menu::after {
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-left: 6px solid transparent;
+  content: '';
 }
 .qa-q-view-follows {
   background: #eeeeee;
@@ -927,6 +1142,13 @@ div .header-banner {
   margin-right: 2px;
   padding: 0;
 }
+.qa-nav-footer-list {
+  float: left;
+  list-style-type: none;
+  margin: 0;
+  margin-right: 2px;
+  padding: 0;
+}
 .qa-footer-left {
   float: left !important;
   float: left;
@@ -1096,9 +1318,6 @@ fieldset[disabled] .qa-vote-up-button {
 .qa-vote-up-button:focus {
   outline: none ;
 }
-.qa-q-list-vote-disabled .qa-vote-buttons {
-  display: none;
-}
 .qa-vote-up-disabled {
   color: #333333;
 }
@@ -1213,6 +1432,24 @@ fieldset[disabled] .qa-vote-up-button {
 .qa-vote-down-disabled {
   color: #333333;
 }
+.qa-vote-one-button {
+  position: absolute;
+  left: 2px;
+  top: 20px;
+}
+.qa-vote-first-button {
+  position: absolute;
+  left: 2px;
+  top: 6px;
+}
+.qa-vote-second-button {
+  position: absolute;
+  left: 2px;
+  bottom: 6px;
+}
+.qa-q-list-vote-disabled .qa-vote-buttons {
+  display: none;
+}
 .qa-voted-up-button {
   color: #ffffff;
   background-color: #5cb85c;
@@ -1321,21 +1558,6 @@ fieldset[disabled] .qa-vote-up-button {
   background-color: #c12e2a;
   background-image: none;
 }
-.qa-vote-one-button {
-  position: absolute;
-  left: 2px;
-  top: 20px;
-}
-.qa-vote-first-button {
-  position: absolute;
-  left: 2px;
-  top: 6px;
-}
-.qa-vote-second-button {
-  position: absolute;
-  left: 2px;
-  bottom: 6px;
-}
 .qa-netvote-count {
   text-align: center;
   display: block;
@@ -1358,12 +1580,16 @@ fieldset[disabled] .qa-vote-up-button {
   display: block;
 }
 .qa-upvote-count-data,
+.qa-downvote-count-data,
+.qa-upvote-count-data,
 .qa-downvote-count-data {
   font-size: 18px;
   font-weight: 700;
   display: block;
   line-height: 18px;
 }
+.qa-upvote-count-pad,
+.qa-downvote-count-pad,
 .qa-upvote-count-pad,
 .qa-downvote-count-pad {
   font-size: 12px;
@@ -1483,16 +1709,16 @@ a.qa-template-question .qa-view-count:focus {
   float: right;
   position: absolute;
   right: 0px;
-  padding-right: 2px;
-  padding-top: 40px;
+  padding-right: 50px;
+  padding-top: 2px;
 }
 .qa-favoriting .qa-waiting {
   float: right !important;
   float: right;
   font-size: 20px;
   position: absolute;
-  right: -4px;
-  top: 63%;
+  right: 44px ;
+  top: 35%;
 }
 .qa-template-question .qa-favoriting {
   padding-right: 15px;
@@ -2331,6 +2557,7 @@ a.list-group-item.active > .qa-nav-cat-item .qa-nav-cat-note,
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2dede', endColorstr='#ffe7c3c3', GradientType=0);
   border-color: #dca7a7;
   margin-top: 10px;
+  display: block;
 }
 .qa-form-tall-error h4,
 .qa-form-wide-error h4,
@@ -2894,6 +3121,80 @@ fieldset[disabled] .qa-form-tall-button-save {
   background-color: #419641;
   background-image: none;
 }
+.qa-form-wide-button:before,
+.qa-form-tall-button:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 5px;
+}
+.qa-form-wide-button:before.pull-left,
+.qa-form-tall-button:before.pull-left {
+  margin-right: .3em;
+}
+.qa-form-wide-button:before.pull-right,
+.qa-form-tall-button:before.pull-right {
+  margin-left: .3em;
+}
+.qa-form-wide-button-login:before,
+.qa-form-tall-button-login:before {
+  content: "\f090";
+}
+.qa-form-wide-button-register:before,
+.qa-form-tall-button-register:before {
+  content: "\f007";
+}
+.qa-form-wide-button-save:before,
+.qa-form-tall-button-save:before {
+  content: "\f0c7";
+}
+.qa-form-wide-button-reset:before,
+.qa-form-tall-button-reset:before {
+  content: "\f01e";
+}
+.qa-form-wide-button-change:before,
+.qa-form-tall-button-change:before {
+  content: "\f01e";
+}
+.qa-form-wide-button-account:before,
+.qa-form-tall-button-account:before {
+  content: "\f044";
+}
+.qa-form-wide-button-setbonus:before,
+.qa-form-tall-button-setbonus:before {
+  content: "\f0fe";
+}
+.qa-form-wide-button-post:before,
+.qa-form-tall-button-post:before {
+  content: "\f0fe";
+}
+.qa-form-wide-button-send:before,
+.qa-form-tall-button-send:before {
+  content: "\f1d8";
+}
+.qa-form-wide-button-ask:before,
+.qa-form-tall-button-ask:before {
+  content: "\f128";
+}
+.qa-form-wide-button-answer:before,
+.qa-form-tall-button-answer:before {
+  content: "\f067";
+}
+.qa-form-wide-button-comment:before,
+.qa-form-tall-button-comment:before {
+  content: "\f112";
+}
+.qa-form-wide-button-cancel:before,
+.qa-form-tall-button-cancel:before {
+  content: "\f00d";
+}
+.qa-form-wide-button-close:before,
+.qa-form-tall-button-close:before {
+  content: "\f023";
+}
 /* Standard form (wide version) */
 .qa-form-wide-spacer {
   padding: 15px;
@@ -2922,7 +3223,7 @@ fieldset[disabled] .qa-form-tall-button-save {
 		vertical-align:middle; */
 }
 .qa-form-wide-note {
-  font-size: 10px;
+  font-size: 14px;
   margin-left: 5px;
   color: #777777;
 }
@@ -2930,7 +3231,6 @@ fieldset[disabled] .qa-form-tall-button-save {
   padding: 8px ;
 }
 /* Standard form (light version - buttons only) */
-/* overflow:visible for IE */
 .qa-form-light-button {
   display: inline-block;
   margin-bottom: 0;
@@ -2971,6 +3271,7 @@ fieldset[disabled] .qa-form-tall-button-save {
   line-height: 1.5;
   border-radius: 3px;
   text-transform: capitalize;
+  margin-bottom: 2px;
 }
 .qa-form-light-button:hover,
 .qa-form-light-button:focus,
@@ -3038,6 +3339,69 @@ fieldset[disabled] .qa-form-light-button {
   background-color: #e0e0e0;
   background-image: none;
 }
+.qa-form-light-button:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 5px;
+}
+.qa-form-light-button:before.pull-left {
+  margin-right: .3em;
+}
+.qa-form-light-button:before.pull-right {
+  margin-left: .3em;
+}
+.qa-form-light-button-edit,
+.qa-form-light-button-retagcat,
+.qa-form-light-button-edit:hover,
+.qa-form-light-button-retagcat:hover {
+  color: #31708f;
+}
+.qa-form-light-button-edit:before,
+.qa-form-light-button-retagcat:before {
+  content: "\f044";
+}
+.qa-form-light-button-flag,
+.qa-form-light-button-flag:hover {
+  color: #a94442;
+}
+.qa-form-light-button-flag:before {
+  content: "\f024";
+}
+.qa-form-light-button-unflag,
+.qa-form-light-button-clearflags,
+.qa-form-light-button-unflag:hover,
+.qa-form-light-button-clearflags:hover {
+  color: #8a6d3b;
+}
+.qa-form-light-button-unflag:before,
+.qa-form-light-button-clearflags:before {
+  content: "\f11e";
+}
+.qa-form-light-button-hide,
+.qa-form-light-button-hide:hover {
+  color: #a94442;
+}
+.qa-form-light-button-hide:before {
+  content: "\f070";
+}
+.qa-form-light-button-follow,
+.qa-form-light-button-follow:hover {
+  color: #8a6d3b;
+}
+.qa-form-light-button-follow:before {
+  content: "\f128";
+}
+.qa-form-light-button-comment,
+.qa-form-light-button-comment:hover {
+  color: #3c763d;
+}
+.qa-form-light-button-comment:before {
+  content: "\f112";
+}
 .qa-form-light-button-answer {
   color: #ffffff;
   background-color: #5cb85c;
@@ -3091,6 +3455,308 @@ fieldset[disabled] .qa-form-light-button {
 .qa-form-light-button-answer[disabled] {
   background-color: #419641;
   background-image: none;
+}
+.qa-form-light-button-answer:before {
+  content: "\f067";
+}
+.qa-form-light-button-reshow,
+.qa-form-light-button-reshow:hover {
+  color: #3c763d;
+}
+.qa-form-light-button-reshow:before {
+  content: "\f06e";
+}
+.qa-form-light-button-claim,
+.qa-form-light-button-claim:hover {
+  color: #a94442;
+}
+.qa-form-light-button-claim:before {
+  content: "\f08d";
+}
+.qa-form-light-button-delete {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  background-image: -webkit-linear-gradient(top, #d9534f 0%, #c12e2a 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9534f), to(#c12e2a));
+  background-image: linear-gradient(to bottom, #d9534f 0%, #c12e2a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc12e2a', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #b92c28;
+}
+.qa-form-light-button-delete:hover,
+.qa-form-light-button-delete:focus,
+.qa-form-light-button-delete.focus,
+.qa-form-light-button-delete:active,
+.qa-form-light-button-delete.active,
+.open > .dropdown-toggle.qa-form-light-button-delete {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.qa-form-light-button-delete:active,
+.qa-form-light-button-delete.active,
+.open > .dropdown-toggle.qa-form-light-button-delete {
+  background-image: none;
+}
+.qa-form-light-button-delete .badge {
+  color: #d9534f;
+  background-color: #ffffff;
+}
+.qa-form-light-button-delete:active,
+.qa-form-light-button-delete.active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.qa-form-light-button-delete:hover,
+.qa-form-light-button-delete:focus {
+  background-color: #c12e2a;
+  background-position: 0 -15px;
+}
+.qa-form-light-button-delete:active,
+.qa-form-light-button-delete.active {
+  background-color: #c12e2a;
+  border-color: #b92c28;
+}
+.qa-form-light-button-delete:disabled,
+.qa-form-light-button-delete[disabled] {
+  background-color: #c12e2a;
+  background-image: none;
+}
+.qa-form-light-button-delete:before {
+  content: "\f014";
+}
+.qa-form-light-button-approve {
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  background-image: -webkit-linear-gradient(top, #5cb85c 0%, #419641 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5cb85c), to(#419641));
+  background-image: linear-gradient(to bottom, #5cb85c 0%, #419641 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #3e8f3e;
+}
+.qa-form-light-button-approve:hover,
+.qa-form-light-button-approve:focus,
+.qa-form-light-button-approve.focus,
+.qa-form-light-button-approve:active,
+.qa-form-light-button-approve.active,
+.open > .dropdown-toggle.qa-form-light-button-approve {
+  color: #ffffff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.qa-form-light-button-approve:active,
+.qa-form-light-button-approve.active,
+.open > .dropdown-toggle.qa-form-light-button-approve {
+  background-image: none;
+}
+.qa-form-light-button-approve .badge {
+  color: #5cb85c;
+  background-color: #ffffff;
+}
+.qa-form-light-button-approve:active,
+.qa-form-light-button-approve.active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.qa-form-light-button-approve:hover,
+.qa-form-light-button-approve:focus {
+  background-color: #419641;
+  background-position: 0 -15px;
+}
+.qa-form-light-button-approve:active,
+.qa-form-light-button-approve.active {
+  background-color: #419641;
+  border-color: #3e8f3e;
+}
+.qa-form-light-button-approve:disabled,
+.qa-form-light-button-approve[disabled] {
+  background-color: #419641;
+  background-image: none;
+}
+.qa-form-light-button-approve:before {
+  content: "\f087";
+}
+.qa-form-light-button-reject {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  background-image: -webkit-linear-gradient(top, #d9534f 0%, #c12e2a 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9534f), to(#c12e2a));
+  background-image: linear-gradient(to bottom, #d9534f 0%, #c12e2a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc12e2a', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #b92c28;
+}
+.qa-form-light-button-reject:hover,
+.qa-form-light-button-reject:focus,
+.qa-form-light-button-reject.focus,
+.qa-form-light-button-reject:active,
+.qa-form-light-button-reject.active,
+.open > .dropdown-toggle.qa-form-light-button-reject {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.qa-form-light-button-reject:active,
+.qa-form-light-button-reject.active,
+.open > .dropdown-toggle.qa-form-light-button-reject {
+  background-image: none;
+}
+.qa-form-light-button-reject .badge {
+  color: #d9534f;
+  background-color: #ffffff;
+}
+.qa-form-light-button-reject:active,
+.qa-form-light-button-reject.active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.qa-form-light-button-reject:hover,
+.qa-form-light-button-reject:focus {
+  background-color: #c12e2a;
+  background-position: 0 -15px;
+}
+.qa-form-light-button-reject:active,
+.qa-form-light-button-reject.active {
+  background-color: #c12e2a;
+  border-color: #b92c28;
+}
+.qa-form-light-button-reject:disabled,
+.qa-form-light-button-reject[disabled] {
+  background-color: #c12e2a;
+  background-image: none;
+}
+.qa-form-light-button-reject:before {
+  content: "\f088";
+}
+.qa-form-light-button-close {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  background-image: -webkit-linear-gradient(top, #d9534f 0%, #c12e2a 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9534f), to(#c12e2a));
+  background-image: linear-gradient(to bottom, #d9534f 0%, #c12e2a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc12e2a', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #b92c28;
+}
+.qa-form-light-button-close:hover,
+.qa-form-light-button-close:focus,
+.qa-form-light-button-close.focus,
+.qa-form-light-button-close:active,
+.qa-form-light-button-close.active,
+.open > .dropdown-toggle.qa-form-light-button-close {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.qa-form-light-button-close:active,
+.qa-form-light-button-close.active,
+.open > .dropdown-toggle.qa-form-light-button-close {
+  background-image: none;
+}
+.qa-form-light-button-close .badge {
+  color: #d9534f;
+  background-color: #ffffff;
+}
+.qa-form-light-button-close:active,
+.qa-form-light-button-close.active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.qa-form-light-button-close:hover,
+.qa-form-light-button-close:focus {
+  background-color: #c12e2a;
+  background-position: 0 -15px;
+}
+.qa-form-light-button-close:active,
+.qa-form-light-button-close.active {
+  background-color: #c12e2a;
+  border-color: #b92c28;
+}
+.qa-form-light-button-close:disabled,
+.qa-form-light-button-close[disabled] {
+  background-color: #c12e2a;
+  background-image: none;
+}
+.qa-form-light-button-close:before {
+  content: "\f023";
+}
+.qa-form-light-button-reopen {
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  background-image: -webkit-linear-gradient(top, #5cb85c 0%, #419641 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5cb85c), to(#419641));
+  background-image: linear-gradient(to bottom, #5cb85c 0%, #419641 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #3e8f3e;
+}
+.qa-form-light-button-reopen:hover,
+.qa-form-light-button-reopen:focus,
+.qa-form-light-button-reopen.focus,
+.qa-form-light-button-reopen:active,
+.qa-form-light-button-reopen.active,
+.open > .dropdown-toggle.qa-form-light-button-reopen {
+  color: #ffffff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.qa-form-light-button-reopen:active,
+.qa-form-light-button-reopen.active,
+.open > .dropdown-toggle.qa-form-light-button-reopen {
+  background-image: none;
+}
+.qa-form-light-button-reopen .badge {
+  color: #5cb85c;
+  background-color: #ffffff;
+}
+.qa-form-light-button-reopen:active,
+.qa-form-light-button-reopen.active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.qa-form-light-button-reopen:hover,
+.qa-form-light-button-reopen:focus {
+  background-color: #419641;
+  background-position: 0 -15px;
+}
+.qa-form-light-button-reopen:active,
+.qa-form-light-button-reopen.active {
+  background-color: #419641;
+  border-color: #3e8f3e;
+}
+.qa-form-light-button-reopen:disabled,
+.qa-form-light-button-reopen[disabled] {
+  background-color: #419641;
+  background-image: none;
+}
+.qa-form-light-button-reopen:before {
+  content: "\f09c";
 }
 /* Standard form (basic version - buttons only) */
 .qa-form-basic-button {
@@ -3222,6 +3888,7 @@ fieldset[disabled] .qa-form-basic-button {
     height: 40px;
     margin-right: 5px;
     padding: 0 0 0 3px;
+    margin-bottom: 5px;
   }
   .qa-q-list .qa-voting.qa-voting-net .qa-netvote-count-data {
     font-size: 14px;
@@ -3234,7 +3901,6 @@ fieldset[disabled] .qa-form-basic-button {
   .qa-q-list .qa-a-count {
     width: 40px;
     height: 40px;
-    margin-top: 5px;
   }
   .qa-q-list .qa-a-count .qa-a-count-data {
     font-size: 14px;
@@ -3277,7 +3943,7 @@ fieldset[disabled] .qa-form-basic-button {
 .qa-q-item-stats {
   float: left !important;
   float: left;
-  width: 15%;
+  width: 22.5%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -3303,11 +3969,12 @@ fieldset[disabled] .qa-form-basic-button {
 }
 .qa-q-item-main {
   float: left;
-  width: 85%;
+  width: 77.5%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-left: 0px;
 }
 @media (min-width: 768px) {
   .qa-q-item-main {
@@ -3331,7 +3998,7 @@ fieldset[disabled] .qa-form-basic-button {
 .qa-template-user-activity .qa-q-item-stats {
   float: left !important;
   float: left;
-  width: 12.5%;
+  width: 16.66666667%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -3361,7 +4028,7 @@ fieldset[disabled] .qa-form-basic-button {
 .qa-template-user-answers .qa-q-item-main,
 .qa-template-user-activity .qa-q-item-main {
   float: left;
-  width: 87.5%;
+  width: 83.33333333%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -3423,7 +4090,7 @@ fieldset[disabled] .qa-form-basic-button {
   margin-right: 5px;
 }
 .qa-q-item-meta {
-  display: inline-block;
+  display: inline;
   vertical-align: middle;
   font-size: 12px;
 }
@@ -3442,6 +4109,7 @@ fieldset[disabled] .qa-form-basic-button {
 }
 .qa-q-item-tag-item {
   display: inline;
+  margin-top: 2px;
 }
 .qa-q-item-buttons {
   float: left;
@@ -3541,6 +4209,11 @@ fieldset[disabled] .qa-form-basic-button {
   background: #428bca;
   font-weight: 700;
   width: 10%;
+}
+@media only screen and (max-width: 767px) {
+  .qa-top-tags-count {
+    width: 20%;
+  }
 }
 .qa-top-tags-label .qa-tag-link {
   font-weight: 400;
@@ -3676,7 +4349,7 @@ a.qa-browse-cat-link:visited {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   border-color: #dddddd;
   border-radius: 5px ;
-  padding: 15px;
+  padding: 5px;
 }
 .qa-q-view {
   padding-top: 20px;
@@ -3684,11 +4357,35 @@ a.qa-browse-cat-link:visited {
 .qa-q-view .qa-voting {
   width: 75px;
 }
+@media only screen and (max-width: 767px) {
+  .qa-q-view .qa-voting {
+    width: 65px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .qa-q-view .qa-voting {
+    width: 65px;
+  }
+}
+.qa-part-q-view-closed {
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #dddddd;
+  border-color: #bce8f1;
+}
+.qa-part-q-view-solved {
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #dddddd;
+  border-color: #d6e9c6;
+}
 .qa-q-view-main {
   float: left;
   width: 85%;
   min-height: 1px;
-  padding: 0 10px 10px 10px ;
+  padding: 0 5px 10px 5px ;
 }
 @media only screen and (max-width: 767px) {
   .qa-q-view-main {
@@ -3703,17 +4400,10 @@ a.qa-browse-cat-link:visited {
 .qa-q-view-content {
   margin-bottom: 20px;
   font-size: 14px;
+  word-wrap: break-word;
 }
 .qa-q-view-content .entry-content {
-  margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.4;
-}
-@media (min-width: 768px) {
-  .qa-q-view-content .entry-content {
-    font-size: 21px;
-  }
+  font-size: 18px;
 }
 .qa-q-view-avatar {
   display: inline-block;
@@ -3726,15 +4416,89 @@ a.qa-browse-cat-link:visited {
   font-size: 12px;
 }
 .qa-q-view-follows {
-  font-size: 14px;
-  margin-bottom: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+  background-image: -webkit-linear-gradient(top, #d9edf7 0%, #b9def0 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9edf7), to(#b9def0));
+  background-image: linear-gradient(to bottom, #d9edf7 0%, #b9def0 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9edf7', endColorstr='#ffb9def0', GradientType=0);
+  border-color: #9acfea;
+}
+.qa-q-view-follows h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.qa-q-view-follows .alert-link {
+  font-weight: bold;
+}
+.qa-q-view-follows > p,
+.qa-q-view-follows > ul {
+  margin-bottom: 0;
+}
+.qa-q-view-follows > p + p {
+  margin-top: 5px;
+}
+.qa-q-view-follows hr {
+  border-top-color: #a6e1ec;
+}
+.qa-q-view-follows .alert-link {
+  color: #245269;
+}
+.qa-q-view-follows-link {
+  font-weight: bold;
+  color: #245269;
 }
 .qa-q-view-closed {
-  font-size: 14px;
+  padding: 15px;
   margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+  background-image: -webkit-linear-gradient(top, #d9edf7 0%, #b9def0 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9edf7), to(#b9def0));
+  background-image: linear-gradient(to bottom, #d9edf7 0%, #b9def0 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9edf7', endColorstr='#ffb9def0', GradientType=0);
+  border-color: #9acfea;
+  font-weight: bold;
+  color: #245269;
+}
+.qa-q-view-closed h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.qa-q-view-closed .alert-link {
+  font-weight: bold;
+}
+.qa-q-view-closed > p,
+.qa-q-view-closed > ul {
+  margin-bottom: 0;
+}
+.qa-q-view-closed > p + p {
+  margin-top: 5px;
+}
+.qa-q-view-closed hr {
+  border-top-color: #a6e1ec;
+}
+.qa-q-view-closed .alert-link {
+  color: #245269;
 }
 .qa-q-view-closed-content {
-  font-weight: 700;
+  font-weight: normal;
 }
 .qa-q-view-extra {
   font-size: 14px;
@@ -3773,7 +4537,7 @@ a.qa-browse-cat-link:visited {
   padding: 0;
 }
 .qa-q-view-tag-item {
-  display: inline;
+  display: inline-block;
 }
 .qa-q-view-buttons {
   margin-top: 16px;
@@ -3784,7 +4548,7 @@ a.qa-browse-cat-link:visited {
   }
 }
 .qa-q-view-c-list {
-  margin: 15px;
+  margin: 15px -15px 15px 15px;
 }
 .qa-q-view-c-list:before,
 .qa-q-view-c-list:after {
@@ -3801,6 +4565,11 @@ a.qa-browse-cat-link:visited {
 }
 .qa-q-view-c-list:after {
   clear: both;
+}
+@media only screen and (max-width: 767px) {
+  .qa-q-view-c-list {
+    margin-right: -40px;
+  }
 }
 .qa-q-view-hidden .qa-voting {
   color: #555555;
@@ -3823,6 +4592,10 @@ a.qa-browse-cat-link:visited {
 .qa-q-view-hidden .qa-tag-link {
   color: #555555;
   opacity: 0.5px;
+}
+#tag_examples_title,
+#tag_complete_title {
+  float: left ;
 }
 /* Answer form */
 .qa-part-a-form div#anew h2 {
@@ -3936,15 +4709,14 @@ a.qa-browse-cat-link:visited {
   padding-left: 10px;
 }
 .qa-a-item-content {
-  margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.4;
+  font-size: 18px;
   margin-bottom: 16px;
+  word-wrap: break-word;
 }
-@media (min-width: 768px) {
+@media only screen and (max-width: 767px) {
   .qa-a-item-content {
-    font-size: 21px;
+    clear: both ;
+    margin-top: 10px;
   }
 }
 .qa-a-item-avatar {
@@ -3980,8 +4752,28 @@ a.qa-browse-cat-link:visited {
   margin-top: 16px;
 }
 .qa-a-item-c-list {
+  margin: 15px -15px 15px 15px;
+}
+.qa-a-item-c-list:before,
+.qa-a-item-c-list:after {
+  content: " ";
+  display: table;
+}
+.qa-a-item-c-list:after {
   clear: both;
-  margin: 20px 0 0;
+}
+.qa-a-item-c-list:before,
+.qa-a-item-c-list:after {
+  content: " ";
+  display: table;
+}
+.qa-a-item-c-list:after {
+  clear: both;
+}
+@media only screen and (max-width: 767px) {
+  .qa-a-item-c-list {
+    margin-right: -40px;
+  }
 }
 /* Answer selection */
 .qa-a-selection {
@@ -3992,6 +4784,14 @@ a.qa-browse-cat-link:visited {
   text-align: center;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
+}
+@media only screen and (max-width: 767px) {
+  .qa-a-selection {
+    left: initial ;
+    right: 10px;
+    top: 20px;
+    float: right ;
+  }
 }
 .qa-a-select-button {
   display: inline-block;
@@ -4102,7 +4902,6 @@ fieldset[disabled] .qa-a-select-button {
   background-image: none;
 }
 .qa-a-select-button:hover {
-  background-color: #31708f;
   color: #ffffff;
 }
 .qa-a-unselect-button {
@@ -4216,14 +5015,118 @@ fieldset[disabled] .qa-a-unselect-button {
 }
 .qa-a-unselect-button:hover {
   color: #3c763d;
-  background-color: #ffffff;
 }
-/* .qa-a-selected {
-	background:url(../images/selected-star.png) no-repeat 0 0;
-	height:50px;
-	width:50px;
-	margin:0 auto;
-} */
+.qa-a-selected {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e0e0e0));
+  background-image: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #dbdbdb;
+  text-shadow: 0 1px 0 #fff;
+  border-color: #ccc;
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+  padding-top: 12px;
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+.qa-a-selected:hover,
+.qa-a-selected:focus,
+.qa-a-selected.focus {
+  color: #333333;
+  text-decoration: none;
+}
+.qa-a-selected:active,
+.qa-a-selected.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.qa-a-selected.disabled,
+.qa-a-selected[disabled],
+fieldset[disabled] .qa-a-selected {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.qa-a-selected:active,
+.qa-a-selected.active {
+  background-image: none;
+}
+.qa-a-selected:hover,
+.qa-a-selected:focus,
+.qa-a-selected.focus,
+.qa-a-selected:active,
+.qa-a-selected.active,
+.open > .dropdown-toggle.qa-a-selected {
+  color: #333333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.qa-a-selected:active,
+.qa-a-selected.active,
+.open > .dropdown-toggle.qa-a-selected {
+  background-image: none;
+}
+.qa-a-selected .badge {
+  color: #ffffff;
+  background-color: #333333;
+}
+.qa-a-selected:active,
+.qa-a-selected.active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.qa-a-selected:hover,
+.qa-a-selected:focus {
+  background-color: #e0e0e0;
+  background-position: 0 -15px;
+}
+.qa-a-selected:active,
+.qa-a-selected.active {
+  background-color: #e0e0e0;
+  border-color: #dbdbdb;
+}
+.qa-a-selected:disabled,
+.qa-a-selected[disabled] {
+  background-color: #e0e0e0;
+  background-image: none;
+}
+.qa-a-selected:hover {
+  color: #3c763d;
+}
 .qa-a-selected-text {
   font-size: 9px;
   display: block;
@@ -4233,6 +5136,12 @@ fieldset[disabled] .qa-a-unselect-button {
 /* Comment list  */
 .qa-c-list-item {
   padding: 8px;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   border: 1px solid transparent;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -4360,141 +5269,10 @@ fieldset[disabled] .qa-a-unselect-button {
   }
 }
 .qa-c-item-buttons .qa-form-light-button {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e0e0e0));
-  background-image: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-repeat: repeat-x;
-  border-color: #dbdbdb;
-  text-shadow: 0 1px 0 #fff;
-  border-color: #ccc;
-}
-.qa-c-item-buttons .qa-form-light-button:focus,
-.qa-c-item-buttons .qa-form-light-button:active:focus,
-.qa-c-item-buttons .qa-form-light-button.active:focus,
-.qa-c-item-buttons .qa-form-light-button.focus,
-.qa-c-item-buttons .qa-form-light-button:active.focus,
-.qa-c-item-buttons .qa-form-light-button.active.focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-.qa-c-item-buttons .qa-form-light-button:hover,
-.qa-c-item-buttons .qa-form-light-button:focus,
-.qa-c-item-buttons .qa-form-light-button.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-c-item-buttons .qa-form-light-button:active,
-.qa-c-item-buttons .qa-form-light-button.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-c-item-buttons .qa-form-light-button.disabled,
-.qa-c-item-buttons .qa-form-light-button[disabled],
-fieldset[disabled] .qa-c-item-buttons .qa-form-light-button {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-c-item-buttons .qa-form-light-button:active,
-.qa-c-item-buttons .qa-form-light-button.active {
-  background-image: none;
-}
-.qa-c-item-buttons .qa-form-light-button:hover,
-.qa-c-item-buttons .qa-form-light-button:focus,
-.qa-c-item-buttons .qa-form-light-button.focus,
-.qa-c-item-buttons .qa-form-light-button:active,
-.qa-c-item-buttons .qa-form-light-button.active,
-.open > .dropdown-toggle.qa-c-item-buttons .qa-form-light-button {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-.qa-c-item-buttons .qa-form-light-button:active,
-.qa-c-item-buttons .qa-form-light-button.active,
-.open > .dropdown-toggle.qa-c-item-buttons .qa-form-light-button {
-  background-image: none;
-}
-.qa-c-item-buttons .qa-form-light-button.disabled,
-.qa-c-item-buttons .qa-form-light-button[disabled],
-fieldset[disabled] .qa-c-item-buttons .qa-form-light-button,
-.qa-c-item-buttons .qa-form-light-button.disabled:hover,
-.qa-c-item-buttons .qa-form-light-button[disabled]:hover,
-fieldset[disabled] .qa-c-item-buttons .qa-form-light-button:hover,
-.qa-c-item-buttons .qa-form-light-button.disabled:focus,
-.qa-c-item-buttons .qa-form-light-button[disabled]:focus,
-fieldset[disabled] .qa-c-item-buttons .qa-form-light-button:focus,
-.qa-c-item-buttons .qa-form-light-button.disabled.focus,
-.qa-c-item-buttons .qa-form-light-button[disabled].focus,
-fieldset[disabled] .qa-c-item-buttons .qa-form-light-button.focus,
-.qa-c-item-buttons .qa-form-light-button.disabled:active,
-.qa-c-item-buttons .qa-form-light-button[disabled]:active,
-fieldset[disabled] .qa-c-item-buttons .qa-form-light-button:active,
-.qa-c-item-buttons .qa-form-light-button.disabled.active,
-.qa-c-item-buttons .qa-form-light-button[disabled].active,
-fieldset[disabled] .qa-c-item-buttons .qa-form-light-button.active {
-  background-color: #ffffff;
-  border-color: #cccccc;
-}
-.qa-c-item-buttons .qa-form-light-button .badge {
-  color: #ffffff;
-  background-color: #333333;
-}
-.qa-c-item-buttons .qa-form-light-button:active,
-.qa-c-item-buttons .qa-form-light-button.active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-c-item-buttons .qa-form-light-button:hover,
-.qa-c-item-buttons .qa-form-light-button:focus {
-  background-color: #e0e0e0;
-  background-position: 0 -15px;
-}
-.qa-c-item-buttons .qa-form-light-button:active,
-.qa-c-item-buttons .qa-form-light-button.active {
-  background-color: #e0e0e0;
-  border-color: #dbdbdb;
-}
-.qa-c-item-buttons .qa-form-light-button:disabled,
-.qa-c-item-buttons .qa-form-light-button[disabled] {
-  background-color: #e0e0e0;
-  background-image: none;
 }
 /* Message list */
 .qa-message-item {
@@ -4531,141 +5309,10 @@ fieldset[disabled] .qa-c-item-buttons .qa-form-light-button.active {
   float: right;
 }
 .qa-message-buttons .qa-form-light-button {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e0e0e0));
-  background-image: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-repeat: repeat-x;
-  border-color: #dbdbdb;
-  text-shadow: 0 1px 0 #fff;
-  border-color: #ccc;
-}
-.qa-message-buttons .qa-form-light-button:focus,
-.qa-message-buttons .qa-form-light-button:active:focus,
-.qa-message-buttons .qa-form-light-button.active:focus,
-.qa-message-buttons .qa-form-light-button.focus,
-.qa-message-buttons .qa-form-light-button:active.focus,
-.qa-message-buttons .qa-form-light-button.active.focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-.qa-message-buttons .qa-form-light-button:hover,
-.qa-message-buttons .qa-form-light-button:focus,
-.qa-message-buttons .qa-form-light-button.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-message-buttons .qa-form-light-button:active,
-.qa-message-buttons .qa-form-light-button.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-message-buttons .qa-form-light-button.disabled,
-.qa-message-buttons .qa-form-light-button[disabled],
-fieldset[disabled] .qa-message-buttons .qa-form-light-button {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-message-buttons .qa-form-light-button:active,
-.qa-message-buttons .qa-form-light-button.active {
-  background-image: none;
-}
-.qa-message-buttons .qa-form-light-button:hover,
-.qa-message-buttons .qa-form-light-button:focus,
-.qa-message-buttons .qa-form-light-button.focus,
-.qa-message-buttons .qa-form-light-button:active,
-.qa-message-buttons .qa-form-light-button.active,
-.open > .dropdown-toggle.qa-message-buttons .qa-form-light-button {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-.qa-message-buttons .qa-form-light-button:active,
-.qa-message-buttons .qa-form-light-button.active,
-.open > .dropdown-toggle.qa-message-buttons .qa-form-light-button {
-  background-image: none;
-}
-.qa-message-buttons .qa-form-light-button.disabled,
-.qa-message-buttons .qa-form-light-button[disabled],
-fieldset[disabled] .qa-message-buttons .qa-form-light-button,
-.qa-message-buttons .qa-form-light-button.disabled:hover,
-.qa-message-buttons .qa-form-light-button[disabled]:hover,
-fieldset[disabled] .qa-message-buttons .qa-form-light-button:hover,
-.qa-message-buttons .qa-form-light-button.disabled:focus,
-.qa-message-buttons .qa-form-light-button[disabled]:focus,
-fieldset[disabled] .qa-message-buttons .qa-form-light-button:focus,
-.qa-message-buttons .qa-form-light-button.disabled.focus,
-.qa-message-buttons .qa-form-light-button[disabled].focus,
-fieldset[disabled] .qa-message-buttons .qa-form-light-button.focus,
-.qa-message-buttons .qa-form-light-button.disabled:active,
-.qa-message-buttons .qa-form-light-button[disabled]:active,
-fieldset[disabled] .qa-message-buttons .qa-form-light-button:active,
-.qa-message-buttons .qa-form-light-button.disabled.active,
-.qa-message-buttons .qa-form-light-button[disabled].active,
-fieldset[disabled] .qa-message-buttons .qa-form-light-button.active {
-  background-color: #ffffff;
-  border-color: #cccccc;
-}
-.qa-message-buttons .qa-form-light-button .badge {
-  color: #ffffff;
-  background-color: #333333;
-}
-.qa-message-buttons .qa-form-light-button:active,
-.qa-message-buttons .qa-form-light-button.active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-message-buttons .qa-form-light-button:hover,
-.qa-message-buttons .qa-form-light-button:focus {
-  background-color: #e0e0e0;
-  background-position: 0 -15px;
-}
-.qa-message-buttons .qa-form-light-button:active,
-.qa-message-buttons .qa-form-light-button.active {
-  background-color: #e0e0e0;
-  border-color: #dbdbdb;
-}
-.qa-message-buttons .qa-form-light-button:disabled,
-.qa-message-buttons .qa-form-light-button[disabled] {
-  background-color: #e0e0e0;
-  background-image: none;
 }
 /* Related questions widgets*/
 .qa-related-qs {
@@ -4724,7 +5371,6 @@ fieldset[disabled] .qa-message-buttons .qa-form-light-button.active {
   color: #428bca;
   font-weight: 700;
 }
-.qa-tag-link,
 .qa-widget-side .qa-q-view-tag-item,
 .qa-widget-side > div > a {
   background: #ffffff;
@@ -4736,13 +5382,85 @@ fieldset[disabled] .qa-message-buttons .qa-form-light-button.active {
   margin: 2px 1px;
   padding: 5px 10px;
 }
-.qa-tag-link:hover,
 .qa-widget-side .qa-q-view-tag-item:hover,
 .qa-widget-side > div > a:hover {
   background: #fbfbfb;
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   text-decoration: none ;
+}
+.qa-q-item-tag-item,
+.qa-tag-link {
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  position: relative;
+  font-size: 10px;
+}
+.qa-q-view-tags:before,
+.qa-q-view-tags:after {
+  content: " ";
+  display: table;
+}
+.qa-q-view-tags:after {
+  clear: both;
+}
+.qa-q-view-tags:before,
+.qa-q-view-tags:after {
+  content: " ";
+  display: table;
+}
+.qa-q-view-tags:after {
+  clear: both;
+}
+.qa-tag-link {
+  margin-left: 20px;
+  padding: 0 10px 0 12px;
+  background: #428bca;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+}
+.qa-tag-link:before {
+  content: "";
+  float: left;
+  position: absolute;
+  top: 0;
+  left: -9px;
+  width: 0;
+  height: 0;
+  border-color: transparent #428bca;
+  border-style: solid;
+  border-width: 9px 9px 9px 0;
+  -webkit-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
+}
+.qa-tag-link:after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  float: left;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background: #fff;
+  -webkit-box-shadow: -1px -1px 2px #004977;
+  box-shadow: -1px -1px 2px #004977;
+  -webkit-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
+}
+.qa-tag-link:hover {
+  background: #3071a9;
+  color: #ffffff;
+  text-decoration: none;
+}
+.qa-tag-link:hover:before {
+  border-color: transparent #3071a9;
 }
 .qa-widget-side > div > a {
   line-height: normal;
@@ -4757,9 +5475,6 @@ fieldset[disabled] .qa-message-buttons .qa-form-light-button.active {
   background: none;
   border: none;
   text-transform: none;
-}
-.qa-q-view-tag-item {
-  margin: 5px 0;
 }
 .qa-avatar-image {
   border: 0;
@@ -4808,8 +5523,6 @@ fieldset[disabled] .qa-message-buttons .qa-form-light-button.active {
   margin: -7px 0 0 -7px;
 }
 .qa-q-favorited .qa-q-item-title a:before,
-.qa-tag-favorited:before,
-.qa-tag-favorited:hover:before,
 .qa-cat-favorited:before,
 .qa-user-favorited:before,
 .qa-nav-cat-favorited:before,
@@ -4825,8 +5538,6 @@ fieldset[disabled] .qa-message-buttons .qa-form-light-button.active {
   color: #f0ad4e;
 }
 .qa-q-favorited .qa-q-item-title a:before.pull-left,
-.qa-tag-favorited:before.pull-left,
-.qa-tag-favorited:hover:before.pull-left,
 .qa-cat-favorited:before.pull-left,
 .qa-user-favorited:before.pull-left,
 .qa-nav-cat-favorited:before.pull-left,
@@ -4834,8 +5545,6 @@ fieldset[disabled] .qa-message-buttons .qa-form-light-button.active {
   margin-right: .3em;
 }
 .qa-q-favorited .qa-q-item-title a:before.pull-right,
-.qa-tag-favorited:before.pull-right,
-.qa-tag-favorited:hover:before.pull-right,
 .qa-cat-favorited:before.pull-right,
 .qa-user-favorited:before.pull-right,
 .qa-nav-cat-favorited:before.pull-right,
@@ -4973,6 +5682,14 @@ fieldset[disabled] .qa-message-buttons .qa-form-light-button.active {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
 }
+.qa-template-user .qa-part-form-profile td {
+  word-wrap: break-word;
+}
+.qa-template-user .qa-part-form-profile span.qa-form-wide-note,
+.qa-template-user .qa-part-form-profile span.qa-form-wide-static {
+  display: block ;
+  margin-left: 0px;
+}
 .qa-template-user .qa-part-form-activity h2 {
   margin-top: 0;
 }
@@ -5017,6 +5734,7 @@ fieldset[disabled] .qa-message-buttons .qa-form-light-button.active {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
+  text-align: center;
   vertical-align: middle;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
@@ -5034,10 +5752,6 @@ fieldset[disabled] .qa-message-buttons .qa-form-light-button.active {
   user-select: none;
   display: block;
   width: 100%;
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
-  text-align: center;
   color: #fff ;
   margin-top: 2px;
 }
@@ -5076,66 +5790,6 @@ fieldset[disabled] #login-dropdown-menu li.open-login-buttons a {
 }
 #login-dropdown-menu li.open-login-buttons a:active,
 #login-dropdown-menu li.open-login-buttons a.active {
-  background-image: none;
-}
-#login-dropdown-menu li.open-login-buttons a:hover,
-#login-dropdown-menu li.open-login-buttons a:focus,
-#login-dropdown-menu li.open-login-buttons a.focus,
-#login-dropdown-menu li.open-login-buttons a:active,
-#login-dropdown-menu li.open-login-buttons a.active,
-.open > .dropdown-toggle#login-dropdown-menu li.open-login-buttons a {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-#login-dropdown-menu li.open-login-buttons a:active,
-#login-dropdown-menu li.open-login-buttons a.active,
-.open > .dropdown-toggle#login-dropdown-menu li.open-login-buttons a {
-  background-image: none;
-}
-#login-dropdown-menu li.open-login-buttons a.disabled,
-#login-dropdown-menu li.open-login-buttons a[disabled],
-fieldset[disabled] #login-dropdown-menu li.open-login-buttons a,
-#login-dropdown-menu li.open-login-buttons a.disabled:hover,
-#login-dropdown-menu li.open-login-buttons a[disabled]:hover,
-fieldset[disabled] #login-dropdown-menu li.open-login-buttons a:hover,
-#login-dropdown-menu li.open-login-buttons a.disabled:focus,
-#login-dropdown-menu li.open-login-buttons a[disabled]:focus,
-fieldset[disabled] #login-dropdown-menu li.open-login-buttons a:focus,
-#login-dropdown-menu li.open-login-buttons a.disabled.focus,
-#login-dropdown-menu li.open-login-buttons a[disabled].focus,
-fieldset[disabled] #login-dropdown-menu li.open-login-buttons a.focus,
-#login-dropdown-menu li.open-login-buttons a.disabled:active,
-#login-dropdown-menu li.open-login-buttons a[disabled]:active,
-fieldset[disabled] #login-dropdown-menu li.open-login-buttons a:active,
-#login-dropdown-menu li.open-login-buttons a.disabled.active,
-#login-dropdown-menu li.open-login-buttons a[disabled].active,
-fieldset[disabled] #login-dropdown-menu li.open-login-buttons a.active {
-  background-color: #ffffff;
-  border-color: #cccccc;
-}
-#login-dropdown-menu li.open-login-buttons a .badge {
-  color: #ffffff;
-  background-color: #333333;
-}
-#login-dropdown-menu li.open-login-buttons a:active,
-#login-dropdown-menu li.open-login-buttons a.active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-#login-dropdown-menu li.open-login-buttons a:hover,
-#login-dropdown-menu li.open-login-buttons a:focus {
-  background-color: #e0e0e0;
-  background-position: 0 -15px;
-}
-#login-dropdown-menu li.open-login-buttons a:active,
-#login-dropdown-menu li.open-login-buttons a.active {
-  background-color: #e0e0e0;
-  border-color: #dbdbdb;
-}
-#login-dropdown-menu li.open-login-buttons a:disabled,
-#login-dropdown-menu li.open-login-buttons a[disabled] {
-  background-color: #e0e0e0;
   background-image: none;
 }
 #login-dropdown-menu li.open-login-buttons a:hover {
@@ -5217,10 +5871,14 @@ fieldset[disabled] #login-dropdown-menu li.open-login-buttons a.active {
   background-image: -webkit-gradient(linear, left top, right top, from(#c4e17f), color-stop(12.5%, #c4e17f), color-stop(12.5%, #f7fdca), color-stop(25%, #f7fdca), color-stop(25%, #fecf71), color-stop(37.5%, #fecf71), color-stop(37.5%, #f0776c), color-stop(50%, #f0776c), color-stop(50%, #db9dbe), color-stop(62.5%, #db9dbe), color-stop(62.5%, #c49cde), color-stop(75%, #c49cde), color-stop(75%, #669ae1), color-stop(87.5%, #669ae1), color-stop(87.5%, #62c2e4), to(#62c2e4));
   background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login {
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
+  text-align: center;
   vertical-align: middle;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
@@ -5236,179 +5894,180 @@ fieldset[disabled] #login-dropdown-menu li.open-login-buttons a.active {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
-  text-align: center;
   color: #fff ;
   margin-right: 5% ;
   width: 40% ;
 }
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:focus,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:focus,
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active:focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:active:focus,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:active:focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:active:focus,
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active:focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.active:focus,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.active:focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.active:focus,
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.focus,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.focus,
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active.focus {
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:active.focus,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:active.focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:active.focus,
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active.focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.active.focus,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.active.focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:hover,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:hover,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:hover,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:hover,
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.focus {
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:focus,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:focus,
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.focus,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.focus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.focus {
   color: #333333;
   text-decoration: none;
 }
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active {
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:active,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:active,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:active,
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.active,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.active,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.disabled,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.disabled,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.disabled,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.disabled,
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login[disabled],
-fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active {
-  background-image: none;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active.focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:hover,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.disabled,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login[disabled],
-fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active {
-  background-image: none;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:hover,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active,
-.open > .dropdown-toggle.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active,
-.open > .dropdown-toggle.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login {
-  background-image: none;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.disabled,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login[disabled],
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login[disabled],
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login[disabled],
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login[disabled],
 fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.disabled:hover,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login[disabled]:hover,
-fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:hover,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.disabled:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login[disabled]:focus,
-fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.disabled.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login[disabled].focus,
-fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.disabled:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login[disabled]:active,
-fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.disabled.active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login[disabled].active,
-fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active {
-  background-color: #ffffff;
-  border-color: #cccccc;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login .badge {
-  color: #ffffff;
-  background-color: #333333;
+fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login,
+fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login,
+fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:hover,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:focus {
-  background-color: #e0e0e0;
-  background-position: 0 -15px;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active {
-  background-color: #e0e0e0;
-  border-color: #dbdbdb;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:disabled,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login[disabled] {
-  background-color: #e0e0e0;
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:active,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:active,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:active,
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.active,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.active,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.active {
   background-image: none;
 }
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:hover {
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:hover,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:hover,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:hover,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:hover {
   color: #fff ;
 }
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.facebook {
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.facebook,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.facebook,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.facebook,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.facebook {
   background-color: #3b5998 ;
 }
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.github {
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.github,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.github,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.github,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.github {
   background-color: #444444 ;
 }
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.foursquare {
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.foursquare,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.foursquare,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.foursquare,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.foursquare {
   background-color: #f94877 ;
 }
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.google,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.googleplus {
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.google,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.google,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.google,
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.googleplus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.googleplus,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.googleplus,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.googleplus {
   background-color: #dd4b39 ;
 }
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.windows {
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.windows,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.windows,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.windows,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.windows {
   background-color: #2672ec ;
 }
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.tumblr {
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.tumblr,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.tumblr,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.tumblr,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.tumblr {
   background-color: #2c4762 ;
 }
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.yahoo {
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.yahoo,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.yahoo,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.yahoo,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.yahoo {
   background-color: #720e9e ;
 }
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.twitter {
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.twitter,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.twitter,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.twitter,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.twitter {
   background-color: #55acee ;
 }
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.linkedin {
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.linkedin,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.linkedin,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.linkedin,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.linkedin {
   background-color: #007bb6 ;
 }
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.vk {
+.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.vk,
+.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.vk,
+.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.vk,
+.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.vk {
   background-color: #587ea3 ;
+}
+@media only screen and (max-width: 767px) {
+  .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login,
+  .qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login,
+  .qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login,
+  .qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login {
+    display: block;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login,
+  .qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login,
+  .qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login,
+  .qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login {
+    display: block;
+    width: 100%;
+  }
 }

@@ -1,8 +1,11 @@
 <?php
 $print_or = false ;
 ?>
-<li> <a class=""  href="<?php echo qa_path_html('register'); ?>" title="<?php echo qa_lang_html('users/register_title'); ?>"><span><?php echo qa_lang_html('users/register_button'); ?></span></a> </li>
-<li class="dropdown login-dropdown"> <a class=""  href="#" title="<?php echo qa_lang_html('users/login_title'); ?>" data-toggle="dropdown"><?php echo qa_lang_html('users/login_button'); ?></a>
+<li class="dropdown login-dropdown login active"> 
+	<a href="#" title="<?php echo qa_lang_html('users/login_title'); ?>" data-toggle="dropdown" class="navbar-login-button">
+		<?php //echo qa_lang_html('users/login_button'); ?>
+		<span class="fa fa-key"></span>
+	</a>
 	<ul class="dropdown-menu" role="menu" id="login-dropdown-menu">
 		<?php      
 			if(!empty($this->content['navigation']['user'])){
@@ -69,7 +72,12 @@ $print_or = false ;
 				<input type="hidden" name="code" value="<?php echo qa_html(qa_get_form_security_code('login')); ?>"/>
 			</li>
 			<li>
-				<input type="submit" value="<?php echo $this->content['navigation']['user']['login']['label']; ?>" id="qa-login" name="dologin" class="btn btn-primary btn-block" />
+				<button type="submit" value="" id="qa-login" name="dologin" class="btn btn-primary btn-block" >
+				    <?php echo $this->content['navigation']['user']['login']['label']; ?> 
+				</button>
+			</li>
+			<li class="register"> 
+				<a class="btn btn-success btn-block" href="<?php echo qa_path_html('register'); ?>" title="<?php echo qa_lang_html('users/register_title'); ?>"><?php echo qa_lang_html('users/register_button'); ?></a> 
 			</li>
 			<li class="forgot-password">
 				<a href="<?php echo qa_path_html('forgot'); ?>"><?php echo qa_lang_html('users/forgot_link') ?></a>

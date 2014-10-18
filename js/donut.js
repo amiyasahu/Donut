@@ -14,13 +14,13 @@ jQuery(document).ready(function($) {
 });
 
 /*For hover dropdown of the navbar items */
-jQuery(document).ready(function($) {
+/*jQuery(document).ready(function($) {
 	$('.navbar .dropdown').not('.login-dropdown,.user-dropdown').hover(function() {
 	  $(this).find('.dropdown-menu').first().stop(true, true).slideDown(200).end().end().addClass('open');
 	}, function() {
 	  $(this).find('.dropdown-menu').first().stop(true, true).slideUp(150).end().end().removeClass('open');
 	});
-});
+});*/
 
 jQuery(document).ready(function($) {
 	var selector = '.qa-form-tall-button-ask,.qa-form-tall-button-answer, '+
@@ -61,3 +61,15 @@ jQuery(document).ready(function($) {
 			};
 	};
 });*/
+
+jQuery(document).ready(function($) {
+	var $mainQ = $('.qa-part-q-view') ,
+		$closedQ = $mainQ.children('.qa-q-closed') ,
+		$solvedQ = $('#a_list').children('.qa-a-list-item-selected') ;
+	if ($closedQ.length > 0) {
+		$mainQ.addClass('qa-part-q-view-closed');
+	}; 
+	if ($solvedQ.length > 0) {
+		$mainQ.addClass('qa-part-q-view-solved');
+	}; 
+});

@@ -19,6 +19,7 @@
 			$this->head_title();
 			$this->head_metas();
 			$this->head_css();
+			$this->donut_utility_for_old_ie();
 			$this->head_links();
 			$this->head_lines();
 			$this->head_script();
@@ -37,7 +38,17 @@
 			if ($this->template == 'admin') {
 				$js_paths['admin'] = 'js/admin.js' ;
 			}
-			$this->output($this->donut_resources($js_paths , 'js'));
+			
+			if (DONUT_ACTIVATE_PROD_MODE) {
+				$cdn_js_paths = array(
+					'bootstrap' => donut_opt::BS_JS_CDN ,
+					);
+				unset($js_paths['bootstrap']);
+				$this->donut_resources($cdn_js_paths , 'js' , TRUE );
+			}
+
+			$this->donut_resources($js_paths , 'js');
+
 		}
 
 		function head_css()
@@ -54,7 +65,18 @@
 				$css_paths['donut_responsive'] = 'css/donut-responsive.css' ;
 			}
 
-			$this->output($this->donut_resources($css_paths , 'css'));
+			if (DONUT_ACTIVATE_PROD_MODE) {
+				$cdn_css_paths = array(
+					'bootstrap' => donut_opt::BS_CSS_CDN ,
+					// 'bootstrap_theme' => donut_opt::BS_THEME_CSS_CDN ,
+					'fonts' => donut_opt::FA_CDN ,
+					);
+				unset($css_paths['bootstrap']);
+				unset($css_paths['fonts']);
+				$this->donut_resources($cdn_css_paths , 'css' , TRUE );
+			}
+
+			$this->donut_resources($css_paths , 'css');
 		}
 
 		function body_content()
@@ -282,6 +304,23 @@
 			$this->output('</div>', '<!-- END of left-side-bar -->');
 		}
 
+		function a_selection($post)
+		{
+			$this->output('<div class="qa-a-selection">');
+			
+			if (isset($post['select_tags']))
+				$this->post_hover_button($post, 'select_tags', '', 'qa-a-select');
+			elseif (isset($post['unselect_tags']))
+				$this->post_hover_button($post, 'unselect_tags', '', 'qa-a-unselect');
+			elseif ($post['selected'])
+				$this->output('<div class="qa-a-selected"> <span class="fa fa-check"></span> </div>');
+			
+			if (isset($post['select_text']))
+				$this->output('<div class="qa-a-selected-text">'.@$post['select_text'].'</div>');
+			
+			$this->output('</div>');
+		}
+
 		/**
 		 * prevent display of regular footer content (see body_suffix()) and replace with closing new <div>s
 		 * @return  null
@@ -426,7 +465,21 @@
         		$this->output('<button '.$post[$element].' type="submit" value="'.$value.'" class="'.$class.'-disabled" disabled="disabled"/> '.$icon.'</button>');
         	}
         }
-		
+
+		function form_button_data($button, $key, $style)
+		{
+			$baseclass='qa-form-'.$style.'-button qa-form-'.$style.'-button-'.$key;
+			
+			$this->output('<button'.rtrim(' '.@$button['tags']).' title="'.@$button['popup'].'" type="submit"'.
+				(isset($style) ? (' class="'.$baseclass.'"') : '').'>'.@$button['label'].'</button>');
+		}
+
+		/**
+		 * prints the favorite button
+		 * @param  array $tags  parameters
+		 * @param  [type] $class class
+		 * @return null 
+		 */
 		function favorite_button($tags, $class)
 		{
 			if (isset($tags)){
@@ -435,6 +488,10 @@
 			}
 		}
 
+		/**
+		 * the feed icon with a link
+		 * @return null
+		 */
 		function feed()
 		{
 			$feed=@$this->content['feed'];
@@ -450,6 +507,10 @@
 			}
 		}
 
+		/**
+		 * Attribution link for the theme which adds the authors name 
+		 * @return [type] [description]
+		 */
 		function attribution()
 		{
 			/*Please do not remove this as you are using this for free . I will appriciate if you keep this on your site */
@@ -462,11 +523,20 @@
 			qa_html_theme_base::attribution();
 		}
 
+		/**
+		 * beautifies the default waiting template with a font aswome icon 
+		 * @return null
+		 */
 		function waiting_template()
 		{
 			$this->output('<span id="qa-waiting-template" class="qa-waiting fa fa-spinner fa-spin"></span>');
 		}
 
+		/**
+		 * beautifies the default notice 
+		 * @param  array $notice notice parameters
+		 * @return null
+		 */
 		function notice($notice)
 		{
 			$this->output('<div class="qa-notice alert alert-info text-center alert-dismissible" role="alert" id="'.$notice['id'].'">');
@@ -486,41 +556,121 @@
 			
 			$this->output('</div>');
 		}
-
-		function donut_css($relative_path)
+		
+		/**
+		 * prints the navbar search on the top 
+		 * @return null
+		 */
+		function search()
 		{
-			if (!empty($relative_path)) {
-				$this->output('<link rel="stylesheet" type="text/css" href="'.$this->rooturl.$relative_path.'"/>' );
+			$search=$this->content['search'];
+			
+			$this->output(
+				'<form class="navbar-form pull-right" role="form" '.$search['form_tags'].'>',
+				@$search['form_extra']
+			);
+			
+			$this->search_field($search);
+			// $this->search_button($search);
+			
+			$this->output(
+				'</form>'
+			);
+		}
+
+		/**
+		 * prints the search field 
+		 * @param  array $search 
+		 * @return null
+		 */
+		function search_field($search)
+		{
+			$this->output(
+				'<div class="form-group">',
+					'<input type="text" '.$search['field_tags'].' value="'.@$search['value'].'" class="qa-search-field" placeholder="'.$search['button_label'].'"/>',
+				'</div>');
+		}
+
+		/**
+		 * prints the aearch button
+		 * @param  array $search 
+		 * @return null 
+		 */
+		function search_button($search)
+		{
+			$this->output('<button type="submit" value="" class="qa-search-button" >'.$search['button_label'].'</button>');
+		}
+
+		/**
+		 * prints the css path
+		 * @param  string  $path     path of the css file
+		 * @param  boolean $external weather it is relative to the theme or a external to the theme 
+		 * @return null
+		 */
+		function donut_css($path , $external = false)
+		{
+			if ($external) {
+				$full_path = $path ;
+			}else {
+				$full_path = $this->rooturl.$path ;
+			}
+
+			if (!empty($path)) {
+				$this->output('<link rel="stylesheet" type="text/css" href="'.$full_path.'"/>' );
 			}
 		}
 
-		function donut_js($relative_path)
+		/**
+		 * prints the js path
+		 * @param  string  $path     path of the js file
+		 * @param  boolean $external weather it is relative to the theme or a external to the theme 
+		 * @return null
+		 */
+		function donut_js($path , $external = false)
 		{
-			if (!empty($relative_path)) {
-				$this->output('<script src="'.$this->rooturl.$relative_path.'" type="text/javascript"></script>' );
+			if ($external) {
+				$full_path = $path ;
+			}else {
+				$full_path = $this->rooturl.$path ;
+			}
+
+			if (!empty($path)) {
+				$this->output('<script src="'.$full_path.'" type="text/javascript"></script>' );
 			}
 		}
 
-		function donut_resources($relative_paths , $type = 'css')
+		/**
+		 * prints the CSS and JS links 
+		 * @param  array  $paths    list of the resources
+		 * @param  string  $type     type of the resource css or js 
+		 * @param  boolean $external weather it is relative to the theme or a external to the theme 
+		 * @return null
+		 */
+		function donut_resources($paths , $type = 'css' , $external = false )
 		{
-			if (count($relative_paths)) {
-				foreach ($relative_paths as $key => $relative_path) {
+			if (count($paths)) {
+				foreach ($paths as $key => $path) {
 					if ($type ==='js') {
-						$this->donut_js($relative_path) ;
+						$this->donut_js($path , $external) ;
 					}else if ($type === 'css'){
-						$this->donut_css($relative_path) ;
+						$this->donut_css($path , $external) ;
 					}
 				}
 			}
 		}
 
+		/**
+		 * prints the complete navbar
+		 * @param  $navigation
+		 * @return text
+		 */
 		function donut_nav_bar($navigation)
 		{
 			$title = qa_opt('site_title') ;
 			$home_url = qa_opt('site_url') ;
 			ob_start();
 			?>
-			<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			      <div class="container">
 			        <div class="navbar-header">
 			          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -529,24 +679,33 @@
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
 			          </button>
-			           <?php //$this->logo(); ?>
-			          <a class="navbar-brand first-letter-logo" href="<?php echo $home_url ;?>">D</a>
+			           <?php $this->logo(); ?>
+			          <!-- <a class="navbar-brand first-letter-logo" href="<?php echo $home_url ;?>">D</a> -->
 			        </div>
-			        <div class="navbar-collapse collapse">
-			          <ul class="nav navbar-nav">
-			            <?php $this->donut_nav_bar_main_links($navigation['main']); ?>
-			          </ul>
-			          <ul class="nav navbar-nav navbar-right">
-			          	<?php $this->donut_user_drop_down(); ?>
-			          </ul>
-			        </div><!--/.nav-collapse -->
+			        <div class="donut-navigation">
+				        <ul class="nav navbar-nav navbar-right user-nav">
+				        	<?php $this->donut_user_drop_down(); ?>
+				        </ul>
+				        <div class="navbar-collapse collapse main-nav">
+				        	<?php $this->search(); ?>	
+				        	<ul class="nav navbar-nav inner-drop-nav">
+				        	    <?php $this->donut_nav_bar_main_links($navigation['main']); ?>
+				        	</ul>
+				        </div>
+				        		        		
+			        </div>
 
 			      </div>
-			</div>
+			</nav>
 			<?php
 			return ob_get_clean();
 		}
 
+		/**
+		 * grabs the sub-nav links for the navigation items 
+		 * @param  array $navigation navigation links
+		 * @return null
+		 */
 		function donut_nav_bar_main_links($navigation)
 		{
 			if (count($navigation)) {
@@ -589,6 +748,11 @@
 			}
 		}
 
+		/**
+		 * nav item for the sidebar 
+		 * @param  array $nav_item navigation item
+		 * @return null
+		 */
 		function donut_nav_side_bar_item($nav_item)
 		{
 			$class = (!!@$nav_item['selected']) ? ' active' : '' ;
@@ -596,6 +760,11 @@
 			$this->output('<a href="'.$nav_item['url'].'" class="list-group-item '.$class.'">'.$icon . $nav_item['label'].'</a>');
 		}
 
+		/**
+		 * prints a single nav-bar item 
+		 * @param  array $nav_item navigation item 
+		 * @return null
+		 */
 		function donut_nav_bar_item($nav_item)
 		{
 			$class  = (!!@$nav_item['class']) ? $nav_item['class'] .' ' : '' ;
@@ -610,6 +779,12 @@
 			$this->output('<li '.$class.'><a href="'.$nav_item['url'].'">'.$icon . $nav_item['label'].'</a></li>');
 		}
 
+		/**
+		 * Prints the drop down menu 
+		 * @param  array $nav_item      the navigation item 
+		 * @param  attay $sub_nav_items sub-nav items to be displayed 
+		 * @return null
+		 */
 		function donut_nav_bar_drop_down($nav_item , $sub_nav_items)
 		{
 			$class = (!!@$nav_item['selected']) ? 'active' : '' ;
@@ -630,6 +805,10 @@
 			}
 		}
 
+		/**
+		 * prints sidebar navigation 
+		 * @return  null
+		 */
 		function donut_sidebar_toggle_nav_btn()
 		{
 			$this->output('<div class="row">');
@@ -656,6 +835,10 @@
 			$this->output('</div>') ;
 		}*/
 
+		/**
+		 * prints the defult meta and view ports 
+		 * @return  null
+		 */
 		function donut_default_meta()
 		{
 			$this->output_raw('<meta charset="utf-8">');
@@ -664,11 +847,20 @@
 			$this->output_raw('<meta name="author" content="">');
 		}
 
+		/**
+		 * prints the favicon icon
+		 * @return  null
+		 */
 		function donut_favicon()
 		{
 			$this->output_raw('<link rel="shortcut icon" href="favicon.ico">');
 		}
 
+		/**
+		 * prints the view count 
+		 * @param  array 
+		 * @return null
+		 */
 		function donut_view_count($post)
 		{
 			if (!empty($post['views']) && $this->template !== 'question') {
@@ -679,6 +871,25 @@
 			}
 		}
 
+		/**
+		 * adds support for old IE browsers 
+		 * 
+		 */
+		function donut_utility_for_old_ie()
+		{
+			$this->output('
+					<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+					   <!--[if lt IE 9]>
+					     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+					     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+					<![endif]-->
+				');
+		}
+
+		/**
+		 * prints the drop down for the user 
+		 * 
+		 */
 		function donut_user_drop_down(){
 			if (qa_is_logged_in()) {
 				require_once DONUT_THEME_BASE_DIR . '/templates/user-loggedin-drop-down.php' ;
