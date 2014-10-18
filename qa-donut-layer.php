@@ -586,9 +586,10 @@
 		function search_field($search)
 		{
 			$this->output(
-				'<div class="form-group">',
-					'<input type="text" '.$search['field_tags'].' value="'.@$search['value'].'" class="qa-search-field" placeholder="'.$search['button_label'].'"/>',
-				'</div>');
+				'<div class="input-group">',
+					'<input type="text" '.$search['field_tags'].' value="'.@$search['value'].'" class="qa-search-field" placeholder="'.$search['button_label'].'"/>');
+			$this->search_button($search);
+			$this->output('</div>');
 		}
 
 		/**
@@ -598,7 +599,9 @@
 		 */
 		function search_button($search)
 		{
-			$this->output('<button type="submit" value="" class="qa-search-button" >'.$search['button_label'].'</button>');
+			$this->output('<span class="input-group-btn">');
+			$this->output('<button type="submit" value="" class="btn qa-search-button" ><span class="fa fa-search"></span></button>');
+			$this->output('</span>');
 		}
 
 		/**
@@ -819,21 +822,6 @@
 				$this->output('</div>');
 			$this->output('</div>');
 		}
-
-		/*function home_page_jumbotron()
-		{
-			$this->output('<div class="home-page">') ;
-			$this->output('<div class="jumbotron-ad text-center">') ;
-			$this->output('<div class="col-md-8 com-sm-8">') ;
-			$this->output('<h1 class="text-info"><i class="fa fa-comments-o"></i> Donut Theme</h1>') ;
-			$this->output('<p class="text-info">Get free expert help and assistance by experts</p>') ;
-			$this->output('</div>') ;
-			$this->output('<div class="col-md-4 com-sm-4">') ;
-			$this->output('<h1 class="text-info"><i class="fa fa-question"></i></h1>') ;
-			$this->output('</div>') ;
-			$this->output('</div>') ;
-			$this->output('</div>') ;
-		}*/
 
 		/**
 		 * prints the defult meta and view ports 
