@@ -41,7 +41,7 @@ if (!defined('DONUT_THEME_VERSION_UID')) {
  * If you using this on your local machine with out a internet connection then set it to false 
  */
 if (!defined('DONUT_ACTIVATE_PROD_MODE')) {
-	define('DONUT_ACTIVATE_PROD_MODE', FALSE );
+	define('DONUT_ACTIVATE_PROD_MODE', TRUE );
 }
 
 /**
