@@ -516,7 +516,7 @@
 			/*Please do not remove this as you are using this for free . I will appriciate if you keep this on your site */
 			$this->output(
 				'<div class="qa-attribution">',
-				'&nbsp;| Donut Theme by <a href="http://www.amiyasahu.com">Amiya Sahu</a>',
+				'&nbsp;| Donut Theme by <a href="http://amiyasahu.com">Amiya Sahu</a>',
 				'</div>'
 			);
 
