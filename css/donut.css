@@ -1132,11 +1132,11 @@ div .header-banner {
   margin-right: 2px;
   padding: 0;
 }
-.qa-nav-footer-list {
+.qa-nav-footer-list li {
   float: left;
   list-style-type: none;
   margin: 0;
-  margin-right: 2px;
+  margin-right: 5px;
   padding: 0;
 }
 .qa-footer-left {
