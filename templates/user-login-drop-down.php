@@ -12,6 +12,8 @@ $print_or = false ;
 				$this->output('<li class="open-login-buttons">');
 				foreach ($this->content['navigation']['user'] as $k => $custom) {
 					if (isset($custom) && (($k != 'login') && ($k != 'register'))) {
+						$icon = '' ;
+						
 						preg_match('/class="([^"]+)"/', @$custom['label'], $class);
 						
 						if ($k == 'facebook')
