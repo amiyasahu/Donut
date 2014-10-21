@@ -564,9 +564,9 @@ table .table {
 /* 
 .qa-template-questions ,
 .qa-template-qa {
-  .page-title h1 {
-    clear: both ;
-  }
+	.page-title h1 {
+		clear: both ;
+	}
 }
 */
 .qa-main-wrapper h1 {
@@ -633,8 +633,8 @@ img {
   margin-right: -15px;
 }
 /* .qa-header {
-  padding:15px 10px 5px;
-  height:auto;
+	padding:15px 10px 5px;
+	height:auto;
 } */
 .qa-logo {
   display: inline-block;
@@ -2500,13 +2500,13 @@ a.list-group-item.active > .qa-nav-cat-item .qa-nav-cat-note,
 .qa-form-tall-text,
 .qa-form-tall-number {
   /* padding:3px;
-    width:48px;
-    background:@body-bg;
-    border:1px solid @input-border;  */
+		width:48px;
+		background:@body-bg;
+		border:1px solid @input-border;  */
 }
 .qa-form-talltall-checkbox {
   /* float:left;
-    margin-right:4px; */
+		margin-right:4px; */
 }
 .qa-form-tall-image {
   text-align: center;
@@ -3071,17 +3071,17 @@ fieldset[disabled] .qa-form-tall-button-save {
 }
 .qa-form-wide-text {
   /* background:@body-bg;
-    width:320px;
-    border:1px solid @input-border; */
+		width:320px;
+		border:1px solid @input-border; */
 }
 .qa-form-wide-table textarea.qa-form-wide-text {
   height: 125px;
 }
 .qa-form-wide-number {
   /* width:48px;
-    background:#111;
-    border:1px solid #444;
-    vertical-align:middle; */
+		background:#111;
+		border:1px solid #444;
+		vertical-align:middle; */
 }
 .qa-form-wide-note {
   font-size: 14px;

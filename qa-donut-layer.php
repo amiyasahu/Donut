@@ -1,8 +1,10 @@
 <?php
+if (!defined('QA_VERSION')) { // don't allow this page to be requested directly from browser
+	header('Location: ../../');
+	exit;
+}
 
-
-	class qa_html_theme extends qa_html_theme_base
-	{	
+class qa_html_theme extends qa_html_theme_base {
 
 		function doctype() {
 			qa_html_theme_base::doctype();
@@ -886,8 +888,6 @@
 			}
 		}
 	}
-
-
 /*
 	Omit PHP closing tag to help avoid accidental output
 */

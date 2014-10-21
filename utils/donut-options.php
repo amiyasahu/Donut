@@ -1,4 +1,8 @@
 <?php 
+if (!defined('QA_VERSION')) { // don't allow this page to be requested directly from browser
+	header('Location: ../../');
+	exit;
+}
 /**
  * This file will contain all the option names we are going to use in out theme 
  */
