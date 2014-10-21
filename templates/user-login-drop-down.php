@@ -12,8 +12,8 @@ $print_or = false ;
 				$this->output('<li class="open-login-buttons">');
 				foreach ($this->content['navigation']['user'] as $k => $custom) {
 					if (isset($custom) && (($k != 'login') && ($k != 'register'))) {
-						$icon = '' ;
 						
+						$icon = '' ;
 						preg_match('/class="([^"]+)"/', @$custom['label'], $class);
 						
 						if ($k == 'facebook')
@@ -90,4 +90,3 @@ $print_or = false ;
 <?php
 unset($this->content['navigation']['user']['login']);
 unset($this->content['navigation']['user']['register']);
-$this->output(ob_get_clean());
