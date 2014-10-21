@@ -6,10 +6,6 @@ if (!defined('QA_VERSION')) { // don't allow this page to be requested directly 
 
 class qa_html_theme extends qa_html_theme_base {
 
-		function doctype() {
-			qa_html_theme_base::doctype();
-		}
-		
 		function head()
 		{
 			$this->output(
