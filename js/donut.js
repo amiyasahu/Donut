@@ -10,13 +10,14 @@ jQuery(document).ready(function () {
 		$selected_sub_nav.parent('li.qa-nav-sub-item').addClass('active');
 	};
 	
-	/*$('[title]').tooltip({
+	$('[title]').tooltip({
 		placement : 'bottom' 
-	});*/
-	$('body').tooltip({
+	});
+	
+	/*$('body').tooltip({
 	    selector: '[title]' ,
 	    placement : 'bottom' ,
-	});
+	});*/
 	
 	$('.qa-vote-buttons').tooltip({
 	    selector: '[title]' ,
