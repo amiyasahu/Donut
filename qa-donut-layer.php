@@ -152,14 +152,8 @@ class qa_html_theme extends qa_html_theme_base {
 
 			$this->widgets('main', 'high');
 
-			/*if (isset($content['main_form_tags']))
-				$this->output('<form '.$content['main_form_tags'].'>');*/
-				
 			$this->main_parts($content);
 		
-			/*if (isset($content['main_form_tags']))
-				$this->output('</form>');*/
-				
 			$this->widgets('main', 'low');
 
 			$this->page_links();
@@ -233,10 +227,6 @@ class qa_html_theme extends qa_html_theme_base {
 				$this->output($this->donut_nav_bar($this->content['navigation']));
 				unset($this->content['navigation']['main']);
 			}
-			
-			/*$this->output('<div id="qa-login-bar"><div id="qa-login-group">');
-			$this->nav_user_search();
-            $this->output('</div></div>');*/
         }
 		
 		function header_custom() // allows modification of custom element shown inside header after logo
@@ -260,8 +250,6 @@ class qa_html_theme extends qa_html_theme_base {
 
 			$this->output('<div class="qa-main-shadow">', '');
 			$this->output('<div class="qa-main-wrapper">', '');
-			// $this->nav_main_sub();
-			// $this->page_title_error();		
 		}
 
 		function page_links_item($page_link)
@@ -671,7 +659,24 @@ class qa_html_theme extends qa_html_theme_base {
 			$home_url = qa_opt('site_url') ;
 			ob_start();
 			?>
-			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<header>
+			  <div class="container">
+			    <div class="row">
+			      <div class="col-sm-6">
+			        <div class="logo">
+			          <?php $this->logo(); ?>
+			          <!-- <div class="meta">Clean Bootstrap Theme</div> -->
+			        </div>
+			      </div>
+			      <div class="col-sm-6">
+        			<div class="search-bar">
+				        <?php $this->search(); ?>	
+        			</div>
+			      </div>
+			    </div>
+			  </div>
+			</header>
+			<nav id="nav" class="navbar navbar-default navbar-static-top" role="navigation">
 			      <div class="container">
 			        <div class="navbar-header">
 			          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -680,7 +685,7 @@ class qa_html_theme extends qa_html_theme_base {
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
 			          </button>
-			           <?php $this->logo(); ?>
+			           
 			          <!-- <a class="navbar-brand first-letter-logo" href="<?php echo $home_url ;?>">D</a> -->
 			        </div>
 			        <div class="donut-navigation">
@@ -688,7 +693,6 @@ class qa_html_theme extends qa_html_theme_base {
 				        	<?php $this->donut_user_drop_down(); ?>
 				        </ul>
 				        <div class="navbar-collapse collapse main-nav">
-				        	<?php $this->search(); ?>	
 				        	<ul class="nav navbar-nav inner-drop-nav">
 				        	    <?php $this->donut_nav_bar_main_links($navigation['main']); ?>
 				        	</ul>
