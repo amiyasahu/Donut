@@ -557,7 +557,7 @@ header .search-bar {
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: none ;
-  margin-left: -5px !important;
+  margin-left: -10px !important;
 }
 @media only screen and (max-width: 767px) {
   .navbar-nav.navbar-collapse {
