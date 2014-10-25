@@ -404,6 +404,9 @@ table .table {
   background-color: #ffffff;
 }
 /* light border below navbar */
+#nav {
+  z-index: 1010;
+}
 #nav.affix {
   position: fixed;
   top: 0;

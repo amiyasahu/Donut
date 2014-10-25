@@ -10,6 +10,8 @@ jQuery(document).ready(function () {
 		$selected_sub_nav.parent('li.qa-nav-sub-item').addClass('active');
 	};
 	
+	$('.qa-logo-link').removeAttr('title');
+
 	$('[title]').tooltip({
 		placement : 'bottom' 
 	});
@@ -24,8 +26,6 @@ jQuery(document).ready(function () {
 	    placement : 'bottom' ,
 	    container:'body'
 	});
-
-	$('.qa-logo-link').removeAttr('title');
 
 	var $mainQ = $('.qa-part-q-view') ,
 		$closedQ = $mainQ.children('.qa-q-closed') ,
