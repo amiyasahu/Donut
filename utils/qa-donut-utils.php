@@ -183,9 +183,6 @@ if (!function_exists('donut_qs_sub_navigation')) {
 
 if (!function_exists('donut_unanswered_sub_navigation')) {
 	function donut_unanswered_sub_navigation($by, $categoryslugs)
-/*
-	Return the sub navigation structure common to unanswered pages
-*/
 	{
 		$request='unanswered';
 
