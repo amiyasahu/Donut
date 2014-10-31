@@ -33,3 +33,36 @@
 .qa-nav-sub {
 	.hidden-xs();
 }
+
+.qa-template-admin {
+	.qa-main-wrapper{
+		.row-offcanvas();
+		.row-offcanvas-left();
+		@media screen and (max-width: 767px) {
+			.qa-left-side-bar {
+				left: -50%;
+				margin-left: 10px;
+			}
+			&.active {
+				left: 50%;
+			}
+		}
+	}
+
+	.qa-main {
+		.make-xs-column(12);
+		.make-sm-column(9);
+	}
+
+	.qa-left-side-bar {
+		.make-xs-column(6);
+		.make-sm-column(3);
+		.visible-xs();
+		.visible-sm();
+		.visible-md();
+		.visible-lg();
+		.sidebar-offcanvas();
+		min-height: 100px;
+		z-index: 1000;
+	}
+}

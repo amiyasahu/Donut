@@ -53,20 +53,15 @@ class qa_html_theme extends qa_html_theme_base {
 		{
 			qa_html_theme_base::head_css();
 			$css_paths = array(
+					'fonts'     => 'css/font-awesome.min.css',
 					'bootstrap' => 'css/bootstrap.min.css',
 					'donut'     => 'css/donut.css',
-					'fonts'     => 'css/font-awesome.min.css',
+					'donut_responsive' => 'css/donut-responsive.css' ,
 					);
-			if ($this->template == 'admin') {
-				$css_paths['admin'] = 'css/admin.css' ;
-			}else {
-				$css_paths['donut_responsive'] = 'css/donut-responsive.css' ;
-			}
-
+			
 			if (DONUT_ACTIVATE_PROD_MODE) {
 				$cdn_css_paths = array(
 					'bootstrap' => donut_opt::BS_CSS_CDN ,
-					// 'bootstrap_theme' => donut_opt::BS_THEME_CSS_CDN ,
 					'fonts' => donut_opt::FA_CDN ,
 					);
 				unset($css_paths['bootstrap']);
@@ -178,33 +173,6 @@ class qa_html_theme extends qa_html_theme_base {
 			$this->output('</div>', '');
 		}
 
-		function nav_user_search() // outputs login form if user not logged in
-		{
-			qa_html_theme_base::nav_user_search();
-			
-			if (!qa_is_logged_in()) {
-				$login=@$this->content['navigation']['user']['login'];
-				
-				if (isset($login) && !QA_FINAL_EXTERNAL_USERS) {
-					$this->output(
-						'<!--[Begin: login form]-->',				
-						'<form id="qa-loginform" action="'.$login['url'].'" method="post">',
-							'<input type="text" id="qa-userid" name="emailhandle" placeholder="'.trim(qa_lang_html(qa_opt('allow_login_email_only') ? 'users/email_label' : 'users/email_handle_label'), ':').'" />',
-							'<input type="password" id="qa-password" name="password" placeholder="'.trim(qa_lang_html('users/password_label'), ':').'" />',
-							'<div id="qa-rememberbox"><input type="checkbox" name="remember" id="qa-rememberme" value="1"/>',
-							'<label for="qa-rememberme" id="qa-remember">'.qa_lang_html('users/remember').'</label></div>',
-							'<input type="hidden" name="code" value="'.qa_html(qa_get_form_security_code('login')).'"/>',
-							'<input type="submit" value="'.$login['label'].'" id="qa-login" name="dologin" />',
-						'</form>',				
-						'<!--[End: login form]-->'
-					);
-					
-					unset($this->content['navigation']['user']['login']); // removes regular navigation link to log in page
-				}
-			}
-			
-		}
-		
 		function logged_in() 
 		{
 			if (qa_is_logged_in()) // output user avatar to login bar
