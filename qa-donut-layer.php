@@ -56,7 +56,7 @@ class qa_html_theme extends qa_html_theme_base {
 					'fonts'     => 'css/font-awesome.min.css',
 					'bootstrap' => 'css/bootstrap.min.css',
 					'donut'     => 'css/donut.css',
-					'donut_responsive' => 'css/donut-responsive.css' ,
+					'responsive' => 'css/donut-responsive.css' ,
 					);
 			
 			if (DONUT_ACTIVATE_PROD_MODE) {
