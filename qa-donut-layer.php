@@ -113,7 +113,7 @@ class qa_html_theme extends qa_html_theme_base {
 
 			$this->main();
 
-			if ($this->template !== 'admin') {
+			if ($this->template !== 'admin' && $this->template!='user') {
 				$this->sidepanel();
 			}
 
@@ -130,7 +130,7 @@ class qa_html_theme extends qa_html_theme_base {
 		{
 			$content=$this->content;
 
-			$this->output('<div class="qa-main'.(@$this->content['hidden'] ? ' qa-main-hidden' : '').'">');
+			$this->output('<div class="qa-main pull-left'.(@$this->content['hidden'] ? ' qa-main-hidden' : '').'">');
 			
 			if (!empty($this->content['navigation']['sub']) || $this->template == 'admin') {
 				$this->donut_sidebar_toggle_nav_btn();
@@ -162,6 +162,20 @@ class qa_html_theme extends qa_html_theme_base {
 			$this->widgets('main', 'bottom');
 
 			$this->output('</div> <!-- END qa-main -->', '');
+		}
+
+		function sidepanel()
+		{
+			$this->output('<div class="qa-sidepanel pull-right">');
+			$this->widgets('side', 'top');
+			$this->sidebar();
+			$this->widgets('side', 'high');
+			$this->nav('cat', 1);
+			$this->widgets('side', 'low');
+			$this->output_raw(@$this->content['sidepanel']);
+			$this->feed();
+			$this->widgets('side', 'bottom');
+			$this->output('</div>', '');
 		}
 
 		function nav_user_search() // outputs login form if user not logged in
@@ -259,16 +273,6 @@ class qa_html_theme extends qa_html_theme_base {
 			$this->output('<li class="qa-page-links-item'.$active_class.$disabled_class.'">');
 			$this->page_link_content($page_link);
 			$this->output('</li>');
-		}
-
-		/**
-		 * removes sidebar for user profile pages
-		 * @return null
-		 */
-		function sidepanel() 
-		{
-			if ($this->template!='user')
-				qa_html_theme_base::sidepanel();
 		}
 
 		function left_side_bar($sub_navigation)
