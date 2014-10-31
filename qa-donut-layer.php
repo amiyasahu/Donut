@@ -637,7 +637,6 @@ class qa_html_theme extends qa_html_theme_base {
 			      <div class="col-sm-6">
 			        <div class="logo">
 			          <?php $this->logo(); ?>
-			          <!-- <div class="meta">Clean Bootstrap Theme</div> -->
 			        </div>
 			      </div>
 			      <div class="col-sm-6">
@@ -657,8 +656,6 @@ class qa_html_theme extends qa_html_theme_base {
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
 			          </button>
-			           
-			          <!-- <a class="navbar-brand first-letter-logo" href="<?php echo $home_url ;?>">D</a> -->
 			        </div>
 			        <div class="donut-navigation">
 				        <ul class="nav navbar-nav navbar-right user-nav">
