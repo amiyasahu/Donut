@@ -48,6 +48,9 @@ if (!defined('DONUT_ACTIVATE_PROD_MODE')) {
 	define('DONUT_ACTIVATE_PROD_MODE', FALSE );
 }
 
+if (!defined('DONUT_LANG_RTL')) {
+	define('DONUT_LANG_RTL', TRUE );
+}
 /**
  * include the required files for the theme 
  */

@@ -58,6 +58,10 @@ class qa_html_theme extends qa_html_theme_base {
 					'donut'     => 'css/donut.css',
 					'responsive' => 'css/donut-responsive.css' ,
 					);
+
+			if (DONUT_LANG_RTL) {
+				$css_paths['rtl'] = 'css/donut-rtl.css' ;
+			}
 			
 			if (DONUT_ACTIVATE_PROD_MODE) {
 				$cdn_css_paths = array(

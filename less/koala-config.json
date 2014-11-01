@@ -7,8 +7,8 @@
 			"dest": "../css/donut.css"
 		},
 		{	
-			"src": "admin.less",
-			"dest": "../css/admin.css"
+			"src": "donut-rtl.less",
+			"dest": "../css/donut-rtl.css"
 		},
 		{	
 			"src": "donut-responsive.less",
