@@ -1026,9 +1026,9 @@ class qa_html_theme extends qa_html_theme_base {
             if (isset($item))
                 $this->output(
     				'<li class="tag-item">',
-    					'<div>',
+    					'<div class="clearfix">',
     						'<p class="tag-head">',
-    							$item['label'] . '<span> &#215; ' . $item['count'] . '</span>',
+    							'<span> ' . $item['count'] . ' &#215;</span>' . $item['label'] ,
     						 '</p>'
     						 );
             	if (!empty($content)) {
