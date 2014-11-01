@@ -962,7 +962,7 @@ class qa_html_theme extends qa_html_theme_base {
 	                
 	                for ($column = 0; $column < $columns; $column++) {
 	                    $this->set_context('ranking_column', $column);
-	                    $this->output('<div class="col-md-' . ceil(12 / $columns) . '" col-xs-12>');
+	                    $this->output('<div class="col-md-' . ceil(12 / $columns) . ' col-xs-12" >');
 	                    $this->output('<ul class="donut-tags-list">');
 	                    
 	                    for ($row = 0; $row < $rows; $row++) {
@@ -1029,13 +1029,15 @@ class qa_html_theme extends qa_html_theme_base {
     					'<div>',
     						'<p class="tag-head">',
     							$item['label'] . '<span> &#215; ' . $item['count'] . '</span>',
-    						 '</p>
-    						 <p class="desc">',
+    						 '</p>'
+    						 );
+            	if (!empty($content)) {
+            		$this->output('<p class="desc">',
     						 $this->truncate($content, 150),
-    						 '</p>',
-    					 '</div>',
-    				 '</li>'
-    			);
+    						 '</p>');
+            	}
+    			$this->output('</div>',
+    				 '</li>' );
         }
         function truncate($string, $limit, $pad="...") {
               if(strlen($string) <= $limit) 

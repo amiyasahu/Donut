@@ -4111,6 +4111,8 @@ fieldset[disabled] .qa-form-basic-button {
 }
 .qa-top-tags ul.donut-tags-list {
   list-style-type: none ;
+  padding-left: 5px;
+  margin-bottom: 0px;
 }
 .qa-top-tags ul.donut-tags-list .qa-tag-link {
   margin-right: 2px ;
