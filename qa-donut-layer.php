@@ -860,6 +860,193 @@ class qa_html_theme extends qa_html_theme_base {
 				require_once DONUT_THEME_BASE_DIR . '/templates/user-login-drop-down.php' ;
 			}
 		}
+
+	    function ranking($ranking)
+	    {
+	        $class = (@$ranking['type'] == 'users') ? 'qa-top-users' : 'qa-top-tags';
+	        $rows  = min($ranking['rows'], count($ranking['items']));
+	        if (!$rows) {
+	        	$rows = 1 ;
+	        }
+	        
+	        if (@$ranking['type'] == 'users') {
+	            $this->output('<div class="page-users-list clearfix"><div class="row">');
+	            
+	            if(isset($ranking['items']))
+					$columns=ceil(count($ranking['items'])/$rows);
+				
+	            if (isset($ranking['items']))
+	            {
+					$pagesize  = qa_opt('page_size_users');
+					$start     = qa_get_start();	
+					$users     = qa_db_select_with_pending(qa_db_top_users_selectspec($start, qa_opt_if_loaded('page_size_users')));
+					$users     = array_slice($users, 0, $pagesize);
+					$usershtml = qa_userids_handles_html($users);
+
+	                foreach ($ranking['items'] as $user) {
+						$this->output('<div class="user-box col-sm-' . ceil(12 / $columns) . ' col-xs-12">');
+						$user_raw    = !empty($user['raw']) ? $user['raw'] : $user ;
+						$handle      = @$user_raw['handle'];
+						$handle_html = @$usershtml[$user_raw['userid']];
+	                    
+	                    if (isset($user_raw['userid'])) {
+	                    	$user_rank  = qa_db_select_with_pending(qa_db_user_rank_selectspec($user_raw['userid'],true));
+	                    	$level_html = qa_user_level_string($user_rank);
+	                    }else  {
+	                    	$level_html = $user['score'] ;
+	                    	unset($user['score']);
+	                    }
+
+	                    if (empty($handle_html)) {
+	                    	$handle_html = $user['label'];
+	                    }
+						
+						$avatar = (QA_FINAL_EXTERNAL_USERS
+										? qa_get_external_avatar_html(@$user_raw['userid'], qa_opt('avatar_users_size'), true)
+										: qa_get_user_avatar_html(@$user_raw['flags'], @$user_raw['email'], @$user_raw['handle'],
+											@$user_raw['avatarblobid'], @$user_raw['avatarwidth'], @$user_raw['avatarheight'], 70 , true)
+										) ;
+						if (isset($user['score'])) {
+							$userpoints = $user['score'] ;
+							$pointshtml = ($userpoints===1) ? qa_lang_html_sub('main/1_point', '1', '1')
+													: qa_lang_html_sub('main/x_points', qa_html($userpoints));
+							if (!empty($pointshtml)) {
+								$pointshtml = '<p class="score">'.$pointshtml.'</p>' ;
+							}
+						}
+
+	                    $this->output('
+								<div class="user-box-inner">
+									<div class="user-avatar">
+										'.$avatar .'
+									</div>
+									<div class="user-data">
+										'.$handle_html.'
+										<div class="user-level">
+											'.$level_html .'
+										</div>
+										<div class="counts clearfix">
+											'.@$pointshtml.'
+										</div>
+								</div>');
+
+	                    if (qa_opt('badge_active') && function_exists('qa_get_badge_list'))
+	                        $this->output('<div class="badge-list">' . donut_user_badge($handle) . '</div>');
+	                    
+	                    $this->output('</div>');
+	                    $this->output('</div>');
+
+	                } 
+	            }else {
+	                $this->output('
+								<div class="no-items">
+									<h3 class="">' . qa_lang_html('main/no_active_users') . '</h3>
+								</div>');
+				}
+	            
+	            
+	            $this->output('</div>');
+	            $this->output('</div>');
+	            
+	        } elseif (@$ranking['type'] == 'tags') {
+	            
+	            if ($rows > 0) {
+	                $this->output('<div id="tags-list" class="row ' . $class . '">');
+					
+					$tags = array();
+					foreach(@$ranking['items'] as $item)
+						$tags[] = strip_tags($item['label']);
+					
+					
+	                $columns = ceil(count($ranking['items']) / $rows);
+	                
+	                for ($column = 0; $column < $columns; $column++) {
+	                    $this->set_context('ranking_column', $column);
+	                    $this->output('<div class="col-md-' . ceil(12 / $columns) . '" col-xs-12>');
+	                    $this->output('<ul class="donut-tags-list">');
+	                    
+	                    for ($row = 0; $row < $rows; $row++) {
+	                        $this->set_context('ranking_row', $row);
+	                        $this->donut_tags_item(@$ranking['items'][$column * $rows + $row], $class, $column > 0);
+	                    }
+	                    
+	                    $this->clear_context('ranking_column');
+	                    
+	                    $this->output('</ul>');
+	                    $this->output('</div>');
+	                }
+	                
+	                $this->clear_context('ranking_row');
+	                
+	                $this->output('</div>');
+	            } else
+	                $this->output('
+						<div class="no-items">
+						<h3 class="icon-warning">' . qa_lang('cleanstrap/no_tags') . '</h3>
+						<p>' . qa_lang('cleanstrap/no_results_detail') . '</p>
+						</div>');
+	            
+	        } else {
+	            
+	            
+	            if ($rows > 0) {
+	                $this->output('<table class="' . $class . '-table">');
+	                
+	                $columns = ceil(count($ranking['items']) / $rows);
+	                
+	                for ($row = 0; $row < $rows; $row++) {
+	                    $this->set_context('ranking_row', $row);
+	                    $this->output('<tr>');
+	                    
+	                    for ($column = 0; $column < $columns; $column++) {
+	                        $this->set_context('ranking_column', $column);
+	                        $this->ranking_item(@$ranking['items'][$column * $rows + $row], $class, $column > 0);
+	                    }
+	                    
+	                    $this->clear_context('ranking_column');
+	                    
+	                    $this->output('</tr>');
+	                }
+	                
+	                $this->clear_context('ranking_row');
+	                
+	                $this->output('</table>');
+	            } else
+	                $this->output('
+							<div class="no-items">
+								<h3 class="icon-warning">' . qa_lang_html('cleanstrap/no_results') . '</h3>
+								<p>' . qa_lang_html('cleanstrap/no_results_detail') . '</p>
+							</div>');
+	        }
+	    }
+        function donut_tags_item($item, $class, $spacer)
+        {
+            $content = qa_db_read_one_value( qa_db_query_sub("SELECT ^tagmetas.content FROM ^tagmetas WHERE ^tagmetas.tag =$ ", strip_tags($item['label'])), true);
+    		
+            if (isset($item))
+                $this->output(
+    				'<li class="tag-item">',
+    					'<div>',
+    						'<p class="tag-head">',
+    							$item['label'] . '<span> &#215; ' . $item['count'] . '</span>',
+    						 '</p>
+    						 <p class="desc">',
+    						 $this->truncate($content, 150),
+    						 '</p>',
+    					 '</div>',
+    				 '</li>'
+    			);
+        }
+        function truncate($string, $limit, $pad="...") {
+              if(strlen($string) <= $limit) 
+                    return $string; 
+              else{ 
+                    $text = $string.' ';
+                    $text = substr($text,0,$limit);
+                    $text = substr($text,0,strrpos($text,' '));
+                    return $text.$pad;
+              } 
+        }
 	}
 /*
 	Omit PHP closing tag to help avoid accidental output

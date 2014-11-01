@@ -656,6 +656,7 @@ div {
 
 .qa-main {
 	.make-md-column(9);
+	.make-xs-column(12);
 	@media @tablet {
 		margin-bottom: 80px;
 	}
@@ -1859,6 +1860,15 @@ div {
 	&-spacer {
 
 	}
+	ul.donut-tags-list {
+		list-style-type: none ;
+		.qa-tag-link {
+			margin-right: 2px ; 
+		}
+		li.tag-item {
+			padding: 5px;
+		}
+	}
 }
 /* users page */
 .qa-top-users {
@@ -1901,6 +1911,31 @@ div {
 
 	&-spacer {
 
+	}
+}
+.user-box {
+	margin-bottom: 5px;
+	&-inner {
+		display: block;
+		text-align: center ;
+		.light-border();
+		border-radius: 5px;
+		padding: 5px;
+		.user-avatar {
+			display: inline-block;
+			.qa-avatar-image {
+				.img-circle();
+			}
+		}
+		.user-data {
+			margin-top: 5px;
+			.qa-user-link {
+				font-size: @font-size-h4 ;
+				&:hover {
+					text-decoration: none ;
+				}
+			}
+		}
 	}
 }
 
@@ -1994,9 +2029,9 @@ div {
 	padding-top:20px;
 	.qa-voting {
 		width: 75px;
+		margin-top: -20px;
 		@media @mobile {
 			width: 65px;
-			margin-top: -20px;
 		}
 		@media @tablet {
 			width: 65px;

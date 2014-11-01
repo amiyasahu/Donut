@@ -261,3 +261,91 @@ if (!function_exists('donut_users_sub_navigation')) {
 			return null;
 	}
 }
+
+if (!defined('donut_get_user_data')) {
+	function donut_get_user_data($handle){
+		$userid = qa_handle_to_userid($handle);
+		$identifier=QA_FINAL_EXTERNAL_USERS ? $userid : $handle;
+		$user = array();
+		if(defined('QA_WORDPRESS_INTEGRATE_PATH')){
+			$u_rank = qa_db_select_with_pending(qa_db_user_rank_selectspec($userid,true));
+			$u_points = qa_db_select_with_pending(qa_db_user_points_selectspec($userid,true));
+			
+			$userinfo = array();
+			$user_info = get_userdata( $userid );
+			$userinfo['userid'] = $userid;
+			$userinfo['handle'] = $handle;
+			$userinfo['email'] = $user_info->user_email;
+			
+			$user[0] = $userinfo;
+			$user[1]['rank'] = $u_rank;
+			$user[2] = $u_points;
+			$user = ($user[0]+ $user[1]+ $user[2]);
+		}else{
+			$user['account'] = qa_db_select_with_pending( qa_db_user_account_selectspec($userid, true) );
+			$user['rank'] = qa_db_select_with_pending( qa_db_user_rank_selectspec($handle) );
+			$user['points'] = qa_db_select_with_pending( qa_db_user_points_selectspec($identifier) );
+			
+			$user['followers'] = qa_db_read_one_value( qa_db_query_sub('SELECT count(*) FROM ^userfavorites WHERE ^userfavorites.entityid = # and ^userfavorites.entitytype = "U" ', $userid), true );
+			
+			$user['following'] = qa_db_read_one_value( qa_db_query_sub('SELECT count(*) FROM ^userfavorites WHERE ^userfavorites.userid = # and ^userfavorites.entitytype = "U" ', $userid), true );
+		}
+
+		return $user;
+	}	
+}
+
+		
+function donut_user_profile($handle, $field =NULL){
+	$userid = qa_handle_to_userid($handle);
+	if(defined('QA_WORDPRESS_INTEGRATE_PATH')){
+		return get_user_meta( $userid );
+	}else{
+		$query = qa_db_select_with_pending(qa_db_user_profile_selectspec($userid, true));
+		
+		if(!$field) return $query;
+		if (isset($query[$field]))
+			return $query[$field];
+	}
+	
+	return false;
+}	
+
+function donut_user_badge($handle) {
+	if(qa_opt('badge_active')){
+	$userids = qa_handles_to_userids(array($handle));
+	$userid = $userids[$handle];
+
+	
+	// displays small badge widget, suitable for meta
+	
+	$result = qa_db_read_all_values(
+		qa_db_query_sub(
+			'SELECT badge_slug FROM ^userbadges WHERE user_id=#',
+			$userid
+		)
+	);
+
+	if(count($result) == 0) return;
+	
+	$badges = qa_get_badge_list();
+	foreach($result as $slug) {
+		$bcount[$badges[$slug]['type']] = isset($bcount[$badges[$slug]['type']])?$bcount[$badges[$slug]['type']]+1:1; 
+	}
+	$output='<ul class="user-badge clearfix">';
+	for($x = 2; $x >= 0; $x--) {
+		if(!isset($bcount[$x])) continue;
+		$count = $bcount[$x];
+		if($count == 0) continue;
+
+		$type = qa_get_badge_type($x);
+		$types = $type['slug'];
+		$typed = $type['name'];
+
+		$output.='<li class="badge-medal '.$types.'"><i class="icon-badge" title="'.$count.' '.$typed.'"></i><span class="badge-pointer badge-'.$types.'-count" title="'.$count.' '.$typed.'"> '.$count.'</span></li>';
+	}
+	$output = substr($output,0,-1);  // lazy remove space
+	$output.='</ul>';
+	return($output);
+	}
+}

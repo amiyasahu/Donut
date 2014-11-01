@@ -993,6 +993,8 @@ div .header-banner {
 }
 .qa-main {
   position: relative;
+  float: left;
+  width: 100%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
@@ -4107,6 +4109,15 @@ fieldset[disabled] .qa-form-basic-button {
 .qa-top-tags-label .qa-tag-link {
   font-weight: 400;
 }
+.qa-top-tags ul.donut-tags-list {
+  list-style-type: none ;
+}
+.qa-top-tags ul.donut-tags-list .qa-tag-link {
+  margin-right: 2px ;
+}
+.qa-top-tags ul.donut-tags-list li.tag-item {
+  padding: 5px;
+}
 /* users page */
 .qa-top-users-table > tbody > tr:last-child > td:not(.qa-top-users-spacer) {
   border-bottom: 1px solid #dddddd;
@@ -4135,6 +4146,34 @@ fieldset[disabled] .qa-form-basic-button {
   font-weight: bold;
   width: 15%;
   text-align: center;
+}
+.user-box {
+  margin-bottom: 5px;
+}
+.user-box-inner {
+  display: block;
+  text-align: center ;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #dddddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+.user-box-inner .user-avatar {
+  display: inline-block;
+}
+.user-box-inner .user-avatar .qa-avatar-image {
+  border-radius: 50%;
+}
+.user-box-inner .user-data {
+  margin-top: 5px;
+}
+.user-box-inner .user-data .qa-user-link {
+  font-size: 18px;
+}
+.user-box-inner .user-data .qa-user-link:hover {
+  text-decoration: none ;
 }
 /* categories page */
 .qa-browse-cat-list {
@@ -4211,11 +4250,11 @@ a.qa-browse-cat-link:visited {
 }
 .qa-q-view .qa-voting {
   width: 75px;
+  margin-top: -20px;
 }
 @media only screen and (max-width: 767px) {
   .qa-q-view .qa-voting {
     width: 65px;
-    margin-top: -20px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
