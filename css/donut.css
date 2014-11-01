@@ -5770,6 +5770,30 @@ fieldset[disabled] #login-dropdown-menu li.open-login-buttons a {
   background-image: -webkit-gradient(linear, left top, right top, from(#c4e17f), color-stop(12.5%, #c4e17f), color-stop(12.5%, #f7fdca), color-stop(25%, #f7fdca), color-stop(25%, #fecf71), color-stop(37.5%, #fecf71), color-stop(37.5%, #f0776c), color-stop(50%, #f0776c), color-stop(50%, #db9dbe), color-stop(62.5%, #db9dbe), color-stop(62.5%, #c49cde), color-stop(75%, #c49cde), color-stop(75%, #669ae1), color-stop(87.5%, #669ae1), color-stop(87.5%, #62c2e4), to(#62c2e4));
   background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
+.qa-template-register .qa-form-tall-table,
+.qa-template-login .qa-form-tall-table {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .qa-template-register .qa-form-tall-table,
+  .qa-template-login .qa-form-tall-table {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .qa-template-register .qa-form-tall-table,
+  .qa-template-login .qa-form-tall-table {
+    left: 25%;
+  }
+}
+.qa-template-register .qa-part-custom,
+.qa-template-login .qa-part-custom {
+  clear: both ;
+}
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login,
 .qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login,
 .qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login,
