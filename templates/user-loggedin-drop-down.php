@@ -4,11 +4,11 @@ $userid = qa_get_logged_in_userid();
 $useraccount=qa_db_select_with_pending(qa_db_user_account_selectspec($userid, true) );
 
 $logged_in_user_avatar = qa_get_user_avatar_html($useraccount['flags'], $useraccount['email'], null ,
-			$useraccount['avatarblobid'], $useraccount['avatarwidth'], $useraccount['avatarheight'], 30);
+			$useraccount['avatarblobid'], $useraccount['avatarwidth'], $useraccount['avatarheight'], 40);
 
 if (empty($logged_in_user_avatar)) {
 	// if the default avatar is not set by the admin , then take the default 
-	$logged_in_user_avatar = '<img src="'.DONUT_THEME_ROOT_URL.'/images/default-profile-pic.png" width="30" height="30" class="qa-avatar-image" alt="">';
+	$logged_in_user_avatar = '<img src="'.DONUT_THEME_ROOT_URL.'/images/default-profile-pic.png" width="40" height="40" class="qa-avatar-image" alt="">';
 }
 
 if (isset($this->content['navigation']['user']['updates'])) {
