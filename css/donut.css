@@ -4915,6 +4915,7 @@ fieldset[disabled] .qa-a-unselect-button {
   padding-top: 12px;
   background-color: #dff0d8;
   color: #3c763d;
+  border-radius: 200px !important ;
 }
 .qa-a-selected:hover,
 .qa-a-selected:focus,
