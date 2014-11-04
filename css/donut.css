@@ -1272,118 +1272,112 @@ fieldset[disabled] .qa-vote-up-button {
   outline: none ;
 }
 .qa-vote-up-disabled {
-  color: #333333;
+  color: #428bca;
+  font-weight: normal;
+  border-radius: 0;
+  color: #777777;
+}
+.qa-vote-up-disabled,
+.qa-vote-up-disabled:active,
+.qa-vote-up-disabled.active,
+.qa-vote-up-disabled[disabled],
+fieldset[disabled] .qa-vote-up-disabled {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.qa-vote-up-disabled,
+.qa-vote-up-disabled:hover,
+.qa-vote-up-disabled:focus,
+.qa-vote-up-disabled:active {
+  border-color: transparent;
+}
+.qa-vote-up-disabled:hover,
+.qa-vote-up-disabled:focus {
+  color: #2a6496;
+  text-decoration: underline;
+  background-color: transparent;
 }
 .qa-vote-up-button {
-  color: #ffffff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  background-image: -webkit-linear-gradient(top, #5bc0de 0%, #2aabd2 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#5bc0de), to(#2aabd2));
-  background-image: linear-gradient(to bottom, #5bc0de 0%, #2aabd2 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2aabd2', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-repeat: repeat-x;
-  border-color: #28a4c9;
+  color: #428bca;
+  font-weight: normal;
+  border-radius: 0;
+  color: #5bc0de;
 }
+.qa-vote-up-button,
+.qa-vote-up-button:active,
+.qa-vote-up-button.active,
+.qa-vote-up-button[disabled],
+fieldset[disabled] .qa-vote-up-button {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.qa-vote-up-button,
 .qa-vote-up-button:hover,
 .qa-vote-up-button:focus,
-.qa-vote-up-button.focus,
-.qa-vote-up-button:active,
-.qa-vote-up-button.active,
-.open > .dropdown-toggle.qa-vote-up-button {
-  color: #ffffff;
-  background-color: #31b0d5;
-  border-color: #269abc;
-}
-.qa-vote-up-button:active,
-.qa-vote-up-button.active,
-.open > .dropdown-toggle.qa-vote-up-button {
-  background-image: none;
-}
-.qa-vote-up-button .badge {
-  color: #5bc0de;
-  background-color: #ffffff;
-}
-.qa-vote-up-button:active,
-.qa-vote-up-button.active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+.qa-vote-up-button:active {
+  border-color: transparent;
 }
 .qa-vote-up-button:hover,
 .qa-vote-up-button:focus {
-  background-color: #2aabd2;
-  background-position: 0 -15px;
-}
-.qa-vote-up-button:active,
-.qa-vote-up-button.active {
-  background-color: #2aabd2;
-  border-color: #28a4c9;
-}
-.qa-vote-up-button:disabled,
-.qa-vote-up-button[disabled] {
-  background-color: #2aabd2;
-  background-image: none;
+  color: #2a6496;
+  text-decoration: underline;
+  background-color: transparent;
 }
 .qa-vote-down-button {
-  color: #ffffff;
-  background-color: #f0ad4e;
-  border-color: #eea236;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  background-image: -webkit-linear-gradient(top, #f0ad4e 0%, #eb9316 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0ad4e), to(#eb9316));
-  background-image: linear-gradient(to bottom, #f0ad4e 0%, #eb9316 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0ad4e', endColorstr='#ffeb9316', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-repeat: repeat-x;
-  border-color: #e38d13;
+  color: #428bca;
+  font-weight: normal;
+  border-radius: 0;
+  color: #f0ad4e;
 }
+.qa-vote-down-button,
+.qa-vote-down-button:active,
+.qa-vote-down-button.active,
+.qa-vote-down-button[disabled],
+fieldset[disabled] .qa-vote-down-button {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.qa-vote-down-button,
 .qa-vote-down-button:hover,
 .qa-vote-down-button:focus,
-.qa-vote-down-button.focus,
-.qa-vote-down-button:active,
-.qa-vote-down-button.active,
-.open > .dropdown-toggle.qa-vote-down-button {
-  color: #ffffff;
-  background-color: #ec971f;
-  border-color: #d58512;
-}
-.qa-vote-down-button:active,
-.qa-vote-down-button.active,
-.open > .dropdown-toggle.qa-vote-down-button {
-  background-image: none;
-}
-.qa-vote-down-button .badge {
-  color: #f0ad4e;
-  background-color: #ffffff;
-}
-.qa-vote-down-button:active,
-.qa-vote-down-button.active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+.qa-vote-down-button:active {
+  border-color: transparent;
 }
 .qa-vote-down-button:hover,
 .qa-vote-down-button:focus {
-  background-color: #eb9316;
-  background-position: 0 -15px;
-}
-.qa-vote-down-button:active,
-.qa-vote-down-button.active {
-  background-color: #eb9316;
-  border-color: #e38d13;
-}
-.qa-vote-down-button:disabled,
-.qa-vote-down-button[disabled] {
-  background-color: #eb9316;
-  background-image: none;
+  color: #2a6496;
+  text-decoration: underline;
+  background-color: transparent;
 }
 .qa-vote-down-disabled {
-  color: #333333;
+  color: #428bca;
+  font-weight: normal;
+  border-radius: 0;
+  color: #777777;
+}
+.qa-vote-down-disabled,
+.qa-vote-down-disabled:active,
+.qa-vote-down-disabled.active,
+.qa-vote-down-disabled[disabled],
+fieldset[disabled] .qa-vote-down-disabled {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.qa-vote-down-disabled,
+.qa-vote-down-disabled:hover,
+.qa-vote-down-disabled:focus,
+.qa-vote-down-disabled:active {
+  border-color: transparent;
+}
+.qa-vote-down-disabled:hover,
+.qa-vote-down-disabled:focus {
+  color: #2a6496;
+  text-decoration: underline;
+  background-color: transparent;
 }
 .qa-vote-one-button {
   position: absolute;
@@ -1404,112 +1398,58 @@ fieldset[disabled] .qa-vote-up-button {
   display: none;
 }
 .qa-voted-up-button {
-  color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  background-image: -webkit-linear-gradient(top, #5cb85c 0%, #419641 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#5cb85c), to(#419641));
-  background-image: linear-gradient(to bottom, #5cb85c 0%, #419641 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-repeat: repeat-x;
-  border-color: #3e8f3e;
+  color: #428bca;
+  font-weight: normal;
+  border-radius: 0;
+  color: #5cb85c;
 }
+.qa-voted-up-button,
+.qa-voted-up-button:active,
+.qa-voted-up-button.active,
+.qa-voted-up-button[disabled],
+fieldset[disabled] .qa-voted-up-button {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.qa-voted-up-button,
 .qa-voted-up-button:hover,
 .qa-voted-up-button:focus,
-.qa-voted-up-button.focus,
-.qa-voted-up-button:active,
-.qa-voted-up-button.active,
-.open > .dropdown-toggle.qa-voted-up-button {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #398439;
-}
-.qa-voted-up-button:active,
-.qa-voted-up-button.active,
-.open > .dropdown-toggle.qa-voted-up-button {
-  background-image: none;
-}
-.qa-voted-up-button .badge {
-  color: #5cb85c;
-  background-color: #ffffff;
-}
-.qa-voted-up-button:active,
-.qa-voted-up-button.active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+.qa-voted-up-button:active {
+  border-color: transparent;
 }
 .qa-voted-up-button:hover,
 .qa-voted-up-button:focus {
-  background-color: #419641;
-  background-position: 0 -15px;
-}
-.qa-voted-up-button:active,
-.qa-voted-up-button.active {
-  background-color: #419641;
-  border-color: #3e8f3e;
-}
-.qa-voted-up-button:disabled,
-.qa-voted-up-button[disabled] {
-  background-color: #419641;
-  background-image: none;
+  color: #2a6496;
+  text-decoration: underline;
+  background-color: transparent;
 }
 .qa-voted-down-button {
-  color: #ffffff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  background-image: -webkit-linear-gradient(top, #d9534f 0%, #c12e2a 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9534f), to(#c12e2a));
-  background-image: linear-gradient(to bottom, #d9534f 0%, #c12e2a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc12e2a', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-repeat: repeat-x;
-  border-color: #b92c28;
+  color: #428bca;
+  font-weight: normal;
+  border-radius: 0;
+  color: #d9534f;
 }
+.qa-voted-down-button,
+.qa-voted-down-button:active,
+.qa-voted-down-button.active,
+.qa-voted-down-button[disabled],
+fieldset[disabled] .qa-voted-down-button {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.qa-voted-down-button,
 .qa-voted-down-button:hover,
 .qa-voted-down-button:focus,
-.qa-voted-down-button.focus,
-.qa-voted-down-button:active,
-.qa-voted-down-button.active,
-.open > .dropdown-toggle.qa-voted-down-button {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #ac2925;
-}
-.qa-voted-down-button:active,
-.qa-voted-down-button.active,
-.open > .dropdown-toggle.qa-voted-down-button {
-  background-image: none;
-}
-.qa-voted-down-button .badge {
-  color: #d9534f;
-  background-color: #ffffff;
-}
-.qa-voted-down-button:active,
-.qa-voted-down-button.active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+.qa-voted-down-button:active {
+  border-color: transparent;
 }
 .qa-voted-down-button:hover,
 .qa-voted-down-button:focus {
-  background-color: #c12e2a;
-  background-position: 0 -15px;
-}
-.qa-voted-down-button:active,
-.qa-voted-down-button.active {
-  background-color: #c12e2a;
-  border-color: #b92c28;
-}
-.qa-voted-down-button:disabled,
-.qa-voted-down-button[disabled] {
-  background-color: #c12e2a;
-  background-image: none;
+  color: #2a6496;
+  text-decoration: underline;
+  background-color: transparent;
 }
 .qa-netvote-count {
   text-align: center;

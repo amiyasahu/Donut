@@ -817,18 +817,24 @@ div {
 		}
 	}
 	&-up-disabled {
-		color:@gray-dark;
+		.btn-link();
+		color:@gray-light;
 	}
 	&-up-button {
-		.btn-info();
+		// .btn-info();
+		.btn-link();
+		color: @brand-info ;
 	}
 
 	&-down-button {
-		.btn-warning();
+		// .btn-warning();
+		.btn-link();
+		color: @brand-warning ;
 	}
 
 	&-down-disabled {
-		color:@gray-dark;
+		.btn-link();
+		color:@gray-light;
 	}
 	&-one-button {
 		position:absolute;
@@ -857,11 +863,15 @@ div {
 
 .qa-voted {
 	&-up-button {
-		.btn-success();
+		// .btn-success();
+		.btn-link();
+		color: @brand-success ;
 	}
 
 	&-down-button {
-		.btn-danger();
+		// .btn-danger();
+		.btn-link();
+		color: @brand-danger ;
 	}
 }
 
