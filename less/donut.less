@@ -2100,7 +2100,7 @@ div {
 		.clearfix();
 		margin : 15px -15px 15px 15px;
 		@media @mobile {
-			margin-right: -40px;
+			margin-right: -5px;
 		}
 	}
 
@@ -2197,6 +2197,9 @@ div {
 			color:@gray-light;
 		}
 	}
+	.qa-voting {
+		margin-top: -10px;
+	}
 }
 
 .qa-a-item-main {
@@ -2205,7 +2208,7 @@ div {
 	min-height: 1px;
 	padding: 0 10px 10px 10px ;
 	@media @mobile {
-		width: 80%;
+		width: 100%;
 	}
 }
 
@@ -2270,7 +2273,7 @@ div {
 		.clearfix();
 		margin : 15px -15px 15px 15px;
 		@media @mobile {
-			margin-right: -40px;
+			margin-right: -5px;
 		}
 	}
 }
@@ -2283,6 +2286,7 @@ div {
 	top:85px;
 	width:60px;
 	text-align:center;
+	float: left ;
 	-webkit-transition: all .5s ease;
 	   -moz-transition: all .5s ease;
 	    -ms-transition: all .5s ease;
@@ -2290,8 +2294,8 @@ div {
 	        transition: all .5s ease;
 	@media @mobile {
 		left: initial ;
-		right:10px;
-		top:20px;
+		right:5px;
+		top:10px;
 		float: right ;
 	}
 }
@@ -2312,6 +2316,7 @@ div {
 		// background-color: @state-info-text;
 		color : lighten(@state-info-text, 10);
 	}
+	border-radius: 200px !important ; 
 }
 
 .qa-a-unselect-button {
@@ -2332,6 +2337,7 @@ div {
 		color: @state-success-text ;
 		// background-color: @body-bg;
 	}
+	border-radius: 200px !important ; 
 }
 
 .qa-a-selected {

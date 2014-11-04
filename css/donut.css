@@ -4420,7 +4420,7 @@ a.qa-browse-cat-link:visited {
 }
 @media only screen and (max-width: 767px) {
   .qa-q-view-c-list {
-    margin-right: -40px;
+    margin-right: -5px;
   }
 }
 .qa-q-view-hidden .qa-voting {
@@ -4545,6 +4545,9 @@ a.qa-browse-cat-link:visited {
 .qa-a-list-item-hidden .qa-user-link {
   color: #777777;
 }
+.qa-a-list-item .qa-voting {
+  margin-top: -10px;
+}
 .qa-a-item-main {
   float: left;
   width: 85%;
@@ -4553,7 +4556,7 @@ a.qa-browse-cat-link:visited {
 }
 @media only screen and (max-width: 767px) {
   .qa-a-item-main {
-    width: 80%;
+    width: 100%;
   }
 }
 .qa-c-form h2 {
@@ -4624,7 +4627,7 @@ a.qa-browse-cat-link:visited {
 }
 @media only screen and (max-width: 767px) {
   .qa-a-item-c-list {
-    margin-right: -40px;
+    margin-right: -5px;
   }
 }
 /* Answer selection */
@@ -4634,14 +4637,15 @@ a.qa-browse-cat-link:visited {
   top: 85px;
   width: 60px;
   text-align: center;
+  float: left ;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
 @media only screen and (max-width: 767px) {
   .qa-a-selection {
     left: initial ;
-    right: 10px;
-    top: 20px;
+    right: 5px;
+    top: 10px;
     float: right ;
   }
 }
@@ -4686,6 +4690,7 @@ a.qa-browse-cat-link:visited {
   color: #31708f;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
+  border-radius: 200px !important ;
 }
 .qa-a-select-button:hover,
 .qa-a-select-button:focus,
@@ -4798,6 +4803,7 @@ fieldset[disabled] .qa-a-select-button {
   color: #3c763d;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
+  border-radius: 200px !important ;
 }
 .qa-a-unselect-button:hover,
 .qa-a-unselect-button:focus,
