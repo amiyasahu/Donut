@@ -3915,7 +3915,7 @@ fieldset[disabled] .qa-form-basic-button {
 @media (min-width: 1200px) {
   .qa-q-item-stats {
     float: left;
-    width: 19%;
+    width: 20%;
   }
 }
 .qa-q-item-main {
@@ -3942,7 +3942,7 @@ fieldset[disabled] .qa-form-basic-button {
 @media (min-width: 1200px) {
   .qa-q-item-main {
     float: left;
-    width: 81%;
+    width: 80%;
   }
 }
 .qa-q-item-avatar-meta {
