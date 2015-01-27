@@ -2897,6 +2897,16 @@ div {
 			display: block ; 
 			margin-left: 0px;	
 		}
+		#level .qa-form-wide-static a {
+			.btn();
+			.btn-primary();
+			.btn-sm();
+			&:before {
+				.fa();
+				margin-right: 5px;
+				content: @fa-var-envelope-o ;
+			}
+		}
 	}
 
 	.qa-part-form-activity {
