@@ -1631,8 +1631,6 @@ a.qa-template-question .qa-view-count:focus {
 .qa-favorite-button,
 .qa-unfavorite-button {
   border: 0;
-  height: 30px;
-  width: 30px;
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -1651,7 +1649,7 @@ a.qa-template-question .qa-view-count:focus {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding: 6px;
+  padding: 6px 8px ;
 }
 .qa-favorite-button:hover,
 .qa-unfavorite-button:hover,
