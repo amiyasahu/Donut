@@ -40,6 +40,14 @@ if (isset($this->content['navigation']['user']['updates'])) {
 				<?php echo qa_get_logged_in_handle(); ?>
 			</a>
 		</li>
+		<?php if (qa_opt('allow_private_messages') && !($useraccount['flags'] & QA_USER_FLAGS_NO_MESSAGES) ): ?>
+			<li>
+				<a href="<?php echo qa_path_html('messages') ?>">
+					<span class="fa fa-envelope"></span>	
+					<?php echo qa_lang_html('misc/nav_user_pms') ?>
+				</a>
+			</li>
+		<?php endif ?>
 		<li>
 			<a href="<?php echo qa_path_html('user/' . qa_get_logged_in_handle()); ?>">
 				<span class="fa fa-money"></span>	
