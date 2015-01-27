@@ -806,8 +806,6 @@ class qa_html_theme extends qa_html_theme_base {
 		{
 			$this->output_raw('<meta charset="utf-8">');
 			$this->output_raw('<meta name="viewport" content="width=device-width, initial-scale=1">');
-			$this->output_raw('<meta name="description" content="">');
-			$this->output_raw('<meta name="author" content="">');
 		}
 
 		/**
@@ -1019,6 +1017,7 @@ class qa_html_theme extends qa_html_theme_base {
 							</div>');
 	        }
 	    }
+
         function donut_tags_item($item, $class, $spacer)
         {
             $content = qa_db_read_one_value( qa_db_query_sub("SELECT ^tagmetas.content FROM ^tagmetas WHERE ^tagmetas.tag =$ ", strip_tags($item['label'])), true);
@@ -1039,6 +1038,7 @@ class qa_html_theme extends qa_html_theme_base {
     			$this->output('</div>',
     				 '</li>' );
         }
+
         function truncate($string, $limit, $pad="...") {
               if(strlen($string) <= $limit) 
                     return $string; 
