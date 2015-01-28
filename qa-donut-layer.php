@@ -888,8 +888,8 @@ class qa_html_theme extends qa_html_theme_base {
 						$handle_html = @$usershtml[$user_raw['userid']];
 	                    
 	                    if (isset($user_raw['userid'])) {
-	                    	$user_rank  = qa_db_select_with_pending(qa_db_user_rank_selectspec($user_raw['userid'],true));
-	                    	$level_html = qa_user_level_string($user_rank);
+	                    	$user_level = donut_get_user_level($user_raw['userid']);
+	                    	$level_html = qa_user_level_string($user_level);
 	                    }else  {
 	                    	$level_html = $user['score'] ;
 	                    	unset($user['score']);

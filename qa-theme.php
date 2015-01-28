@@ -57,3 +57,8 @@ if (!defined('DONUT_LANG_RTL')) {
 require_once DONUT_THEME_BASE_DIR.'/utils/qa-donut-utils.php';
 require_once DONUT_THEME_BASE_DIR.'/utils/donut-options.php';
 require_once DONUT_THEME_BASE_DIR.'/qa-donut-layer.php';
+
+/**
+ * Declaring global variables for caching the userdata 
+ */
+$donut_userid_and_levels=array();
