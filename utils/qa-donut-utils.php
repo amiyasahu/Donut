@@ -379,7 +379,7 @@ if(!defined('donut_get_user_avatar')){
 
 		if (empty($user_avatar)) {
 			// if the default avatar is not set by the admin , then take the default 
-			$user_avatar = '<img src="'.DONUT_THEME_ROOT_URL.'/images/default-profile-pic.png" width="'.$size.'" height="'.$size.'" class="qa-avatar-image" alt="">';
+			$user_avatar = donut_get_default_avatar($size);
 		}
 
 		return $user_avatar ;
@@ -408,12 +408,18 @@ if(!defined('donut_get_post_avatar')) {
 		
 		if (empty($avatar)) {
 				// if the default avatar is not set by the admin , then take the default 
-				$avatar = '<img src="'.DONUT_THEME_ROOT_URL.'/images/default-profile-pic.png" width="'.$size.'" height="'.$size.'" class="qa-avatar-image" alt="">';
+				$avatar = donut_get_default_avatar($size);
 		}
 
 		if($html)
 			return '<div class="avatar" data-id="'.$post['raw']['userid'].'" data-handle="'.$post['raw']['handle'].'">'.$avatar.'</div>';
 		
 		return $avatar;
+	}
+}
+
+if (!function_exists('donut_get_default_avatar')) {
+	function donut_get_default_avatar($size = 40){
+		return '<img src="'.DONUT_THEME_ROOT_URL.'/images/default-profile-pic.png" width="'.$size.'" height="'.$size.'" class="qa-avatar-image" alt="">' ;
 	}
 }
