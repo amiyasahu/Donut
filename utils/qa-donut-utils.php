@@ -385,3 +385,35 @@ if(!defined('donut_get_user_avatar')){
 		return $user_avatar ;
 	}
 }
+
+if(!defined('donut_get_post_avatar')) {
+	function donut_get_post_avatar($post, $size = 40, $html=false){
+		if(!isset($post['raw'])){
+			$post['raw']['userid'] 			= $post['userid'];
+			$post['raw']['flags'] 			= $post['flags'];
+			$post['raw']['email'] 			= $post['email'];
+			$post['raw']['handle'] 			= $post['handle'];
+			$post['raw']['avatarblobid'] 	= $post['avatarblobid'];
+			$post['raw']['avatarwidth'] 	= $post['avatarwidth'];
+			$post['raw']['avatarheight'] 	= $post['avatarheight'];
+		}
+
+		if(defined('QA_WORDPRESS_INTEGRATE_PATH')){
+			$avatar = get_avatar( qa_get_user_email($userid), $size);
+		}if (QA_FINAL_EXTERNAL_USERS)
+			$avatar = qa_get_external_avatar_html($post['raw']['userid'], $size, false);
+		else
+			$avatar = qa_get_user_avatar_html($post['raw']['flags'], $post['raw']['email'], $post['raw']['handle'],
+				$post['raw']['avatarblobid'], $post['raw']['avatarwidth'], $post['raw']['avatarheight'], $size);
+		
+		if (empty($avatar)) {
+				// if the default avatar is not set by the admin , then take the default 
+				$avatar = '<img src="'.DONUT_THEME_ROOT_URL.'/images/default-profile-pic.png" width="40" height="40" class="qa-avatar-image" alt="">';
+		}
+
+		if($html)
+			return '<div class="avatar" data-id="'.$post['raw']['userid'].'" data-handle="'.$post['raw']['handle'].'">'.$avatar.'</div>';
+		
+		return $avatar;
+	}
+}
