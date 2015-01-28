@@ -886,8 +886,8 @@ class qa_html_theme extends qa_html_theme_base {
 						$user_raw    = !empty($user['raw']) ? $user['raw'] : $user ;
 						$handle      = @$user_raw['handle'];
 						$handle_html = @$usershtml[$user_raw['userid']];
-	                    
-	                    if (isset($user_raw['userid'])) {
+
+	                    if (is_numeric($user['score'])) {
 	                    	$user_level = donut_get_user_level($user_raw['userid']);
 	                    	$level_html = qa_user_level_string($user_level);
 	                    }else  {
@@ -904,6 +904,7 @@ class qa_html_theme extends qa_html_theme_base {
 										: qa_get_user_avatar_html(@$user_raw['flags'], @$user_raw['email'], @$user_raw['handle'],
 											@$user_raw['avatarblobid'], @$user_raw['avatarwidth'], @$user_raw['avatarheight'], 70 , true)
 										) ;
+
 						if (isset($user['score'])) {
 							$userpoints = $user['score'] ;
 							$pointshtml = ($userpoints===1) ? qa_lang_html_sub('main/1_point', '1', '1')
