@@ -1656,7 +1656,7 @@ div {
 
 .qa-q-list-item {
 	.row();
-	padding:5px 0px;
+	padding:10px 0px;
 	.light-border();
 	& + & {
 		border-top:0px ;
@@ -1733,12 +1733,19 @@ div {
 		.make-md-column(9.2);
 		.make-lg-column(9.6);
 		padding-left: 0px;
+		margin-top: 5px ;
 	}
 
 	&-avatar-meta{
 		margin: 5px;
 	}
-
+	&-avatar-warp {
+		.pull-left();
+		margin: 5px 10px 0 10px ;
+		img {
+			.img-circle();
+		}
+	}
 	&-avatar {
 		display:inline-block;
 		vertical-align:middle;

@@ -408,7 +408,7 @@ if(!defined('donut_get_post_avatar')) {
 		
 		if (empty($avatar)) {
 				// if the default avatar is not set by the admin , then take the default 
-				$avatar = '<img src="'.DONUT_THEME_ROOT_URL.'/images/default-profile-pic.png" width="40" height="40" class="qa-avatar-image" alt="">';
+				$avatar = '<img src="'.DONUT_THEME_ROOT_URL.'/images/default-profile-pic.png" width="'.$size.'" height="'.$size.'" class="qa-avatar-image" alt="">';
 		}
 
 		if($html)

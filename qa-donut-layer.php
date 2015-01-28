@@ -328,6 +328,25 @@ class qa_html_theme extends qa_html_theme_base {
 			}
 		}
 
+		public function q_list_item($q_item)
+		{
+			$this->output('<div class="qa-q-list-item'.rtrim(' '.@$q_item['classes']).'" '.@$q_item['tags'].'>');
+
+			//$this->q_item_stats($q_item);
+			$this->q_item_avatar($q_item);
+			$this->q_item_main($q_item);
+			$this->q_item_clear();
+
+			$this->output('</div> <!-- END qa-q-list-item -->', '');
+		}
+
+		function q_item_avatar($q_item){
+			$avatar = donut_get_post_avatar($q_item , 60);
+			$this->output('<div class="qa-q-item-avatar-warp">');
+			$this->output($avatar);
+			$this->output('</div>');
+		}
+
 		/**
 		 * add view count to question list
 		 * @param  array $q_item 
