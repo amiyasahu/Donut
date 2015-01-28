@@ -370,16 +370,16 @@ if (!defined('donut_get_user_level')) {
 }
 
 if(!defined('donut_get_user_avatar')){
-	function donut_get_user_avatar($userid)
+	function donut_get_user_avatar($userid , $size = 40)
 	{
 		$useraccount=qa_db_select_with_pending(qa_db_user_account_selectspec($userid, true) );
 
 		$user_avatar = qa_get_user_avatar_html($useraccount['flags'], $useraccount['email'], null ,
-					$useraccount['avatarblobid'], $useraccount['avatarwidth'], $useraccount['avatarheight'], 40);
+					$useraccount['avatarblobid'], $useraccount['avatarwidth'], $useraccount['avatarheight'], $size );
 
 		if (empty($user_avatar)) {
 			// if the default avatar is not set by the admin , then take the default 
-			$user_avatar = '<img src="'.DONUT_THEME_ROOT_URL.'/images/default-profile-pic.png" width="40" height="40" class="qa-avatar-image" alt="">';
+			$user_avatar = '<img src="'.DONUT_THEME_ROOT_URL.'/images/default-profile-pic.png" width="'.$size.'" height="'.$size.'" class="qa-avatar-image" alt="">';
 		}
 
 		return $user_avatar ;
