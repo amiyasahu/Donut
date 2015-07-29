@@ -378,6 +378,9 @@ if(!defined('donut_get_user_avatar')){
 			$user_avatar = qa_get_user_avatar_html($useraccount['flags'], $useraccount['email'], null ,
 				$useraccount['avatarblobid'], $useraccount['avatarwidth'], $useraccount['avatarheight'], $size );
 		}
+		else{
+			$user_avatar = qa_get_external_avatar_html($userid, qa_opt('avatar_users_size'), true);
+		}
 
 		if (empty($user_avatar)) {
 			// if the default avatar is not set by the admin , then take the default 
