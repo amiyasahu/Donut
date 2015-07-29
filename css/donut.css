@@ -3778,7 +3778,7 @@ fieldset[disabled] .qa-form-basic-button {
 .qa-q-list-item {
   margin-left: -15px;
   margin-right: -15px;
-  padding: 5px 0px;
+  padding: 10px 0px;
   border: 1px solid transparent;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -3923,6 +3923,7 @@ fieldset[disabled] .qa-form-basic-button {
   padding-left: 15px;
   padding-right: 15px;
   padding-left: 0px;
+  margin-top: 5px ;
 }
 @media (min-width: 768px) {
   .qa-q-item-main {
@@ -3944,6 +3945,14 @@ fieldset[disabled] .qa-form-basic-button {
 }
 .qa-q-item-avatar-meta {
   margin: 5px;
+}
+.qa-q-item-avatar-warp {
+  float: left !important;
+  float: left;
+  margin: 5px 10px 0 10px ;
+}
+.qa-q-item-avatar-warp img {
+  border-radius: 50%;
 }
 .qa-q-item-avatar {
   display: inline-block;

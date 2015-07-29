@@ -368,3 +368,63 @@ if (!defined('donut_get_user_level')) {
 		}
 	}
 }
+
+if(!defined('donut_get_user_avatar')){
+	function donut_get_user_avatar($userid , $size = 40)
+	{
+		if(!defined('QA_WORDPRESS_INTEGRATE_PATH')) {
+			$useraccount=qa_db_select_with_pending(qa_db_user_account_selectspec($userid, true) );
+
+			$user_avatar = qa_get_user_avatar_html($useraccount['flags'], $useraccount['email'], null ,
+				$useraccount['avatarblobid'], $useraccount['avatarwidth'], $useraccount['avatarheight'], $size );
+		}
+		else{
+			$user_avatar = qa_get_external_avatar_html($userid, qa_opt('avatar_users_size'), true);
+		}
+
+		if (empty($user_avatar)) {
+			// if the default avatar is not set by the admin , then take the default 
+			$user_avatar = donut_get_default_avatar($size);
+		}
+
+		return $user_avatar ;
+	}
+}
+
+if(!defined('donut_get_post_avatar')) {
+	function donut_get_post_avatar($post, $size = 40, $html=false){
+		if(!isset($post['raw'])){
+			$post['raw']['userid'] 			= $post['userid'];
+			$post['raw']['flags'] 			= $post['flags'];
+			$post['raw']['email'] 			= $post['email'];
+			$post['raw']['handle'] 			= $post['handle'];
+			$post['raw']['avatarblobid'] 	= $post['avatarblobid'];
+			$post['raw']['avatarwidth'] 	= $post['avatarwidth'];
+			$post['raw']['avatarheight'] 	= $post['avatarheight'];
+		}
+
+		if(defined('QA_WORDPRESS_INTEGRATE_PATH')){
+			$avatar = get_avatar( qa_get_user_email($post['raw']['userid']), $size);
+		}if (QA_FINAL_EXTERNAL_USERS)
+			$avatar = qa_get_external_avatar_html($post['raw']['userid'], $size, false);
+		else
+			$avatar = qa_get_user_avatar_html($post['raw']['flags'], $post['raw']['email'], $post['raw']['handle'],
+				$post['raw']['avatarblobid'], $post['raw']['avatarwidth'], $post['raw']['avatarheight'], $size);
+		
+		if (empty($avatar)) {
+				// if the default avatar is not set by the admin , then take the default 
+				$avatar = donut_get_default_avatar($size);
+		}
+
+		if($html)
+			return '<div class="avatar" data-id="'.$post['raw']['userid'].'" data-handle="'.$post['raw']['handle'].'">'.$avatar.'</div>';
+		
+		return $avatar;
+	}
+}
+
+if (!function_exists('donut_get_default_avatar')) {
+	function donut_get_default_avatar($size = 40){
+		return '<img src="'.DONUT_THEME_ROOT_URL.'/images/default-profile-pic.png" width="'.$size.'" height="'.$size.'" class="qa-avatar-image" alt="">' ;
+	}
+}
