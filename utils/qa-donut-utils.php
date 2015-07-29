@@ -372,10 +372,12 @@ if (!defined('donut_get_user_level')) {
 if(!defined('donut_get_user_avatar')){
 	function donut_get_user_avatar($userid , $size = 40)
 	{
-		$useraccount=qa_db_select_with_pending(qa_db_user_account_selectspec($userid, true) );
+		if(!defined('QA_WORDPRESS_INTEGRATE_PATH')) {
+			$useraccount=qa_db_select_with_pending(qa_db_user_account_selectspec($userid, true) );
 
-		$user_avatar = qa_get_user_avatar_html($useraccount['flags'], $useraccount['email'], null ,
-					$useraccount['avatarblobid'], $useraccount['avatarwidth'], $useraccount['avatarheight'], $size );
+			$user_avatar = qa_get_user_avatar_html($useraccount['flags'], $useraccount['email'], null ,
+				$useraccount['avatarblobid'], $useraccount['avatarwidth'], $useraccount['avatarheight'], $size );
+		}
 
 		if (empty($user_avatar)) {
 			// if the default avatar is not set by the admin , then take the default 
@@ -399,7 +401,7 @@ if(!defined('donut_get_post_avatar')) {
 		}
 
 		if(defined('QA_WORDPRESS_INTEGRATE_PATH')){
-			$avatar = get_avatar( qa_get_user_email($userid), $size);
+			$avatar = get_avatar( qa_get_user_email($post['raw']['userid']), $size);
 		}if (QA_FINAL_EXTERNAL_USERS)
 			$avatar = qa_get_external_avatar_html($post['raw']['userid'], $size, false);
 		else
