@@ -47,14 +47,14 @@
                 'responsive' => 'css/donut-responsive.css',
             );
 
-            if ( DONUT_LANG_RTL ) {
+            if ( donut_opt('is_rtl') ) {
                 $css_paths['rtl'] = 'css/donut-rtl.css';
             }
 
-            if ( DONUT_ACTIVATE_PROD_MODE ) {
+            if ( donut_opt('activate_prod_mode') ) {
                 $cdn_css_paths = array(
-                    'bootstrap' => donut_opt::BS_CSS_CDN,
-                    'fonts'     => donut_opt::FA_CDN,
+                    'bootstrap' => Donut_Option_Keys::BS_CSS_CDN,
+                    'fonts'     => Donut_Option_Keys::FA_CDN,
                 );
                 unset( $css_paths['bootstrap'] );
                 unset( $css_paths['fonts'] );
@@ -95,7 +95,7 @@
             if ( $external ) {
                 $full_path = $path;
             } else {
-                $full_path = $this->rooturl . $path;
+                $full_path = donut_theme_url() . '/' . $path;
             }
 
             if ( !empty( $path ) ) {
@@ -114,7 +114,7 @@
             if ( $external ) {
                 $full_path = $path;
             } else {
-                $full_path = $this->rooturl . $path;
+                $full_path = donut_theme_url() . '/' . $path;
             }
 
             if ( !empty( $path ) ) {
@@ -148,9 +148,9 @@
                 $js_paths['admin'] = 'js/admin.js';
             }
 
-            if ( DONUT_ACTIVATE_PROD_MODE ) {
+            if ( donut_opt('activate_prod_mode') ) {
                 $cdn_js_paths = array(
-                    'bootstrap' => donut_opt::BS_JS_CDN,
+                    'bootstrap' => Donut_Option_Keys::BS_JS_CDN,
                 );
                 unset( $js_paths['bootstrap'] );
                 $this->donut_resources( $cdn_js_paths, 'js', true );

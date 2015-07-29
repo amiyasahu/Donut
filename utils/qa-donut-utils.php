@@ -438,3 +438,25 @@
             return '<img src="' . DONUT_THEME_ROOT_URL . '/images/default-profile-pic.png" width="' . $size . '" height="' . $size . '" class="qa-avatar-image" alt="">';
         }
     }
+
+    /**
+     * @param  boolean if set to true , it returns the absolute theme folder
+     *
+     * @return String
+     */
+    function donut_theme_folder( $absolute = false )
+    {
+        $path = basename( QA_THEME_DIR ) . '/' . DONUT_THEME_BASE_DIR_NAME;
+
+        return $absolute ? ( QA_BASE_DIR . $path ) : $path;
+    }
+
+    /**
+     * returns the base url for the theme
+     *
+     * @return string
+     */
+    function donut_theme_url()
+    {
+        return qa_path_to_root() . donut_theme_folder();
+    }
