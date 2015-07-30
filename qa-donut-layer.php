@@ -449,27 +449,23 @@
          */
         function donut_nav_bar( $navigation )
         {
-            $title = qa_opt( 'site_title' );
-            $home_url = qa_opt( 'site_url' );
             ob_start();
             ?>
-            <header>
+            <header id="top-header">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6">
-                            <div class="logo">
-                                <?php $this->logo(); ?>
+                        <div class="col-xs-12">
+                            <div class="left-part pull-left">
+                                Free responsive theme for q2a
                             </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="search-bar">
-                                <?php $this->search(); ?>
+                            <div class="right-part pull-right hidden-xs">
+                                Social Links
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
-            <nav id="nav" class="navbar navbar-default navbar-static-top" role="navigation">
+            <nav id="nav" class="navbar navbar-static-top" role="navigation">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -480,7 +476,10 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <div class="donut-navigation">
+                    <div class="col-sm-3 logo-wrapper">
+                            <?php $this->logo(); ?>
+                    </div>
+                    <div class="donut-navigation col-sm-9">
                         <ul class="nav navbar-nav navbar-right user-nav">
                             <?php $this->donut_user_drop_down(); ?>
                         </ul>
