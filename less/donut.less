@@ -110,6 +110,7 @@ header{
 	background: @body-bg;
 	.logo{
 		padding: 15px 0px;
+
 		h1{
 			font-size: 40px;
 			line-height: 45px;
@@ -119,18 +120,18 @@ header{
 				text-decoration: none;
 			}
 		}
+
 		.meta{
 			color: #777;
 		}
+
 		@media @mobile {
 			text-align: center;
 		}
+
 		.qa-logo {
 			display: inline-block;
 			vertical-align: top;
-			zoom: 1; /* Fix for IE7 */
-			*display: inline; /* Fix for IE7 */
-			// float: right ;
 		}
 
 		.qa-logo-link {
@@ -351,14 +352,8 @@ header{
 	}
 }
 */
+.qa-main,
 .qa-main-wrapper {
-	h1 {
-		.page-header();
-		margin: 20px 0 10px;
-	}
-}
-
-.qa-main {
 	h1 {
 		.page-header();
 		margin: 20px 0 10px;
@@ -371,7 +366,6 @@ img{
 
 .qa-body-wrapper {
 	.container();
-	// padding-top: 60px;
 }
 
 .qa-main-shadow{
@@ -522,6 +516,7 @@ div {
     }
 } */
 }
+
 /* reduce padding for the userimage at the navbar */
 .navbar-nav>li>a.navbar-user-img {
 	padding: 5px 10px;
@@ -638,6 +633,7 @@ div {
 		}
 	}
 }
+
 .qa-template {
 	&-questions ,
 	&-unanswered ,
@@ -680,8 +676,22 @@ div {
 	// margin-top: 10px;
 }
 
+.qa-sidebar ,
+.qa-error ,
+.qa-q-view-follows ,
+.qa-q-view-closed ,
+.qa-form-tall-ok ,
+.qa-form-wide-ok ,
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok ,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok ,
+.qa-form-tall-error ,
+.qa-form-wide-error ,
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-error ,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-error {
+  .alert();
+}
+
 .qa-sidebar {
-	.alert();
 	.alert-info();
 }
 
@@ -1053,7 +1063,6 @@ div {
 }
 
 .qa-error {
-	.alert();
 	.alert-danger();
 	a {
 		.alert-link();
@@ -1271,7 +1280,6 @@ div {
 .qa-form-wide-ok ,
 .qa-form-tall-table > tbody > tr > td.qa-form-tall-ok ,
 .qa-form-wide-table > tbody > tr > td.qa-form-wide-ok {
-	.alert();
 	.alert-success();
 	display: block;
 }
@@ -1280,7 +1288,6 @@ div {
 .qa-form-wide-error ,
 .qa-form-tall-table > tbody > tr > td.qa-form-tall-error ,
 .qa-form-wide-table > tbody > tr > td.qa-form-wide-error {
-	.alert();
 	.alert-danger();
 	margin-top: 10px;
 	display: block;
@@ -2033,7 +2040,6 @@ div {
 	}
 
 	&-follows {
-		.alert();
 		.alert-info();
 		&-link {
 			.alert-link();
@@ -2041,7 +2047,6 @@ div {
 	}
 
 	&-closed {
-		.alert();
 		.alert-info();
 		.alert-link();
 		&-content {
