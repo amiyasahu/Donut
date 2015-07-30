@@ -11,6 +11,7 @@
          * caching to enhance the performance .
          * If you using this on your local machine with out a internet connection then set it to false
          */
-        'activate_prod_mode' => false,
-        'is_rtl'             => false,
+        'activate_prod_mode'                    => false,
+        'is_rtl'                                => false,
+        'allow_subnav_dropdowns_at_main_header' => false,
     );

@@ -47,11 +47,11 @@
                 'responsive' => 'css/donut-responsive.css',
             );
 
-            if ( donut_opt('is_rtl') ) {
+            if ( donut_opt( 'is_rtl' ) ) {
                 $css_paths['rtl'] = 'css/donut-rtl.css';
             }
 
-            if ( donut_opt('activate_prod_mode') ) {
+            if ( donut_opt( 'activate_prod_mode' ) ) {
                 $cdn_css_paths = array(
                     'bootstrap' => Donut_Option_Keys::BS_CSS_CDN,
                     'fonts'     => Donut_Option_Keys::FA_CDN,
@@ -148,7 +148,7 @@
                 $js_paths['admin'] = 'js/admin.js';
             }
 
-            if ( donut_opt('activate_prod_mode') ) {
+            if ( donut_opt( 'activate_prod_mode' ) ) {
                 $cdn_js_paths = array(
                     'bootstrap' => Donut_Option_Keys::BS_JS_CDN,
                 );
@@ -569,28 +569,28 @@
                 foreach ( $navigation as $key => $nav_item ) {
                     if ( $key == 'questions' ) {
                         $sub_nav = donut_get_sub_navigation( 'questions', $this->template );
-                        if ( count( $sub_nav ) ) {
+                        if ( count( $sub_nav ) && donut_opt( 'allow_subnav_dropdowns_at_main_header' ) ) {
                             $this->donut_nav_bar_drop_down( $nav_item, $sub_nav );
                         } else {
                             $this->donut_nav_bar_item( $nav_item );
                         }
                     } else if ( $key == 'unanswered' ) {
                         $sub_nav = donut_get_sub_navigation( 'unanswered' );
-                        if ( count( $sub_nav ) ) {
+                        if ( count( $sub_nav ) && donut_opt( 'allow_subnav_dropdowns_at_main_header' ) ) {
                             $this->donut_nav_bar_drop_down( $nav_item, $sub_nav );
                         } else {
                             $this->donut_nav_bar_item( $nav_item );
                         }
                     } else if ( $key == 'user' ) {
                         $sub_nav = donut_get_sub_navigation( 'users' );
-                        if ( count( $sub_nav ) ) {
+                        if ( count( $sub_nav ) && donut_opt( 'allow_subnav_dropdowns_at_main_header' ) ) {
                             $this->donut_nav_bar_drop_down( $nav_item, $sub_nav );
                         } else {
                             $this->donut_nav_bar_item( $nav_item );
                         }
                     } else if ( $key == 'admin' ) {
                         $sub_nav = donut_get_sub_navigation( 'admin' );
-                        if ( count( $sub_nav ) ) {
+                        if ( count( $sub_nav ) && donut_opt( 'allow_subnav_dropdowns_at_main_header' ) ) {
                             foreach ( $sub_nav as $key => &$sub_nav_item ) {
                                 $sub_nav_item['icon'] = 'cog';
                             }
