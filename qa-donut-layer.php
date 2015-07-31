@@ -163,15 +163,25 @@
         function body_content()
         {
             $sub_navigation = @$this->content['navigation']['sub'];
+
             if ( $this->template === 'admin' ) {
                 unset( $this->content['navigation']['sub'] );
             }
+
             $navigation = &$this->content['navigation'];
+
             if ( isset( $navigation['cat'] ) ) {
                 donut_remove_brackets( $navigation['cat'] );
             }
+
             $this->body_prefix();
             $this->notices();
+
+            $this->output( '<div class="row">' );
+            $this->output( '<div class="container">' );
+            $this->output( '<div class="top-divider"></div>' );
+            $this->output( '</div>' );
+            $this->output( '</div>' );
 
             if ( $this->template !== 'question' ) {
                 $this->output( '<main class="donut-masthead">' );
