@@ -183,7 +183,7 @@
                 $this->output( '</main>' );
             }
 
-            $this->output( '<div class="qa-body-wrapper">', '' );
+            $this->output( '<div class="qa-body-wrapper container">', '' );
 
             $this->widgets( 'full', 'top' );
             $this->header();
@@ -255,7 +255,7 @@
             $this->output( '</div> <!-- END qa-header -->', '' );
 
             $this->output( '<div class="qa-main-shadow">', '' );
-            $this->output( '<div class="qa-main-wrapper">', '' );
+            $this->output( '<div class="qa-main-wrapper row">', '' );
         }
 
         function header_custom() // allows modification of custom element shown inside header after logo
@@ -527,9 +527,66 @@
         {
             $this->output(
                 '<div class="input-group">',
-                '<input type="text" ' . $search['field_tags'] . ' value="' . @$search['value'] . '" class="qa-search-field" placeholder="' . $search['button_label'] . '"/>' );
+                '<input type="text" ' . $search['field_tags'] . ' value="' . @$search['value'] . '" class="qa-search-field form-control" placeholder="' . $search['button_label'] . '"/>' );
             $this->search_button( $search );
             $this->output( '</div>' );
+        }
+
+        public function form_password($field, $style)
+        {
+            $this->output('<input '.@$field['tags'].' type="password" value="'.@$field['value'].'" class="qa-form-'.$style.'-text form-control"/>');
+        }
+
+        public function form_number($field, $style)
+        {
+            $this->output('<input '.@$field['tags'].' type="text" value="'.@$field['value'].'" class="qa-form-'.$style.'-number form-control"/>');
+        }
+
+
+        public function form_text_single_row($field, $style)
+        {
+            $this->output('<input '.@$field['tags'].' type="text" value="'.@$field['value'].'" class="qa-form-'.$style.'-text form-control"/>');
+        }
+
+        public function form_text_multi_row($field, $style)
+        {
+            $this->output('<textarea '.@$field['tags'].' rows="'.(int)$field['rows'].'" cols="40" class="qa-form-'.$style.'-text  form-control">'.@$field['value'].'</textarea>');
+        }
+        /**
+         * Output a <select> element. The $field array may contain the following keys:
+         *   options: (required) a key-value array containing all the options in the select.
+         *   tags: any attributes to be added to the select.
+         *   value: the selected value from the 'options' parameter.
+         *   match_by: whether to match the 'value' (default) or 'key' of each option to determine if it is to be selected.
+         */
+        public function form_select($field, $style)
+        {
+            $this->output('<select ' . (isset($field['tags']) ? $field['tags'] : '') . ' class="qa-form-' . $style . '-select form-control">');
+
+            // Only match by key if it is explicitly specified. Otherwise, for backwards compatibility, match by value
+            $matchbykey = isset($field['match_by']) && $field['match_by'] === 'key';
+
+            foreach ($field['options'] as $key => $value) {
+                $selected = isset($field['value']) && (
+                        ($matchbykey && $key === $field['value']) ||
+                        (!$matchbykey && $value === $field['value'])
+                    );
+                $this->output('<option value="' . $key . '"' . ($selected ? ' selected' : '') . '>' . $value . '</option>');
+            }
+
+            $this->output('</select>');
+        }
+
+        public function form_select_radio($field, $style)
+        {
+            $radios = 0;
+
+            foreach ($field['options'] as $tag => $value) {
+                if ($radios++)
+                    $this->output('<br/>');
+
+                $this->output('<input '.@$field['tags'].' type="radio" value="'.$tag.'"'.(($value == @$field['value']) ? ' checked' : '').' class="qa-form-'.$style.'-radio"/> '.$value);
+            }
         }
 
         /**

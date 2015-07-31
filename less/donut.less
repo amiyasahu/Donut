@@ -36,13 +36,7 @@ body {
 }
 
 /* styling for the input forms */
-input[type="text"],
-input[type="password"],
-textarea,
-select,
-checkbox,
-radio {
-	.form-control();
+.form-control{
 	/* reducing the default shadow of BS */
 	&:focus {
 		border-color: @input-border-focus;
@@ -390,14 +384,6 @@ header#top-header {
 
 }
 
-/*
-.qa-template-questions ,
-.qa-template-qa {
-	.page-title h1 {
-		clear: both ;
-	}
-}
-*/
 .qa-main,
 .qa-main-wrapper {
 	h1 {
@@ -411,7 +397,7 @@ img {
 }
 
 .qa-body-wrapper {
-	.container();
+
 }
 
 .qa-main-shadow {
@@ -419,75 +405,14 @@ img {
 }
 
 .qa-main-wrapper {
-	.row();
-}
 
-/* .qa-header {
-	padding:15px 10px 5px;
-	height:auto;
-} */
+}
 
 div {
 	.header-banner {
 		float: right;
 		margin: 0;
 	}
-}
-
-.dont-include() {
-	/*
-  .qa-nav-main {
-	  clear:both;
-	  padding:0;
-	  background: #eaeaea;
-	  border:1px solid @light-border;
-  }
-  .qa-nav-main-list {
-	  font-size:16px;
-	  list-style:none;
-	  margin:0;
-	  padding:0;
-	  font-family:Arial,Helvetica,sans-serif;
-  }
-  .qa-nav-main-item,.qa-nav-main-item-opp {
-  }
-  .qa-nav-main-item {
-	  float:left;
-	  margin:0;
-  }
-  .qa-nav-main-hot a{
-	  color:#a80000 !important;
-	  text-transform:uppercase;
-	  font-weight:700;
-  }
-  .qa-nav-main-item-opp {
-	  float:right;
-	  padding-right:0;
-  }
-  .qa-nav-main-link {
-	  color:@gray !important;
-	  display:block;
-	  font-weight:700;
-	  padding:7px 9px;
-	  -moz-transition:all ease-in-out 0.5s;
-	  -webkit-transition:all ease-in-out 0.5s;
-	  -o-transition:all ease-in-out 0.5s;
-	  -ms-transition:all ease-in-out 0.5s;
-	  transition:all ease-in-out 0.5s;
-  }
-  .qa-nav-main-link:hover,.qa-nav-main-selected {
-	  text-decoration:none;
-	  color:#006699 !important;
-	  -moz-transition:all ease-in-out 0.2s;
-	  -webkit-transition:all ease-in-out 0.2s;
-	  -o-transition:all ease-in-out 0.2s;
-	  -ms-transition:all ease-in-out 0.2s;
-	  transition:all ease-in-out 0.2s;
-  }
-  .qa-nav-main-custom-1 .qa-nav-main-link{
-	  border-left:none;
-  }
-  */
 }
 
 .navbar-nav {
@@ -533,42 +458,9 @@ div {
 	}
 }
 
-.dont-include() {
-	/* .navbar{
-	  &.navbar-default ,
-	  &.navbar-inverse {
-		  .dropdown-menu {
-			  right:0;
-			  left:auto;
-		  }
-	  }
-  } */
-
-	/* .navbar {
-	  .nav {
-		  & > li {
-			  & > .dropdown-menu{
-				  margin-top: 7px;
-				  &:before {
-					  position: absolute;
-					  top: -7px;
-					  left: 9px;
-					  display: inline-block;
-					  border-right: 7px solid transparent;
-					  border-bottom: 7px solid rgba(0,0,0,.15);;
-					  border-left: 7px solid transparent;
-					  border-bottom-color: rgba(0, 0, 0, 0.2);
-					  content: '';
-				  }
-			  }
-		  }
-	  }
-  } */
-}
-
 /* reduce padding for the userimage at the navbar */
 .navbar-nav > li > a.navbar-user-img {
-	padding: 5px 10px;
+	padding: 0px 10px;
 }
 
 /* small caret at the dropdown menu */
