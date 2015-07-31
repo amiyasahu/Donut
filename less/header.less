@@ -18,6 +18,7 @@ header#top-header {
 	z-index: 1010;
 	-webkit-transition: top .6s, opacity .6s, background .3s;
 	transition: top .6s, opacity .6s, background .3s;
+	border: 0;
 
 	&.affix {
 		position: fixed;
@@ -39,32 +40,43 @@ header#top-header {
 		-webkit-transition: all 200ms ease-out;
 		transition: all 200ms ease-out;
 	}
+
 	a:hover {
 		opacity: 1;
 	}
 
 	.container {
-		padding: 10px 0;
+		padding: 5px 0;
 	}
 
 	@media @mobile {
 		text-align: center;
 	}
 
-	.logo-wrapper {
+	.logo-wrapper
+	{
 		display: table;
 		height: 60px;
+		padding: 10px 15px ;
+	}
+
+	.donut-navigation {
+		padding: 10px 0 ;
 	}
 
 	.qa-logo {
 		height: 100%;
 		display: table-cell;
 		vertical-align: middle;
+		line-height: 40px ;
 	}
 
 	.qa-logo-link {
-		font-size: 32px;
+		font-size: 36px;
 		padding-top: 10px;
+		line-height: 60px ;
+		opacity: 1;
+
 		&:hover, &:active, &:focus {
 			text-decoration: none;
 		}
@@ -72,6 +84,8 @@ header#top-header {
 			border: none;
 			-webkit-box-shadow: none;
 			box-shadow: none;
+			max-height: 70px ;
+
 		}
 	}
 
@@ -87,6 +101,9 @@ header#top-header {
 				float: none !important;
 			}
 		}
+	}
+	&.navbar-static-top{
+		border-width: 0;
 	}
 }
 
@@ -234,17 +251,14 @@ header#top-header {
 }
 
 @media (min-width: 768px) {
-	.navbar-nav {
-		padding-top: 10px;
-		margin-left: 15px;
-	}
 
 	.navbar-nav > li {
 		margin-left: 15px;
 	}
 
 	.navbar-nav > li > a {
-		padding: 10px 0;
+		padding: 20px 0;
+		line-height: 30px ;
 		&:hover, &:active, &:focus {
 			background-color: #fff;
 		}
@@ -272,7 +286,17 @@ header#top-header {
 
 /* reduce padding for the userimage at the navbar */
 .navbar-nav > li > a.navbar-user-img {
-	padding: 0px 10px;
+	padding: 2px 5px;
+	border: 1px solid @gray-lighter;
+	margin-right: 15px;
+	border-radius: 3px ;
+	img.qa-avatar-image {
+		display: block;
+	}
+	span.user-name{
+		font-size: 80%;
+		color: @gray-base;
+	}
 }
 
 /* small caret at the dropdown menu */

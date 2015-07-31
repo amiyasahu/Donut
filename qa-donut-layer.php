@@ -315,7 +315,7 @@
             }
 
             $this->widgets( 'main', 'top' );
-            
+
             if ( !empty( $this->content['navigation']['sub'] ) || $this->template == 'admin' ) {
 
                 $this->output( '<div class="row hidden-xs subnav-row">' );

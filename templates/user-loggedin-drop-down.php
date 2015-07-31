@@ -5,7 +5,7 @@
         $useraccount = qa_db_select_with_pending( qa_db_user_account_selectspec( $userid, true ) );
     }
 
-    $logged_in_user_avatar = donut_get_user_avatar( $userid );
+    $logged_in_user_avatar = donut_get_user_avatar( $userid , 30 );
 
     if ( isset( $this->content['navigation']['user']['updates'] ) ) {
         $this->content['navigation']['user']['updates']['icon'] = 'bell-o';
@@ -13,12 +13,10 @@
 
 ?>
 
-<li class="user-name active">
-    <a href="<?php echo qa_path_html( 'user/' . qa_get_logged_in_handle() ); ?>"><?php echo qa_get_logged_in_handle(); ?></a>
-</li>
 <li class="dropdown user-dropdown">
     <a href="#" class="navbar-user-img dropdown-toggle" data-toggle="dropdown">
         <?php echo $logged_in_user_avatar; ?>
+        <span class="user-name"><?php echo qa_get_logged_in_handle(); ?></span>
     </a>
     <ul class="dropdown-menu" role="menu" id="user-dropdown-menu">
         <?php if ( qa_get_logged_in_level() >= QA_USER_LEVEL_ADMIN ): ?>
