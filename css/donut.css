@@ -290,8 +290,8 @@ table .table {
 header#top-header {
   background-color: #337ab7;
   color: #ffffff;
-  z-index: 11;
   position: relative;
+  min-height: 5px;
 }
 header#top-header .left-part,
 header#top-header .right-part {
