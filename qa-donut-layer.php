@@ -177,21 +177,17 @@
             $this->body_prefix();
             $this->notices();
 
-            $this->output( '<div class="row">' );
             $this->output( '<div class="container">' );
             $this->output( '<div class="top-divider"></div>' );
             $this->output( '</div>' );
-            $this->output( '</div>' );
 
-            if ( $this->template !== 'question' ) {
-                $this->output( '<main class="donut-masthead">' );
-                $this->output( '<div class="container">' );
-                $this->output( '<div class="page-title">' );
-                $this->page_title_error();
-                $this->output( '</div>' );
-                $this->output( '</div>' );
-                $this->output( '</main>' );
-            }
+            $this->output( '<main class="donut-masthead">' );
+            $this->output( '<div class="container">' );
+            $this->output( '<div class="page-title">' );
+            $this->page_title_error();
+            $this->output( '</div>' );
+            $this->output( '</div>' );
+            $this->output( '</main>' );
 
             $this->output( '<div class="qa-body-wrapper container">', '' );
 
@@ -319,11 +315,7 @@
             }
 
             $this->widgets( 'main', 'top' );
-
-            if ( $this->template == 'question' ) {
-                $this->page_title_error();
-            }
-
+            
             if ( !empty( $this->content['navigation']['sub'] ) || $this->template == 'admin' ) {
 
                 $this->output( '<div class="row hidden-xs subnav-row">' );
@@ -487,7 +479,7 @@
                         </button>
                     </div>
                     <div class="col-sm-3 logo-wrapper">
-                            <?php $this->logo(); ?>
+                        <?php $this->logo(); ?>
                     </div>
                     <div class="donut-navigation col-sm-9">
                         <ul class="nav navbar-nav navbar-right user-nav">
@@ -542,26 +534,27 @@
             $this->output( '</div>' );
         }
 
-        public function form_password($field, $style)
+        public function form_password( $field, $style )
         {
-            $this->output('<input '.@$field['tags'].' type="password" value="'.@$field['value'].'" class="qa-form-'.$style.'-text form-control"/>');
+            $this->output( '<input ' . @$field['tags'] . ' type="password" value="' . @$field['value'] . '" class="qa-form-' . $style . '-text form-control"/>' );
         }
 
-        public function form_number($field, $style)
+        public function form_number( $field, $style )
         {
-            $this->output('<input '.@$field['tags'].' type="text" value="'.@$field['value'].'" class="qa-form-'.$style.'-number form-control"/>');
+            $this->output( '<input ' . @$field['tags'] . ' type="text" value="' . @$field['value'] . '" class="qa-form-' . $style . '-number form-control"/>' );
         }
 
 
-        public function form_text_single_row($field, $style)
+        public function form_text_single_row( $field, $style )
         {
-            $this->output('<input '.@$field['tags'].' type="text" value="'.@$field['value'].'" class="qa-form-'.$style.'-text form-control"/>');
+            $this->output( '<input ' . @$field['tags'] . ' type="text" value="' . @$field['value'] . '" class="qa-form-' . $style . '-text form-control"/>' );
         }
 
-        public function form_text_multi_row($field, $style)
+        public function form_text_multi_row( $field, $style )
         {
-            $this->output('<textarea '.@$field['tags'].' rows="'.(int)$field['rows'].'" cols="40" class="qa-form-'.$style.'-text  form-control">'.@$field['value'].'</textarea>');
+            $this->output( '<textarea ' . @$field['tags'] . ' rows="' . (int) $field['rows'] . '" cols="40" class="qa-form-' . $style . '-text  form-control">' . @$field['value'] . '</textarea>' );
         }
+
         /**
          * Output a <select> element. The $field array may contain the following keys:
          *   options: (required) a key-value array containing all the options in the select.
@@ -569,33 +562,33 @@
          *   value: the selected value from the 'options' parameter.
          *   match_by: whether to match the 'value' (default) or 'key' of each option to determine if it is to be selected.
          */
-        public function form_select($field, $style)
+        public function form_select( $field, $style )
         {
-            $this->output('<select ' . (isset($field['tags']) ? $field['tags'] : '') . ' class="qa-form-' . $style . '-select form-control">');
+            $this->output( '<select ' . ( isset( $field['tags'] ) ? $field['tags'] : '' ) . ' class="qa-form-' . $style . '-select form-control">' );
 
             // Only match by key if it is explicitly specified. Otherwise, for backwards compatibility, match by value
-            $matchbykey = isset($field['match_by']) && $field['match_by'] === 'key';
+            $matchbykey = isset( $field['match_by'] ) && $field['match_by'] === 'key';
 
-            foreach ($field['options'] as $key => $value) {
-                $selected = isset($field['value']) && (
-                        ($matchbykey && $key === $field['value']) ||
-                        (!$matchbykey && $value === $field['value'])
+            foreach ( $field['options'] as $key => $value ) {
+                $selected = isset( $field['value'] ) && (
+                        ( $matchbykey && $key === $field['value'] ) ||
+                        ( !$matchbykey && $value === $field['value'] )
                     );
-                $this->output('<option value="' . $key . '"' . ($selected ? ' selected' : '') . '>' . $value . '</option>');
+                $this->output( '<option value="' . $key . '"' . ( $selected ? ' selected' : '' ) . '>' . $value . '</option>' );
             }
 
-            $this->output('</select>');
+            $this->output( '</select>' );
         }
 
-        public function form_select_radio($field, $style)
+        public function form_select_radio( $field, $style )
         {
             $radios = 0;
 
-            foreach ($field['options'] as $tag => $value) {
-                if ($radios++)
-                    $this->output('<br/>');
+            foreach ( $field['options'] as $tag => $value ) {
+                if ( $radios++ )
+                    $this->output( '<br/>' );
 
-                $this->output('<input '.@$field['tags'].' type="radio" value="'.$tag.'"'.(($value == @$field['value']) ? ' checked' : '').' class="qa-form-'.$style.'-radio"/> '.$value);
+                $this->output( '<input ' . @$field['tags'] . ' type="radio" value="' . $tag . '"' . ( ( $value == @$field['value'] ) ? ' checked' : '' ) . ' class="qa-form-' . $style . '-radio"/> ' . $value );
             }
         }
 
