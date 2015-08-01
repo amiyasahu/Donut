@@ -338,10 +338,7 @@ header#top-header .right-part {
 .navbar .logo-wrapper {
   display: table;
   height: 60px;
-  padding: 10px 15px ;
-}
-.navbar .donut-navigation {
-  padding: 10px 0 ;
+  padding: 0 15px ;
 }
 .navbar .qa-logo {
   height: 100%;
