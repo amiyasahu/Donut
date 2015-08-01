@@ -19,10 +19,4 @@
          * Allowed values true | false
          */
         'is_rtl'                                => false,
-
-        /**
-         * Enable or disable the dropdowns at the top header
-         * Allowed values true | false
-         */
-        'allow_subnav_dropdowns_at_main_header' => false,
     );

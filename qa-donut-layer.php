@@ -626,40 +626,7 @@
         {
             if ( count( $navigation ) ) {
                 foreach ( $navigation as $key => $nav_item ) {
-                    if ( $key == 'questions' ) {
-                        $sub_nav = donut_get_sub_navigation( 'questions', $this->template );
-                        if ( count( $sub_nav ) && donut_opt( 'allow_subnav_dropdowns_at_main_header' ) ) {
-                            $this->donut_nav_bar_drop_down( $nav_item, $sub_nav );
-                        } else {
-                            $this->donut_nav_bar_item( $nav_item );
-                        }
-                    } else if ( $key == 'unanswered' ) {
-                        $sub_nav = donut_get_sub_navigation( 'unanswered' );
-                        if ( count( $sub_nav ) && donut_opt( 'allow_subnav_dropdowns_at_main_header' ) ) {
-                            $this->donut_nav_bar_drop_down( $nav_item, $sub_nav );
-                        } else {
-                            $this->donut_nav_bar_item( $nav_item );
-                        }
-                    } else if ( $key == 'user' ) {
-                        $sub_nav = donut_get_sub_navigation( 'users' );
-                        if ( count( $sub_nav ) && donut_opt( 'allow_subnav_dropdowns_at_main_header' ) ) {
-                            $this->donut_nav_bar_drop_down( $nav_item, $sub_nav );
-                        } else {
-                            $this->donut_nav_bar_item( $nav_item );
-                        }
-                    } else if ( $key == 'admin' ) {
-                        $sub_nav = donut_get_sub_navigation( 'admin' );
-                        if ( count( $sub_nav ) && donut_opt( 'allow_subnav_dropdowns_at_main_header' ) ) {
-                            foreach ( $sub_nav as $key => &$sub_nav_item ) {
-                                $sub_nav_item['icon'] = 'cog';
-                            }
-                            $this->donut_nav_bar_drop_down( $nav_item, $sub_nav );
-                        } else {
-                            $this->donut_nav_bar_item( $nav_item );
-                        }
-                    } else {
-                        $this->donut_nav_bar_item( $nav_item );
-                    }
+                    $this->donut_nav_bar_item( $nav_item );
                 }
             }
         }
@@ -667,7 +634,7 @@
         /**
          * Prints the drop down menu
          * @param  array $nav_item the navigation item
-         * @param  attay $sub_nav_items sub-nav items to be displayed
+         * @param  array $sub_nav_items sub-nav items to be displayed
          * @return null
          */
         function donut_nav_bar_drop_down( $nav_item, $sub_nav_items )
