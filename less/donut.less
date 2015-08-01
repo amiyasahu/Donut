@@ -17,62 +17,10 @@ html , body {
 	font-family: 'Lato', sans-serif;
 }
 
-/* clearing the wrappers */
-#qa-login-group,
-.qa-header,
-.qa-main-shadow,
-.qa-main-wrapper,
-.qa-nav-main-list,
-.qa-nav-sub-list,
-.qa-nav-cat-item,
-	/* clearing the main items */
-.qa-nav-main-clear,
-.qa-nav-sub-clear,
-.qa-q-item-clear,
-.qa-q-view-clear,
-.qa-a-item-clear,
-.qa-c-item-clear,
-.qa-footer-clear,
-.qa-page-links-clear,
-.qa-q-view-tags {
-	.clearfix();
-}
-
-/* styling for the input forms */
-.form-control{
-	/* reducing the default shadow of BS */
-	&:focus {
-		border-color: @input-border-focus;
-		outline: 0;
-		-webkit-box-shadow: none;
-		box-shadow: none;
-	}
-}
-
-input[type="submit"] {
-	cursor: pointer;
-}
-
-input[type=checkbox] {
-	margin-right: 5px;
-}
-
-textarea {
-	height: 50px;
-	&.qa-form-tall-text {
-		height: 100px;
-	}
-}
-
-input[name="file"] {
-	display: inline;
-	margin-left: 10px;
-}
-
-table {
-	.table();
-}
-
+@import "clears.less";
+@import "inputs.less";
+@import "tables.less";
+@import "images.less";
 @import "header.less";
 
 .qa-search-button {

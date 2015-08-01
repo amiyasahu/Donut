@@ -1,0 +1,30 @@
+/* styling for the input forms */
+.form-control{
+	/* reducing the default shadow of BS */
+	&:focus {
+		border-color: @input-border-focus;
+		outline: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+}
+
+input[type="submit"] {
+	cursor: pointer;
+}
+
+input[type=checkbox] {
+	margin-right: 5px;
+}
+
+textarea {
+	height: 50px;
+	&.qa-form-tall-text {
+		height: 100px;
+	}
+}
+
+input[name="file"] {
+	display: inline;
+	margin-left: 10px;
+}

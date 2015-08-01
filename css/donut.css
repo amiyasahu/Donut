@@ -81,13 +81,6 @@
 .qa-q-list-item:after {
   clear: both;
 }
-.navbar-inverse .container,
-.navbar-default .container,
-main.donut-masthead .container,
-footer.donut-footer .container {
-  position: relative;
-  z-index: 2;
-}
 .jumbotron-ad {
   padding: 50px 0;
 }
