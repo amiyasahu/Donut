@@ -435,7 +435,7 @@
     if ( !function_exists( 'donut_get_default_avatar' ) ) {
         function donut_get_default_avatar( $size = 40 )
         {
-            return '<img src="' . DONUT_THEME_ROOT_URL . '/images/default-profile-pic.png" width="' . $size . '" height="' . $size . '" class="qa-avatar-image" alt="">';
+            return '<img src="' . donut_theme_url() . '/images/default-profile-pic.png" width="' . $size . '" height="' . $size . '" class="qa-avatar-image" alt="">';
         }
     }
 
@@ -459,4 +459,9 @@
     function donut_theme_url()
     {
         return qa_path_to_root() . donut_theme_folder();
+    }
+
+    function donut_include_template( $template_file )
+    {
+        return require( DONUT_THEME_TEMPLATE_DIR . $template_file );
     }
