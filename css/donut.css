@@ -224,6 +224,9 @@ body {
 .qa-q-view-tags:after {
   clear: both;
 }
+.qa-nav-sub-admin-moderate {
+  clear: left;
+}
 /* styling for the input forms */
 .form-control {
   /* reducing the default shadow of BS */
@@ -283,6 +286,11 @@ table > tbody + tbody {
 }
 table .table {
   background-color: #ffffff;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 /* Header */
 header#top-header {
@@ -634,11 +642,6 @@ header#top-header .top-html-block a:visited {
   border-bottom: 1px solid #eeeeee;
   margin: 20px 0 10px;
 }
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 div .header-banner {
   float: right;
   margin: 0;
@@ -803,23 +806,6 @@ div .header-banner {
   padding-left: 0;
   padding-right: 0;
 }
-.qa-nav-sub-admin-moderate {
-  clear: left;
-}
-.qa-main {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 992px) {
-  .qa-main {
-    float: left;
-    width: 75%;
-  }
-}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .qa-main {
     margin-bottom: 80px;
@@ -835,17 +821,7 @@ div .header-banner {
 }
 /* Page sections */
 .qa-sidepanel {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
   min-height: 80px;
-}
-@media (min-width: 992px) {
-  .qa-sidepanel {
-    float: left;
-    width: 25%;
-  }
 }
 .qa-sidebar,
 .qa-error,

@@ -77,10 +77,6 @@ html , body {
 	}
 }
 
-img {
-	.img-responsive();
-}
-
 .qa-body-wrapper {
 
 }
@@ -179,13 +175,7 @@ div {
 	}
 }
 
-.qa-nav-sub-admin-moderate {
-	clear: left;
-}
-
 .qa-main {
-	.make-md-column(9);
-	.make-xs-column(12);
 	@media @tablet {
 		margin-bottom: 80px;
 	}
@@ -202,9 +192,7 @@ div {
 
 /* Page sections */
 .qa-sidepanel {
-	.make-md-column(3);
 	min-height: 80px;
-	// margin-top: 10px;
 }
 
 .qa-sidebar,
@@ -226,57 +214,7 @@ div {
 	.alert-info();
 }
 
-.donut-footer {
-	padding-top: 25px;
-	padding-bottom: 25px;
-	margin-top: 50px;
-	color: @gray-light;
-	text-align: center;
-	border-top: 1px solid @light-border;
-	background-color: @light-background;
-	position: relative;
-}
-
-.qa-footer {
-	color: @gray-light;
-	text-align: center;
-	a,
-	a:visited {
-		text-decoration: underline;
-	}
-	&-left {
-		.pull-left();
-	}
-	&-right {
-		.pull-right();
-	}
-}
-
-.qa-nav-footer {
-	&-list {
-		float: left;
-		list-style-type: none;
-		margin: 0;
-		margin-right: 2px;
-		padding: 0;
-	}
-	&-item {
-		float: left;
-		margin-right: 5px;
-	}
-	&-link {
-	}
-	&-link:hover {
-	}
-}
-
-.qa-attribution {
-	.pull-right();
-	a {
-		&:hover {
-		}
-	}
-}
+@import "components/footer.less";
 
 /*-- content and widgets --*/
 .qa-ask-box {

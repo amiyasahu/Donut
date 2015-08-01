@@ -308,7 +308,7 @@
         {
             $content = $this->content;
 
-            $this->output( '<div class="qa-main pull-left' . ( @$this->content['hidden'] ? ' qa-main-hidden' : '' ) . '">' );
+            $this->output( '<div class="qa-main col-md-9 col-xs-12 pull-left' . ( @$this->content['hidden'] ? ' qa-main-hidden' : '' ) . '">' );
 
             if ( !empty( $this->content['navigation']['sub'] ) || $this->template == 'admin' ) {
                 $this->donut_sidebar_toggle_nav_btn();
@@ -355,7 +355,7 @@
 
         function sidepanel()
         {
-            $this->output( '<div class="qa-sidepanel pull-right">' );
+            $this->output( '<div class="qa-sidepanel col-md-3 pull-right">' );
             $this->widgets( 'side', 'top' );
             $this->sidebar();
             $this->widgets( 'side', 'high' );
