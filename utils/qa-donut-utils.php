@@ -461,7 +461,12 @@
         return qa_path_to_root() . donut_theme_folder();
     }
 
-    function donut_include_template( $template_file )
+    function donut_include_template( $template_file, $echo = true )
     {
-        return require( DONUT_THEME_TEMPLATE_DIR . $template_file );
+        ob_start();
+        require( DONUT_THEME_TEMPLATE_DIR . $template_file );
+        $op = ob_get_clean();
+        if ( $echo ) echo $op;
+
+        return $op;
     }
