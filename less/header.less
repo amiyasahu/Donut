@@ -6,10 +6,32 @@ header#top-header {
 	min-height: 5px;
 	.left-part,
 	.right-part {
-		font-size: 80%;
+		font-size: 90%;
 		padding: 8px 0;
 		opacity: 1;
 	}
+
+	.top-html-block {
+		line-height: 12px;
+		list-style: none;
+		position: relative;
+		display: inline-block;
+		border-left: 1px solid rgba(255, 255, 255, 0.2);
+		padding-left: 10px;
+		margin-left: 10px;
+		.social-links {
+			font-size: 12px;
+			a {
+				font-size: 16px;
+				margin-right: 5px;
+			}
+		}
+		a, a:hover, a:active, a:visited {
+			color: @body-bg;
+			text-decoration: none;
+		}
+	}
+
 }
 
 .navbar {
@@ -53,11 +75,10 @@ header#top-header {
 		text-align: center;
 	}
 
-	.logo-wrapper
-	{
+	.logo-wrapper {
 		display: table;
 		height: 60px;
-		padding: 0 15px ;
+		padding: 0 15px;
 	}
 
 	.donut-navigation {
@@ -68,13 +89,13 @@ header#top-header {
 		height: 100%;
 		display: table-cell;
 		vertical-align: middle;
-		line-height: 40px ;
+		line-height: 40px;
 	}
 
 	.qa-logo-link {
 		font-size: 36px;
 		padding-top: 10px;
-		line-height: 60px ;
+		line-height: 60px;
 		opacity: 1;
 
 		&:hover, &:active, &:focus {
@@ -84,7 +105,7 @@ header#top-header {
 			border: none;
 			-webkit-box-shadow: none;
 			box-shadow: none;
-			max-height: 70px ;
+			max-height: 70px;
 
 		}
 	}
@@ -102,7 +123,7 @@ header#top-header {
 			}
 		}
 	}
-	&.navbar-static-top{
+	&.navbar-static-top {
 		border-width: 0;
 	}
 }
@@ -258,7 +279,7 @@ header#top-header {
 
 	.navbar-nav > li > a {
 		padding: 20px 0;
-		line-height: 30px ;
+		line-height: 30px;
 		&:hover, &:active, &:focus {
 			background-color: #fff;
 		}
@@ -289,11 +310,11 @@ header#top-header {
 	padding: 2px 5px;
 	border: 1px solid @gray-lighter;
 	margin-right: 15px;
-	border-radius: 3px ;
+	border-radius: 3px;
 	img.qa-avatar-image {
 		display: block;
 	}
-	span.user-name{
+	span.user-name {
 		font-size: 80%;
 		color: @gray-base;
 	}

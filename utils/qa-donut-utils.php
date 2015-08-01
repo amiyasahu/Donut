@@ -470,3 +470,26 @@
 
         return $op;
     }
+
+    function donut_get_link( $params )
+    {
+        if ( !empty( $params['icon'] ) ) {
+            $icon = '<span class="fa fa-' . $params['icon'] . '"></span> ';
+        }
+
+        if ( @$params['tooltips'] ) {
+            $tooltips_data = 'data-toggle="tooltip" data-placement="' . @$params['hover-position'] . '" title="' . $params['hover-text'] . '"';
+        }
+
+        return sprintf('<a href="%s" %s>%s %s</a>' , @$params['link'] , @$tooltips_data , @$icon,  @$params['text']);
+    }
+
+    function donut_get_social_link( $params, $icon_only = false )
+    {
+        if ( $icon_only ) $params['text'] = '';
+
+        $params['tooltips'] = true;
+        $params['hover-position'] = 'bottom';
+
+        return donut_get_link( $params );
+    }

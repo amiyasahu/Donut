@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
 .thumbnail > img,
 .thumbnail a > img,
 .carousel-inner > .item > img,
@@ -119,6 +120,10 @@ footer.donut-footer .container {
   padding: 21px 35px;
 }
 /* body padding for the sticky navbar on the top */
+html,
+body {
+  font-family: 'Lato', sans-serif;
+}
 /* clearing the wrappers */
 #qa-login-group:before,
 .qa-header:before,
@@ -295,9 +300,32 @@ header#top-header {
 }
 header#top-header .left-part,
 header#top-header .right-part {
-  font-size: 80%;
+  font-size: 90%;
   padding: 8px 0;
   opacity: 1;
+}
+header#top-header .top-html-block {
+  line-height: 12px;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding-left: 10px;
+  margin-left: 10px;
+}
+header#top-header .top-html-block .social-links {
+  font-size: 12px;
+}
+header#top-header .top-html-block .social-links a {
+  font-size: 16px;
+  margin-right: 5px;
+}
+header#top-header .top-html-block a,
+header#top-header .top-html-block a:hover,
+header#top-header .top-html-block a:active,
+header#top-header .top-html-block a:visited {
+  color: #ffffff;
+  text-decoration: none;
 }
 .navbar {
   background-color: #ffffff;
@@ -338,18 +366,18 @@ header#top-header .right-part {
 .navbar .logo-wrapper {
   display: table;
   height: 60px;
-  padding: 0 15px ;
+  padding: 0 15px;
 }
 .navbar .qa-logo {
   height: 100%;
   display: table-cell;
   vertical-align: middle;
-  line-height: 40px ;
+  line-height: 40px;
 }
 .navbar .qa-logo-link {
   font-size: 36px;
   padding-top: 10px;
-  line-height: 60px ;
+  line-height: 60px;
   opacity: 1;
 }
 .navbar .qa-logo-link:hover,
@@ -361,7 +389,7 @@ header#top-header .right-part {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  max-height: 70px ;
+  max-height: 70px;
 }
 .navbar.navbar-static-top {
   border-width: 0;
@@ -482,7 +510,7 @@ header#top-header .right-part {
   }
   .navbar-nav > li > a {
     padding: 20px 0;
-    line-height: 30px ;
+    line-height: 30px;
   }
   .navbar-nav > li > a:hover,
   .navbar-nav > li > a:active,
@@ -510,7 +538,7 @@ header#top-header .right-part {
   padding: 2px 5px;
   border: 1px solid #eeeeee;
   margin-right: 15px;
-  border-radius: 3px ;
+  border-radius: 3px;
 }
 .navbar-nav > li > a.navbar-user-img img.qa-avatar-image {
   display: block;
