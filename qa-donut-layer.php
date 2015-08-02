@@ -175,13 +175,17 @@
             }
 
             $this->body_prefix();
-            $this->notices();
 
             $this->output( '<div class="container">' );
             $this->output( '<div class="top-divider"></div>' );
             $this->output( '</div>' );
 
             $this->output( '<main class="donut-masthead">' );
+
+            $this->output( '<div class="container">' );
+            $this->notices();
+            $this->output( '</div>' );
+
             $this->output( '<div class="container">' );
             $this->output( '<div class="page-title">' );
             $this->page_title_error();

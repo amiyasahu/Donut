@@ -660,7 +660,7 @@ div .header-banner {
   color: #3B5998 !important;
 }
 .qa-notice {
-  margin-bottom: 0;
+  margin: 10px 0 5px 0;
 }
 .subnav-row {
   margin-bottom: 10px;
