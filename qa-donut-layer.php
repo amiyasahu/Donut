@@ -322,7 +322,7 @@
 
             if ( !empty( $this->content['navigation']['sub'] ) || $this->template == 'admin' ) {
 
-                $this->output( '<div class="row hidden-xs subnav-row">' );
+                $this->output( '<div class="hidden-xs subnav-row clearfix">' );
                 $this->nav_main_sub();
                 $this->output( '</div>' );
 
