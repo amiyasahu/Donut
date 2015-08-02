@@ -2338,18 +2338,42 @@ a.qa-template-question .qa-view-count:focus {
   top: 30%;
 }
 .qa-error {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.qa-error h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.qa-error .alert-link {
+  font-weight: bold;
+}
+.qa-error > p,
+.qa-error > ul {
+  margin-bottom: 0;
+}
+.qa-error > p + p {
+  margin-top: 5px;
+}
+.donut-error,
+.qa-error {
   background-color: #f2dede;
   border-color: #ebccd1;
   color: #a94442;
   margin-bottom: 10px;
   margin-top: 10px;
 }
+.donut-error hr,
 .qa-error hr {
   border-top-color: #e4b9c0;
 }
+.donut-error .alert-link,
 .qa-error .alert-link {
   color: #843534;
 }
+.donut-error a,
 .qa-error a {
   color: #843534;
 }
