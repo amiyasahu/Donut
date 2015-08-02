@@ -32,6 +32,32 @@
 	}
 }
 
+.qa-vote-one-button,
+.qa-vote-first-button,
+.qa-vote-second-button,
+.qa-vote-up-button ,
+.qa-favorite-button,
+.qa-unfavorite-button , 
+.qa-form-tall-button,
+.qa-form-tall-table input[type="button"],
+.qa-form-wide-button,
+.qa-form-basic-button ,
+.qa-form-tall-button-cancel , 
+.qa-form-wide-button-save,
+.qa-form-wide-button-saverecalc,
+.qa-form-tall-button-save , 
+.qa-form-light-button , 
+.qa-form-basic-button ,
+.qa-a-select-button ,
+.qa-a-unselect-button ,
+.qa-a-selected , 
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a ,
+#login-dropdown-menu.open-login-buttons a ,
+.qa-template-register div.qa-part-custom a.open-login-button ,
+.qa-template-login div.qa-part-custom a.open-login-button {
+	.btn();
+}
+
 .qa-vote {
 	&-buttons {
 		position: relative;
@@ -47,7 +73,6 @@
 	&-first-button,
 	&-second-button,
 	&-up-button {
-		.btn();
 		.btn-xs();
 		padding: 4px;
 		&:active {
@@ -62,13 +87,11 @@
 		color: @gray-light;
 	}
 	&-up-button {
-		// .btn-info();
 		.btn-link();
 		color: @brand-info;
 	}
 
 	&-down-button {
-		// .btn-warning();
 		.btn-link();
 		color: @brand-warning;
 	}
@@ -104,13 +127,11 @@
 
 .qa-voted {
 	&-up-button {
-		// .btn-success();
 		.btn-link();
 		color: @brand-success;
 	}
 
 	&-down-button {
-		// .btn-danger();
 		.btn-link();
 		color: @brand-danger;
 	}
@@ -119,7 +140,6 @@
 .qa-favorite-button,
 .qa-unfavorite-button {
 	border: 0;
-	.btn();
 	padding: 6px 8px;
 }
 
@@ -143,19 +163,16 @@
 .qa-form-tall-table input[type="button"],
 .qa-form-wide-button,
 .qa-form-basic-button {
-	.btn();
 	.btn-primary();
 }
 
 .qa-form-tall-button-cancel {
-	.btn();
 	.btn-warning();
 }
 
 .qa-form-wide-button-save,
 .qa-form-wide-button-saverecalc,
 .qa-form-tall-button-save {
-	.btn();
 	.btn-success();
 }
 
@@ -163,7 +180,6 @@
 
 .qa-form-light {
 	&-button {
-		.btn();
 		.btn-default();
 		.btn-sm();
 		text-transform: capitalize;
@@ -182,7 +198,6 @@
 		}
 	}
 	&-button-flag {
-		// .btn-danger();
 		&, &:hover {
 			color: @state-danger-text;
 		}
@@ -192,7 +207,6 @@
 	}
 	&-button-unflag,
 	&-button-clearflags {
-		// .btn-warning();
 		&, &:hover {
 			color: @state-warning-text;
 		}
@@ -280,13 +294,11 @@
 
 /* Standard form (basic version - buttons only) */
 .qa-form-basic-button {
-	.btn();
 	.btn-sm();
 	.btn-primary();
 }
 
 .qa-a-select-button {
-	.btn();
 	.btn-default();
 	height: 50px;
 	width: 50px;
@@ -298,14 +310,12 @@
 	-o-transition: all .5s ease;
 	transition: all .5s ease;
 	&:hover {
-		// background-color: @state-info-text;
 		color: lighten(@state-info-text, 10);
 	}
 	border-radius: 200px !important;
 }
 
 .qa-a-unselect-button {
-	.btn();
 	.btn-default();
 	height: 50px;
 	width: 50px;
@@ -320,13 +330,11 @@
 
 	&:hover {
 		color: @state-success-text;
-		// background-color: @body-bg;
 	}
 	border-radius: 200px !important;
 }
 
 .qa-a-selected {
-	.btn();
 	.btn-default();
 	height: 50px;
 	width: 50px;
@@ -349,7 +357,6 @@
 .qa-template-user {
 	.qa-part-form-profile {
 		#level .qa-form-wide-static a {
-			.btn();
 			.btn-primary();
 			.btn-sm();
 			&:before {
@@ -363,7 +370,6 @@
 #login-dropdown-menu {
 	&.open-login-buttons {
 		a {
-			.btn();
 			.btn-block();
 			color: #fff;
 			&:hover {
@@ -384,7 +390,6 @@
 	div.qa-part-custom {
 		a.open-login-button.context-register.action-login,
 		a.open-login-button.context-login.action-login, {
-			.btn();
 			color: #fff;
 			margin-right: 5%;
 			width: 40%;

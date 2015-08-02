@@ -613,19 +613,29 @@ header#top-header .top-html-block a:visited {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.qa-vote-buttons {
-  position: relative;
-  height: 60px;
-  width: 16px;
-  float: left;
-}
-.qa-vote-buttons div.tooltip-inner {
-  max-width: 200px;
-}
 .qa-vote-one-button,
 .qa-vote-first-button,
 .qa-vote-second-button,
-.qa-vote-up-button {
+.qa-vote-up-button,
+.qa-favorite-button,
+.qa-unfavorite-button,
+.qa-form-tall-button,
+.qa-form-tall-table input[type="button"],
+.qa-form-wide-button,
+.qa-form-basic-button,
+.qa-form-tall-button-cancel,
+.qa-form-wide-button-save,
+.qa-form-wide-button-saverecalc,
+.qa-form-tall-button-save,
+.qa-form-light-button,
+.qa-form-basic-button,
+.qa-a-select-button,
+.qa-a-unselect-button,
+.qa-a-selected,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a,
+#login-dropdown-menu.open-login-buttons a,
+.qa-template-register div.qa-part-custom a.open-login-button,
+.qa-template-login div.qa-part-custom a.open-login-button {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -644,24 +654,76 @@ header#top-header .top-html-block a:visited {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding: 1px 5px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 3px;
-  padding: 4px;
 }
 .qa-vote-one-button:hover,
 .qa-vote-first-button:hover,
 .qa-vote-second-button:hover,
 .qa-vote-up-button:hover,
+.qa-favorite-button:hover,
+.qa-unfavorite-button:hover,
+.qa-form-tall-button:hover,
+.qa-form-tall-table input[type="button"]:hover,
+.qa-form-wide-button:hover,
+.qa-form-basic-button:hover,
+.qa-form-tall-button-cancel:hover,
+.qa-form-wide-button-save:hover,
+.qa-form-wide-button-saverecalc:hover,
+.qa-form-tall-button-save:hover,
+.qa-form-light-button:hover,
+.qa-form-basic-button:hover,
+.qa-a-select-button:hover,
+.qa-a-unselect-button:hover,
+.qa-a-selected:hover,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:hover,
+#login-dropdown-menu.open-login-buttons a:hover,
+.qa-template-register div.qa-part-custom a.open-login-button:hover,
+.qa-template-login div.qa-part-custom a.open-login-button:hover,
 .qa-vote-one-button:focus,
 .qa-vote-first-button:focus,
 .qa-vote-second-button:focus,
 .qa-vote-up-button:focus,
+.qa-favorite-button:focus,
+.qa-unfavorite-button:focus,
+.qa-form-tall-button:focus,
+.qa-form-tall-table input[type="button"]:focus,
+.qa-form-wide-button:focus,
+.qa-form-basic-button:focus,
+.qa-form-tall-button-cancel:focus,
+.qa-form-wide-button-save:focus,
+.qa-form-wide-button-saverecalc:focus,
+.qa-form-tall-button-save:focus,
+.qa-form-light-button:focus,
+.qa-form-basic-button:focus,
+.qa-a-select-button:focus,
+.qa-a-unselect-button:focus,
+.qa-a-selected:focus,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus,
+#login-dropdown-menu.open-login-buttons a:focus,
+.qa-template-register div.qa-part-custom a.open-login-button:focus,
+.qa-template-login div.qa-part-custom a.open-login-button:focus,
 .qa-vote-one-button.focus,
 .qa-vote-first-button.focus,
 .qa-vote-second-button.focus,
-.qa-vote-up-button.focus {
+.qa-vote-up-button.focus,
+.qa-favorite-button.focus,
+.qa-unfavorite-button.focus,
+.qa-form-tall-button.focus,
+.qa-form-tall-table input[type="button"].focus,
+.qa-form-wide-button.focus,
+.qa-form-basic-button.focus,
+.qa-form-tall-button-cancel.focus,
+.qa-form-wide-button-save.focus,
+.qa-form-wide-button-saverecalc.focus,
+.qa-form-tall-button-save.focus,
+.qa-form-light-button.focus,
+.qa-form-basic-button.focus,
+.qa-a-select-button.focus,
+.qa-a-unselect-button.focus,
+.qa-a-selected.focus,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.focus,
+#login-dropdown-menu.open-login-buttons a.focus,
+.qa-template-register div.qa-part-custom a.open-login-button.focus,
+.qa-template-login div.qa-part-custom a.open-login-button.focus {
   color: #333333;
   text-decoration: none;
 }
@@ -669,10 +731,48 @@ header#top-header .top-html-block a:visited {
 .qa-vote-first-button:active,
 .qa-vote-second-button:active,
 .qa-vote-up-button:active,
+.qa-favorite-button:active,
+.qa-unfavorite-button:active,
+.qa-form-tall-button:active,
+.qa-form-tall-table input[type="button"]:active,
+.qa-form-wide-button:active,
+.qa-form-basic-button:active,
+.qa-form-tall-button-cancel:active,
+.qa-form-wide-button-save:active,
+.qa-form-wide-button-saverecalc:active,
+.qa-form-tall-button-save:active,
+.qa-form-light-button:active,
+.qa-form-basic-button:active,
+.qa-a-select-button:active,
+.qa-a-unselect-button:active,
+.qa-a-selected:active,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active,
+#login-dropdown-menu.open-login-buttons a:active,
+.qa-template-register div.qa-part-custom a.open-login-button:active,
+.qa-template-login div.qa-part-custom a.open-login-button:active,
 .qa-vote-one-button.active,
 .qa-vote-first-button.active,
 .qa-vote-second-button.active,
-.qa-vote-up-button.active {
+.qa-vote-up-button.active,
+.qa-favorite-button.active,
+.qa-unfavorite-button.active,
+.qa-form-tall-button.active,
+.qa-form-tall-table input[type="button"].active,
+.qa-form-wide-button.active,
+.qa-form-basic-button.active,
+.qa-form-tall-button-cancel.active,
+.qa-form-wide-button-save.active,
+.qa-form-wide-button-saverecalc.active,
+.qa-form-tall-button-save.active,
+.qa-form-light-button.active,
+.qa-form-basic-button.active,
+.qa-a-select-button.active,
+.qa-a-unselect-button.active,
+.qa-a-selected.active,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.active,
+#login-dropdown-menu.open-login-buttons a.active,
+.qa-template-register div.qa-part-custom a.open-login-button.active,
+.qa-template-login div.qa-part-custom a.open-login-button.active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -682,14 +782,71 @@ header#top-header .top-html-block a:visited {
 .qa-vote-first-button.disabled,
 .qa-vote-second-button.disabled,
 .qa-vote-up-button.disabled,
+.qa-favorite-button.disabled,
+.qa-unfavorite-button.disabled,
+.qa-form-tall-button.disabled,
+.qa-form-tall-table input[type="button"].disabled,
+.qa-form-wide-button.disabled,
+.qa-form-basic-button.disabled,
+.qa-form-tall-button-cancel.disabled,
+.qa-form-wide-button-save.disabled,
+.qa-form-wide-button-saverecalc.disabled,
+.qa-form-tall-button-save.disabled,
+.qa-form-light-button.disabled,
+.qa-form-basic-button.disabled,
+.qa-a-select-button.disabled,
+.qa-a-unselect-button.disabled,
+.qa-a-selected.disabled,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.disabled,
+#login-dropdown-menu.open-login-buttons a.disabled,
+.qa-template-register div.qa-part-custom a.open-login-button.disabled,
+.qa-template-login div.qa-part-custom a.open-login-button.disabled,
 .qa-vote-one-button[disabled],
 .qa-vote-first-button[disabled],
 .qa-vote-second-button[disabled],
 .qa-vote-up-button[disabled],
+.qa-favorite-button[disabled],
+.qa-unfavorite-button[disabled],
+.qa-form-tall-button[disabled],
+.qa-form-tall-table input[type="button"][disabled],
+.qa-form-wide-button[disabled],
+.qa-form-basic-button[disabled],
+.qa-form-tall-button-cancel[disabled],
+.qa-form-wide-button-save[disabled],
+.qa-form-wide-button-saverecalc[disabled],
+.qa-form-tall-button-save[disabled],
+.qa-form-light-button[disabled],
+.qa-form-basic-button[disabled],
+.qa-a-select-button[disabled],
+.qa-a-unselect-button[disabled],
+.qa-a-selected[disabled],
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a[disabled],
+#login-dropdown-menu.open-login-buttons a[disabled],
+.qa-template-register div.qa-part-custom a.open-login-button[disabled],
+.qa-template-login div.qa-part-custom a.open-login-button[disabled],
 fieldset[disabled] .qa-vote-one-button,
 fieldset[disabled] .qa-vote-first-button,
 fieldset[disabled] .qa-vote-second-button,
-fieldset[disabled] .qa-vote-up-button {
+fieldset[disabled] .qa-vote-up-button,
+fieldset[disabled] .qa-favorite-button,
+fieldset[disabled] .qa-unfavorite-button,
+fieldset[disabled] .qa-form-tall-button,
+fieldset[disabled] .qa-form-tall-table input[type="button"],
+fieldset[disabled] .qa-form-wide-button,
+fieldset[disabled] .qa-form-basic-button,
+fieldset[disabled] .qa-form-tall-button-cancel,
+fieldset[disabled] .qa-form-wide-button-save,
+fieldset[disabled] .qa-form-wide-button-saverecalc,
+fieldset[disabled] .qa-form-tall-button-save,
+fieldset[disabled] .qa-form-light-button,
+fieldset[disabled] .qa-form-basic-button,
+fieldset[disabled] .qa-a-select-button,
+fieldset[disabled] .qa-a-unselect-button,
+fieldset[disabled] .qa-a-selected,
+fieldset[disabled] .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a,
+fieldset[disabled] #login-dropdown-menu.open-login-buttons a,
+fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button,
+fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
   cursor: not-allowed;
   opacity: 0.65;
   filter: alpha(opacity=65);
@@ -700,11 +857,68 @@ fieldset[disabled] .qa-vote-up-button {
 .qa-vote-first-button:active,
 .qa-vote-second-button:active,
 .qa-vote-up-button:active,
+.qa-favorite-button:active,
+.qa-unfavorite-button:active,
+.qa-form-tall-button:active,
+.qa-form-tall-table input[type="button"]:active,
+.qa-form-wide-button:active,
+.qa-form-basic-button:active,
+.qa-form-tall-button-cancel:active,
+.qa-form-wide-button-save:active,
+.qa-form-wide-button-saverecalc:active,
+.qa-form-tall-button-save:active,
+.qa-form-light-button:active,
+.qa-form-basic-button:active,
+.qa-a-select-button:active,
+.qa-a-unselect-button:active,
+.qa-a-selected:active,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active,
+#login-dropdown-menu.open-login-buttons a:active,
+.qa-template-register div.qa-part-custom a.open-login-button:active,
+.qa-template-login div.qa-part-custom a.open-login-button:active,
 .qa-vote-one-button.active,
 .qa-vote-first-button.active,
 .qa-vote-second-button.active,
-.qa-vote-up-button.active {
+.qa-vote-up-button.active,
+.qa-favorite-button.active,
+.qa-unfavorite-button.active,
+.qa-form-tall-button.active,
+.qa-form-tall-table input[type="button"].active,
+.qa-form-wide-button.active,
+.qa-form-basic-button.active,
+.qa-form-tall-button-cancel.active,
+.qa-form-wide-button-save.active,
+.qa-form-wide-button-saverecalc.active,
+.qa-form-tall-button-save.active,
+.qa-form-light-button.active,
+.qa-form-basic-button.active,
+.qa-a-select-button.active,
+.qa-a-unselect-button.active,
+.qa-a-selected.active,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.active,
+#login-dropdown-menu.open-login-buttons a.active,
+.qa-template-register div.qa-part-custom a.open-login-button.active,
+.qa-template-login div.qa-part-custom a.open-login-button.active {
   background-image: none;
+}
+.qa-vote-buttons {
+  position: relative;
+  height: 60px;
+  width: 16px;
+  float: left;
+}
+.qa-vote-buttons div.tooltip-inner {
+  max-width: 200px;
+}
+.qa-vote-one-button,
+.qa-vote-first-button,
+.qa-vote-second-button,
+.qa-vote-up-button {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  padding: 4px;
 }
 .qa-vote-one-button:active,
 .qa-vote-first-button:active,
@@ -901,61 +1115,7 @@ fieldset[disabled] .qa-voted-down-button {
 .qa-favorite-button,
 .qa-unfavorite-button {
   border: 0;
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   padding: 6px 8px;
-}
-.qa-favorite-button:hover,
-.qa-unfavorite-button:hover,
-.qa-favorite-button:focus,
-.qa-unfavorite-button:focus,
-.qa-favorite-button.focus,
-.qa-unfavorite-button.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-favorite-button:active,
-.qa-unfavorite-button:active,
-.qa-favorite-button.active,
-.qa-unfavorite-button.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-favorite-button.disabled,
-.qa-unfavorite-button.disabled,
-.qa-favorite-button[disabled],
-.qa-unfavorite-button[disabled],
-fieldset[disabled] .qa-favorite-button,
-fieldset[disabled] .qa-unfavorite-button {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-favorite-button:active,
-.qa-unfavorite-button:active,
-.qa-favorite-button.active,
-.qa-unfavorite-button.active {
-  background-image: none;
 }
 .qa-favorite-button {
   color: #ffffff;
@@ -1226,24 +1386,6 @@ fieldset[disabled] .qa-unfavorite-button:hover {
 .qa-form-tall-table input[type="button"],
 .qa-form-wide-button,
 .qa-form-basic-button {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: #ffffff;
   background-color: #337ab7;
   border-color: #2e6da4;
@@ -1257,62 +1399,6 @@ fieldset[disabled] .qa-unfavorite-button:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
   border-color: #245580;
-}
-.qa-form-tall-button:hover,
-.qa-form-tall-table input[type="button"]:hover,
-.qa-form-wide-button:hover,
-.qa-form-basic-button:hover,
-.qa-form-tall-button:focus,
-.qa-form-tall-table input[type="button"]:focus,
-.qa-form-wide-button:focus,
-.qa-form-basic-button:focus,
-.qa-form-tall-button.focus,
-.qa-form-tall-table input[type="button"].focus,
-.qa-form-wide-button.focus,
-.qa-form-basic-button.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-form-tall-button:active,
-.qa-form-tall-table input[type="button"]:active,
-.qa-form-wide-button:active,
-.qa-form-basic-button:active,
-.qa-form-tall-button.active,
-.qa-form-tall-table input[type="button"].active,
-.qa-form-wide-button.active,
-.qa-form-basic-button.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-form-tall-button.disabled,
-.qa-form-tall-table input[type="button"].disabled,
-.qa-form-wide-button.disabled,
-.qa-form-basic-button.disabled,
-.qa-form-tall-button[disabled],
-.qa-form-tall-table input[type="button"][disabled],
-.qa-form-wide-button[disabled],
-.qa-form-basic-button[disabled],
-fieldset[disabled] .qa-form-tall-button,
-fieldset[disabled] .qa-form-tall-table input[type="button"],
-fieldset[disabled] .qa-form-wide-button,
-fieldset[disabled] .qa-form-basic-button {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-form-tall-button:active,
-.qa-form-tall-table input[type="button"]:active,
-.qa-form-wide-button:active,
-.qa-form-basic-button:active,
-.qa-form-tall-button.active,
-.qa-form-tall-table input[type="button"].active,
-.qa-form-wide-button.active,
-.qa-form-basic-button.active {
-  background-image: none;
 }
 .qa-form-tall-button:focus,
 .qa-form-tall-table input[type="button"]:focus,
@@ -1426,24 +1512,6 @@ fieldset[disabled] .qa-form-basic-button {
   border-color: #245580;
 }
 .qa-form-tall-button-cancel {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: #ffffff;
   background-color: #f0ad4e;
   border-color: #eea236;
@@ -1457,32 +1525,6 @@ fieldset[disabled] .qa-form-basic-button {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
   border-color: #e38d13;
-}
-.qa-form-tall-button-cancel:hover,
-.qa-form-tall-button-cancel:focus,
-.qa-form-tall-button-cancel.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-form-tall-button-cancel:active,
-.qa-form-tall-button-cancel.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-form-tall-button-cancel.disabled,
-.qa-form-tall-button-cancel[disabled],
-fieldset[disabled] .qa-form-tall-button-cancel {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-form-tall-button-cancel:active,
-.qa-form-tall-button-cancel.active {
-  background-image: none;
 }
 .qa-form-tall-button-cancel:focus,
 .qa-form-tall-button-cancel.focus {
@@ -1538,24 +1580,6 @@ fieldset[disabled] .qa-form-tall-button-cancel {
 .qa-form-wide-button-save,
 .qa-form-wide-button-saverecalc,
 .qa-form-tall-button-save {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: #ffffff;
   background-color: #5cb85c;
   border-color: #4cae4c;
@@ -1569,52 +1593,6 @@ fieldset[disabled] .qa-form-tall-button-cancel {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
   border-color: #3e8f3e;
-}
-.qa-form-wide-button-save:hover,
-.qa-form-wide-button-saverecalc:hover,
-.qa-form-tall-button-save:hover,
-.qa-form-wide-button-save:focus,
-.qa-form-wide-button-saverecalc:focus,
-.qa-form-tall-button-save:focus,
-.qa-form-wide-button-save.focus,
-.qa-form-wide-button-saverecalc.focus,
-.qa-form-tall-button-save.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-form-wide-button-save:active,
-.qa-form-wide-button-saverecalc:active,
-.qa-form-tall-button-save:active,
-.qa-form-wide-button-save.active,
-.qa-form-wide-button-saverecalc.active,
-.qa-form-tall-button-save.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-form-wide-button-save.disabled,
-.qa-form-wide-button-saverecalc.disabled,
-.qa-form-tall-button-save.disabled,
-.qa-form-wide-button-save[disabled],
-.qa-form-wide-button-saverecalc[disabled],
-.qa-form-tall-button-save[disabled],
-fieldset[disabled] .qa-form-wide-button-save,
-fieldset[disabled] .qa-form-wide-button-saverecalc,
-fieldset[disabled] .qa-form-tall-button-save {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-form-wide-button-save:active,
-.qa-form-wide-button-saverecalc:active,
-.qa-form-tall-button-save:active,
-.qa-form-wide-button-save.active,
-.qa-form-wide-button-saverecalc.active,
-.qa-form-tall-button-save.active {
-  background-image: none;
 }
 .qa-form-wide-button-save:focus,
 .qa-form-wide-button-saverecalc:focus,
@@ -1709,24 +1687,6 @@ fieldset[disabled] .qa-form-tall-button-save {
 }
 /* Standard form (light version - buttons only) */
 .qa-form-light-button {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: #333333;
   background-color: #ffffff;
   border-color: #cccccc;
@@ -1748,32 +1708,6 @@ fieldset[disabled] .qa-form-tall-button-save {
   border-radius: 3px;
   text-transform: capitalize;
   margin-bottom: 2px;
-}
-.qa-form-light-button:hover,
-.qa-form-light-button:focus,
-.qa-form-light-button.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-form-light-button:active,
-.qa-form-light-button.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-form-light-button.disabled,
-.qa-form-light-button[disabled],
-fieldset[disabled] .qa-form-light-button {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-form-light-button:active,
-.qa-form-light-button.active {
-  background-image: none;
 }
 .qa-form-light-button:focus,
 .qa-form-light-button.focus {
@@ -2307,24 +2241,6 @@ fieldset[disabled] .qa-form-light-button-reopen {
 }
 /* Standard form (basic version - buttons only) */
 .qa-form-basic-button {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -2342,32 +2258,6 @@ fieldset[disabled] .qa-form-light-button-reopen {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
   border-color: #245580;
-}
-.qa-form-basic-button:hover,
-.qa-form-basic-button:focus,
-.qa-form-basic-button.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-form-basic-button:active,
-.qa-form-basic-button.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-form-basic-button.disabled,
-.qa-form-basic-button[disabled],
-fieldset[disabled] .qa-form-basic-button {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-form-basic-button:active,
-.qa-form-basic-button.active {
-  background-image: none;
 }
 .qa-form-basic-button:focus,
 .qa-form-basic-button.focus {
@@ -2421,24 +2311,6 @@ fieldset[disabled] .qa-form-basic-button {
   border-color: #245580;
 }
 .qa-a-select-button {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: #333333;
   background-color: #ffffff;
   border-color: #cccccc;
@@ -2464,32 +2336,6 @@ fieldset[disabled] .qa-form-basic-button {
   -o-transition: all .5s ease;
   transition: all .5s ease;
   border-radius: 200px !important;
-}
-.qa-a-select-button:hover,
-.qa-a-select-button:focus,
-.qa-a-select-button.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-a-select-button:active,
-.qa-a-select-button.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-a-select-button.disabled,
-.qa-a-select-button[disabled],
-fieldset[disabled] .qa-a-select-button {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-a-select-button:active,
-.qa-a-select-button.active {
-  background-image: none;
 }
 .qa-a-select-button:focus,
 .qa-a-select-button.focus {
@@ -2546,24 +2392,6 @@ fieldset[disabled] .qa-a-select-button {
   color: #3e8eb5;
 }
 .qa-a-unselect-button {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: #333333;
   background-color: #ffffff;
   border-color: #cccccc;
@@ -2590,32 +2418,6 @@ fieldset[disabled] .qa-a-select-button {
   -o-transition: all .5s ease;
   transition: all .5s ease;
   border-radius: 200px !important;
-}
-.qa-a-unselect-button:hover,
-.qa-a-unselect-button:focus,
-.qa-a-unselect-button.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-a-unselect-button:active,
-.qa-a-unselect-button.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-a-unselect-button.disabled,
-.qa-a-unselect-button[disabled],
-fieldset[disabled] .qa-a-unselect-button {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-a-unselect-button:active,
-.qa-a-unselect-button.active {
-  background-image: none;
 }
 .qa-a-unselect-button:focus,
 .qa-a-unselect-button.focus {
@@ -2672,24 +2474,6 @@ fieldset[disabled] .qa-a-unselect-button {
   color: #3c763d;
 }
 .qa-a-selected {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: #333333;
   background-color: #ffffff;
   border-color: #cccccc;
@@ -2712,32 +2496,6 @@ fieldset[disabled] .qa-a-unselect-button {
   background-color: #dff0d8;
   color: #3c763d;
   border-radius: 200px !important;
-}
-.qa-a-selected:hover,
-.qa-a-selected:focus,
-.qa-a-selected.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-a-selected:active,
-.qa-a-selected.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-a-selected.disabled,
-.qa-a-selected[disabled],
-fieldset[disabled] .qa-a-selected {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.qa-a-selected:active,
-.qa-a-selected.active {
-  background-image: none;
 }
 .qa-a-selected:focus,
 .qa-a-selected.focus {
@@ -2800,24 +2558,6 @@ fieldset[disabled] .qa-a-selected {
   margin-top: 2px;
 }
 .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: #ffffff;
   background-color: #337ab7;
   border-color: #2e6da4;
@@ -2835,46 +2575,6 @@ fieldset[disabled] .qa-a-selected {
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active:focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.active:focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active.focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.active.focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:hover,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.disabled,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a[disabled],
-fieldset[disabled] .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-a.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.disabled,
-fieldset[disabled] a.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
-  pointer-events: none;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.active {
-  background-image: none;
 }
 .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus,
 .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.focus {
@@ -2987,68 +2687,10 @@ fieldset[disabled] .qa-template-user .qa-part-form-profile #level .qa-form-wide-
   content: "\f003";
 }
 #login-dropdown-menu.open-login-buttons a {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   display: block;
   width: 100%;
   color: #fff;
   margin-top: 2px;
-}
-#login-dropdown-menu.open-login-buttons a:focus,
-#login-dropdown-menu.open-login-buttons a:active:focus,
-#login-dropdown-menu.open-login-buttons a.active:focus,
-#login-dropdown-menu.open-login-buttons a.focus,
-#login-dropdown-menu.open-login-buttons a:active.focus,
-#login-dropdown-menu.open-login-buttons a.active.focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-#login-dropdown-menu.open-login-buttons a:hover,
-#login-dropdown-menu.open-login-buttons a:focus,
-#login-dropdown-menu.open-login-buttons a.focus {
-  color: #333333;
-  text-decoration: none;
-}
-#login-dropdown-menu.open-login-buttons a:active,
-#login-dropdown-menu.open-login-buttons a.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-#login-dropdown-menu.open-login-buttons a.disabled,
-#login-dropdown-menu.open-login-buttons a[disabled],
-fieldset[disabled] #login-dropdown-menu.open-login-buttons a {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-a#login-dropdown-menu.open-login-buttons a.disabled,
-fieldset[disabled] a#login-dropdown-menu.open-login-buttons a {
-  pointer-events: none;
-}
-#login-dropdown-menu.open-login-buttons a:active,
-#login-dropdown-menu.open-login-buttons a.active {
-  background-image: none;
 }
 #login-dropdown-menu.open-login-buttons a:hover {
   color: #fff;
@@ -3091,121 +2733,9 @@ fieldset[disabled] a#login-dropdown-menu.open-login-buttons a {
 .qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login,
 .qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login,
 .qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: #fff;
   margin-right: 5%;
   width: 40%;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active:focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:active:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:active:focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:active:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active:focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.active:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.active:focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.active:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active.focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:active.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:active.focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:active.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active.focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.active.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.active.focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.active.focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:hover,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:hover,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:hover,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:hover,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.focus,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.focus {
-  color: #333333;
-  text-decoration: none;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:active,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.active,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.disabled,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.disabled,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.disabled,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.disabled,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login[disabled],
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login[disabled],
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login[disabled],
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login[disabled],
-fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login,
-fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login,
-fieldset[disabled] .qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login,
-fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-a.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.disabled,
-a.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.disabled,
-a.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.disabled,
-a.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.disabled,
-fieldset[disabled] a.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login,
-fieldset[disabled] a.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login,
-fieldset[disabled] a.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login,
-fieldset[disabled] a.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login {
-  pointer-events: none;
-}
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login:active,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login:active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login.active,
-.qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login.active,
-.qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.active,
-.qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.active {
-  background-image: none;
 }
 .qa-template-register div.qa-part-custom a.open-login-button.context-register.action-login:hover,
 .qa-template-login div.qa-part-custom a.open-login-button.context-register.action-login:hover,
@@ -3365,18 +2895,6 @@ div .header-banner {
 @media only screen and (max-width: 767px) {
   .side-toggle-button {
     margin-bottom: 5px;
-  }
-}
-.qa-nav-sub {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 992px) {
-  .qa-nav-sub {
-    float: left;
-    width: 100%;
   }
 }
 .qa-nav-sub .qa-nav-sub-list {
