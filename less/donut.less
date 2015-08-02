@@ -22,6 +22,7 @@ html , body {
 @import "components/tables.less";
 @import "components/images.less";
 @import "components/header.less";
+@import "components/icons.less";
 
 .qa-search-button {
 	border: 0;
@@ -830,7 +831,6 @@ div {
 .qa-form-wide-button,
 .qa-form-tall-button {
 	&:before {
-		.fa();
 		margin-right: 5px;
 	}
 	&-login {
@@ -970,7 +970,6 @@ div {
 		text-transform: capitalize;
 		margin-bottom: 2px;
 		&:before {
-			.fa();
 			margin-right: 5px;
 		}
 	}
@@ -2260,7 +2259,6 @@ div {
 
 .qa-favorite-image {
 	&:before {
-		.fa();
 		content: @fa-var-heart;
 		padding-right: 5px;
 		color: @brand-success;
@@ -2298,7 +2296,6 @@ div {
 .qa-nav-cat-favorited,
 .qa-browse-cat-favorited {
 	&:before {
-		.fa();
 		content: @fa-var-star;
 		padding-right: 5px;
 		color: @brand-warning;
@@ -2307,7 +2304,6 @@ div {
 
 .qa-cat-parent-favorited {
 	&:before {
-		.fa();
 		content: @fa-var-star;
 		padding-right: 5px;
 		color: lighten(@brand-warning, 5);
@@ -2403,7 +2399,6 @@ div {
 			.btn-primary();
 			.btn-sm();
 			&:before {
-				.fa();
 				margin-right: 5px;
 				content: @fa-var-envelope-o;
 			}

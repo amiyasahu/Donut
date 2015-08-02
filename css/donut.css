@@ -598,6 +598,24 @@ header#top-header .top-html-block a:visited {
   border-left: 6px solid transparent;
   content: '';
 }
+.qa-form-wide-button:before,
+.qa-form-tall-button:before,
+.qa-form-light-button:before,
+.qa-favorite-image:before,
+.qa-q-favorited .qa-q-item-title a:before,
+.qa-cat-favorited:before,
+.qa-user-favorited:before,
+.qa-nav-cat-favorited:before,
+.qa-browse-cat-favorited:before,
+.qa-cat-parent-favorited:before,
+.qa-part-form-profile #level .qa-form-wide-static a:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .qa-search-button {
   border: 0;
   background: none;
@@ -2794,21 +2812,7 @@ fieldset[disabled] .qa-form-tall-button-save {
 }
 .qa-form-wide-button:before,
 .qa-form-tall-button:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   margin-right: 5px;
-}
-.qa-form-wide-button:before.pull-left,
-.qa-form-tall-button:before.pull-left {
-  margin-right: .3em;
-}
-.qa-form-wide-button:before.pull-right,
-.qa-form-tall-button:before.pull-right {
-  margin-left: .3em;
 }
 .qa-form-wide-button-login:before,
 .qa-form-tall-button-login:before {
@@ -3021,19 +3025,7 @@ fieldset[disabled] .qa-form-light-button {
   border-color: #dbdbdb;
 }
 .qa-form-light-button:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   margin-right: 5px;
-}
-.qa-form-light-button:before.pull-left {
-  margin-right: .3em;
-}
-.qa-form-light-button:before.pull-right {
-  margin-left: .3em;
 }
 .qa-form-light-button-edit,
 .qa-form-light-button-retagcat,
@@ -5217,21 +5209,9 @@ fieldset[disabled] .qa-a-selected {
   display: inline-block;
 }
 .qa-favorite-image:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   content: "\f004";
   padding-right: 5px;
   color: #5cb85c;
-}
-.qa-favorite-image:before.pull-left {
-  margin-right: .3em;
-}
-.qa-favorite-image:before.pull-right {
-  margin-left: .3em;
 }
 .qa-waiting {
   margin: 0px 12px 0px 5px;
@@ -5252,46 +5232,14 @@ fieldset[disabled] .qa-a-selected {
 .qa-user-favorited:before,
 .qa-nav-cat-favorited:before,
 .qa-browse-cat-favorited:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   content: "\f005";
   padding-right: 5px;
   color: #f0ad4e;
 }
-.qa-q-favorited .qa-q-item-title a:before.pull-left,
-.qa-cat-favorited:before.pull-left,
-.qa-user-favorited:before.pull-left,
-.qa-nav-cat-favorited:before.pull-left,
-.qa-browse-cat-favorited:before.pull-left {
-  margin-right: .3em;
-}
-.qa-q-favorited .qa-q-item-title a:before.pull-right,
-.qa-cat-favorited:before.pull-right,
-.qa-user-favorited:before.pull-right,
-.qa-nav-cat-favorited:before.pull-right,
-.qa-browse-cat-favorited:before.pull-right {
-  margin-left: .3em;
-}
 .qa-cat-parent-favorited:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   content: "\f005";
   padding-right: 5px;
   color: #f2b866;
-}
-.qa-cat-parent-favorited:before.pull-left {
-  margin-right: .3em;
-}
-.qa-cat-parent-favorited:before.pull-right {
-  margin-left: .3em;
 }
 .qa-template-user .qa-main {
   float: left;
@@ -5600,20 +5548,8 @@ fieldset[disabled] .qa-template-user .qa-part-form-profile #level .qa-form-wide-
   background-image: none;
 }
 .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   margin-right: 5px;
   content: "\f003";
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:before.pull-left {
-  margin-right: .3em;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:before.pull-right {
-  margin-left: .3em;
 }
 .qa-template-user .qa-part-form-activity h2 {
   margin-top: 0;
