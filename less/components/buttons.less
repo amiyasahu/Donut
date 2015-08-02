@@ -58,6 +58,40 @@
 	.btn();
 }
 
+/*success buttons*/
+.qa-form-wide-button-save,
+.qa-form-wide-button-saverecalc,
+.qa-form-tall-button-save ,
+.qa-unfavorite-button 
+{
+	.btn-success();
+}
+
+.qa-favorite-button,
+.qa-unfavorite-button {
+	border: 0;
+	padding: 6px 8px;
+}
+
+.qa-favorite-button {
+	.btn-warning();
+}
+
+.qa-favorite-button:hover {
+	color : @btn-success-color;
+	background-color: @btn-success-bg;
+	border-color: @btn-success-border
+}
+
+.qa-unfavorite-button:hover {
+	color: @btn-danger-color;
+	background-color: @btn-danger-bg;
+	border-color: @btn-danger-border;
+}
+
+/*Link buttons*/
+/*small buttons*/
+/*extra small buttons*/
 .qa-vote {
 	&-buttons {
 		position: relative;
@@ -137,26 +171,6 @@
 	}
 }
 
-.qa-favorite-button,
-.qa-unfavorite-button {
-	border: 0;
-	padding: 6px 8px;
-}
-
-.qa-favorite-button {
-	.btn-warning();
-	&:hover {
-		.btn-success();
-	}
-}
-
-.qa-unfavorite-button {
-	.btn-success();
-	&:hover {
-		.btn-danger();
-	}
-}
-
 /* little bit work around the buttons */
 
 .qa-form-tall-button,
@@ -168,12 +182,6 @@
 
 .qa-form-tall-button-cancel {
 	.btn-warning();
-}
-
-.qa-form-wide-button-save,
-.qa-form-wide-button-saverecalc,
-.qa-form-tall-button-save {
-	.btn-success();
 }
 
 /* Standard form (light version - buttons only) */
