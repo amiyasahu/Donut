@@ -654,6 +654,7 @@ header#top-header .top-html-block a:visited {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  border-radius: 0;
 }
 .qa-vote-one-button:hover,
 .qa-vote-first-button:hover,
@@ -862,99 +863,61 @@ fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
-.qa-form-wide-button-save:focus,
-.qa-form-wide-button-saverecalc:focus,
-.qa-form-tall-button-save:focus,
-.qa-unfavorite-button:focus,
-.qa-form-wide-button-save.focus,
-.qa-form-wide-button-saverecalc.focus,
-.qa-form-tall-button-save.focus,
-.qa-unfavorite-button.focus {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #255625;
-}
 .qa-form-wide-button-save:hover,
 .qa-form-wide-button-saverecalc:hover,
 .qa-form-tall-button-save:hover,
-.qa-unfavorite-button:hover {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #398439;
-}
+.qa-unfavorite-button:hover,
 .qa-form-wide-button-save:active,
 .qa-form-wide-button-saverecalc:active,
 .qa-form-tall-button-save:active,
 .qa-unfavorite-button:active,
-.qa-form-wide-button-save.active,
-.qa-form-wide-button-saverecalc.active,
-.qa-form-tall-button-save.active,
-.qa-unfavorite-button.active,
-.open > .dropdown-toggle.qa-form-wide-button-save,
-.open > .dropdown-toggle.qa-form-wide-button-saverecalc,
-.open > .dropdown-toggle.qa-form-tall-button-save,
-.open > .dropdown-toggle.qa-unfavorite-button {
+.qa-form-wide-button-save:focus,
+.qa-form-wide-button-saverecalc:focus,
+.qa-form-tall-button-save:focus,
+.qa-unfavorite-button:focus {
   color: #ffffff;
-  background-color: #449d44;
-  border-color: #398439;
-}
-.qa-form-wide-button-save:active,
-.qa-form-wide-button-saverecalc:active,
-.qa-form-tall-button-save:active,
-.qa-unfavorite-button:active,
-.qa-form-wide-button-save.active,
-.qa-form-wide-button-saverecalc.active,
-.qa-form-tall-button-save.active,
-.qa-unfavorite-button.active,
-.open > .dropdown-toggle.qa-form-wide-button-save,
-.open > .dropdown-toggle.qa-form-wide-button-saverecalc,
-.open > .dropdown-toggle.qa-form-tall-button-save,
-.open > .dropdown-toggle.qa-unfavorite-button {
-  background-image: none;
-}
-.qa-form-wide-button-save .badge,
-.qa-form-wide-button-saverecalc .badge,
-.qa-form-tall-button-save .badge,
-.qa-unfavorite-button .badge {
-  color: #5cb85c;
-  background-color: #ffffff;
 }
 .qa-favorite-button,
 .qa-unfavorite-button {
   border: 0;
   padding: 6px 8px;
 }
-.qa-favorite-button {
+/* little bit work around the buttons */
+.qa-form-tall-button,
+.qa-form-tall-table input[type="button"],
+.qa-form-wide-button,
+.qa-form-basic-button {
+  color: #ffffff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.qa-form-tall-button:hover,
+.qa-form-tall-table input[type="button"]:hover,
+.qa-form-wide-button:hover,
+.qa-form-basic-button:hover,
+.qa-form-tall-button:active,
+.qa-form-tall-table input[type="button"]:active,
+.qa-form-wide-button:active,
+.qa-form-basic-button:active,
+.qa-form-tall-button:focus,
+.qa-form-tall-table input[type="button"]:focus,
+.qa-form-wide-button:focus,
+.qa-form-basic-button:focus {
+  color: #ffffff;
+}
+.qa-favorite-button,
+.qa-form-tall-button-cancel {
   color: #ffffff;
   background-color: #f0ad4e;
   border-color: #eea236;
 }
+.qa-favorite-button:hover,
+.qa-form-tall-button-cancel:hover,
+.qa-favorite-button:active,
+.qa-form-tall-button-cancel:active,
 .qa-favorite-button:focus,
-.qa-favorite-button.focus {
+.qa-form-tall-button-cancel:focus {
   color: #ffffff;
-  background-color: #ec971f;
-  border-color: #985f0d;
-}
-.qa-favorite-button:hover {
-  color: #ffffff;
-  background-color: #ec971f;
-  border-color: #d58512;
-}
-.qa-favorite-button:active,
-.qa-favorite-button.active,
-.open > .dropdown-toggle.qa-favorite-button {
-  color: #ffffff;
-  background-color: #ec971f;
-  border-color: #d58512;
-}
-.qa-favorite-button:active,
-.qa-favorite-button.active,
-.open > .dropdown-toggle.qa-favorite-button {
-  background-image: none;
-}
-.qa-favorite-button .badge {
-  color: #f0ad4e;
-  background-color: #ffffff;
 }
 .qa-favorite-button:hover {
   color: #ffffff;
@@ -1179,104 +1142,6 @@ fieldset[disabled] .qa-voted-down-button {
   color: #23527c;
   text-decoration: underline;
   background-color: transparent;
-}
-/* little bit work around the buttons */
-.qa-form-tall-button,
-.qa-form-tall-table input[type="button"],
-.qa-form-wide-button,
-.qa-form-basic-button {
-  color: #ffffff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
-}
-.qa-form-tall-button:focus,
-.qa-form-tall-table input[type="button"]:focus,
-.qa-form-wide-button:focus,
-.qa-form-basic-button:focus,
-.qa-form-tall-button.focus,
-.qa-form-tall-table input[type="button"].focus,
-.qa-form-wide-button.focus,
-.qa-form-basic-button.focus {
-  color: #ffffff;
-  background-color: #286090;
-  border-color: #122b40;
-}
-.qa-form-tall-button:hover,
-.qa-form-tall-table input[type="button"]:hover,
-.qa-form-wide-button:hover,
-.qa-form-basic-button:hover {
-  color: #ffffff;
-  background-color: #286090;
-  border-color: #204d74;
-}
-.qa-form-tall-button:active,
-.qa-form-tall-table input[type="button"]:active,
-.qa-form-wide-button:active,
-.qa-form-basic-button:active,
-.qa-form-tall-button.active,
-.qa-form-tall-table input[type="button"].active,
-.qa-form-wide-button.active,
-.qa-form-basic-button.active,
-.open > .dropdown-toggle.qa-form-tall-button,
-.open > .dropdown-toggle.qa-form-tall-table input[type="button"],
-.open > .dropdown-toggle.qa-form-wide-button,
-.open > .dropdown-toggle.qa-form-basic-button {
-  color: #ffffff;
-  background-color: #286090;
-  border-color: #204d74;
-}
-.qa-form-tall-button:active,
-.qa-form-tall-table input[type="button"]:active,
-.qa-form-wide-button:active,
-.qa-form-basic-button:active,
-.qa-form-tall-button.active,
-.qa-form-tall-table input[type="button"].active,
-.qa-form-wide-button.active,
-.qa-form-basic-button.active,
-.open > .dropdown-toggle.qa-form-tall-button,
-.open > .dropdown-toggle.qa-form-tall-table input[type="button"],
-.open > .dropdown-toggle.qa-form-wide-button,
-.open > .dropdown-toggle.qa-form-basic-button {
-  background-image: none;
-}
-.qa-form-tall-button .badge,
-.qa-form-tall-table input[type="button"] .badge,
-.qa-form-wide-button .badge,
-.qa-form-basic-button .badge {
-  color: #337ab7;
-  background-color: #ffffff;
-}
-.qa-form-tall-button-cancel {
-  color: #ffffff;
-  background-color: #f0ad4e;
-  border-color: #eea236;
-}
-.qa-form-tall-button-cancel:focus,
-.qa-form-tall-button-cancel.focus {
-  color: #ffffff;
-  background-color: #ec971f;
-  border-color: #985f0d;
-}
-.qa-form-tall-button-cancel:hover {
-  color: #ffffff;
-  background-color: #ec971f;
-  border-color: #d58512;
-}
-.qa-form-tall-button-cancel:active,
-.qa-form-tall-button-cancel.active,
-.open > .dropdown-toggle.qa-form-tall-button-cancel {
-  color: #ffffff;
-  background-color: #ec971f;
-  border-color: #d58512;
-}
-.qa-form-tall-button-cancel:active,
-.qa-form-tall-button-cancel.active,
-.open > .dropdown-toggle.qa-form-tall-button-cancel {
-  background-image: none;
-}
-.qa-form-tall-button-cancel .badge {
-  color: #f0ad4e;
-  background-color: #ffffff;
 }
 /* Standard form (light version - buttons only) */
 .qa-form-light-button {

@@ -56,6 +56,7 @@
 .qa-template-register div.qa-part-custom a.open-login-button ,
 .qa-template-login div.qa-part-custom a.open-login-button {
 	.btn();
+	border-radius: 0;
 }
 
 /*success buttons*/
@@ -64,7 +65,12 @@
 .qa-form-tall-button-save ,
 .qa-unfavorite-button 
 {
-	.btn-success();
+	color: @btn-success-color;
+	background-color: @btn-success-bg;
+	border-color: @btn-success-border;
+	&:hover , &:active , &:focus {
+		color: @btn-success-color;
+	}
 }
 
 .qa-favorite-button,
@@ -73,8 +79,27 @@
 	padding: 6px 8px;
 }
 
-.qa-favorite-button {
-	.btn-warning();
+/* little bit work around the buttons */
+.qa-form-tall-button,
+.qa-form-tall-table input[type="button"],
+.qa-form-wide-button,
+.qa-form-basic-button {
+	color: @btn-primary-color;
+	background-color: @btn-primary-bg;
+	border-color: @btn-primary-border;
+	&:hover , &:active , &:focus {
+		color: @btn-primary-color;
+	}
+}
+
+.qa-favorite-button ,
+.qa-form-tall-button-cancel {
+	color: @btn-warning-color;
+	background-color: @btn-warning-bg;
+	border-color: @btn-warning-border;
+	&:hover , &:active , &:focus {
+		color:  @btn-warning-color;
+	}
 }
 
 .qa-favorite-button:hover {
@@ -169,19 +194,6 @@
 		.btn-link();
 		color: @brand-danger;
 	}
-}
-
-/* little bit work around the buttons */
-
-.qa-form-tall-button,
-.qa-form-tall-table input[type="button"],
-.qa-form-wide-button,
-.qa-form-basic-button {
-	.btn-primary();
-}
-
-.qa-form-tall-button-cancel {
-	.btn-warning();
 }
 
 /* Standard form (light version - buttons only) */
