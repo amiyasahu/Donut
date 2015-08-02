@@ -654,7 +654,6 @@ header#top-header .top-html-block a:visited {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 0;
 }
 .qa-vote-one-button:hover,
 .qa-vote-first-button:hover,
