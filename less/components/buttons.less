@@ -47,7 +47,6 @@
 .qa-form-wide-button-saverecalc,
 .qa-form-tall-button-save,
 .qa-form-light-button,
-.qa-form-basic-button,
 .qa-a-select-button,
 .qa-a-unselect-button,
 .qa-a-selected,
@@ -56,32 +55,64 @@
 .qa-template-register div.qa-part-custom a.open-login-button,
 .qa-template-login div.qa-part-custom a.open-login-button {
 	.btn();
+	outline: none;
+}
+
+/*Default Buttons*/
+.qa-form-light-button,
+.qa-a-select-button,
+.qa-a-unselect-button,
+.qa-a-selected {
+	color: @btn-default-color;
+	background-color: @btn-default-bg;
+	border-color: @btn-default-border;
+	&:hover, &:active, &:focus {
+		color: @btn-default-color;
+		background-color: @btn-default-bg;
+		border-color: @btn-default-border;
+	}
+}
+
+/*Danger buttons*/
+.qa-form-light-button-reject ,
+.qa-form-light-button-delete ,
+.qa-form-light-button-close
+{
+	color: @btn-danger-color;
+	background-color: @btn-danger-bg;
+	border-color: @btn-danger-border;
+	&:hover, &:active, &:focus {
+		color: @btn-danger-color;
+		background-color: @btn-danger-bg;
+		border-color: @btn-danger-border;
+	}
 }
 
 /*success buttons*/
 .qa-form-wide-button-save,
 .qa-form-wide-button-saverecalc,
 .qa-form-tall-button-save,
-.qa-unfavorite-button {
+.qa-unfavorite-button,
+.qa-form-light-button-answer,
+.qa-form-light-button-approve,
+.qa-form-light-button-reopen {
 	color: @btn-success-color;
 	background-color: @btn-success-bg;
 	border-color: @btn-success-border;
 	&:hover, &:active, &:focus {
 		color: @btn-success-color;
+		background-color: @btn-success-bg;
+		border-color: @btn-success-border;
 	}
 }
 
-.qa-favorite-button,
-.qa-unfavorite-button {
-	border: 0;
-	padding: 6px 8px;
-}
 
-/* little bit work around the buttons */
+/*primary buttons*/
 .qa-form-tall-button,
 .qa-form-tall-table input[type="button"],
 .qa-form-wide-button,
-.qa-form-basic-button {
+.qa-form-basic-button,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
 	color: @btn-primary-color;
 	background-color: @btn-primary-bg;
 	border-color: @btn-primary-border;
@@ -90,6 +121,7 @@
 	}
 }
 
+/*Warning buttons*/
 .qa-favorite-button,
 .qa-form-tall-button-cancel {
 	color: @btn-warning-color;
@@ -100,17 +132,6 @@
 	}
 }
 
-.qa-favorite-button:hover {
-	color: @btn-success-color;
-	background-color: @btn-success-bg;
-	border-color: @btn-success-border
-}
-
-.qa-unfavorite-button:hover {
-	color: @btn-danger-color;
-	background-color: @btn-danger-bg;
-	border-color: @btn-danger-border;
-}
 
 /*Link buttons*/
 .qa-vote-buttons-up-disabled,
@@ -121,9 +142,6 @@
 .qa-voted-down-button {
 	.btn-link();
 }
-
-/*small buttons*/
-/*extra small buttons*/
 
 .qa-vote {
 	&-buttons {
@@ -199,10 +217,8 @@
 }
 
 /* Standard form (light version - buttons only) */
-
 .qa-form-light {
 	&-button {
-		.btn-default();
 		.btn-sm();
 		text-transform: capitalize;
 		margin-bottom: 2px;
@@ -261,7 +277,6 @@
 		}
 	}
 	&-button-answer {
-		.btn-success();
 		&:before {
 			content: @fa-var-plus;
 		}
@@ -283,31 +298,26 @@
 		}
 	}
 	&-button-delete {
-		.btn-danger();
 		&:before {
 			content: @fa-var-trash-o;
 		}
 	}
 	&-button-approve {
-		.btn-success();
 		&:before {
 			content: @fa-var-thumbs-o-up;
 		}
 	}
 	&-button-reject {
-		.btn-danger();
 		&:before {
 			content: @fa-var-thumbs-o-down;
 		}
 	}
 	&-button-close {
-		.btn-danger();
 		&:before {
 			content: @fa-var-lock;
 		}
 	}
 	&-button-reopen {
-		.btn-success();
 		&:before {
 			content: @fa-var-unlock;
 		}
@@ -317,55 +327,42 @@
 /* Standard form (basic version - buttons only) */
 .qa-form-basic-button {
 	.btn-sm();
-	.btn-primary();
+}
+
+.qa-a-select-button ,
+.qa-a-unselect-button ,
+.qa-a-selected {
+	height: 50px;
+	width: 50px;
+	font-size: 25px;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+	border-radius: 200px !important;
 }
 
 .qa-a-select-button {
-	.btn-default();
-	height: 50px;
-	width: 50px;
-	font-size: 25px;
 	color: @state-info-text;
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-ms-transition: all .5s ease;
-	-o-transition: all .5s ease;
-	transition: all .5s ease;
-	&:hover {
+	&:hover, &:active, &:focus {
 		color: lighten(@state-info-text, 10);
 	}
-	border-radius: 200px !important;
 }
 
 .qa-a-unselect-button {
-	.btn-default();
-	height: 50px;
-	width: 50px;
-	font-size: 25px;
 	background-color: @state-success-bg;
 	color: @state-success-text;
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-ms-transition: all .5s ease;
-	-o-transition: all .5s ease;
-	transition: all .5s ease;
-
-	&:hover {
+	&:hover, &:active, &:focus {
 		color: @state-success-text;
 	}
-	border-radius: 200px !important;
 }
 
 .qa-a-selected {
-	.btn-default();
-	height: 50px;
-	width: 50px;
-	font-size: 25px;
 	padding-top: 12px;
 	background-color: @state-success-bg;
 	color: @state-success-text;
-	border-radius: 200px !important;
-	&:hover {
+	&:hover, &:active, &:focus {
 		color: @state-success-text;
 	}
 	&-text {
@@ -373,19 +370,6 @@
 		display: block;
 		color: @state-success-text;
 		margin-top: 2px;
-	}
-}
-
-.qa-template-user {
-	.qa-part-form-profile {
-		#level .qa-form-wide-static a {
-			.btn-primary();
-			.btn-sm();
-			&:before {
-				margin-right: 5px;
-				content: @fa-var-envelope-o;
-			}
-		}
 	}
 }
 
@@ -425,6 +409,36 @@
 				.btn-block();
 			}
 			.login-btn-colors();
+		}
+	}
+}
+
+.qa-favorite-button,
+.qa-unfavorite-button {
+	border: 0;
+	padding: 6px 8px;
+}
+
+.qa-favorite-button:hover {
+	color: @btn-success-color;
+	background-color: @btn-success-bg;
+	border-color: @btn-success-border
+}
+
+.qa-unfavorite-button:hover {
+	color: @btn-danger-color;
+	background-color: @btn-danger-bg;
+	border-color: @btn-danger-border;
+}
+
+.qa-template-user {
+	.qa-part-form-profile {
+		#level .qa-form-wide-static a {
+			.btn-sm();
+			&:before {
+				margin-right: 5px;
+				content: @fa-var-envelope-o;
+			}
 		}
 	}
 }

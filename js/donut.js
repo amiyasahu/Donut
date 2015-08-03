@@ -15,12 +15,7 @@ jQuery(document).ready(function () {
 	$('[title]').tooltip({
 		placement : 'bottom' 
 	});
-	
-	/*$('body').tooltip({
-	    selector: '[title]' ,
-	    placement : 'bottom' ,
-	});*/
-	
+
 	$('.qa-vote-buttons').tooltip({
 	    selector: '[title]' ,
 	    placement : 'bottom' ,
@@ -40,10 +35,11 @@ jQuery(document).ready(function () {
 
     $('#nav').affix({
 	      offset: {
-	        top: $('#nav').height()
+	        top: $('#nav').height() + 200
 	      }
 	}); 
 
+    /*
     $('#nav').on('affix.bs.affix', function () {
         var navHeight = $('.navbar').outerHeight(true);
         $('#nav + .container').css('margin-top', navHeight);
@@ -52,4 +48,5 @@ jQuery(document).ready(function () {
     $('#nav').on('affix-top.bs.affix', function () {
      	$('#nav + .container').css('margin-top', 0);
  	});
+ 	*/
 });

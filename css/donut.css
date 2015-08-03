@@ -628,7 +628,6 @@ header#top-header .top-html-block a:visited {
 .qa-form-wide-button-saverecalc,
 .qa-form-tall-button-save,
 .qa-form-light-button,
-.qa-form-basic-button,
 .qa-a-select-button,
 .qa-a-unselect-button,
 .qa-a-selected,
@@ -654,6 +653,7 @@ header#top-header .top-html-block a:visited {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  outline: none;
 }
 .qa-vote-one-button:hover,
 .qa-vote-first-button:hover,
@@ -670,7 +670,6 @@ header#top-header .top-html-block a:visited {
 .qa-form-wide-button-saverecalc:hover,
 .qa-form-tall-button-save:hover,
 .qa-form-light-button:hover,
-.qa-form-basic-button:hover,
 .qa-a-select-button:hover,
 .qa-a-unselect-button:hover,
 .qa-a-selected:hover,
@@ -693,7 +692,6 @@ header#top-header .top-html-block a:visited {
 .qa-form-wide-button-saverecalc:focus,
 .qa-form-tall-button-save:focus,
 .qa-form-light-button:focus,
-.qa-form-basic-button:focus,
 .qa-a-select-button:focus,
 .qa-a-unselect-button:focus,
 .qa-a-selected:focus,
@@ -716,7 +714,6 @@ header#top-header .top-html-block a:visited {
 .qa-form-wide-button-saverecalc.focus,
 .qa-form-tall-button-save.focus,
 .qa-form-light-button.focus,
-.qa-form-basic-button.focus,
 .qa-a-select-button.focus,
 .qa-a-unselect-button.focus,
 .qa-a-selected.focus,
@@ -742,7 +739,6 @@ header#top-header .top-html-block a:visited {
 .qa-form-wide-button-saverecalc:active,
 .qa-form-tall-button-save:active,
 .qa-form-light-button:active,
-.qa-form-basic-button:active,
 .qa-a-select-button:active,
 .qa-a-unselect-button:active,
 .qa-a-selected:active,
@@ -765,7 +761,6 @@ header#top-header .top-html-block a:visited {
 .qa-form-wide-button-saverecalc.active,
 .qa-form-tall-button-save.active,
 .qa-form-light-button.active,
-.qa-form-basic-button.active,
 .qa-a-select-button.active,
 .qa-a-unselect-button.active,
 .qa-a-selected.active,
@@ -793,7 +788,6 @@ header#top-header .top-html-block a:visited {
 .qa-form-wide-button-saverecalc.disabled,
 .qa-form-tall-button-save.disabled,
 .qa-form-light-button.disabled,
-.qa-form-basic-button.disabled,
 .qa-a-select-button.disabled,
 .qa-a-unselect-button.disabled,
 .qa-a-selected.disabled,
@@ -816,7 +810,6 @@ header#top-header .top-html-block a:visited {
 .qa-form-wide-button-saverecalc[disabled],
 .qa-form-tall-button-save[disabled],
 .qa-form-light-button[disabled],
-.qa-form-basic-button[disabled],
 .qa-a-select-button[disabled],
 .qa-a-unselect-button[disabled],
 .qa-a-selected[disabled],
@@ -839,7 +832,6 @@ fieldset[disabled] .qa-form-wide-button-save,
 fieldset[disabled] .qa-form-wide-button-saverecalc,
 fieldset[disabled] .qa-form-tall-button-save,
 fieldset[disabled] .qa-form-light-button,
-fieldset[disabled] .qa-form-basic-button,
 fieldset[disabled] .qa-a-select-button,
 fieldset[disabled] .qa-a-unselect-button,
 fieldset[disabled] .qa-a-selected,
@@ -853,11 +845,60 @@ fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+/*Default Buttons*/
+.qa-form-light-button,
+.qa-a-select-button,
+.qa-a-unselect-button,
+.qa-a-selected {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+.qa-form-light-button:hover,
+.qa-a-select-button:hover,
+.qa-a-unselect-button:hover,
+.qa-a-selected:hover,
+.qa-form-light-button:active,
+.qa-a-select-button:active,
+.qa-a-unselect-button:active,
+.qa-a-selected:active,
+.qa-form-light-button:focus,
+.qa-a-select-button:focus,
+.qa-a-unselect-button:focus,
+.qa-a-selected:focus {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+/*Danger buttons*/
+.qa-form-light-button-reject,
+.qa-form-light-button-delete,
+.qa-form-light-button-close {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.qa-form-light-button-reject:hover,
+.qa-form-light-button-delete:hover,
+.qa-form-light-button-close:hover,
+.qa-form-light-button-reject:active,
+.qa-form-light-button-delete:active,
+.qa-form-light-button-close:active,
+.qa-form-light-button-reject:focus,
+.qa-form-light-button-delete:focus,
+.qa-form-light-button-close:focus {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
 /*success buttons*/
 .qa-form-wide-button-save,
 .qa-form-wide-button-saverecalc,
 .qa-form-tall-button-save,
-.qa-unfavorite-button {
+.qa-unfavorite-button,
+.qa-form-light-button-answer,
+.qa-form-light-button-approve,
+.qa-form-light-button-reopen {
   color: #ffffff;
   background-color: #5cb85c;
   border-color: #4cae4c;
@@ -866,26 +907,33 @@ fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
 .qa-form-wide-button-saverecalc:hover,
 .qa-form-tall-button-save:hover,
 .qa-unfavorite-button:hover,
+.qa-form-light-button-answer:hover,
+.qa-form-light-button-approve:hover,
+.qa-form-light-button-reopen:hover,
 .qa-form-wide-button-save:active,
 .qa-form-wide-button-saverecalc:active,
 .qa-form-tall-button-save:active,
 .qa-unfavorite-button:active,
+.qa-form-light-button-answer:active,
+.qa-form-light-button-approve:active,
+.qa-form-light-button-reopen:active,
 .qa-form-wide-button-save:focus,
 .qa-form-wide-button-saverecalc:focus,
 .qa-form-tall-button-save:focus,
-.qa-unfavorite-button:focus {
+.qa-unfavorite-button:focus,
+.qa-form-light-button-answer:focus,
+.qa-form-light-button-approve:focus,
+.qa-form-light-button-reopen:focus {
   color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
 }
-.qa-favorite-button,
-.qa-unfavorite-button {
-  border: 0;
-  padding: 6px 8px;
-}
-/* little bit work around the buttons */
+/*primary buttons*/
 .qa-form-tall-button,
 .qa-form-tall-table input[type="button"],
 .qa-form-wide-button,
-.qa-form-basic-button {
+.qa-form-basic-button,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
   color: #ffffff;
   background-color: #337ab7;
   border-color: #2e6da4;
@@ -894,16 +942,20 @@ fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
 .qa-form-tall-table input[type="button"]:hover,
 .qa-form-wide-button:hover,
 .qa-form-basic-button:hover,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:hover,
 .qa-form-tall-button:active,
 .qa-form-tall-table input[type="button"]:active,
 .qa-form-wide-button:active,
 .qa-form-basic-button:active,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active,
 .qa-form-tall-button:focus,
 .qa-form-tall-table input[type="button"]:focus,
 .qa-form-wide-button:focus,
-.qa-form-basic-button:focus {
+.qa-form-basic-button:focus,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus {
   color: #ffffff;
 }
+/*Warning buttons*/
 .qa-favorite-button,
 .qa-form-tall-button-cancel {
   color: #ffffff;
@@ -917,16 +969,6 @@ fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
 .qa-favorite-button:focus,
 .qa-form-tall-button-cancel:focus {
   color: #ffffff;
-}
-.qa-favorite-button:hover {
-  color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-.qa-unfavorite-button:hover {
-  color: #ffffff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
 }
 /*Link buttons*/
 .qa-vote-buttons-up-disabled,
@@ -1015,8 +1057,6 @@ fieldset[disabled] .qa-voted-down-button {
   text-decoration: underline;
   background-color: transparent;
 }
-/*small buttons*/
-/*extra small buttons*/
 .qa-vote-buttons {
   position: relative;
   height: 60px;
@@ -1086,42 +1126,12 @@ fieldset[disabled] .qa-voted-down-button {
 }
 /* Standard form (light version - buttons only) */
 .qa-form-light-button {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
   text-transform: capitalize;
   margin-bottom: 2px;
-}
-.qa-form-light-button:focus,
-.qa-form-light-button.focus {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #8c8c8c;
-}
-.qa-form-light-button:hover {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-.qa-form-light-button:active,
-.qa-form-light-button.active,
-.open > .dropdown-toggle.qa-form-light-button {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-.qa-form-light-button:active,
-.qa-form-light-button.active,
-.open > .dropdown-toggle.qa-form-light-button {
-  background-image: none;
-}
-.qa-form-light-button .badge {
-  color: #ffffff;
-  background-color: #333333;
 }
 .qa-form-light-button:before {
   margin-right: 5px;
@@ -1174,38 +1184,6 @@ fieldset[disabled] .qa-voted-down-button {
 .qa-form-light-button-comment:before {
   content: "\f112";
 }
-.qa-form-light-button-answer {
-  color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-.qa-form-light-button-answer:focus,
-.qa-form-light-button-answer.focus {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #255625;
-}
-.qa-form-light-button-answer:hover {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #398439;
-}
-.qa-form-light-button-answer:active,
-.qa-form-light-button-answer.active,
-.open > .dropdown-toggle.qa-form-light-button-answer {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #398439;
-}
-.qa-form-light-button-answer:active,
-.qa-form-light-button-answer.active,
-.open > .dropdown-toggle.qa-form-light-button-answer {
-  background-image: none;
-}
-.qa-form-light-button-answer .badge {
-  color: #5cb85c;
-  background-color: #ffffff;
-}
 .qa-form-light-button-answer:before {
   content: "\f067";
 }
@@ -1223,177 +1201,17 @@ fieldset[disabled] .qa-voted-down-button {
 .qa-form-light-button-claim:before {
   content: "\f08d";
 }
-.qa-form-light-button-delete {
-  color: #ffffff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
-}
-.qa-form-light-button-delete:focus,
-.qa-form-light-button-delete.focus {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #761c19;
-}
-.qa-form-light-button-delete:hover {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #ac2925;
-}
-.qa-form-light-button-delete:active,
-.qa-form-light-button-delete.active,
-.open > .dropdown-toggle.qa-form-light-button-delete {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #ac2925;
-}
-.qa-form-light-button-delete:active,
-.qa-form-light-button-delete.active,
-.open > .dropdown-toggle.qa-form-light-button-delete {
-  background-image: none;
-}
-.qa-form-light-button-delete .badge {
-  color: #d9534f;
-  background-color: #ffffff;
-}
 .qa-form-light-button-delete:before {
   content: "\f014";
-}
-.qa-form-light-button-approve {
-  color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-.qa-form-light-button-approve:focus,
-.qa-form-light-button-approve.focus {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #255625;
-}
-.qa-form-light-button-approve:hover {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #398439;
-}
-.qa-form-light-button-approve:active,
-.qa-form-light-button-approve.active,
-.open > .dropdown-toggle.qa-form-light-button-approve {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #398439;
-}
-.qa-form-light-button-approve:active,
-.qa-form-light-button-approve.active,
-.open > .dropdown-toggle.qa-form-light-button-approve {
-  background-image: none;
-}
-.qa-form-light-button-approve .badge {
-  color: #5cb85c;
-  background-color: #ffffff;
 }
 .qa-form-light-button-approve:before {
   content: "\f087";
 }
-.qa-form-light-button-reject {
-  color: #ffffff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
-}
-.qa-form-light-button-reject:focus,
-.qa-form-light-button-reject.focus {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #761c19;
-}
-.qa-form-light-button-reject:hover {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #ac2925;
-}
-.qa-form-light-button-reject:active,
-.qa-form-light-button-reject.active,
-.open > .dropdown-toggle.qa-form-light-button-reject {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #ac2925;
-}
-.qa-form-light-button-reject:active,
-.qa-form-light-button-reject.active,
-.open > .dropdown-toggle.qa-form-light-button-reject {
-  background-image: none;
-}
-.qa-form-light-button-reject .badge {
-  color: #d9534f;
-  background-color: #ffffff;
-}
 .qa-form-light-button-reject:before {
   content: "\f088";
 }
-.qa-form-light-button-close {
-  color: #ffffff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
-}
-.qa-form-light-button-close:focus,
-.qa-form-light-button-close.focus {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #761c19;
-}
-.qa-form-light-button-close:hover {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #ac2925;
-}
-.qa-form-light-button-close:active,
-.qa-form-light-button-close.active,
-.open > .dropdown-toggle.qa-form-light-button-close {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #ac2925;
-}
-.qa-form-light-button-close:active,
-.qa-form-light-button-close.active,
-.open > .dropdown-toggle.qa-form-light-button-close {
-  background-image: none;
-}
-.qa-form-light-button-close .badge {
-  color: #d9534f;
-  background-color: #ffffff;
-}
 .qa-form-light-button-close:before {
   content: "\f023";
-}
-.qa-form-light-button-reopen {
-  color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-.qa-form-light-button-reopen:focus,
-.qa-form-light-button-reopen.focus {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #255625;
-}
-.qa-form-light-button-reopen:hover {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #398439;
-}
-.qa-form-light-button-reopen:active,
-.qa-form-light-button-reopen.active,
-.open > .dropdown-toggle.qa-form-light-button-reopen {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #398439;
-}
-.qa-form-light-button-reopen:active,
-.qa-form-light-button-reopen.active,
-.open > .dropdown-toggle.qa-form-light-button-reopen {
-  background-image: none;
-}
-.qa-form-light-button-reopen .badge {
-  color: #5cb85c;
-  background-color: #ffffff;
 }
 .qa-form-light-button-reopen:before {
   content: "\f09c";
@@ -1404,45 +1222,13 @@ fieldset[disabled] .qa-voted-down-button {
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
-  color: #ffffff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
 }
-.qa-form-basic-button:focus,
-.qa-form-basic-button.focus {
-  color: #ffffff;
-  background-color: #286090;
-  border-color: #122b40;
-}
-.qa-form-basic-button:hover {
-  color: #ffffff;
-  background-color: #286090;
-  border-color: #204d74;
-}
-.qa-form-basic-button:active,
-.qa-form-basic-button.active,
-.open > .dropdown-toggle.qa-form-basic-button {
-  color: #ffffff;
-  background-color: #286090;
-  border-color: #204d74;
-}
-.qa-form-basic-button:active,
-.qa-form-basic-button.active,
-.open > .dropdown-toggle.qa-form-basic-button {
-  background-image: none;
-}
-.qa-form-basic-button .badge {
-  color: #337ab7;
-  background-color: #ffffff;
-}
-.qa-a-select-button {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
+.qa-a-select-button,
+.qa-a-unselect-button,
+.qa-a-selected {
   height: 50px;
   width: 50px;
   font-size: 25px;
-  color: #31708f;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
@@ -1450,122 +1236,31 @@ fieldset[disabled] .qa-voted-down-button {
   transition: all .5s ease;
   border-radius: 200px !important;
 }
-.qa-a-select-button:focus,
-.qa-a-select-button.focus {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #8c8c8c;
+.qa-a-select-button {
+  color: #31708f;
 }
-.qa-a-select-button:hover {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
+.qa-a-select-button:hover,
 .qa-a-select-button:active,
-.qa-a-select-button.active,
-.open > .dropdown-toggle.qa-a-select-button {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-.qa-a-select-button:active,
-.qa-a-select-button.active,
-.open > .dropdown-toggle.qa-a-select-button {
-  background-image: none;
-}
-.qa-a-select-button .badge {
-  color: #ffffff;
-  background-color: #333333;
-}
-.qa-a-select-button:hover {
+.qa-a-select-button:focus {
   color: #3e8eb5;
 }
 .qa-a-unselect-button {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
-  height: 50px;
-  width: 50px;
-  font-size: 25px;
   background-color: #dff0d8;
   color: #3c763d;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
-  border-radius: 200px !important;
 }
-.qa-a-unselect-button:focus,
-.qa-a-unselect-button.focus {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #8c8c8c;
-}
-.qa-a-unselect-button:hover {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
+.qa-a-unselect-button:hover,
 .qa-a-unselect-button:active,
-.qa-a-unselect-button.active,
-.open > .dropdown-toggle.qa-a-unselect-button {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-.qa-a-unselect-button:active,
-.qa-a-unselect-button.active,
-.open > .dropdown-toggle.qa-a-unselect-button {
-  background-image: none;
-}
-.qa-a-unselect-button .badge {
-  color: #ffffff;
-  background-color: #333333;
-}
-.qa-a-unselect-button:hover {
+.qa-a-unselect-button:focus {
   color: #3c763d;
 }
 .qa-a-selected {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
-  height: 50px;
-  width: 50px;
-  font-size: 25px;
   padding-top: 12px;
   background-color: #dff0d8;
   color: #3c763d;
-  border-radius: 200px !important;
 }
-.qa-a-selected:focus,
-.qa-a-selected.focus {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #8c8c8c;
-}
-.qa-a-selected:hover {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
+.qa-a-selected:hover,
 .qa-a-selected:active,
-.qa-a-selected.active,
-.open > .dropdown-toggle.qa-a-selected {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-.qa-a-selected:active,
-.qa-a-selected.active,
-.open > .dropdown-toggle.qa-a-selected {
-  background-image: none;
-}
-.qa-a-selected .badge {
-  color: #ffffff;
-  background-color: #333333;
-}
-.qa-a-selected:hover {
+.qa-a-selected:focus {
   color: #3c763d;
 }
 .qa-a-selected-text {
@@ -1573,80 +1268,6 @@ fieldset[disabled] .qa-voted-down-button {
   display: block;
   color: #3c763d;
   margin-top: 2px;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
-  color: #ffffff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 3px;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.focus {
-  color: #ffffff;
-  background-color: #286090;
-  border-color: #122b40;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:hover {
-  color: #ffffff;
-  background-color: #286090;
-  border-color: #204d74;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.active,
-.open > .dropdown-toggle.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
-  color: #ffffff;
-  background-color: #286090;
-  border-color: #204d74;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active:hover,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.active:hover,
-.open > .dropdown-toggle.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:hover,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active:focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.active:focus,
-.open > .dropdown-toggle.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active.focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.active.focus,
-.open > .dropdown-toggle.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.focus {
-  color: #ffffff;
-  background-color: #204d74;
-  border-color: #122b40;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.active,
-.open > .dropdown-toggle.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
-  background-image: none;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.disabled,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a[disabled],
-fieldset[disabled] .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.disabled:hover,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a[disabled]:hover,
-fieldset[disabled] .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:hover,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.disabled:focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a[disabled]:focus,
-fieldset[disabled] .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.disabled.focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a[disabled].focus,
-fieldset[disabled] .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.disabled:active,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a[disabled]:active,
-fieldset[disabled] .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.disabled.active,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a[disabled].active,
-fieldset[disabled] .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.active {
-  background-color: #337ab7;
-  border-color: #2e6da4;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a .badge {
-  color: #337ab7;
-  background-color: #ffffff;
-}
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:before {
-  margin-right: 5px;
-  content: "\f003";
 }
 #login-dropdown-menu.open-login-buttons a {
   display: block;
@@ -1786,6 +1407,31 @@ fieldset[disabled] .qa-template-user .qa-part-form-profile #level .qa-form-wide-
 .qa-template-register div.qa-part-custom a.open-login-button.context-login.action-login.vk,
 .qa-template-login div.qa-part-custom a.open-login-button.context-login.action-login.vk {
   background-color: #587ea3;
+}
+.qa-favorite-button,
+.qa-unfavorite-button {
+  border: 0;
+  padding: 6px 8px;
+}
+.qa-favorite-button:hover {
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.qa-unfavorite-button:hover {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:before {
+  margin-right: 5px;
+  content: "\f003";
 }
 .qa-search-button {
   border: 0;
@@ -2132,8 +1778,6 @@ div .header-banner {
   box-shadow: none;
 }
 .entry-title {
-  color: #000000;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 .qa-rss-feed {
