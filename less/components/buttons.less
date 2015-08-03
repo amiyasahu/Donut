@@ -73,6 +73,20 @@
 	}
 }
 
+/*primary buttons*/
+.qa-form-tall-button,
+.qa-form-tall-table input[type="button"],
+.qa-form-wide-button,
+.qa-form-basic-button,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
+	color: @btn-primary-color;
+	background-color: @btn-primary-bg;
+	border-color: @btn-primary-border;
+	&:hover, &:active, &:focus {
+		color: @btn-primary-color;
+	}
+}
+
 /*Danger buttons*/
 .qa-form-light-button-reject ,
 .qa-form-light-button-delete ,
@@ -106,21 +120,6 @@
 	}
 }
 
-
-/*primary buttons*/
-.qa-form-tall-button,
-.qa-form-tall-table input[type="button"],
-.qa-form-wide-button,
-.qa-form-basic-button,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
-	color: @btn-primary-color;
-	background-color: @btn-primary-bg;
-	border-color: @btn-primary-border;
-	&:hover, &:active, &:focus {
-		color: @btn-primary-color;
-	}
-}
-
 /*Warning buttons*/
 .qa-favorite-button,
 .qa-form-tall-button-cancel {
@@ -131,7 +130,6 @@
 		color: @btn-warning-color;
 	}
 }
-
 
 /*Link buttons*/
 .qa-vote-buttons-up-disabled,

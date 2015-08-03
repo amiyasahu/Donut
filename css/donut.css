@@ -870,6 +870,33 @@ fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
   background-color: #ffffff;
   border-color: #cccccc;
 }
+/*primary buttons*/
+.qa-form-tall-button,
+.qa-form-tall-table input[type="button"],
+.qa-form-wide-button,
+.qa-form-basic-button,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
+  color: #ffffff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.qa-form-tall-button:hover,
+.qa-form-tall-table input[type="button"]:hover,
+.qa-form-wide-button:hover,
+.qa-form-basic-button:hover,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:hover,
+.qa-form-tall-button:active,
+.qa-form-tall-table input[type="button"]:active,
+.qa-form-wide-button:active,
+.qa-form-basic-button:active,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active,
+.qa-form-tall-button:focus,
+.qa-form-tall-table input[type="button"]:focus,
+.qa-form-wide-button:focus,
+.qa-form-basic-button:focus,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus {
+  color: #ffffff;
+}
 /*Danger buttons*/
 .qa-form-light-button-reject,
 .qa-form-light-button-delete,
@@ -927,33 +954,6 @@ fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
   color: #ffffff;
   background-color: #5cb85c;
   border-color: #4cae4c;
-}
-/*primary buttons*/
-.qa-form-tall-button,
-.qa-form-tall-table input[type="button"],
-.qa-form-wide-button,
-.qa-form-basic-button,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
-  color: #ffffff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
-}
-.qa-form-tall-button:hover,
-.qa-form-tall-table input[type="button"]:hover,
-.qa-form-wide-button:hover,
-.qa-form-basic-button:hover,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:hover,
-.qa-form-tall-button:active,
-.qa-form-tall-table input[type="button"]:active,
-.qa-form-wide-button:active,
-.qa-form-basic-button:active,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active,
-.qa-form-tall-button:focus,
-.qa-form-tall-table input[type="button"]:focus,
-.qa-form-wide-button:focus,
-.qa-form-basic-button:focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus {
-  color: #ffffff;
 }
 /*Warning buttons*/
 .qa-favorite-button,
