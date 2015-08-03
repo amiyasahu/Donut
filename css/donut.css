@@ -1433,9 +1433,6 @@ fieldset[disabled] .qa-voted-down-button {
   margin-right: 5px;
   content: "\f003";
 }
-.navbar {
-  -webkit-backface-visibility: hidden;
-}
 .qa-search-button {
   border: 0;
   background: none;

@@ -491,7 +491,7 @@
 
                 </div>
             </nav>
-            <header>
+            </header>
             <?php
             return ob_get_clean();
         }
