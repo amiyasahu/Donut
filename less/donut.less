@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Lato);
-
 @import (reference) "bootstrap/bootstrap.less";
 @import (reference) "font-awesome/font-awesome.less";
 @import (reference) "variables.less";
@@ -12,7 +11,7 @@ body {
 	// padding-top: 50px;
 }
 
-html , body {
+html, body {
 	font-family: 'Lato', sans-serif;
 }
 
@@ -432,7 +431,7 @@ div {
 	.alert();
 }
 
-.donut-error ,
+.donut-error,
 .qa-error {
 	.alert-danger();
 	a {
@@ -1383,24 +1382,13 @@ div {
 }
 
 /* Answer form */
-.qa-part-a-form {
-	div#anew {
-		h2 {
-			.well();
-			.well-sm();
-			font-size: 21px;
-		}
-	}
-}
-
-/* Answer view  */
-.qa-part-a-list {
-	> h2#a_list_title {
-		font-size: 22px;
-		position: relative;
-		padding: 15px 0px;
-		border-bottom: 1px solid #e2e2e2;
-	}
+.qa-part-a-form div#anew h2,
+	/* Answer view  */
+.qa-part-a-list > h2#a_list_title {
+	font-size: 22px;
+	position: relative;
+	padding: 15px 0px;
+	border-bottom: 1px solid #e2e2e2;
 }
 
 .qa-a-list-item {
