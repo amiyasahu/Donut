@@ -90,7 +90,6 @@
 /*Danger buttons*/
 .qa-form-light-button-reject ,
 .qa-form-light-button-delete ,
-.qa-form-light-button-close
 {
 	color: @btn-danger-color;
 	background-color: @btn-danger-bg;
@@ -108,8 +107,7 @@
 .qa-form-tall-button-save,
 .qa-unfavorite-button,
 .qa-form-light-button-answer,
-.qa-form-light-button-approve,
-.qa-form-light-button-reopen {
+.qa-form-light-button-approve{
 	color: @btn-success-color;
 	background-color: @btn-success-bg;
 	border-color: @btn-success-border;
@@ -226,50 +224,32 @@
 	}
 	&-button-edit,
 	&-button-retagcat {
-		&, &:hover {
-			color: @state-info-text;
-		}
 		&:before {
 			content: @fa-var-edit;
 		}
 	}
 	&-button-flag {
-		&, &:hover {
-			color: @state-danger-text;
-		}
 		&:before {
 			content: @fa-var-flag;
 		}
 	}
 	&-button-unflag,
 	&-button-clearflags {
-		&, &:hover {
-			color: @state-warning-text;
-		}
 		&:before {
 			content: @fa-var-flag-checkered;
 		}
 	}
 	&-button-hide {
-		&, &:hover {
-			color: @state-danger-text;
-		}
 		&:before {
 			content: @fa-var-eye-slash;
 		}
 	}
 	&-button-follow {
-		&, &:hover {
-			color: @state-warning-text;
-		}
 		&:before {
 			content: @fa-var-question;
 		}
 	}
 	&-button-comment {
-		&, &:hover {
-			color: @state-success-text;
-		}
 		&:before {
 			content: @fa-var-mail-reply;
 		}
@@ -280,17 +260,11 @@
 		}
 	}
 	&-button-reshow {
-		&, &:hover {
-			color: @state-success-text;
-		}
 		&:before {
 			content: @fa-var-eye;
 		}
 	}
 	&-button-claim {
-		&, &:hover {
-			color: @state-danger-text;
-		}
 		&:before {
 			content: @fa-var-thumb-tack;
 		}

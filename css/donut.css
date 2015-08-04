@@ -899,21 +899,17 @@ fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
 }
 /*Danger buttons*/
 .qa-form-light-button-reject,
-.qa-form-light-button-delete,
-.qa-form-light-button-close {
+.qa-form-light-button-delete {
   color: #ffffff;
   background-color: #d9534f;
   border-color: #d43f3a;
 }
 .qa-form-light-button-reject:hover,
 .qa-form-light-button-delete:hover,
-.qa-form-light-button-close:hover,
 .qa-form-light-button-reject:active,
 .qa-form-light-button-delete:active,
-.qa-form-light-button-close:active,
 .qa-form-light-button-reject:focus,
-.qa-form-light-button-delete:focus,
-.qa-form-light-button-close:focus {
+.qa-form-light-button-delete:focus {
   color: #ffffff;
   background-color: #d9534f;
   border-color: #d43f3a;
@@ -924,8 +920,7 @@ fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
 .qa-form-tall-button-save,
 .qa-unfavorite-button,
 .qa-form-light-button-answer,
-.qa-form-light-button-approve,
-.qa-form-light-button-reopen {
+.qa-form-light-button-approve {
   color: #ffffff;
   background-color: #5cb85c;
   border-color: #4cae4c;
@@ -936,21 +931,18 @@ fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
 .qa-unfavorite-button:hover,
 .qa-form-light-button-answer:hover,
 .qa-form-light-button-approve:hover,
-.qa-form-light-button-reopen:hover,
 .qa-form-wide-button-save:active,
 .qa-form-wide-button-saverecalc:active,
 .qa-form-tall-button-save:active,
 .qa-unfavorite-button:active,
 .qa-form-light-button-answer:active,
 .qa-form-light-button-approve:active,
-.qa-form-light-button-reopen:active,
 .qa-form-wide-button-save:focus,
 .qa-form-wide-button-saverecalc:focus,
 .qa-form-tall-button-save:focus,
 .qa-unfavorite-button:focus,
 .qa-form-light-button-answer:focus,
-.qa-form-light-button-approve:focus,
-.qa-form-light-button-reopen:focus {
+.qa-form-light-button-approve:focus {
   color: #ffffff;
   background-color: #5cb85c;
   border-color: #4cae4c;
@@ -1136,50 +1128,22 @@ fieldset[disabled] .qa-voted-down-button {
 .qa-form-light-button:before {
   margin-right: 5px;
 }
-.qa-form-light-button-edit,
-.qa-form-light-button-retagcat,
-.qa-form-light-button-edit:hover,
-.qa-form-light-button-retagcat:hover {
-  color: #31708f;
-}
 .qa-form-light-button-edit:before,
 .qa-form-light-button-retagcat:before {
   content: "\f044";
 }
-.qa-form-light-button-flag,
-.qa-form-light-button-flag:hover {
-  color: #a94442;
-}
 .qa-form-light-button-flag:before {
   content: "\f024";
-}
-.qa-form-light-button-unflag,
-.qa-form-light-button-clearflags,
-.qa-form-light-button-unflag:hover,
-.qa-form-light-button-clearflags:hover {
-  color: #8a6d3b;
 }
 .qa-form-light-button-unflag:before,
 .qa-form-light-button-clearflags:before {
   content: "\f11e";
 }
-.qa-form-light-button-hide,
-.qa-form-light-button-hide:hover {
-  color: #a94442;
-}
 .qa-form-light-button-hide:before {
   content: "\f070";
 }
-.qa-form-light-button-follow,
-.qa-form-light-button-follow:hover {
-  color: #8a6d3b;
-}
 .qa-form-light-button-follow:before {
   content: "\f128";
-}
-.qa-form-light-button-comment,
-.qa-form-light-button-comment:hover {
-  color: #3c763d;
 }
 .qa-form-light-button-comment:before {
   content: "\f112";
@@ -1187,16 +1151,8 @@ fieldset[disabled] .qa-voted-down-button {
 .qa-form-light-button-answer:before {
   content: "\f067";
 }
-.qa-form-light-button-reshow,
-.qa-form-light-button-reshow:hover {
-  color: #3c763d;
-}
 .qa-form-light-button-reshow:before {
   content: "\f06e";
-}
-.qa-form-light-button-claim,
-.qa-form-light-button-claim:hover {
-  color: #a94442;
 }
 .qa-form-light-button-claim:before {
   content: "\f08d";
