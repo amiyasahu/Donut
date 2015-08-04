@@ -7,6 +7,19 @@
     class qa_html_theme extends qa_html_theme_base
     {
 
+        /**
+         * Doctype function
+         */
+        function doctype()
+        {
+            if ( !property_exists( 'qa_html_theme_base', 'isRTL' ) ) {
+                /*Fall back for the version 1.6.3*/
+                $this->isRTL = isset( $this->content['direction'] ) && $this->content['direction'] === 'rtl';
+            }
+
+            parent::doctype();
+        }
+
         function head()
         {
             $this->output(
@@ -39,7 +52,7 @@
 
         function head_css()
         {
-            qa_html_theme_base::head_css();
+            parent::head_css();
             $css_paths = array(
                 'fonts'      => 'css/font-awesome.min.css',
                 'bootstrap'  => 'css/bootstrap.min.css',
@@ -47,7 +60,7 @@
                 'responsive' => 'css/donut-responsive.css',
             );
 
-            if ( donut_opt( 'is_rtl' ) ) {
+            if ( donut_opt( 'is_rtl' ) && $this->isRTL ) {
                 $css_paths['rtl'] = 'css/donut-rtl.css';
             }
 
@@ -139,11 +152,13 @@
 
         function head_script() // change style of WYSIWYG editor to match theme better
         {
-            qa_html_theme_base::head_script();
+            parent::head_script();
+
             $js_paths = array(
                 'bootstrap' => 'js/bootstrap.min.js',
                 'donut'     => 'js/donut.js',
             );
+
             if ( $this->template == 'admin' ) {
                 $js_paths['admin'] = 'js/admin.js';
             }
@@ -405,7 +420,7 @@
             $this->output( '<footer class="donut-footer">' );
             $this->output( '<div class="container">' );
 
-            qa_html_theme_base::footer();
+            parent::footer();
             $this->output( '</div>' );
             $this->output( '</footer> <!-- END footer -->', '' );
         }
@@ -423,7 +438,7 @@
                     '</div>'
                 );
 
-            qa_html_theme_base::logged_in();
+            parent::logged_in();
 
             if ( qa_is_logged_in() ) { // adds points count after logged in username
                 $userpoints = qa_get_logged_in_points();
@@ -738,7 +753,7 @@
 
             $this->voting( $q_item );
             $this->a_count( $q_item );
-            // qa_html_theme_base::view_count($q_item);
+            // parent::view_count($q_item);
 
             $this->output( '</div>' );
         }
@@ -813,7 +828,7 @@
         function view_count( $q_item ) // prevent display of view count in the usual place
         {
             if ( $this->template == 'question' )
-                qa_html_theme_base::view_count( $q_item );
+                parent::view_count( $q_item );
         }
 
         function post_disabled_button( $post, $element, $value, $class )
@@ -848,7 +863,7 @@
 
         /**
          * Attribution link for the theme which adds the authors name
-         * @return [type] [description]
+         * @return null
          */
         function attribution()
         {
@@ -859,7 +874,7 @@
                 '</div>'
             );
 
-            qa_html_theme_base::attribution();
+            parent::attribution();
         }
 
         /**
