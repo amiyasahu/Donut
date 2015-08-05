@@ -392,6 +392,9 @@ header#top-header .top-html-block a:visited {
 .navbar.navbar-static-top {
   border-width: 0;
 }
+.navbar .navbar-right.user-nav {
+  margin-right: 15px ;
+}
 /* Navigation */
 .navbar-toggle {
   margin-left: 8px;
@@ -463,7 +466,6 @@ header#top-header .top-html-block a:visited {
     background-color: #ffffff;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    border: 1px solid #e2e2e2;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -531,6 +533,59 @@ header#top-header .top-html-block a:visited {
 .dropdown-menu li:last-child {
   border-bottom: 0px;
 }
+#login-dropdown-menu {
+  width: 250px;
+  padding: 10px;
+}
+#login-dropdown-menu li {
+  padding: 2px;
+  margin-top: 5px;
+  border-bottom: 0;
+}
+#login-dropdown-menu li label.checkbox {
+  margin-left: 20px;
+}
+#login-dropdown-menu li.forgot-password {
+  text-align: center;
+  margin: 10px 0;
+}
+#login-dropdown-menu li.forgot-password a {
+  font-size: 12px;
+  padding: 2px 4px !important;
+}
+#login-dropdown-menu li .login-or {
+  position: relative;
+  font-size: 18px;
+  color: #aaa;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#login-dropdown-menu li .span-or {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  margin-left: -25px;
+  background-color: #fff;
+  width: 50px;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  #login-dropdown-menu li .span-or {
+    background-color: #eeeeee;
+  }
+}
+#login-dropdown-menu li .hr-or {
+  background-color: #cdcdcd;
+  height: 5px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+#login-dropdown-menu li + #login-dropdown-menu li {
+  margin-top: 2px;
+}
 /* reduce padding for the userimage at the navbar */
 .navbar-nav > li > a.navbar-user-img {
   padding: 2px 5px;
@@ -572,7 +627,7 @@ header#top-header .top-html-block a:visited {
 }
 /* small caret at the dropdown right menu */
 .navbar-nav.navbar-right li .dropdown-menu {
-  margin-top: 7px;
+  margin-top: 15px;
 }
 .navbar-nav.navbar-right li .dropdown-menu:before {
   position: absolute;
@@ -595,6 +650,7 @@ header#top-header .top-html-block a:visited {
   border-left: 6px solid transparent;
   content: '';
 }
+/*Not using this now*/
 .qa-form-wide-button:before,
 .qa-form-tall-button:before,
 .qa-form-light-button:before,
@@ -1419,7 +1475,7 @@ fieldset[disabled] .qa-voted-down-button {
 /* page title */
 .page-title {
   position: relative;
-  padding: 30px 0px;
+  padding: 30px 0;
 }
 .page-title h1 {
   clear: none;
@@ -1436,12 +1492,6 @@ fieldset[disabled] .qa-voted-down-button {
 div .header-banner {
   float: right;
   margin: 0;
-}
-.navbar-nav > li.dropdown-split-right > a {
-  padding: 15px 10px 15px 10px;
-}
-.navbar-nav > li.dropdown-split-left > a {
-  padding-right: 0;
 }
 .qa-q-view-follows {
   background: #eeeeee;
@@ -1835,9 +1885,9 @@ div .header-banner {
   font-size: 12px;
 }
 .qa-view-count {
+  float: left;
   background: #ffffff;
   border: 1px solid #dddddd;
-  float: left;
   width: 60px;
   height: 60px;
   text-align: center;
@@ -1906,14 +1956,11 @@ a.qa-template-question .qa-view-count:focus {
   line-height: 1.42857143;
   letter-spacing: 1px;
 }
-.qa-template-question .qa-sidepanel {
-  margin-top: 10px;
-}
 .qa-favoriting {
   float: right !important;
   float: right;
   position: absolute;
-  right: 0px;
+  right: 0;
   padding-right: 50px;
   padding-top: 2px;
 }
@@ -2055,7 +2102,7 @@ a.qa-template-question .qa-view-count:focus {
 .qa-nav-cat-list ul {
   margin-bottom: 20px;
   padding-left: 0;
-  padding-right: 0px;
+  padding-right: 0;
 }
 .qa-nav-cat-list ul li {
   position: relative;
@@ -2064,7 +2111,7 @@ a.qa-template-question .qa-view-count:focus {
   margin-bottom: -1px;
   background-color: #ffffff;
   border: 1px solid #dddddd;
-  padding-right: 0px;
+  padding-right: 0;
 }
 .qa-nav-cat-list ul li:first-child {
   border-top-right-radius: 4px;
@@ -2213,8 +2260,8 @@ a.qa-template-question .qa-view-count:focus {
 .qa-nav-cat-list-3 .qa-nav-cat-item:last-child,
 .qa-nav-cat-list-4 .qa-nav-cat-item:last-child {
   border-right: none;
-  border-bottom-right-radius: 0px !important;
-  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
 }
 .qa-nav-cat-item {
   text-align: right;
@@ -2615,14 +2662,14 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
 .qa-q-list-item {
   margin-left: -15px;
   margin-right: -15px;
-  padding: 10px 0px;
+  padding: 10px 0;
   border: 1px solid transparent;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   border-color: #dddddd;
 }
 .qa-q-list-item + .qa-q-list-item {
-  border-top: 0px;
+  border-top: 0;
 }
 .qa-q-list-item:first-child {
   border-top-right-radius: 5px;
@@ -2759,7 +2806,7 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-left: 0px;
+  padding-left: 0;
   margin-top: 5px;
 }
 @media (min-width: 768px) {
@@ -2883,7 +2930,7 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
 .qa-top-tags ul.donut-tags-list {
   list-style-type: none;
   padding-left: 5px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .qa-top-tags ul.donut-tags-list .qa-tag-link {
   margin-right: 2px;
@@ -3190,7 +3237,7 @@ a.qa-browse-cat-link:visited {
 }
 .qa-q-view-hidden .qa-tag-link {
   color: #555555;
-  opacity: 0.5px;
+  opacity: .5 ;
 }
 #tag_examples_title,
 #tag_complete_title {
@@ -3201,7 +3248,7 @@ a.qa-browse-cat-link:visited {
 .qa-part-a-list > h2#a_list_title {
   font-size: 22px;
   position: relative;
-  padding: 15px 0px;
+  padding: 15px 0;
   border-bottom: 1px solid #e2e2e2;
 }
 .qa-a-list-item {
@@ -3213,7 +3260,7 @@ a.qa-browse-cat-link:visited {
   border-color: #dddddd;
 }
 .qa-a-list-item + .qa-a-list-item {
-  border-top: 0px;
+  border-top: 0;
 }
 .qa-a-list-item:first-child {
   border-top-right-radius: 5px;
@@ -3370,7 +3417,7 @@ a.qa-browse-cat-link:visited {
   border-color: #dddddd;
 }
 .qa-c-list-item + .qa-c-list-item {
-  border-top: 0px;
+  border-top: 0;
 }
 .qa-c-list-item:first-child {
   border-top-right-radius: 3px;
@@ -3384,7 +3431,7 @@ a.qa-browse-cat-link:visited {
   border: 1px solid #d6e9c6;
 }
 .qa-a-list-item-selected .qa-c-list-item + .qa-c-list-item {
-  border-top: 0px;
+  border-top: 0;
 }
 .qa-a-list-item-selected .qa-c-list-item:first-child {
   border-top-right-radius: 3px;
@@ -3503,7 +3550,6 @@ a.qa-browse-cat-link:visited {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  border-color: #dddddd;
   padding: 15px;
   margin-bottom: 5px;
 }
@@ -3718,7 +3764,7 @@ a.qa-browse-cat-link:visited {
   color: #5cb85c;
 }
 .qa-waiting {
-  margin: 0px 12px 0px 5px;
+  margin: 0 12px 0 5px;
   vertical-align: middle;
   color: #337ab7;
   z-index: 1000;
@@ -3864,7 +3910,7 @@ a.qa-browse-cat-link:visited {
 .qa-template-user .qa-part-form-profile span.qa-form-wide-note,
 .qa-template-user .qa-part-form-profile span.qa-form-wide-static {
   display: block;
-  margin-left: 0px;
+  margin-left: 0;
 }
 .qa-template-user .qa-part-form-activity h2 {
   margin-top: 0;
@@ -3891,54 +3937,6 @@ a.qa-browse-cat-link:visited {
   font-size: 18px;
   color: #337ab7;
   font-weight: 700;
-}
-#login-dropdown-menu {
-  width: 250px;
-  padding: 10px;
-}
-#login-dropdown-menu li {
-  padding: 2px;
-  border-bottom: 0;
-}
-#login-dropdown-menu li label.checkbox {
-  margin-left: 20px;
-}
-#login-dropdown-menu li.forgot-password {
-  text-align: center;
-  margin: 10px 0;
-}
-#login-dropdown-menu li .login-or {
-  position: relative;
-  font-size: 18px;
-  color: #aaa;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-#login-dropdown-menu li .span-or {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: -2px;
-  margin-left: -25px;
-  background-color: #fff;
-  width: 50px;
-  text-align: center;
-}
-@media only screen and (max-width: 767px) {
-  #login-dropdown-menu li .span-or {
-    background-color: #eeeeee;
-  }
-}
-#login-dropdown-menu li .hr-or {
-  background-color: #cdcdcd;
-  height: 5px;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-#login-dropdown-menu li + #login-dropdown-menu li {
-  margin-top: 2px;
 }
 .colorgraph {
   height: 5px;

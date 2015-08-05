@@ -2,8 +2,7 @@
     $print_or = false;
 ?>
     <li class="dropdown login-dropdown login active">
-        <a href="#" title="<?php echo qa_lang_html( 'users/login_title' ); ?>" data-toggle="dropdown"
-           class="navbar-login-button">
+        <a href="#" data-toggle="dropdown" class="navbar-login-button">
             <?php //echo qa_lang_html('users/login_button'); ?>
             <span class="fa fa-key"></span>
         </a>
@@ -61,11 +60,17 @@
             <form role="form" action="<?php echo $this->content['navigation']['user']['login']['url']; ?>"
                   method="post">
                 <li>
+                    <label>
+                        <?php echo trim( qa_lang_html( 'users/email_handle_label' ), ':' ); ?>
+                    </label>
                     <input type="text" class="form-control" id="qa-userid" name="emailhandle"
                            placeholder="<?php echo trim( qa_lang_html( 'users/email_handle_label' ), ':' ); ?>"/>
                 </li>
 
                 <li>
+                    <label>
+                        <?php echo trim( qa_lang_html( 'users/password_label' ), ':' ); ?>
+                    </label>
                     <input type="password" class="form-control" id="qa-password" name="password"
                            placeholder="<?php echo trim( qa_lang_html( 'users/password_label' ), ':' ); ?>"/>
                 </li>
@@ -84,11 +89,8 @@
                         <?php echo $this->content['navigation']['user']['login']['label']; ?>
                     </button>
                 </li>
-                <li class="register">
-                    <a class="btn btn-success btn-block" href="<?php echo qa_path_html( 'register' ); ?>"
-                       title="<?php echo qa_lang_html( 'users/register_title' ); ?>"><?php echo qa_lang_html( 'users/register_button' ); ?></a>
-                </li>
                 <li class="forgot-password">
+                    <a href="<?php echo qa_path_html( 'register' ); ?>" ><?php echo qa_lang_html( 'users/register_button' ); ?></a> |
                     <a href="<?php echo qa_path_html( 'forgot' ); ?>"><?php echo qa_lang_html( 'users/forgot_link' ) ?></a>
                 </li>
             </form>

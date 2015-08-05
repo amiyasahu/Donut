@@ -496,7 +496,7 @@
                         <ul class="nav navbar-nav navbar-right user-nav">
                             <?php $this->donut_user_drop_down(); ?>
                         </ul>
-                        <div class="navbar-collapse collapse main-nav">
+                        <div class="navbar-collapse collapse main-nav navbar-left">
                             <ul class="nav navbar-nav inner-drop-nav">
                                 <?php $this->donut_nav_bar_main_links( $navigation['main'] ); ?>
                             </ul>

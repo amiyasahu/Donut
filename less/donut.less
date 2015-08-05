@@ -56,7 +56,7 @@ html, body {
 /* page title */
 .page-title {
 	position: relative;
-	padding: 30px 0px;
+	padding: 30px 0;
 	h1 {
 		clear: none;
 		font-size: 29px;
@@ -93,19 +93,6 @@ div {
 	.header-banner {
 		float: right;
 		margin: 0;
-	}
-}
-
-.navbar-nav {
-	& > li.dropdown-split-right {
-		& > a {
-			padding: 15px 10px 15px 10px;
-		}
-	}
-	& > li.dropdown-split-left {
-		& > a {
-			padding-right: 0;
-		}
 	}
 }
 
@@ -347,7 +334,6 @@ div {
 	float: left;
 	background: @body-bg;
 	border: 1px solid @table-border-color;
-	float: left;
 	width: 60px;
 	height: 60px;
 	text-align: center;
@@ -393,15 +379,12 @@ div {
 			letter-spacing: 1px;
 		}
 	}
-	.qa-sidepanel {
-		margin-top: 10px;
-	}
 }
 
 .qa-favoriting {
 	.pull-right();
 	position: absolute;
-	right: 0px;
+	right: 0;
 	padding-right: 50px;
 	padding-top: 2px;
 	.qa-waiting {
@@ -510,7 +493,7 @@ div {
 		padding: 0 10px 15px 10px !important;
 	}
 	> div.qa-related-qs {
-		padding: 0
+		padding: 0;
 	}
 }
 
@@ -520,10 +503,10 @@ div {
 	.list-group();
 	ul {
 		.list-group();
-		padding-right: 0px;
+		padding-right: 0;
 		li {
 			.list-group-item();
-			padding-right: 0px;
+			padding-right: 0;
 		}
 	}
 	> li {
@@ -561,8 +544,8 @@ div {
 		.qa-nav-cat-item:first-child,
 		.qa-nav-cat-item:last-child {
 			border-right: none;
-			border-bottom-right-radius: 0px !important;
-			border-top-right-radius: 0px !important;
+			border-bottom-right-radius: 0 !important;
+			border-top-right-radius: 0 !important;
 		}
 	}
 }
@@ -886,10 +869,10 @@ div {
 
 .qa-q-list-item {
 	.row();
-	padding: 10px 0px;
+	padding: 10px 0;
 	.light-border();
 	& + & {
-		border-top: 0px;
+		border-top: 0;
 	}
 	&:first-child {
 		border-top-right-radius: 5px;
@@ -963,7 +946,7 @@ div {
 		.make-sm-column(9.3);
 		.make-md-column(9.2);
 		.make-lg-column(9.6);
-		padding-left: 0px;
+		padding-left: 0;
 		margin-top: 5px;
 	}
 
@@ -1074,7 +1057,7 @@ div {
 	ul.donut-tags-list {
 		list-style-type: none;
 		padding-left: 5px;
-		margin-bottom: 0px;
+		margin-bottom: 0;
 		.qa-tag-link {
 			margin-right: 2px;
 		}
@@ -1371,7 +1354,7 @@ div {
 		}
 		.qa-tag-link {
 			color: @gray;
-			opacity: 0.5px;
+			opacity: .5 ;
 		}
 	}
 }
@@ -1387,7 +1370,7 @@ div {
 .qa-part-a-list > h2#a_list_title {
 	font-size: 22px;
 	position: relative;
-	padding: 15px 0px;
+	padding: 15px 0;
 	border-bottom: 1px solid #e2e2e2;
 }
 
@@ -1396,7 +1379,7 @@ div {
 	padding: 20px 10px;
 	.light-border();
 	& + & {
-		border-top: 0px;
+		border-top: 0;
 	}
 	&:first-child {
 		border-top-right-radius: 5px;
@@ -1547,7 +1530,7 @@ div {
 
 	.light-border();
 	& + & {
-		border-top: 0px;
+		border-top: 0;
 	}
 
 	&:first-child {
@@ -1565,7 +1548,7 @@ div {
 	.qa-c-list-item {
 		border: 1px solid @state-success-border;
 		& + .qa-c-list-item {
-			border-top: 0px;
+			border-top: 0;
 		}
 		&:first-child {
 			border-top-right-radius: 3px;
@@ -1706,7 +1689,6 @@ div {
 	border-radius: 4px;
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-	border-color: #dddddd;
 	padding: 15px;
 	margin-bottom: 5px;
 }
@@ -1948,7 +1930,7 @@ div {
 }
 
 .qa-waiting {
-	margin: 0px 12px 0px 5px;
+	margin: 0 12px 0 5px;
 	vertical-align: middle;
 	color: @brand-primary;
 	z-index: 1000;
@@ -2069,7 +2051,7 @@ div {
 		span.qa-form-wide-note,
 		span.qa-form-wide-static {
 			display: block;
-			margin-left: 0px;
+			margin-left: 0;
 		}
 	}
 
@@ -2105,53 +2087,6 @@ div {
 				color: @brand-primary;
 				font-weight: 700;
 			}
-		}
-	}
-}
-
-#login-dropdown-menu {
-	width: 250px;
-	padding: 10px;
-	li {
-		padding: 2px;
-		border-bottom: 0;
-		label.checkbox {
-			margin-left: 20px;
-		}
-		&.forgot-password {
-			.text-center();
-			margin: 10px 0;
-		}
-		.login-or {
-			position: relative;
-			font-size: 18px;
-			color: #aaa;
-			margin-top: 10px;
-			margin-bottom: 10px;
-			padding-top: 10px;
-			padding-bottom: 10px;
-		}
-		.span-or {
-			display: block;
-			position: absolute;
-			left: 50%;
-			top: -2px;
-			margin-left: -25px;
-			background-color: #fff;
-			width: 50px;
-			text-align: center;
-			@media @mobile {
-				background-color: @gray-lighter;
-			}
-		}
-		.hr-or {
-			background-color: #cdcdcd;
-			height: 5px;
-			margin-top: 0px !important;
-			margin-bottom: 0px !important;
-		}
-		& + & {
-			margin-top: 2px;
 		}
 	}
 }

@@ -126,6 +126,9 @@ header#top-header {
 	&.navbar-static-top {
 		border-width: 0;
 	}
+	.navbar-right.user-nav{
+		margin-right: 15px ;
+	}
 }
 
 /* Navigation */
@@ -215,7 +218,6 @@ header#top-header {
 			background-color: @body-bg;
 			-webkit-background-clip: padding-box;
 			background-clip: padding-box;
-			border: 1px solid @light-border;
 			border: 1px solid rgba(0, 0, 0, .15);
 			border-radius: 4px;
 			-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
@@ -305,6 +307,58 @@ header#top-header {
 	}
 }
 
+#login-dropdown-menu {
+	width: 250px;
+	padding: 10px;
+	li {
+		padding: 2px;
+		margin-top: 5px;
+		border-bottom: 0;
+		label.checkbox {
+			margin-left: 20px;
+		}
+		&.forgot-password {
+			.text-center();
+			margin: 10px 0;
+			a {
+				font-size: @font-size-small;
+				padding: 2px 4px !important;
+			}
+		}
+		.login-or {
+			position: relative;
+			font-size: 18px;
+			color: #aaa;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.span-or {
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: -2px;
+			margin-left: -25px;
+			background-color: #fff;
+			width: 50px;
+			text-align: center;
+			@media @mobile {
+				background-color: @gray-lighter;
+			}
+		}
+		.hr-or {
+			background-color: #cdcdcd;
+			height: 5px;
+			margin-top: 0px !important;
+			margin-bottom: 0px !important;
+		}
+		& + & {
+			margin-top: 2px;
+		}
+	}
+}
+
 /* reduce padding for the userimage at the navbar */
 .navbar-nav > li > a.navbar-user-img {
 	padding: 2px 5px;
@@ -354,7 +408,7 @@ header#top-header {
 .navbar-nav.navbar-right {
 	li {
 		.dropdown-menu {
-			margin-top: 7px;
+			margin-top: 15px;
 			&:before {
 				position: absolute;
 				top: -7px;
@@ -376,6 +430,20 @@ header#top-header {
 				border-left: 6px solid transparent;
 				content: '';
 			}
+		}
+	}
+}
+
+/*Not using this now*/
+.donut-navbar-nav() {
+	& > li.dropdown-split-right {
+		& > a {
+			padding: 15px 10px 15px 10px;
+		}
+	}
+	& > li.dropdown-split-left {
+		& > a {
+			padding-right: 0;
 		}
 	}
 }
