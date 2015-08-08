@@ -1447,6 +1447,56 @@ fieldset[disabled] .qa-voted-down-button {
   margin-right: 5px;
   content: "\f003";
 }
+.donut-breadcrumb {
+  border-bottom: 1px solid #e2e2e2;
+  position: relative;
+  padding: 10px 5px ;
+}
+.donut-breadcrumb .breadcrumb {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: transparent;
+  display: block;
+}
+.donut-breadcrumb .breadcrumb > li {
+  display: inline-block;
+}
+.donut-breadcrumb .breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #ccc;
+  font-weight: normal;
+  content: "/\00a0";
+}
+.donut-breadcrumb .breadcrumb > .active {
+  color: #5094ce;
+}
+.donut-breadcrumb .breadcrumb > li > a,
+.donut-breadcrumb .breadcrumb > li i,
+.donut-breadcrumb .breadcrumb > li span {
+  color: #337ab7;
+  font-size: 15px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.donut-breadcrumb .breadcrumb > li > a:hover {
+  text-decoration: none;
+}
+.donut-breadcrumb .breadcrumb > .active > a {
+  color: #5094ce;
+}
+.donut-breadcrumb .breadcrumb > li:last-child > a,
+.donut-breadcrumb .breadcrumb > li:last-child i,
+.donut-breadcrumb .breadcrumb > li:last-child span {
+  color: #5094ce;
+}
+.donut-breadcrumb .qa-widget-full.qa-widget-full-high {
+  margin-top: 0px;
+}
+.donut-breadcrumb .breadcrumb > li i,
+.donut-breadcrumb .breadcrumb > li:last-child i {
+  font-weight: normal;
+}
 .qa-search-button {
   border: 0;
   background: none;

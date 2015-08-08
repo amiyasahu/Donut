@@ -32,6 +32,7 @@
         'top_bar_left_text'        => "Donut - Lightweight and Free responsive Q2A theme",
         'top_bar_right_text'       => "clean theme",
         'top_bar_add_social_links' => true,
+        'enable_breadcrumbs'       => true,
 
         'social_links'             => array(
             'facebook'    => array(

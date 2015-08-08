@@ -205,6 +205,7 @@
             $this->output( '<div class="page-title">' );
             $this->page_title_error();
             $this->output( '</div>' );
+            $this->donut_breadcrumb();
             $this->output( '</div>' );
             $this->output( '</main>' );
 
@@ -478,34 +479,34 @@
 
             ?>
             <header>
-            <nav id="nav" class="navbar navbar-static-top" role="navigation">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="col-sm-3 logo-wrapper">
-                        <?php $this->logo(); ?>
-                    </div>
-                    <div class="donut-navigation col-sm-9">
-                        <ul class="nav navbar-nav navbar-right user-nav">
-                            <?php $this->donut_user_drop_down(); ?>
-                        </ul>
-                        <div class="navbar-collapse collapse main-nav navbar-left">
-                            <ul class="nav navbar-nav inner-drop-nav">
-                                <?php $this->donut_nav_bar_main_links( $navigation['main'] ); ?>
+                <nav id="nav" class="navbar navbar-static-top" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="col-sm-3 logo-wrapper">
+                            <?php $this->logo(); ?>
+                        </div>
+                        <div class="donut-navigation col-sm-9">
+                            <ul class="nav navbar-nav navbar-right user-nav">
+                                <?php $this->donut_user_drop_down(); ?>
                             </ul>
+                            <div class="navbar-collapse collapse main-nav navbar-left">
+                                <ul class="nav navbar-nav inner-drop-nav">
+                                    <?php $this->donut_nav_bar_main_links( $navigation['main'] ); ?>
+                                </ul>
+                            </div>
+
                         </div>
 
                     </div>
-
-                </div>
-            </nav>
+                </nav>
             </header>
             <?php
             return ob_get_clean();
@@ -911,14 +912,14 @@
             $this->output( '</div>' );
         }
 
-        public function error($error)
+        public function error( $error )
         {
-            if (strlen($error)) {
+            if ( strlen( $error ) ) {
                 $this->output(
                     '<div class="donut-error alert alert-dismissible" role="alert">',
                     $error,
-                    '<button class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>' ,
-                '</div>'
+                    '<button class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>',
+                    '</div>'
                 );
             }
         }
@@ -1127,6 +1128,22 @@
                 $text = substr( $text, 0, strrpos( $text, ' ' ) );
 
                 return $text . $pad;
+            }
+        }
+
+        private function donut_breadcrumb()
+        {
+            if ( class_exists( 'Ami_Ami_Breadcrumb' ) && donut_opt( 'enable_breadcrumbs' ) ) {
+                $this->output( '<div class="donut-breadcrumb">' );
+                $args = array(
+                    'themeobject' => $this,
+                    'content'     => $this->content,
+                    'template'    => $this->template,
+                    'request'     => qa_request(),
+                );
+                $breadcrumb = new Ami_Ami_Breadcrumb( $args );
+                $breadcrumb->generate();
+                $this->output( '</div>' );
             }
         }
     }

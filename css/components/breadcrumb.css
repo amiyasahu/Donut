@@ -1,0 +1,50 @@
+.donut-breadcrumb {
+  border-bottom: 1px solid #e2e2e2;
+  position: relative;
+  padding: 10px 0;
+}
+.donut-breadcrumb .breadcrumb {
+  padding: 0 ;
+  margin: 0;
+  list-style: none;
+  background-color: transparent;
+  display: block;
+}
+.donut-breadcrumb .breadcrumb > li {
+  display: inline-block;
+}
+.donut-breadcrumb .breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #ccc;
+  font-weight: bolder;
+  content: "/\00a0";
+}
+.donut-breadcrumb .breadcrumb > .active {
+  color: #777;
+}
+.donut-breadcrumb .breadcrumb > li > a,
+.donut-breadcrumb .breadcrumb > li i,
+.donut-breadcrumb .breadcrumb > li span {
+  color: #444;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.donut-breadcrumb .breadcrumb > li > a:hover {
+  text-decoration: none;
+}
+.donut-breadcrumb .breadcrumb > .active > a {
+  color: #999;
+}
+.donut-breadcrumb .breadcrumb > li:last-child > a,
+.donut-breadcrumb .breadcrumb > li:last-child i,
+.donut-breadcrumb .breadcrumb > li:last-child span {
+  color: #777777;
+}
+.donut-breadcrumb .qa-widget-full.qa-widget-full-high {
+  margin-top: 0px;
+}
+.donut-breadcrumb .breadcrumb > li i,
+.donut-breadcrumb .breadcrumb > li:last-child i {
+  font-weight: normal;
+}
