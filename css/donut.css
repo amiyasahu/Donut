@@ -1497,6 +1497,14 @@ fieldset[disabled] .qa-voted-down-button {
 .donut-breadcrumb .breadcrumb > li:last-child i {
   font-weight: normal;
 }
+@media only screen and (max-width: 767px) {
+  .breadcrumb,
+  .breadcrumb > li > a,
+  .breadcrumb > li i,
+  .breadcrumb > li span {
+    font-size: 12px;
+  }
+}
 .qa-search-button {
   border: 0;
   background: none;
