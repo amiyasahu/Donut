@@ -2797,7 +2797,8 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
 }
 .qa-template-user-answers .qa-q-item-stats,
 .qa-template-user-activity .qa-q-item-stats {
-  float: left !important;
+  float: right !important;
+  float: right;
   float: left;
   width: 16.66666667%;
   position: relative;
@@ -2824,6 +2825,13 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
   .qa-template-user-activity .qa-q-item-stats {
     float: left;
     width: 10%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .qa-template-user-answers .qa-q-item-stats,
+  .qa-template-user-activity .qa-q-item-stats {
+    float: left !important;
+    float: left;
   }
 }
 .qa-template-user-answers .qa-q-item-main,
@@ -2883,7 +2891,8 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
   display: block;
 }
 .qa-q-item-stats {
-  float: left !important;
+  float: right !important;
+  float: right;
   float: left;
   width: 22.5%;
   position: relative;
@@ -2909,6 +2918,12 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
     width: 20%;
   }
 }
+@media only screen and (max-width: 767px) {
+  .qa-q-item-stats {
+    float: left !important;
+    float: left;
+  }
+}
 .qa-q-item-main {
   float: left;
   width: 77.5%;
@@ -2916,7 +2931,6 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-left: 0;
   margin-top: 5px;
 }
 @media (min-width: 768px) {

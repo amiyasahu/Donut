@@ -892,11 +892,14 @@ div {
 .qa-template-user-answers,
 .qa-template-user-activity {
 	.qa-q-item-stats {
-		.pull-left();
+		.pull-right();
 		.make-xs-column(2);
 		.make-sm-column(1.4);
 		.make-md-column(1.5);
 		.make-lg-column(1.2);
+		@media @mobile {
+			.pull-left();
+		}
 	}
 
 	.qa-q-item-main {
@@ -935,11 +938,14 @@ div {
 .qa-q-item {
 
 	&-stats {
-		.pull-left();
+		.pull-right();
 		.make-xs-column(2.7);
 		.make-sm-column(2.7);
 		.make-md-column(2.8);
 		.make-lg-column(2.4);
+		@media @mobile {
+			.pull-left();
+		}
 	}
 
 	&-main {
@@ -947,7 +953,6 @@ div {
 		.make-sm-column(9.3);
 		.make-md-column(9.2);
 		.make-lg-column(9.6);
-		padding-left: 0;
 		margin-top: 5px;
 	}
 
