@@ -395,6 +395,9 @@ header#top-header .top-html-block a:visited {
 .navbar .navbar-right.user-nav {
   padding: 15px 0;
 }
+.navbar .navbar-right.login-nav {
+  margin-right: 15px;
+}
 /* Navigation */
 .navbar-toggle {
   margin-left: 8px;
@@ -1318,7 +1321,7 @@ fieldset[disabled] .qa-voted-down-button {
   color: #3c763d;
 }
 .qa-a-selected {
-  padding-top: 12px;
+  padding-top: 6px;
   background-color: #dff0d8;
   color: #3c763d;
 }
