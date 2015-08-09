@@ -521,9 +521,16 @@ header#top-header .top-html-block a:visited {
     float: right;
   }
   .navbar-nav > li > a.navbar-user-img:hover,
+  .navbar-nav > li > a.navbar-login-button:hover,
   .navbar-nav > li > a.navbar-user-img:active,
-  .navbar-nav > li > a.navbar-user-img:focus {
+  .navbar-nav > li > a.navbar-login-button:active,
+  .navbar-nav > li > a.navbar-user-img:focus,
+  .navbar-nav > li > a.navbar-login-button:focus {
     background-color: #fff;
+  }
+  .navbar .navbar-right.login-nav {
+    margin-right: 0;
+    margin-top: 15px ;
   }
 }
 @media (min-width: 768px) {
