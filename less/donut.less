@@ -24,29 +24,48 @@ html, body {
 @import "components/buttons.less";
 @import "components/breadcrumb.less";
 
-.side-search-bar {
-	margin-bottom: 20px;
-	.qa-search-field.form-control{
-		border-radius: 4px;
-		padding: 20px 12px;
-		width: 110%;
-	}
-}
-
 .qa-search-button {
 	border: 0;
 	background: none;
-	margin-top: 1px;
-	left: -5px;
-	margin-bottom: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	outline: none;
 	margin-left: -10px !important;
-	&:hover , &:active , &:focus , &:active:focus {
-		outline: none ;
+	&:hover, &:active, &:focus, &:active:focus {
+		outline: none;
 		-webkit-box-shadow: none;
 		box-shadow: none;
+	}
+}
+
+.top-search-bar {
+	margin-top: 10px;
+	display: block;
+
+	.qa-search-field.form-control {
+		border-radius: 0;
+		padding: 20px 12px;
+		margin-right: -15px;
+	}
+
+	.qa-search-button {
+		margin-top: 1px;
+		margin-bottom: 0;
+		left: -15px;
+	}
+}
+
+.side-search-bar {
+	margin-bottom: 20px;
+	.qa-search-field.form-control {
+		border-radius: 4px;
+		padding: 20px 12px;
+		width: 110%;
+	}
+	.qa-search-button {
+		margin-top: 1px;
+		left: -5px;
+		margin-bottom: 0;
 	}
 }
 
@@ -1372,7 +1391,7 @@ div {
 		}
 		.qa-tag-link {
 			color: @gray;
-			opacity: .5 ;
+			opacity: .5;
 		}
 	}
 }
@@ -1388,7 +1407,7 @@ div {
 		.light-border();
 		padding: 5px;
 		border-top: medium none;
-		margin-top: -10px ;
+		margin-top: -10px;
 		.border-bottom-radius(5px);
 	}
 }
@@ -1713,7 +1732,7 @@ div {
 
 .qa-message-item {
 	.light-border();
-	padding: 15px 5px ;
+	padding: 15px 5px;
 	margin-bottom: 10px;
 }
 
@@ -1728,7 +1747,7 @@ div {
 		display: block;
 		padding: 15px;
 		position: relative;
-		&:before{
+		&:before {
 			width: 0;
 			height: 0;
 			right: 0;
@@ -1891,7 +1910,7 @@ div {
 	color: @brand-primary;
 	text-decoration: none;
 	cursor: pointer;
-	padding: 2px 8px ;
+	padding: 2px 8px;
 	border: 1px solid @light-border;
 	border-left: medium none;
 	border-bottom-right-radius: 4px;

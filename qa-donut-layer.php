@@ -195,6 +195,12 @@
             $this->output( '<div class="top-divider"></div>' );
             $this->output( '</div>' );
 
+            $this->output( '<div class="container visible-xs">' );
+            $this->output( '<div class="top-search-bar">' );
+            $this->search();
+            $this->output( '</div>' );
+            $this->output( '</div>' );
+
             $this->output( '<main class="donut-masthead">' );
 
             $this->output( '<div class="container">' );
