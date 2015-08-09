@@ -1133,7 +1133,7 @@
 
         private function donut_breadcrumb()
         {
-            if ( class_exists( 'Ami_Ami_Breadcrumb' ) && donut_opt( 'enable_breadcrumbs' ) ) {
+            if ( class_exists( 'Ami_Breadcrumb' ) && donut_opt( 'enable_breadcrumbs' ) ) {
                 $this->output( '<div class="donut-breadcrumb">' );
                 $args = array(
                     'themeobject' => $this,
@@ -1141,9 +1141,10 @@
                     'template'    => $this->template,
                     'request'     => qa_request(),
                 );
-                $breadcrumb = new Ami_Ami_Breadcrumb( $args );
+                $breadcrumb = new Ami_Breadcrumb( $args );
                 $breadcrumb->generate();
                 $this->output( '</div>' );
+                /*TODO: unset the breadcrumb if it exists*/
             }
         }
     }
