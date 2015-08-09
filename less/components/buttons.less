@@ -130,6 +130,10 @@
 }
 
 /*Link buttons*/
+.qa-vote-one-button,
+.qa-vote-first-button,
+.qa-vote-second-button,
+.qa-vote-up-button,
 .qa-vote-buttons-up-disabled,
 .qa-vote-buttons-up-button,
 .qa-vote-buttons-down-disabled,
@@ -137,6 +141,7 @@
 .qa-voted-up-button,
 .qa-voted-down-button {
 	.btn-link();
+	background-color: transparent;
 }
 
 .qa-vote {
@@ -177,10 +182,11 @@
 	&-down-disabled {
 		color: @gray-light;
 	}
+	
 	&-one-button {
 		position: absolute;
 		left: 2px;
-		top: 20px;
+		top: 15px;
 	}
 
 	&-first-button {

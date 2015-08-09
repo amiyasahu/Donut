@@ -16,16 +16,18 @@
 <li class="dropdown user-dropdown">
     <a href="#" class="navbar-user-img dropdown-toggle" data-toggle="dropdown">
         <?php echo $logged_in_user_avatar; ?>
-        <span class="user-name"><?php echo qa_get_logged_in_handle(); ?></span>
     </a>
     <ul class="dropdown-menu" role="menu" id="user-dropdown-menu">
+        <li class="dropdown-header">Signed in as <?php echo qa_get_logged_in_handle(); ?></li>
         <?php if ( qa_get_logged_in_level() >= QA_USER_LEVEL_ADMIN ): ?>
+            <li class="dropdown-header">Admin Section</li>
             <li>
                 <a href="<?php echo qa_path_html( 'admin' ) ?>">
                     <span class="fa fa-cog"></span>
                     <?php echo qa_lang_html( 'main/nav_admin' ); ?>
                 </a>
             </li>
+            <li class="dropdown-header">Profile Section</li>
         <?php endif ?>
         <li>
             <a href="<?php echo qa_path_html( 'user/' . qa_get_logged_in_handle() ); ?>">

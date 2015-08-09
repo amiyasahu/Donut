@@ -393,7 +393,7 @@ header#top-header .top-html-block a:visited {
   border-width: 0;
 }
 .navbar .navbar-right.user-nav {
-  margin-right: 15px ;
+  padding: 15px 0;
 }
 /* Navigation */
 .navbar-toggle {
@@ -524,6 +524,7 @@ header#top-header .top-html-block a:visited {
   background-color: #fff;
   border-color: inherit;
 }
+.dropdown-menu li.dropdown-header,
 .dropdown-menu a {
   padding: 7px 10px !important;
 }
@@ -1021,6 +1022,10 @@ fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
   color: #ffffff;
 }
 /*Link buttons*/
+.qa-vote-one-button,
+.qa-vote-first-button,
+.qa-vote-second-button,
+.qa-vote-up-button,
 .qa-vote-buttons-up-disabled,
 .qa-vote-buttons-up-button,
 .qa-vote-buttons-down-disabled,
@@ -1030,31 +1035,52 @@ fieldset[disabled] .qa-template-login div.qa-part-custom a.open-login-button {
   color: #337ab7;
   font-weight: normal;
   border-radius: 0;
+  background-color: transparent;
 }
+.qa-vote-one-button,
+.qa-vote-first-button,
+.qa-vote-second-button,
+.qa-vote-up-button,
 .qa-vote-buttons-up-disabled,
 .qa-vote-buttons-up-button,
 .qa-vote-buttons-down-disabled,
 .qa-vote-buttons-down-button,
 .qa-voted-up-button,
 .qa-voted-down-button,
+.qa-vote-one-button:active,
+.qa-vote-first-button:active,
+.qa-vote-second-button:active,
+.qa-vote-up-button:active,
 .qa-vote-buttons-up-disabled:active,
 .qa-vote-buttons-up-button:active,
 .qa-vote-buttons-down-disabled:active,
 .qa-vote-buttons-down-button:active,
 .qa-voted-up-button:active,
 .qa-voted-down-button:active,
+.qa-vote-one-button.active,
+.qa-vote-first-button.active,
+.qa-vote-second-button.active,
+.qa-vote-up-button.active,
 .qa-vote-buttons-up-disabled.active,
 .qa-vote-buttons-up-button.active,
 .qa-vote-buttons-down-disabled.active,
 .qa-vote-buttons-down-button.active,
 .qa-voted-up-button.active,
 .qa-voted-down-button.active,
+.qa-vote-one-button[disabled],
+.qa-vote-first-button[disabled],
+.qa-vote-second-button[disabled],
+.qa-vote-up-button[disabled],
 .qa-vote-buttons-up-disabled[disabled],
 .qa-vote-buttons-up-button[disabled],
 .qa-vote-buttons-down-disabled[disabled],
 .qa-vote-buttons-down-button[disabled],
 .qa-voted-up-button[disabled],
 .qa-voted-down-button[disabled],
+fieldset[disabled] .qa-vote-one-button,
+fieldset[disabled] .qa-vote-first-button,
+fieldset[disabled] .qa-vote-second-button,
+fieldset[disabled] .qa-vote-up-button,
 fieldset[disabled] .qa-vote-buttons-up-disabled,
 fieldset[disabled] .qa-vote-buttons-up-button,
 fieldset[disabled] .qa-vote-buttons-down-disabled,
@@ -1065,24 +1091,40 @@ fieldset[disabled] .qa-voted-down-button {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.qa-vote-one-button,
+.qa-vote-first-button,
+.qa-vote-second-button,
+.qa-vote-up-button,
 .qa-vote-buttons-up-disabled,
 .qa-vote-buttons-up-button,
 .qa-vote-buttons-down-disabled,
 .qa-vote-buttons-down-button,
 .qa-voted-up-button,
 .qa-voted-down-button,
+.qa-vote-one-button:hover,
+.qa-vote-first-button:hover,
+.qa-vote-second-button:hover,
+.qa-vote-up-button:hover,
 .qa-vote-buttons-up-disabled:hover,
 .qa-vote-buttons-up-button:hover,
 .qa-vote-buttons-down-disabled:hover,
 .qa-vote-buttons-down-button:hover,
 .qa-voted-up-button:hover,
 .qa-voted-down-button:hover,
+.qa-vote-one-button:focus,
+.qa-vote-first-button:focus,
+.qa-vote-second-button:focus,
+.qa-vote-up-button:focus,
 .qa-vote-buttons-up-disabled:focus,
 .qa-vote-buttons-up-button:focus,
 .qa-vote-buttons-down-disabled:focus,
 .qa-vote-buttons-down-button:focus,
 .qa-voted-up-button:focus,
 .qa-voted-down-button:focus,
+.qa-vote-one-button:active,
+.qa-vote-first-button:active,
+.qa-vote-second-button:active,
+.qa-vote-up-button:active,
 .qa-vote-buttons-up-disabled:active,
 .qa-vote-buttons-up-button:active,
 .qa-vote-buttons-down-disabled:active,
@@ -1091,12 +1133,20 @@ fieldset[disabled] .qa-voted-down-button {
 .qa-voted-down-button:active {
   border-color: transparent;
 }
+.qa-vote-one-button:hover,
+.qa-vote-first-button:hover,
+.qa-vote-second-button:hover,
+.qa-vote-up-button:hover,
 .qa-vote-buttons-up-disabled:hover,
 .qa-vote-buttons-up-button:hover,
 .qa-vote-buttons-down-disabled:hover,
 .qa-vote-buttons-down-button:hover,
 .qa-voted-up-button:hover,
 .qa-voted-down-button:hover,
+.qa-vote-one-button:focus,
+.qa-vote-first-button:focus,
+.qa-vote-second-button:focus,
+.qa-vote-up-button:focus,
 .qa-vote-buttons-up-disabled:focus,
 .qa-vote-buttons-up-button:focus,
 .qa-vote-buttons-down-disabled:focus,
@@ -1153,7 +1203,7 @@ fieldset[disabled] .qa-voted-down-button {
 .qa-vote-one-button {
   position: absolute;
   left: 2px;
-  top: 20px;
+  top: 15px;
 }
 .qa-vote-first-button {
   position: absolute;
