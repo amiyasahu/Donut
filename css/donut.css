@@ -641,7 +641,7 @@ header#top-header .top-html-block a:visited {
   border-bottom-color: rgba(0, 0, 0, 0.2);
   content: '';
 }
-.navbar-nav.navbar-right li .dropdown-menu::after {
+.navbar-nav.navbar-right li .dropdown-menu:after {
   position: absolute;
   top: -6px;
   right: 16px;
@@ -3681,22 +3681,75 @@ a.qa-browse-cat-link:visited {
 }
 /* Message list */
 .qa-message-item {
-  background-color: #ffffff;
   border: 1px solid transparent;
-  border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  padding: 15px;
-  margin-bottom: 5px;
-}
-.qa-message-content {
-  font-size: 18px;
+  border-color: #dddddd;
+  padding: 15px 5px ;
   margin-bottom: 10px;
+}
+.qa-message-content-wrapper {
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.qa-message-content-wrapper .qa-message-content {
+  background: #eeeeee none repeat scroll 0 0;
+  color: #777777;
+  display: block;
+  padding: 15px;
+  position: relative;
+}
+.qa-message-content-wrapper .qa-message-content:before {
+  width: 0;
+  height: 0;
+  right: 0;
+  bottom: 0;
+  content: " ";
+  display: block;
+  position: absolute;
+  border-bottom: 20px solid #fff;
+  border-right: 0 solid transparent;
+  border-left: 20px solid transparent;
+  border-left-style: inset;
+  /*FF fixes*/
+  border-bottom-style: inset;
+  /*FF fixes*/
+}
+.qa-message-content-wrapper .qa-message-content:after {
+  width: 0;
+  height: 0;
+  right: 0;
+  bottom: 0;
+  content: " ";
+  display: block;
+  position: absolute;
+  border-style: solid;
+  border-width: 20px 20px 0 0;
+  border-color: #f4c37d transparent transparent transparent;
 }
 .qa-message-avatar {
   display: inline-block;
   vertical-align: middle;
   margin-right: 4px;
+}
+.qa-message-avatar img {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 2px;
+  border-radius: 50%;
+}
+.qa-message-avatar-meta {
+  padding: 5px;
 }
 .qa-message-meta {
   display: inline-block;

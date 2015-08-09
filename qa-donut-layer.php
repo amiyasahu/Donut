@@ -1147,6 +1147,17 @@
                 /*TODO: unset the breadcrumb if it exists*/
             }
         }
+
+        public function message_content($message)
+        {
+            if (!empty($message['content'])) {
+                $this->output('<div class="qa-message-content-wrapper">');
+                $this->output('<div class="qa-message-content">');
+                $this->output_raw($message['content']);
+                $this->output('</div>');
+                $this->output('</div>');
+            }
+        }
     }
 /*
 	Omit PHP closing tag to help avoid accidental output
