@@ -389,6 +389,24 @@ header#top-header .top-html-block a:visited {
   box-shadow: none;
   max-height: 70px;
 }
+@media only screen and (max-width: 767px) {
+  .navbar .qa-logo-link {
+    font-size: 25px;
+    padding-top: 15px;
+    line-height: 50px;
+  }
+  .navbar .qa-logo-link:hover,
+  .navbar .qa-logo-link:active,
+  .navbar .qa-logo-link:focus {
+    text-decoration: none;
+  }
+  .navbar .qa-logo-link img {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    max-height: 70px;
+  }
+}
 .navbar.navbar-static-top {
   border-width: 0;
 }
@@ -402,6 +420,7 @@ header#top-header .top-html-block a:visited {
 .navbar-toggle {
   margin-left: 8px;
   margin-right: 0px;
+  font-size: 20px;
   float: left !important;
   float: left;
 }
@@ -409,12 +428,6 @@ header#top-header .top-html-block a:visited {
   font-size: 20px;
 }
 @media only screen and (max-width: 767px) {
-  .navbar-nav.navbar-collapse {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
   .navbar-header {
     float: left;
   }
@@ -440,6 +453,7 @@ header#top-header .top-html-block a:visited {
   }
   .nav.navbar-nav.navbar-right.user-nav {
     clear: none;
+    margin-right: -10%;
   }
   .user-nav {
     margin: 0;
@@ -505,6 +519,11 @@ header#top-header .top-html-block a:visited {
   .qa-search-field {
     float: right !important;
     float: right;
+  }
+  .navbar-nav > li > a.navbar-user-img:hover,
+  .navbar-nav > li > a.navbar-user-img:active,
+  .navbar-nav > li > a.navbar-user-img:focus {
+    background-color: #fff;
   }
 }
 @media (min-width: 768px) {
