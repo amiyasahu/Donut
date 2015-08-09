@@ -1555,18 +1555,32 @@ fieldset[disabled] .qa-voted-down-button {
     font-size: 12px;
   }
 }
+.side-search-bar {
+  margin-bottom: 20px;
+}
+.side-search-bar .qa-search-field.form-control {
+  border-radius: 4px;
+  padding: 20px 12px;
+  width: 110%;
+}
 .qa-search-button {
   border: 0;
   background: none;
-  padding: 2px 5px;
   margin-top: 1px;
-  left: -28px;
+  left: -5px;
   margin-bottom: 0;
-  border-radius: 3px;
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: none;
   margin-left: -10px !important;
+}
+.qa-search-button:hover,
+.qa-search-button:active,
+.qa-search-button:focus,
+.qa-search-button:active:focus {
+  outline: none ;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .top-divider {
   border-top: 1px solid #EEE;

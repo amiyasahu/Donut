@@ -376,6 +376,9 @@
         function sidepanel()
         {
             $this->output( '<div class="qa-sidepanel col-md-3 pull-right">' );
+            $this->output( '<div class="side-search-bar hidden-xs">' );
+            $this->search();
+            $this->output( '</div>' );
             $this->widgets( 'side', 'top' );
             $this->sidebar();
             $this->widgets( 'side', 'high' );
@@ -521,7 +524,7 @@
             $search = $this->content['search'];
 
             $this->output(
-                '<form class="navbar-form pull-right" role="form" ' . $search['form_tags'] . '>',
+                '<form class="search-form" role="form" ' . $search['form_tags'] . '>',
                 @$search['form_extra']
             );
 
