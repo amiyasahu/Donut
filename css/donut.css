@@ -3369,6 +3369,17 @@ a.qa-browse-cat-link:visited {
   float: left;
 }
 /* Answer form */
+.qa-part-a-form form {
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #dddddd;
+  padding: 5px;
+  border-top: medium none;
+  margin-top: -10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
 .qa-part-a-form div#anew h2,
 .qa-part-a-list > h2#a_list_title {
   font-size: 22px;
