@@ -1100,6 +1100,7 @@ div {
 		}
 		li.tag-item {
 			padding: 5px;
+			overflow: auto;
 			.tag-head span {
 				float: left;
 			}
@@ -1399,6 +1400,12 @@ div {
 #tag_examples_title,
 #tag_complete_title {
 	float: left;
+	margin-right: 5px;
+}
+
+#tag_hints .qa-tag-link {
+	border: 1px solid @light-border;
+	border-radius: 4px;
 }
 
 /* Answer form */
@@ -1899,11 +1906,16 @@ div {
 
 .qa-q-view-tag-item,
 .qa-q-item-tag-item,
-.qa-tag-link {
+.qa-tag-link,
+.qa-tags-rank-tag-item {
 	float: left;
 	font-size: @font-size-small;
 	border-left: 8px solid @brand-primary;
 	margin-right: 5px;
+}
+.qa-tags-rank-tag-item {
+	display: inline-block;
+	margin-left: 10px;
 }
 
 .qa-tag-link {

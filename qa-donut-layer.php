@@ -732,7 +732,7 @@
         {
             $this->output( '<div class="qa-q-list-item' . rtrim( ' ' . @$q_item['classes'] ) . '" ' . @$q_item['tags'] . '>' );
 
-            $this->q_item_stats($q_item);
+            $this->q_item_stats( $q_item );
             //$this->q_item_avatar( $q_item );
             $this->q_item_main( $q_item );
             $this->q_item_clear();
@@ -1109,18 +1109,19 @@
             if ( isset( $item ) )
                 $this->output(
                     '<li class="tag-item">',
-                    '<div class="clearfix">',
-                    '<p class="tag-head">',
-                    '<span> ' . $item['count'] . ' &#215;</span>' . $item['label'],
-                    '</p>'
+                    '<div class="tag-head">',
+                    '<span> ' . $item['count'] . ' &#215;</span>',
+                    '<div class="qa-tags-rank-tag-item">',
+                    $item['label'],
+                    '</div>',
+                    '</div>'
                 );
             if ( !empty( $content ) ) {
                 $this->output( '<p class="desc">',
                     $this->truncate( $content, 150 ),
                     '</p>' );
             }
-            $this->output( '</div>',
-                '</li>' );
+            $this->output( '</li>' );
         }
 
         function truncate( $string, $limit, $pad = "..." )
@@ -1153,14 +1154,14 @@
             }
         }
 
-        public function message_content($message)
+        public function message_content( $message )
         {
-            if (!empty($message['content'])) {
-                $this->output('<div class="qa-message-content-wrapper">');
-                $this->output('<div class="qa-message-content">');
-                $this->output_raw($message['content']);
-                $this->output('</div>');
-                $this->output('</div>');
+            if ( !empty( $message['content'] ) ) {
+                $this->output( '<div class="qa-message-content-wrapper">' );
+                $this->output( '<div class="qa-message-content">' );
+                $this->output_raw( $message['content'] );
+                $this->output( '</div>' );
+                $this->output( '</div>' );
             }
         }
     }

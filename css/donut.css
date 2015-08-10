@@ -3121,6 +3121,7 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
 }
 .qa-top-tags ul.donut-tags-list li.tag-item {
   padding: 5px;
+  overflow: auto;
 }
 .qa-top-tags ul.donut-tags-list li.tag-item .tag-head span {
   float: left;
@@ -3426,6 +3427,11 @@ a.qa-browse-cat-link:visited {
 #tag_examples_title,
 #tag_complete_title {
   float: left;
+  margin-right: 5px;
+}
+#tag_hints .qa-tag-link {
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
 }
 /* Answer form */
 .qa-part-a-form form {
@@ -3906,11 +3912,16 @@ a.qa-browse-cat-link:visited {
 }
 .qa-q-view-tag-item,
 .qa-q-item-tag-item,
-.qa-tag-link {
+.qa-tag-link,
+.qa-tags-rank-tag-item {
   float: left;
   font-size: 12px;
   border-left: 8px solid #337ab7;
   margin-right: 5px;
+}
+.qa-tags-rank-tag-item {
+  display: inline-block;
+  margin-left: 10px;
 }
 .qa-tag-link {
   color: #337ab7;
