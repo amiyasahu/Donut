@@ -1587,6 +1587,10 @@ div .header-banner {
     margin-bottom: 5px;
   }
 }
+.qa-nav-sub {
+  padding-left: 0;
+  padding-right: 0;
+}
 .qa-nav-sub .qa-nav-sub-list {
   margin-bottom: 0;
   padding-left: 0;
@@ -1701,15 +1705,6 @@ div .header-banner {
 .qa-nav-sub .qa-nav-sub-list .qa-nav-sub-hot .qa-nav-sub-link {
   color: #af0000 !important;
   font-weight: 700;
-}
-.qa-template-questions .qa-nav-sub,
-.qa-template-unanswered .qa-nav-sub,
-.qa-template-updates .qa-nav-sub,
-.qa-template-user-questions .qa-nav-sub,
-.qa-template-user-answers .qa-nav-sub,
-.qa-template-user-activity .qa-nav-sub {
-  padding-left: 0;
-  padding-right: 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .qa-main {
@@ -1941,56 +1936,6 @@ div .header-banner {
 .qa-view-count-pad {
   font-size: 12px;
 }
-.qa-template-question .qa-part-q-view {
-  position: relative;
-}
-.qa-template-question .qa-view-count {
-  position: absolute;
-  right: 0;
-  top: 5px;
-  float: none;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  display: inline;
-  padding: .2em .6em .3em;
-  font-size: 75%;
-  font-weight: bold;
-  line-height: 1;
-  color: #ffffff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: .25em;
-  background-color: #5cb85c;
-}
-a.qa-template-question .qa-view-count:hover,
-a.qa-template-question .qa-view-count:focus {
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-}
-.qa-template-question .qa-view-count:empty {
-  display: none;
-}
-.btn .qa-template-question .qa-view-count {
-  position: relative;
-  top: -1px;
-}
-.qa-template-question .qa-view-count[href]:hover,
-.qa-template-question .qa-view-count[href]:focus {
-  background-color: #449d44;
-}
-.qa-template-question .qa-view-count-data {
-  font-size: 12px;
-  line-height: 1.42857143;
-  display: inline;
-}
-.qa-template-question .qa-view-count-pad {
-  font-size: 12px;
-  line-height: 1.42857143;
-  letter-spacing: 1px;
-}
 .qa-favoriting {
   float: right !important;
   float: right;
@@ -2006,6 +1951,37 @@ a.qa-template-question .qa-view-count:focus {
   position: absolute;
   right: 44px;
   top: 35%;
+}
+.qa-template-question .qa-part-q-view {
+  position: relative;
+}
+.qa-template-question .qa-view-count {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background-color: #5cb85c;
+}
+.qa-template-question .qa-view-count-data {
+  font-size: 12px;
+  line-height: 1.42857143;
+  display: inline;
+}
+.qa-template-question .qa-view-count-pad {
+  font-size: 12px;
+  line-height: 1.42857143;
+  letter-spacing: 1px;
 }
 .qa-template-question .qa-favoriting {
   padding-right: 15px;
@@ -2315,41 +2291,8 @@ a.qa-template-question .qa-view-count:focus {
   vertical-align: middle;
   white-space: nowrap;
   text-align: center;
-  background-color: #777777;
   border-radius: 10px;
   background-color: #f0ad4e;
-}
-.qa-nav-cat-item .qa-nav-cat-note:empty {
-  display: none;
-}
-.btn .qa-nav-cat-item .qa-nav-cat-note {
-  position: relative;
-  top: -1px;
-}
-.btn-xs .qa-nav-cat-item .qa-nav-cat-note,
-.btn-group-xs > .btn .qa-nav-cat-item .qa-nav-cat-note {
-  top: 0;
-  padding: 1px 5px;
-}
-a.qa-nav-cat-item .qa-nav-cat-note:hover,
-a.qa-nav-cat-item .qa-nav-cat-note:focus {
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-}
-.list-group-item.active > .qa-nav-cat-item .qa-nav-cat-note,
-.nav-pills > .active > a > .qa-nav-cat-item .qa-nav-cat-note {
-  color: #337ab7;
-  background-color: #ffffff;
-}
-.list-group-item > .qa-nav-cat-item .qa-nav-cat-note {
-  float: right;
-}
-.list-group-item > .qa-nav-cat-item .qa-nav-cat-note + .qa-nav-cat-item .qa-nav-cat-note {
-  margin-right: 5px;
-}
-.nav-pills > li > a > .qa-nav-cat-item .qa-nav-cat-note {
-  margin-left: 3px;
 }
 .qa-nav-cat-item .qa-nav-cat-link {
   clear: both;

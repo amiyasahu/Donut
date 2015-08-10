@@ -96,11 +96,6 @@ html, body {
 	}
 }
 
-.qa-template-questions,
-.qa-template-qa {
-
-}
-
 .qa-main,
 .qa-main-wrapper {
 	h1 {
@@ -151,6 +146,8 @@ div {
 }
 
 .qa-nav-sub {
+	padding-left: 0;
+	padding-right: 0;
 	.qa-nav-sub-list {
 		.nav();
 		.nav-tabs();
@@ -175,20 +172,6 @@ div {
 
 				}
 			}
-		}
-	}
-}
-
-.qa-template {
-	&-questions,
-	&-unanswered,
-	&-updates,
-	&-user-questions,
-	&-user-answers,
-	&-user-activity {
-		.qa-nav-sub {
-			padding-left: 0;
-			padding-right: 0;
 		}
 	}
 }
@@ -383,34 +366,6 @@ div {
 	}
 }
 
-.qa-template-question {
-	// padding-top: 70px;
-	.qa-part-q-view {
-		position: relative;
-	}
-	.qa-view-count {
-		position: absolute;
-		right: 0;
-		top: 5px;
-		float: none;
-		width: auto;
-		height: auto;
-		cursor: pointer;
-		.label();
-		.label-success();
-		&-data {
-			font-size: @font-size-small;
-			line-height: @line-height-base;
-			display: inline;
-		}
-		&-pad {
-			font-size: @font-size-small;
-			line-height: @line-height-base;
-			letter-spacing: 1px;
-		}
-	}
-}
-
 .qa-favoriting {
 	.pull-right();
 	position: absolute;
@@ -427,6 +382,37 @@ div {
 }
 
 .qa-template-question {
+	.qa-part-q-view {
+		position: relative;
+	}
+	.qa-view-count {
+		position: absolute;
+		right: 0;
+		top: 5px;
+		width: auto;
+		height: auto;
+		cursor: pointer;
+		padding: .2em .6em .3em;
+		font-size: 75%;
+		font-weight: bold;
+		line-height: 1;
+		color: @label-color;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: baseline;
+		border-radius: .25em;
+		background-color: @label-success-bg;
+		&-data {
+			font-size: @font-size-small;
+			line-height: @line-height-base;
+			display: inline;
+		}
+		&-pad {
+			font-size: @font-size-small;
+			line-height: @line-height-base;
+			letter-spacing: 1px;
+		}
+	}
 	.qa-favoriting {
 		padding-right: 15px;
 		padding-top: 5px;
@@ -592,7 +578,17 @@ div {
 
 	}
 	.qa-nav-cat-note {
-		.badge();
+		display: inline-block;
+		min-width: 10px;
+		padding: 3px 7px;
+		font-size: @font-size-small;
+		font-weight: @badge-font-weight;
+		color: @badge-color;
+		line-height: @badge-line-height;
+		vertical-align: middle;
+		white-space: nowrap;
+		text-align: center;
+		border-radius: @badge-border-radius;
 		background-color: @brand-warning;
 	}
 }
@@ -1911,6 +1907,7 @@ div {
 	border-left: 8px solid @brand-primary;
 	margin-right: 5px;
 }
+
 .qa-tags-rank-tag-item {
 	display: inline-block;
 	margin-left: 10px;
