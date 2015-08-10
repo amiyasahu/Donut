@@ -729,7 +729,7 @@
 
         public function q_list_item( $q_item )
         {
-            $this->output( '<div class="qa-q-list-item' . rtrim( ' ' . @$q_item['classes'] ) . '" ' . @$q_item['tags'] . '>' );
+            $this->output( '<div class="qa-q-list-item row' . rtrim( ' ' . @$q_item['classes'] ) . '" ' . @$q_item['tags'] . '>' );
 
             $this->q_item_stats( $q_item );
             //$this->q_item_avatar( $q_item );
