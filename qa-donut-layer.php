@@ -278,7 +278,7 @@
 
         function header() // removes user navigation and search from header and replaces with custom header content. Also opens new <div>s
         {
-            $this->output( '<div class="qa-header">' );
+            $this->output( '<div class="qa-header clearfix">' );
 
             // $this->logo();
             $this->header_clear();
@@ -286,8 +286,8 @@
 
             $this->output( '</div> <!-- END qa-header -->', '' );
 
-            $this->output( '<div class="qa-main-shadow">', '' );
-            $this->output( '<div class="qa-main-wrapper row">', '' );
+            $this->output( '<div class="qa-main-shadow clearfix">', '' );
+            $this->output( '<div class="qa-main-wrapper clearfix row">', '' );
         }
 
         function header_custom() // allows modification of custom element shown inside header after logo
@@ -1163,6 +1163,78 @@
                 $this->output( '</div>' );
                 $this->output( '</div>' );
             }
+        }
+
+        public function vote_clear()
+        {
+            $this->output(
+                '<div class="qa-vote-clear clearfix">',
+                '</div>'
+            );
+        }
+
+        public function page_links_clear()
+        {
+            $this->output(
+                '<div class="qa-page-links-clear clearfix">',
+                '</div>'
+            );
+        }
+
+        public function q_view_clear()
+        {
+            $this->output(
+                '<div class="qa-q-view-clear clearfix">',
+                '</div>'
+            );
+        }
+
+        public function a_item_clear()
+        {
+            $this->output(
+                '<div class="qa-a-item-clear clearfix">',
+                '</div>'
+            );
+        }
+
+        public function c_item_clear()
+        {
+            $this->output(
+                '<div class="qa-c-item-clear clearfix">',
+                '</div>'
+            );
+        }
+
+        public function nav_clear( $navtype )
+        {
+            $this->output(
+                '<div class="qa-nav-' . $navtype . '-clear clearfix">',
+                '</div>'
+            );
+        }
+
+        public function header_clear()
+        {
+            $this->output(
+                '<div class="qa-header-clear clearfix">',
+                '</div>'
+            );
+        }
+
+        public function footer_clear()
+        {
+            $this->output(
+                '<div class="qa-footer-clear clearfix">',
+                '</div>'
+            );
+        }
+
+        public function q_item_clear()
+        {
+            $this->output(
+                '<div class="qa-q-item-clear clearfix">',
+                '</div>'
+            );
         }
     }
 /*
