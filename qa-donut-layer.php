@@ -488,7 +488,8 @@
 
             ?>
             <header>
-                <nav id="nav" class="navbar navbar-static-top" role="navigation">
+                <nav id="nav" class="navbar navbar-static-top"
+                     role="navigation" <?php echo ( donut_opt( 'enable_stiky_header_upon_scroll' ) ? 'data-spy="affix" data-offset-top="60"' : '' ) ?>>
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -508,8 +509,6 @@
                                 <?php $this->donut_nav_bar_main_links( $navigation['main'] ); ?>
                             </ul>
                         </div>
-
-
                     </div>
                 </nav>
             </header>

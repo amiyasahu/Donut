@@ -31,22 +31,5 @@ jQuery(document).ready(function () {
 
 	if ($solvedQ.length > 0) {
 		$mainQ.addClass('qa-part-q-view-solved');
-	}; 
-
-    $('#nav').affix({
-	      offset: {
-	        top: $('#nav').height() + 200
-	      }
-	}); 
-
-    /*
-    $('#nav').on('affix.bs.affix', function () {
-        var navHeight = $('.navbar').outerHeight(true);
-        $('#nav + .container').css('margin-top', navHeight);
-	});
-
-    $('#nav').on('affix-top.bs.affix', function () {
-     	$('#nav + .container').css('margin-top', 0);
- 	});
- 	*/
+	};
 });
