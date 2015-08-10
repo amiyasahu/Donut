@@ -13,7 +13,7 @@
          * Note - If you using this on your local machine with out a internet connection then set it to false
          * Allowed values true | false
          */
-        'activate_prod_mode'              => true ,
+        'activate_prod_mode'              => false ,
 
         /**
          * Is RTL
