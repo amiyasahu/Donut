@@ -2651,9 +2651,7 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   border-color: #dddddd;
-}
-.qa-q-list-item + .qa-q-list-item {
-  border-top: 0;
+  margin-bottom: -1px;
 }
 .qa-q-list-item:first-child {
   border-top-right-radius: 5px;
@@ -3423,9 +3421,7 @@ a.qa-browse-cat-link:visited {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   border-color: #dddddd;
-}
-.qa-c-list-item + .qa-c-list-item {
-  border-top: 0;
+  margin-bottom: -1px;
 }
 .qa-c-list-item:first-child {
   border-top-right-radius: 3px;
