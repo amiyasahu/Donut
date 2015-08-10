@@ -228,7 +228,7 @@
 
             $this->main();
 
-            if ( $this->template !== 'admin' && $this->template != 'user' ) {
+            if ( !in_array( $this->template, $this->hide_sidebar_for_template() ) ) {
                 $this->sidepanel();
             }
 
@@ -333,8 +333,9 @@
         function main()
         {
             $content = $this->content;
+            $width_class = in_array( $this->template, $this->hide_sidebar_for_template() ) ? 'col-xs-12' : 'qa-main col-md-9 col-xs-12 pull-left' ;
 
-            $this->output( '<div class="qa-main col-md-9 col-xs-12 pull-left' . ( @$this->content['hidden'] ? ' qa-main-hidden' : '' ) . '">' );
+            $this->output( '<div class="' . $width_class . ( @$this->content['hidden'] ? ' qa-main-hidden' : '' ) . '">' );
 
             if ( !empty( $this->content['navigation']['sub'] ) || $this->template == 'admin' ) {
                 $this->donut_sidebar_toggle_nav_btn();
@@ -489,7 +490,7 @@
             ?>
             <header>
                 <nav id="nav" class="navbar navbar-static-top"
-                     role="navigation" <?php echo ( donut_opt( 'enable_stiky_header_upon_scroll' ) ? 'data-spy="affix" data-offset-top="60"' : '' ) ?>>
+                     role="navigation" <?php echo( donut_opt( 'enable_stiky_header_upon_scroll' ) ? 'data-spy="affix" data-offset-top="60"' : '' ) ?>>
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -1234,6 +1235,19 @@
                 '<div class="qa-q-item-clear clearfix">',
                 '</div>'
             );
+        }
+
+        /**
+         * @return array
+         */
+        private function hide_sidebar_for_template()
+        {
+            return array(
+                'users',
+                /*'tags', 'categories' ,*/
+                'admin', 'user', 'account',
+                'favorites', 'user-wall', 'messages',
+                'user-activity', 'user-questions', 'user-answers' );
         }
     }
 /*

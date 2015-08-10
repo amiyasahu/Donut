@@ -3804,32 +3804,6 @@ a.qa-browse-cat-link:visited {
   padding-right: 5px;
   color: #f2b866;
 }
-.qa-template-user .qa-main {
-  float: left;
-  width: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .qa-template-user .qa-main {
-    float: left;
-    width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .qa-template-user .qa-main {
-    float: left;
-    width: 100%;
-  }
-}
-@media (min-width: 1200px) {
-  .qa-template-user .qa-main {
-    float: left;
-    width: 100%;
-  }
-}
 .qa-template-user .qa-part-form-activity,
 .qa-template-user .qa-part-message-list {
   float: left;
