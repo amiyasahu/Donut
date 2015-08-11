@@ -13,7 +13,7 @@
          * Note - If you using this on your local machine with out a internet connection then set it to false
          * Allowed values true | false
          */
-        'activate_prod_mode'              => false ,
+        'activate_prod_mode'              => false,
 
         /**
          * Is RTL
@@ -34,6 +34,7 @@
         'top_bar_add_social_links'        => true,
         'enable_breadcrumbs'              => true,
         'enable_stiky_header_upon_scroll' => true,
+        'enable_back_to_top_button'       => true,
 
         'social_links'                    => array(
             'facebook'    => array(

@@ -429,6 +429,11 @@
         function body_suffix() // to replace standard Q2A footer
         {
             $this->output( '<footer class="donut-footer">' );
+
+            if(donut_opt('enable_back_to_top_button')){
+                $this->output('<a class="donut-top"></a>');
+            }
+
             $this->output( '<div class="container">' );
 
             parent::footer();
@@ -488,7 +493,7 @@
             }
 
             ?>
-            <header>
+            <header id="nav-header">
                 <nav id="nav" class="navbar navbar-static-top"
                      role="navigation" <?php echo( donut_opt( 'enable_stiky_header_upon_scroll' ) ? 'data-spy="affix" data-offset-top="60"' : '' ) ?>>
                     <div class="container">

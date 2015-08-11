@@ -1714,7 +1714,7 @@ div .header-banner {
 }
 .qa-main-hidden {
   background-color: #fbfbfb;
-  opacity: 0.8 ;
+  opacity: 0.8;
 }
 .qa-main-hidden .qa-voting {
   color: #555555;
@@ -2579,7 +2579,7 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
   padding: 15px;
 }
 .qa-form-wide-label {
-  min-width: 100px ;
+  min-width: 100px;
 }
 .qa-form-wide-label,
 .qa-form-wide-data {
@@ -3283,7 +3283,7 @@ a.qa-browse-cat-link:visited {
 }
 .qa-a-list-item-hidden {
   background-color: #fbfbfb;
-  opacity: 0.8 ;
+  opacity: 0.8;
 }
 .qa-a-list-item-hidden .qa-voting {
   color: #555555;
@@ -3960,4 +3960,53 @@ a.qa-browse-cat-link:visited {
 .qa-template-register .qa-part-custom,
 .qa-template-login .qa-part-custom {
   clear: both;
+}
+.donut-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  cursor: pointer;
+  border-radius: 4px;
+  bottom: 10%;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  background: #f0ad4e url(../images/top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.donut-top.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.donut-top.fade-out {
+  opacity: .5;
+}
+@media only screen and (min-width: 768px) {
+  .donut-top {
+    right: 20px;
+    bottom: 10%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .donut-top {
+    height: 40px;
+    width: 40px;
+    right: 30px;
+    bottom: 10%;
+  }
+}
+.donut-top.is-visible,
+.donut-top.fade-out,
+.no-touch .donut-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.no-touch .donut-top:hover {
+  background-color: #f0ad4e;
+  opacity: 1;
 }
