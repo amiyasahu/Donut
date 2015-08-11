@@ -12,14 +12,8 @@ jQuery(document).ready(function () {
 	
 	$('.qa-logo-link').removeAttr('title');
 
-	$('[title]').tooltip({
-		placement : 'bottom' 
-	});
-
-	$('.qa-vote-buttons').tooltip({
-	    selector: '[title]' ,
-	    placement : 'bottom' ,
-	    container:'body'
+	$('[title]').not('[class|="qa-vote"]').tooltip({
+		placement : 'bottom'
 	});
 
 	var $mainQ = $('.qa-part-q-view') ,
