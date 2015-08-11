@@ -1148,14 +1148,14 @@
         private function donut_breadcrumb()
         {
             if ( class_exists( 'Ami_Breadcrumb' ) && donut_opt( 'enable_breadcrumbs' ) ) {
-                $args = array(
-                    'themeobject' => $this,
-                    'content'     => $this->content,
-                    'template'    => $this->template,
-                    'request'     => qa_request(),
-                );
-                $breadcrumb = new Ami_Breadcrumb( $args );
-                if ( !$breadcrumb->is_home() ) {
+                if ( !$this->is_home() ) {
+                    $args = array(
+                        'themeobject' => $this,
+                        'content'     => $this->content,
+                        'template'    => $this->template,
+                        'request'     => qa_request(),
+                    );
+                    $breadcrumb = new Ami_Breadcrumb( $args );
                     $this->output( '<div class="donut-breadcrumb">' );
                     $breadcrumb->generate();
                     $this->output( '</div>' );
@@ -1274,6 +1274,17 @@
 
         function donut_page_has_favorite(){
             return isset($this->content['favorite']) ;
+        }
+
+        /**
+         * =================================================
+         * Check if the current page is home page or not
+         * @return bool
+         * =================================================
+         */
+        public function is_home()
+        {
+            return empty( $this->request );
         }
     }
 /*
