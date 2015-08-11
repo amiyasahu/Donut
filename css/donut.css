@@ -1712,20 +1712,24 @@ div .header-banner {
   font-weight: 700;
 }
 .qa-rss-feed {
-  border: none;
   border-radius: 4px;
   color: #ffffff;
-  display: block;
-  font-size: 17px;
-  line-height: 25px;
-  margin: 0;
-  padding: 5px 10px;
+  padding: 6px 10px;
+  position: absolute;
+  right: 0 ;
+  bottom: 5px ;
   background-color: #f0ad4e;
   float: right;
 }
-.qa-rss-feed:hover {
+.qa-rss-feed:hover,
+.qa-rss-feed:active,
+.qa-rss-feed:focus,
+.qa-rss-feed:visited {
   background-color: #f0ad4e;
   color: #ffffff;
+}
+.page-title.has-favorite .qa-rss-feed {
+  right: 35px;
 }
 /* Votes */
 .qa-voting {
@@ -1836,16 +1840,13 @@ div .header-banner {
   float: right;
   position: absolute;
   right: 0;
-  padding-right: 50px;
-  padding-top: 2px;
+  bottom: 5px;
 }
 .qa-favoriting .qa-waiting {
-  float: right !important;
-  float: right;
   font-size: 20px;
   position: absolute;
-  right: 44px;
-  top: 35%;
+  right: -6px;
+  top: 30%;
 }
 .qa-template-question .qa-part-q-view {
   position: relative;
@@ -1877,18 +1878,6 @@ div .header-banner {
   font-size: 12px;
   line-height: 1.42857143;
   letter-spacing: 1px;
-}
-.qa-template-question .qa-favoriting {
-  padding-right: 15px;
-  padding-top: 5px;
-}
-.qa-template-question .qa-favoriting .qa-waiting {
-  float: right !important;
-  float: right;
-  font-size: 20px;
-  position: absolute;
-  right: 24%;
-  top: 30%;
 }
 .qa-error {
   padding: 15px;

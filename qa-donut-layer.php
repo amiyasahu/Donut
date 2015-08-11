@@ -208,7 +208,10 @@
             $this->output( '</div>' );
 
             $this->output( '<div class="container">' );
-            $this->output( '<div class="page-title">' );
+
+            $extra_title_class = $this->donut_page_has_favorite() ? ' has-favorite' : '' ;
+
+            $this->output( '<div class="page-title'.$extra_title_class.'">' );
             $this->page_title_error();
             $this->output( '</div>' );
             $this->donut_breadcrumb();
@@ -270,10 +273,10 @@
          */
         function feed_link()
         {
-            $feed = @$this->content['feed'];
-
-            if ( !empty( $feed ) )
+            if ( $this->donut_page_has_feed() ){
+                $feed = @$this->content['feed'];
                 $this->output( '<a href="' . $feed['url'] . '" title="' . @$feed['label'] . '" class="qa-rss-feed"><i class="fa fa-rss qa-rss-icon" ></i></a>' );
+            }
         }
 
         function header() // removes user navigation and search from header and replaces with custom header content. Also opens new <div>s
@@ -1263,6 +1266,14 @@
         private function donut_do_hide_sidebar()
         {
             return in_array( $this->template, $this->donut_hide_sidebar_for_template() );
+        }
+
+        function donut_page_has_feed(){
+            return !empty(@$this->content['feed']);
+        }
+
+        function donut_page_has_favorite(){
+            return isset($this->content['favorite']) ;
         }
     }
 /*
