@@ -2578,13 +2578,15 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
 .qa-form-wide-spacer {
   padding: 15px;
 }
+.qa-form-wide-label {
+  min-width: 100px ;
+}
 .qa-form-wide-label,
 .qa-form-wide-data {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   border-color: #eeeeee;
-  white-space: nowrap;
   padding: 10px;
 }
 .qa-form-wide-table textarea.qa-form-wide-text {

@@ -228,7 +228,7 @@
 
             $this->main();
 
-            if ( !in_array( $this->template, $this->hide_sidebar_for_template() ) ) {
+            if ( !$this->donut_do_hide_sidebar() ) {
                 $this->sidepanel();
             }
 
@@ -333,7 +333,7 @@
         function main()
         {
             $content = $this->content;
-            $width_class = in_array( $this->template, $this->hide_sidebar_for_template() ) ? 'col-xs-12' : 'qa-main col-md-9 col-xs-12 pull-left' ;
+            $width_class = ( $this->donut_do_hide_sidebar() && $this->template != 'admin' ) ? 'col-xs-12' : 'qa-main col-md-9 col-xs-12 pull-left';
 
             $this->output( '<div class="' . $width_class . ( @$this->content['hidden'] ? ' qa-main-hidden' : '' ) . '">' );
 
@@ -1140,7 +1140,6 @@
         private function donut_breadcrumb()
         {
             if ( class_exists( 'Ami_Breadcrumb' ) && donut_opt( 'enable_breadcrumbs' ) ) {
-                $this->output( '<div class="donut-breadcrumb">' );
                 $args = array(
                     'themeobject' => $this,
                     'content'     => $this->content,
@@ -1148,8 +1147,11 @@
                     'request'     => qa_request(),
                 );
                 $breadcrumb = new Ami_Breadcrumb( $args );
-                $breadcrumb->generate();
-                $this->output( '</div>' );
+                if ( !$breadcrumb->is_home() ) {
+                    $this->output( '<div class="donut-breadcrumb">' );
+                    $breadcrumb->generate();
+                    $this->output( '</div>' );
+                }
                 /*TODO: unset the breadcrumb if it exists*/
             }
         }
@@ -1240,7 +1242,7 @@
         /**
          * @return array
          */
-        private function hide_sidebar_for_template()
+        private function donut_hide_sidebar_for_template()
         {
             return array(
                 'users',
@@ -1248,6 +1250,14 @@
                 'admin', 'user', 'account',
                 'favorites', 'user-wall', 'messages',
                 'user-activity', 'user-questions', 'user-answers' );
+        }
+
+        /**
+         * @return bool
+         */
+        private function donut_do_hide_sidebar()
+        {
+            return in_array( $this->template, $this->donut_hide_sidebar_for_template() );
         }
     }
 /*
