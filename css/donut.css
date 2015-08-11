@@ -921,6 +921,18 @@ header#top-header .top-html-block a:visited {
   text-decoration: underline;
   background-color: transparent;
 }
+.qa-vote-one-button[disabled],
+.qa-vote-first-button[disabled],
+.qa-vote-second-button[disabled],
+.qa-vote-up-button[disabled],
+.qa-vote-buttons-up-disabled[disabled],
+.qa-vote-buttons-up-button[disabled],
+.qa-vote-buttons-down-disabled[disabled],
+.qa-vote-buttons-down-button[disabled],
+.qa-voted-up-button[disabled],
+.qa-voted-down-button[disabled] {
+  cursor: not-allowed;
+}
 .qa-vote-buttons {
   position: relative;
   height: 60px;
