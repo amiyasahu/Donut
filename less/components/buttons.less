@@ -54,8 +54,32 @@
 #login-dropdown-menu.open-login-buttons a,
 .qa-template-register div.qa-part-custom a.open-login-button,
 .qa-template-login div.qa-part-custom a.open-login-button {
-	.btn();
+	display: inline-block;
+	margin-bottom: 0; // For input.btn
+	font-weight: @btn-font-weight;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border: 1px solid transparent;
+	white-space: nowrap;
+	.button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
+	.user-select(none);
 	outline: none;
+	&:hover,
+	&:focus,
+	&.focus {
+		color: @btn-default-color;
+		text-decoration: none;
+	}
+
+	&:active {
+		outline: 0;
+		background-image: none;
+		.box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+	}
+
 }
 
 /*Default Buttons*/
@@ -88,8 +112,8 @@
 }
 
 /*Danger buttons*/
-.qa-form-light-button-reject ,
-.qa-form-light-button-delete ,
+.qa-form-light-button-reject,
+.qa-form-light-button-delete,
 {
 	color: @btn-danger-color;
 	background-color: @btn-danger-bg;
@@ -107,7 +131,7 @@
 .qa-form-tall-button-save,
 .qa-unfavorite-button,
 .qa-form-light-button-answer,
-.qa-form-light-button-approve{
+.qa-form-light-button-approve {
 	color: @btn-success-color;
 	background-color: @btn-success-bg;
 	border-color: @btn-success-border;
@@ -140,7 +164,27 @@
 .qa-vote-buttons-down-button,
 .qa-voted-up-button,
 .qa-voted-down-button {
-	.btn-link();
+	color: @link-color;
+	font-weight: normal;
+	border-radius: 0;
+
+	&,
+	&:active {
+		background-color: transparent;
+		.box-shadow(none);
+	}
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: transparent;
+	}
+	&:hover,
+	&:focus {
+		color: @link-hover-color;
+		text-decoration: @link-hover-decoration;
+		background-color: transparent;
+	}
 	background-color: transparent;
 }
 
@@ -307,8 +351,8 @@
 	.btn-sm();
 }
 
-.qa-a-select-button ,
-.qa-a-unselect-button ,
+.qa-a-select-button,
+.qa-a-unselect-button,
 .qa-a-selected {
 	height: 50px;
 	width: 50px;
