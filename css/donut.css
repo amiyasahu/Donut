@@ -1363,6 +1363,102 @@ header#top-header .top-html-block a:visited {
   float: right !important;
   float: right;
 }
+.site-header {
+  font-family: 'Varela Round', 'Helvetica Neue', cursive, Arial, sans-serif;
+}
+@media only screen and (max-width: 767px) {
+  .site-header {
+    height: auto;
+  }
+}
+.site-header .site-header-cover {
+  background-color: #337ab7;
+}
+.site-header .site-header-entry {
+  padding: 20px 0;
+  position: relative;
+  z-index: 5;
+}
+.site-header .site-header-cover {
+  background-color: #337ab7;
+  color: #ffffff;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.site-header .site-header-cover h1.top-heading {
+  font-size: 70px;
+  font-weight: bolder;
+  text-shadow: 4px 3px 0px #337ab7, 9px 8px 0px rgba(0, 0, 0, 0.15);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .site-header .site-header-cover h1.top-heading {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .site-header .site-header-cover h1.top-heading {
+    font-size: 32px;
+  }
+}
+.site-header .site-header-fade {
+  background-image: url("../images/discuss.jpg");
+  background-position: 0% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  opacity: 0.1;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.site-header .jumbo-box {
+  padding: 10px 50px;
+}
+.site-header .jumbo-box .wrap {
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #dddddd;
+  border-color: #2e6da4;
+  border-radius: 10px;
+  padding: 10px 5px ;
+}
+.site-header .jumbo-box .wrap .hint {
+  padding: 10px 0;
+  font-size: 30px;
+}
+.site-header .jumbo-box .icon-wrap .large-icon {
+  font-size: 7em;
+  text-shadow: 4px 3px 0px #337ab7, 9px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.site-header .search-wrapper {
+  padding-top: 20px;
+  border-top: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #eeeeee;
+  border-top-color: #2e6da4;
+}
+.site-header .search-bar {
+  padding: 10px 5px;
+  margin: auto;
+  background-color: #2e6da4;
+}
+@media (min-width: 300px) {
+  .site-header .search-bar .form-inline .form-group {
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 0;
+  }
+}
+.site-header .search-bar .ask-field {
+  width: 100%;
+}
+.site-header .search-bar .ask-btn {
+  border-radius: 0;
+}
 .qa-search-button {
   border: 0;
   background: none;
@@ -1716,8 +1812,8 @@ div .header-banner {
   color: #ffffff;
   padding: 6px 10px;
   position: absolute;
-  right: 0 ;
-  bottom: 5px ;
+  right: 0;
+  bottom: 5px;
   background-color: #f0ad4e;
   float: right;
 }

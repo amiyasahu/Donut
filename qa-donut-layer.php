@@ -195,6 +195,8 @@
             $this->output( '<div class="top-divider"></div>' );
             $this->output( '</div>' );
 
+            $this->donut_site_header();
+
             $this->output( '<div class="container visible-xs">' );
             $this->output( '<div class="top-search-bar">' );
             $this->search();
@@ -209,13 +211,15 @@
 
             $this->output( '<div class="container">' );
 
-            $extra_title_class = $this->donut_page_has_favorite() ? ' has-favorite' : '' ;
+            $extra_title_class = $this->donut_page_has_favorite() ? ' has-favorite' : '';
 
-            $this->output( '<div class="page-title'.$extra_title_class.'">' );
+            $this->output( '<div class="page-title' . $extra_title_class . '">' );
             $this->page_title_error();
             $this->output( '</div>' );
+
             $this->donut_breadcrumb();
             $this->output( '</div>' );
+
             $this->output( '</main>' );
 
             $this->output( '<div class="qa-body-wrapper container">', '' );
@@ -273,7 +277,7 @@
          */
         function feed_link()
         {
-            if ( $this->donut_page_has_feed() ){
+            if ( $this->donut_page_has_feed() ) {
                 $feed = @$this->content['feed'];
                 $this->output( '<a href="' . $feed['url'] . '" title="' . @$feed['label'] . '" class="qa-rss-feed"><i class="fa fa-rss qa-rss-icon" ></i></a>' );
             }
@@ -433,8 +437,8 @@
         {
             $this->output( '<footer class="donut-footer">' );
 
-            if(donut_opt('enable_back_to_top_button')){
-                $this->output('<a class="donut-top"></a>');
+            if ( donut_opt( 'enable_back_to_top_button' ) ) {
+                $this->output( '<a class="donut-top"></a>' );
             }
 
             $this->output( '<div class="container">' );
@@ -1268,12 +1272,14 @@
             return in_array( $this->template, $this->donut_hide_sidebar_for_template() );
         }
 
-        function donut_page_has_feed(){
-            return !empty(@$this->content['feed']);
+        function donut_page_has_feed()
+        {
+            return !empty( @$this->content['feed'] );
         }
 
-        function donut_page_has_favorite(){
-            return isset($this->content['favorite']) ;
+        function donut_page_has_favorite()
+        {
+            return isset( $this->content['favorite'] );
         }
 
         /**
@@ -1285,6 +1291,13 @@
         public function is_home()
         {
             return empty( $this->request );
+        }
+
+        public function donut_site_header()
+        {
+            if ( $this->is_home() ) {
+                donut_include_template('site-header.php');
+            }
         }
     }
 /*
