@@ -43,4 +43,9 @@ jQuery(document).ready(function () {
 			}, scroll_top_duration
 		);
 	});
+
+	$('#hide-site-header').on('click' , function(event){
+		console.log("Came");
+		$('#site-header').fadeOut('slow');
+	});
 });
