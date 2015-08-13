@@ -253,7 +253,7 @@ header#top-header {
 	#user-dropdown-menu {
 		&.dropdown-menu {
 			width: 200px;
-			left: -150px;
+			left: -160px;
 		}
 	}
 
@@ -389,7 +389,7 @@ header#top-header {
 
 /* reduce padding for the userimage at the navbar */
 .navbar-nav > li > a.navbar-user-img {
-	padding: 2px 5px;
+	padding: 2px ;
 	border: 1px solid @gray-lighter;
 	margin-right: 15px;
 	border-radius: 3px;
@@ -399,6 +399,9 @@ header#top-header {
 	span.user-name {
 		font-size: 80%;
 		color: @gray-base;
+	}
+	@media @mobile {
+		margin-right: 0 ;
 	}
 }
 
@@ -436,7 +439,8 @@ header#top-header {
 .navbar-nav.navbar-right {
 	li {
 		.dropdown-menu {
-			margin-top: 15px;
+			margin-top: 10px;
+			right: 10px;
 			&:before {
 				position: absolute;
 				top: -7px;

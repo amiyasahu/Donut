@@ -357,7 +357,7 @@ header#top-header .top-html-block a:visited {
   }
   #user-dropdown-menu.dropdown-menu {
     width: 200px;
-    left: -150px;
+    left: -160px;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:active {
@@ -477,7 +477,7 @@ header#top-header .top-html-block a:visited {
 }
 /* reduce padding for the userimage at the navbar */
 .navbar-nav > li > a.navbar-user-img {
-  padding: 2px 5px;
+  padding: 2px ;
   border: 1px solid #eeeeee;
   margin-right: 15px;
   border-radius: 3px;
@@ -488,6 +488,11 @@ header#top-header .top-html-block a:visited {
 .navbar-nav > li > a.navbar-user-img span.user-name {
   font-size: 80%;
   color: #000000;
+}
+@media only screen and (max-width: 767px) {
+  .navbar-nav > li > a.navbar-user-img {
+    margin-right: 0 ;
+  }
 }
 /* small caret at the dropdown menu */
 .navbar-nav:not(.navbar-right) li .dropdown-menu {
@@ -516,7 +521,8 @@ header#top-header .top-html-block a:visited {
 }
 /* small caret at the dropdown right menu */
 .navbar-nav.navbar-right li .dropdown-menu {
-  margin-top: 15px;
+  margin-top: 10px;
+  right: 10px;
 }
 .navbar-nav.navbar-right li .dropdown-menu:before {
   position: absolute;
