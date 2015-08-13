@@ -191,7 +191,6 @@ header#top-header .top-html-block a:visited {
   -webkit-transition: top .6s, opacity .6s, background .3s;
   transition: top .6s, opacity .6s, background .3s;
   border: 0;
-  /*TODO*/
 }
 .navbar.affix {
   position: fixed;
@@ -283,72 +282,54 @@ header#top-header .top-html-block a:visited {
   float: left !important;
   float: left;
 }
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:active,
+.nav .open > a:focus {
+  background-color: #fff;
+  border-color: inherit;
+}
 .navbar-login-button {
   font-size: 20px;
 }
 @media only screen and (max-width: 767px) {
+  .navbar .container {
+    padding-bottom: 0;
+  }
   .navbar-header {
     float: left;
   }
   .main-nav {
     clear: both;
   }
-  .main-nav li.active > a,
-  .main-nav li > a:hover {
-    color: #555;
-    background-color: #e7e7e7;
-  }
   .main-nav li {
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid #eeeeee;
   }
-  .main-nav li:last-child {
-    border-bottom: none;
+  .main-nav .inner-drop-nav {
+    margin-bottom: 0;
   }
   .main-nav .navbar-form.pull-right {
     float: none !important;
   }
-  .navbar-right {
-    float: right !important;
+  .nav.navbar-nav.navbar-right.login-nav {
+    margin-right: -10%;
+    margin-top: 15px;
   }
   .nav.navbar-nav.navbar-right.user-nav {
-    clear: none;
-    margin-right: -10%;
-  }
-  .user-nav {
     margin: 0;
   }
-  .user-nav > li {
-    position: relative;
-    display: block;
-    float: left;
-  }
-  .user-nav > li.user-name > a,
-  .user-nav > li.login > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  .user-nav > li.logout a {
-    font-size: 20px;
-  }
-  #login-dropdown-menu.dropdown-menu,
-  #user-dropdown-menu.dropdown-menu {
+  #login-dropdown-menu,
+  #user-dropdown-menu {
     position: absolute;
-    top: 100%;
     z-index: 1000;
-    float: left;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
     background-color: #ffffff;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   }
-  #login-dropdown-menu.dropdown-menu li .span-or,
-  #user-dropdown-menu.dropdown-menu li .span-or {
+  #login-dropdown-menu li .span-or,
+  #user-dropdown-menu li .span-or {
     background-color: #ffffff;
   }
   #login-dropdown-menu.dropdown-menu {
@@ -359,26 +340,8 @@ header#top-header .top-html-block a:visited {
     width: 200px;
     left: -160px;
   }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:active {
-    color: #262626;
-    text-decoration: none;
-    background-color: #f5f5f5;
-  }
-  .navbar-form {
-    width: auto;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-right: 0;
-    margin-left: 0;
-    border: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  .qa-search-field {
-    float: right !important;
-    float: right;
-  }
+  .navbar-nav > li > a.navbar-user-img,
+  .navbar-nav > li > a.navbar-login-button,
   .navbar-nav > li > a.navbar-user-img:hover,
   .navbar-nav > li > a.navbar-login-button:hover,
   .navbar-nav > li > a.navbar-user-img:active,
@@ -386,10 +349,11 @@ header#top-header .top-html-block a:visited {
   .navbar-nav > li > a.navbar-user-img:focus,
   .navbar-nav > li > a.navbar-login-button:focus {
     background-color: #fff;
-  }
-  .navbar .navbar-right.login-nav {
-    margin-right: 0;
-    margin-top: 15px ;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-color: #dddddd;
+    border-radius: 4px;
   }
 }
 @media (min-width: 768px) {
@@ -405,12 +369,6 @@ header#top-header .top-html-block a:visited {
   .navbar-nav > li > a:focus {
     background-color: #fff;
   }
-}
-.nav .open > a,
-.nav .open > a:focus,
-.nav .open > a:hover {
-  background-color: #fff;
-  border-color: inherit;
 }
 .dropdown-menu li.dropdown-header,
 .dropdown-menu a {
@@ -477,7 +435,7 @@ header#top-header .top-html-block a:visited {
 }
 /* reduce padding for the userimage at the navbar */
 .navbar-nav > li > a.navbar-user-img {
-  padding: 2px ;
+  padding: 2px;
   border: 1px solid #eeeeee;
   margin-right: 15px;
   border-radius: 3px;
@@ -545,7 +503,6 @@ header#top-header .top-html-block a:visited {
   border-left: 6px solid transparent;
   content: '';
 }
-/*Not using this now*/
 .qa-form-wide-button:before,
 .qa-form-tall-button:before,
 .qa-form-light-button:before,
