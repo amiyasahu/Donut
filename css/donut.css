@@ -756,6 +756,12 @@ header#top-header .top-html-block a:visited {
 .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus {
   color: #ffffff;
 }
+.qa-template-admin .qa-form-wide-button,
+.qa-template-admin .qa-form-basic-button,
+.qa-template-admin .qa-form-tall-button {
+  margin-bottom: 5px ;
+  margin-top: 5px;
+}
 /*Danger buttons*/
 .qa-form-light-button-reject,
 .qa-form-light-button-delete {
