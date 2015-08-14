@@ -953,18 +953,13 @@
         function ranking( $ranking )
         {
             $class = ( @$ranking['type'] == 'users' ) ? 'qa-top-users' : 'qa-top-tags';
-            $rows = min( $ranking['rows'], count( $ranking['items'] ) );
-            if ( !$rows ) {
-                $rows = 1;
-            }
+            $item_count = min( $ranking['rows'], count( $ranking['items'] ) );
 
             if ( @$ranking['type'] == 'users' ) {
                 $this->output( '<div class="page-users-list clearfix"><div class="row">' );
 
-                if ( isset( $ranking['items'] ) )
-                    $columns = ceil( count( $ranking['items'] ) / $rows );
-
-                if ( isset( $ranking['items'] ) ) {
+                if ( count( $ranking['items'] ) ) {
+                    $columns = qa_opt('columns_users');
                     $pagesize = qa_opt( 'page_size_users' );
                     $start = qa_get_start();
                     $users = qa_db_select_with_pending( qa_db_top_users_selectspec( $start, qa_opt_if_loaded( 'page_size_users' ) ) );
@@ -1034,7 +1029,7 @@
                 } else {
                     $this->output( '
 								<div class="no-items">
-									<h3 class="">' . qa_lang_html( 'main/no_active_users' ) . '</h3>
+									<div class="alert alert-info"><span class="fa fa-warning"></span> ' . qa_lang_html( 'main/no_active_users' ) . '</div>
 								</div>' );
                 }
 
@@ -1044,24 +1039,19 @@
 
             } elseif ( @$ranking['type'] == 'tags' ) {
 
-                if ( $rows > 0 ) {
+                if ( count( $ranking['items'] ) ) {
                     $this->output( '<div id="tags-list" class="row ' . $class . '">' );
 
-                    $tags = array();
-                    foreach ( @$ranking['items'] as $item )
-                        $tags[] = strip_tags( $item['label'] );
-
-
-                    $columns = ceil( count( $ranking['items'] ) / $rows );
+                    $columns = qa_opt('columns_tags');
 
                     for ( $column = 0 ; $column < $columns ; $column++ ) {
                         $this->set_context( 'ranking_column', $column );
                         $this->output( '<div class="col-md-' . ceil( 12 / $columns ) . ' col-xs-12" >' );
                         $this->output( '<ul class="donut-tags-list">' );
 
-                        for ( $row = 0 ; $row < $rows ; $row++ ) {
+                        for ( $row = 0 ; $row < $item_count ; $row++ ) {
                             $this->set_context( 'ranking_row', $row );
-                            $this->donut_tags_item( @$ranking['items'][ $column * $rows + $row ], $class, $column > 0 );
+                            $this->donut_tags_item( @$ranking['items'][ $column * $item_count + $row ], $class, $column > 0 );
                         }
 
                         $this->clear_context( 'ranking_column' );
@@ -1076,41 +1066,11 @@
                 } else
                     $this->output( '
 						<div class="no-items">
-						<h3 class="icon-warning">' . qa_lang( 'cleanstrap/no_tags' ) . '</h3>
-						<p>' . qa_lang( 'cleanstrap/no_results_detail' ) . '</p>
+						<div class="alert alert-info"><span class="fa fa-warning"></span> ' . qa_lang_html('main/no_tags_found') . '</div>
 						</div>' );
 
             } else {
-
-
-                if ( $rows > 0 ) {
-                    $this->output( '<table class="' . $class . '-table">' );
-
-                    $columns = ceil( count( $ranking['items'] ) / $rows );
-
-                    for ( $row = 0 ; $row < $rows ; $row++ ) {
-                        $this->set_context( 'ranking_row', $row );
-                        $this->output( '<tr>' );
-
-                        for ( $column = 0 ; $column < $columns ; $column++ ) {
-                            $this->set_context( 'ranking_column', $column );
-                            $this->ranking_item( @$ranking['items'][ $column * $rows + $row ], $class, $column > 0 );
-                        }
-
-                        $this->clear_context( 'ranking_column' );
-
-                        $this->output( '</tr>' );
-                    }
-
-                    $this->clear_context( 'ranking_row' );
-
-                    $this->output( '</table>' );
-                } else
-                    $this->output( '
-							<div class="no-items">
-								<h3 class="icon-warning">' . qa_lang_html( 'cleanstrap/no_results' ) . '</h3>
-								<p>' . qa_lang_html( 'cleanstrap/no_results_detail' ) . '</p>
-							</div>' );
+               parent::ranking($ranking);
             }
         }
 
