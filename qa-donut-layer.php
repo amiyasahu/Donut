@@ -1274,7 +1274,7 @@
 
         function donut_page_has_feed()
         {
-            return !empty( @$this->content['feed'] );
+            return !empty( $this->content['feed'] );
         }
 
         function donut_page_has_favorite()
