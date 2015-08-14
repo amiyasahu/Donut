@@ -239,8 +239,6 @@ header#top-header {
 	&.navbar-login-button {
 		& {
 			padding: 4px 6px;
-			font-size: 20px;
-			line-height: 30px;
 			border-radius: 4px;
 		}
 		&, &:hover, &:active, &:focus {
@@ -249,9 +247,13 @@ header#top-header {
 			outline: none;
 		}
 	}
+	&.navbar-login-button{
+		font-size: 20px;
+		line-height: 30px;
+	}
 	&.navbar-user-img {
-		img.qa-avatar-img {
-			margin: auto;
+		img.qa-avatar-image {
+			display: inline-block;
 		}
 	}
 }

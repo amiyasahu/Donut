@@ -374,8 +374,6 @@ header#top-header .top-html-block a:visited {
 .navbar-nav > li > a.navbar-user-img,
 .navbar-nav > li > a.navbar-login-button {
   padding: 4px 6px;
-  font-size: 20px;
-  line-height: 30px;
   border-radius: 4px;
 }
 .navbar-nav > li > a.navbar-user-img,
@@ -393,8 +391,12 @@ header#top-header .top-html-block a:visited {
   border-color: #dddddd;
   outline: none;
 }
-.navbar-nav > li > a.navbar-user-img img.qa-avatar-img {
-  margin: auto;
+.navbar-nav > li > a.navbar-login-button {
+  font-size: 20px;
+  line-height: 30px;
+}
+.navbar-nav > li > a.navbar-user-img img.qa-avatar-image {
+  display: inline-block;
 }
 @media only screen and (max-width: 767px) {
   .navbar .container {
