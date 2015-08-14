@@ -96,6 +96,7 @@ header#top-header {
 
 		&:hover, &:active, &:focus {
 			text-decoration: none;
+			outline: none;
 		}
 		img {
 			border: none;
@@ -237,19 +238,21 @@ header#top-header {
 	&.navbar-user-img,
 	&.navbar-login-button {
 		& {
+			padding: 4px 6px;
 			font-size: 20px;
-			padding: 4px 10px;
+			line-height: 30px;
+			border-radius: 4px;
 		}
 		&, &:hover, &:active, &:focus {
 			background-color: #fff;
 			.light-border();
-			border-radius: 4px;
+			outline: none;
 		}
 	}
 	&.navbar-user-img {
-		padding: 2px;
-		border: 1px solid @gray-lighter;
-		border-radius: 3px;
+		img.qa-avatar-img {
+			margin: auto;
+		}
 	}
 }
 
@@ -272,15 +275,6 @@ header#top-header {
 		.inner-drop-nav {
 			margin-bottom: 0;
 		}
-		.navbar-form.pull-right {
-			float: none !important;
-		}
-	}
-
-	.navbar-nav > li > a {
-		&.navbar-user-img {
-			margin-right: 0;
-		}
 	}
 }
 
@@ -293,8 +287,9 @@ header#top-header {
 	.navbar-nav > li > a {
 		padding: 20px 0;
 		line-height: 30px;
-		&:hover, &:active, &:focus {
+		&, &:hover, &:active, &:focus {
 			background-color: #fff;
+			outline: none;
 		}
 	}
 
