@@ -1498,7 +1498,7 @@ header#top-header .top-html-block a:visited {
   background-color: #337ab7;
 }
 .site-header .site-header-entry {
-  padding: 20px 0;
+  padding: 10px 0;
   position: relative;
   z-index: 5;
 }
@@ -2393,16 +2393,10 @@ header#top-header .top-html-block a:visited {
   top: 5px;
   width: auto;
   height: auto;
-  cursor: pointer;
-  padding: .2em .6em .3em;
-  font-size: 75%;
-  font-weight: bold;
-  line-height: 1;
+  padding: 4px 8px ;
+  font-size: 12px;
   color: #ffffff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: .25em;
+  border-radius: 3px;
   background-color: #5cb85c;
 }
 .qa-template-question .qa-view-count-data {
