@@ -1080,7 +1080,8 @@ header#top-header .top-html-block a:visited {
 .qa-form-light-button-follow:before {
   content: "\f128";
 }
-.qa-form-light-button-comment:before {
+.qa-form-light-button-comment:before,
+.qa-form-light-button-reply:before {
   content: "\f112";
 }
 .qa-form-light-button-answer:before {
@@ -2591,7 +2592,7 @@ header#top-header .top-html-block a:visited {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .qa-q-list .qa-vote-buttons {
