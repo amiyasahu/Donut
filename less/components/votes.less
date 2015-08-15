@@ -1,0 +1,51 @@
+/* Votes */
+
+.qa-voting {
+	background: @alert-info-bg;
+	border: 1px solid @alert-info-border;
+	float: left;
+	width: 65px;
+	height: 60px;
+	margin-right: 5px;
+	padding: 0 0 0 3px;
+	border-radius: 3px;
+}
+
+.qa-netvote {
+	&-count {
+		text-align: center;
+		display: block;
+	}
+	&-count-data {
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 700;
+		display: block;
+		margin-top: 10px;
+		overflow: hidden;
+	}
+	&-count-pad {
+		font-size: @font-size-small;
+	}
+}
+
+/* separate vote buttons counter */
+.qa-upvote-count,
+.qa-downvote-count {
+	text-align: center;
+	display: block;
+	&-data {
+		font-size: @font-size-large;
+		font-weight: 700;
+		display: block;
+		line-height: @line-height-base;
+		margin-top: 3px;
+		@media @mobile {
+			line-height: 1 ;
+			font-size: @font-size-base;
+		}
+	}
+	&-pad {
+		display: none;
+	}
+}
