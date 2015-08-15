@@ -1058,7 +1058,7 @@ header#top-header .top-html-block a:visited {
   line-height: 1.5;
   border-radius: 3px;
   text-transform: capitalize;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 .qa-form-light-button:before {
   margin-right: 5px;
@@ -3152,11 +3152,6 @@ a.qa-browse-cat-link:visited {
 .qa-q-view-buttons {
   margin-top: 16px;
 }
-@media only screen and (max-width: 767px) {
-  .qa-q-view-buttons {
-    width: 350px;
-  }
-}
 .qa-q-view-c-list {
   margin: 15px -15px 15px 15px;
 }
@@ -3837,16 +3832,16 @@ a.qa-browse-cat-link:visited {
 .qa-template-user .qa-part-form-profile .qa-form-wide-text {
   width: 100% !important;
 }
-.qa-template-user .qa-part-form-activity td .qa-uf-user-points,
-.qa-template-user .qa-part-form-activity td .qa-uf-user-q-posts,
-.qa-template-user .qa-part-form-activity td .qa-uf-user-a-posts,
-.qa-template-user .qa-part-form-activity td .qa-uf-user-c-posts,
-.qa-template-user .qa-part-form-activity td .qa-uf-user-q-votes,
-.qa-template-user .qa-part-form-activity td .qa-uf-user-a-votes,
-.qa-template-user .qa-part-form-activity td .qa-uf-user-upvotes,
-.qa-template-user .qa-part-form-activity td .qa-uf-user-downvotes,
-.qa-template-user .qa-part-form-activity td .qa-uf-user-upvoteds,
-.qa-template-user .qa-part-form-activity td .qa-uf-user-downvoteds {
+.qa-template-user .qa-part-form-activity td span.qa-uf-user-points,
+.qa-template-user .qa-part-form-activity td span.qa-uf-user-q-posts,
+.qa-template-user .qa-part-form-activity td span.qa-uf-user-a-posts,
+.qa-template-user .qa-part-form-activity td span.qa-uf-user-c-posts,
+.qa-template-user .qa-part-form-activity td span.qa-uf-user-q-votes,
+.qa-template-user .qa-part-form-activity td span.qa-uf-user-a-votes,
+.qa-template-user .qa-part-form-activity td span.qa-uf-user-upvotes,
+.qa-template-user .qa-part-form-activity td span.qa-uf-user-downvotes,
+.qa-template-user .qa-part-form-activity td span.qa-uf-user-upvoteds,
+.qa-template-user .qa-part-form-activity td span.qa-uf-user-downvoteds {
   font-size: 18px;
   color: #337ab7;
   font-weight: 700;
