@@ -1545,13 +1545,6 @@ div .header-banner {
   float: right;
   margin: 0;
 }
-.qa-q-view-follows {
-  background: #eeeeee;
-  padding: 5px 10px;
-}
-.qa-q-view-follows-link {
-  color: #3B5998 !important;
-}
 .qa-notice {
   margin: 10px 0 5px 0;
 }
@@ -1679,7 +1672,7 @@ div .header-banner {
   }
 }
 .qa-nav-sub .qa-nav-sub-list .qa-nav-sub-hot .qa-nav-sub-link {
-  color: #af0000 !important;
+  color: #d9534f !important;
   font-weight: 700;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1868,21 +1861,23 @@ div .header-banner {
   display: block;
 }
 .qa-upvote-count-data,
-.qa-downvote-count-data,
-.qa-upvote-count-data,
 .qa-downvote-count-data {
   font-size: 18px;
   font-weight: 700;
   display: block;
-  line-height: 18px;
+  line-height: 1.42857143;
+  margin-top: 3px;
+}
+@media only screen and (max-width: 767px) {
+  .qa-upvote-count-data,
+  .qa-downvote-count-data {
+    line-height: 1 ;
+    font-size: 14px;
+  }
 }
 .qa-upvote-count-pad,
-.qa-downvote-count-pad,
-.qa-upvote-count-pad,
 .qa-downvote-count-pad {
-  font-size: 12px;
-  line-height: 11px;
-  color: #9DA8AD;
+  display: none;
 }
 /* Answers and views count */
 .qa-a-count {
@@ -3145,6 +3140,7 @@ a.qa-browse-cat-link:visited {
 .qa-q-view-tags {
   clear: both;
   margin-bottom: 14px;
+  overflow: auto;
 }
 .qa-q-view-tag-list {
   list-style: none;

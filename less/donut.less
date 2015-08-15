@@ -76,14 +76,6 @@ div {
 	}
 }
 
-.qa-q-view-follows {
-	background: @gray-lighter;
-	padding: 5px 10px;
-	&-link {
-		color: #3B5998 !important;
-	}
-}
-
 .qa-notice {
 	margin: 10px 0 5px 0;
 }
@@ -114,9 +106,10 @@ div {
 				}
 			}
 		}
+
 		.qa-nav-sub-hot {
 			.qa-nav-sub-link {
-				color: #af0000 !important;
+				color: @brand-danger !important;
 				font-weight: 700;
 				&:hover {
 
@@ -271,18 +264,19 @@ div {
 .qa-downvote-count {
 	text-align: center;
 	display: block;
-	&-data,
 	&-data {
-		font-size: 18px;
+		font-size: @font-size-large;
 		font-weight: 700;
 		display: block;
-		line-height: 18px
+		line-height: @line-height-base;
+		margin-top: 3px;
+		@media @mobile {
+			line-height: 1 ;
+			font-size: @font-size-base;
+		}
 	}
-	&-pad,
 	&-pad {
-		font-size: @font-size-small;
-		line-height: 11px;
-		color: #9DA8AD;
+		display: none;
 	}
 }
 
@@ -1293,6 +1287,7 @@ div {
 	&-tags {
 		clear: both;
 		margin-bottom: 14px;
+		overflow: auto;
 	}
 
 	&-tag-list {
