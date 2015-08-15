@@ -403,7 +403,7 @@ html, body {
 
 /* Question list */
 .qa-part-q-list {
-
+	margin-bottom: 20px;
 }
 
 .qa-q-list {
@@ -614,22 +614,11 @@ html, body {
 }
 
 .qa-suggest-next {
-	.make-xs-column(12);
-	background: #f4f4f4;
-	border: 1px solid #c7dce6;
-	color: #444;
-	font-size: @font-size-base;
-	text-align: center;
-	clear: both;
-	padding: 8px;
-	margin-top: 22px;
-	border-radius: 3px;
+	background: @light-background;
+	.light-border();
 	box-shadow: 0 10px 15px 0 rgba(255, 255, 255, 1) inset, 0 0 5px 0 rgba(0, 0, 0, 0.05);
 	a {
 		font-weight: bold;
-		&:hover {
-			text-decoration: underline;
-		}
 	}
 }
 

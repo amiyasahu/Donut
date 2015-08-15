@@ -1259,6 +1259,17 @@
                 donut_include_template('site-header.php');
             }
         }
+
+        public function suggest_next()
+        {
+            $suggest = @$this->content['suggest_next'];
+
+            if (!empty($suggest)) {
+                $this->output('<div class="qa-suggest-next col-xs-12 text-center clearfix alert">');
+                $this->output($suggest);
+                $this->output('</div>');
+            }
+        }
     }
 /*
 	Omit PHP closing tag to help avoid accidental output

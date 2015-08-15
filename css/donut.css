@@ -2554,6 +2554,9 @@ header#top-header .top-html-block a:visited {
   padding: 8px;
 }
 /* Question list */
+.qa-part-q-list {
+  margin-bottom: 20px;
+}
 .qa-q-list {
   position: relative;
   float: left;
@@ -2855,28 +2858,15 @@ header#top-header .top-html-block a:visited {
   color: #777777;
 }
 .qa-suggest-next {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  background: #f4f4f4;
-  border: 1px solid #c7dce6;
-  color: #444;
-  font-size: 14px;
-  text-align: center;
-  clear: both;
-  padding: 8px;
-  margin-top: 22px;
-  border-radius: 3px;
+  background: #fbfbfb;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #dddddd;
   box-shadow: 0 10px 15px 0 #ffffff inset, 0 0 5px 0 rgba(0, 0, 0, 0.05);
 }
 .qa-suggest-next a {
   font-weight: bold;
-}
-.qa-suggest-next a:hover {
-  text-decoration: underline;
 }
 /* Tags, users and categories */
 .qa-top-tags ul.donut-tags-list {
