@@ -2412,6 +2412,7 @@ header#top-header .top-html-block a:visited {
 }
 .qa-template-question .qa-part-q-view {
   position: relative;
+  margin-bottom: 20px;
 }
 .qa-template-question .qa-view-count {
   position: absolute;
