@@ -81,7 +81,7 @@ html, body {
 
 .side-toggle-button {
 	@media @mobile {
-		margin: 0 0 5px 5px;
+		margin-bottom: 5px ;
 	}
 }
 
@@ -118,12 +118,7 @@ html, body {
 }
 
 .qa-main {
-	@media @tablet {
-		margin-bottom: 80px;
-	}
-	@media @mobile {
-		margin-bottom: 80px;
-	}
+	
 }
 
 .qa-main-hidden {
@@ -218,6 +213,19 @@ html, body {
 	}
 }
 
+.qa-favoriting {
+	.pull-right();
+	position: absolute;
+	right: 0;
+	bottom: 5px;
+	.qa-waiting {
+		font-size: 20px;
+		position: absolute;
+		right: -6px;
+		top: 30%;
+	}
+}
+
 /* Answers and views count */
 .qa-a-count {
 	background: @alert-success-bg;
@@ -272,19 +280,6 @@ html, body {
 	}
 	&-pad {
 		font-size: @font-size-small;
-	}
-}
-
-.qa-favoriting {
-	.pull-right();
-	position: absolute;
-	right: 0;
-	bottom: 5px;
-	.qa-waiting {
-		font-size: 20px;
-		position: absolute;
-		right: -6px;
-		top: 30%;
 	}
 }
 
@@ -462,10 +457,6 @@ html, body {
 	&:last-child {
 		border-bottom-right-radius: 5px;
 		border-bottom-left-radius: 5px;
-	}
-	@media @mobile {
-		margin-left: -8px;
-		margin-right: -8px ;
 	}
 }
 
@@ -955,7 +946,6 @@ html, body {
 }
 
 .qa-part-a-form div#anew h2,
-	/* Answer view  */
 .qa-part-a-list > h2#a_list_title {
 	font-size: 22px;
 	position: relative;
@@ -1017,7 +1007,6 @@ html, body {
 		font-size: @font-size-h4;
 		padding-left: 10px;
 	}
-
 }
 
 .qa-a-item {
@@ -1101,14 +1090,8 @@ html, body {
 
 /* Comment list  */
 .qa-c-list-item {
-	// background:@body-bg;
 	padding: 8px;
 	.make-xs-column(12);
-
-	&:nth-child(odd) {
-		// background:@light-background;
-	}
-
 	.light-border();
 	margin-bottom: -1px;
 
@@ -1330,20 +1313,6 @@ html, body {
 	color: @gray-light;
 }
 
-.qa-message-buttons {
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 12px;
-	margin-left: 12px;
-	.pull-right();
-}
-
-.qa-message-buttons {
-	.qa-form-light-button {
-		.btn-xs();
-	}
-}
-
 /* Related questions widgets*/
 
 .qa-related-qs {
@@ -1375,31 +1344,6 @@ html, body {
 	}
 	&:last-child {
 		border-bottom: none;
-	}
-}
-
-/*activity count widgets */
-
-.qa-widget-side-low {
-	border-top: 1px solid @light-border;
-	div {
-		padding: 0 10px 10px;
-	}
-}
-
-.qa-activity-count {
-	background-color: @body-bg;
-	border-radius: 5px;
-	font-size: @font-size-large;
-	color: @gray-light;
-	padding: 10px;
-	&-item {
-		margin: 0;
-	}
-	&-data {
-		font-size: @font-size-h3;
-		font-weight: 700;
-		color: @brand-primary;
 	}
 }
 
@@ -1482,8 +1426,7 @@ html, body {
 }
 
 .qa-avatar-image {
-	border: 0;
-	vertical-align: middle;
+
 }
 
 .qa-avatar-link,
@@ -1639,16 +1582,16 @@ html, body {
 	}
 	.qa-part-form-activity {
 		td {
-			.qa-uf-user-points,
-			.qa-uf-user-q-posts,
-			.qa-uf-user-a-posts,
-			.qa-uf-user-c-posts,
-			.qa-uf-user-q-votes,
-			.qa-uf-user-a-votes,
-			.qa-uf-user-upvotes,
-			.qa-uf-user-downvotes,
-			.qa-uf-user-upvoteds,
-			.qa-uf-user-downvoteds {
+			span.qa-uf-user-points,
+			span.qa-uf-user-q-posts,
+			span.qa-uf-user-a-posts,
+			span.qa-uf-user-c-posts,
+			span.qa-uf-user-q-votes,
+			span.qa-uf-user-a-votes,
+			span.qa-uf-user-upvotes,
+			span.qa-uf-user-downvotes,
+			span.qa-uf-user-upvoteds,
+			span.qa-uf-user-downvoteds {
 				font-size: @font-size-h4;
 				color: @brand-primary;
 				font-weight: 700;
@@ -1677,4 +1620,4 @@ html, body {
 	.qa-part-custom {
 		clear: both;
 	}
-}
+}span

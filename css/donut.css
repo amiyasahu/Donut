@@ -1384,6 +1384,20 @@ header#top-header .top-html-block a:visited {
 .qa-form-tall-button-close:before {
   content: "\f023";
 }
+.qa-message-buttons {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  margin-left: 12px;
+  float: right !important;
+  float: right;
+}
+.qa-message-buttons .qa-form-light-button {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
 .donut-breadcrumb {
   border-bottom: 1px solid #e2e2e2;
   position: relative;
@@ -1955,6 +1969,28 @@ header#top-header .top-html-block a:visited {
 .qa-sidepanel {
   min-height: 80px;
 }
+/*activity count widgets */
+.qa-widget-side-low {
+  border-top: 1px solid #e2e2e2;
+}
+.qa-widget-side-low div {
+  padding: 0 10px 10px;
+}
+.qa-activity-count {
+  background-color: #ffffff;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #777777;
+  padding: 10px;
+}
+.qa-activity-count-item {
+  margin: 0;
+}
+.qa-activity-count-data {
+  font-size: 24px;
+  font-weight: 700;
+  color: #337ab7;
+}
 /* Votes */
 .qa-voting {
   background: #d9edf7;
@@ -2045,7 +2081,7 @@ header#top-header .top-html-block a:visited {
 }
 @media only screen and (max-width: 767px) {
   .side-toggle-button {
-    margin: 0 0 5px 5px;
+    margin-bottom: 5px ;
   }
 }
 .qa-nav-sub {
@@ -2166,16 +2202,6 @@ header#top-header .top-html-block a:visited {
 .qa-nav-sub .qa-nav-sub-list .qa-nav-sub-hot .qa-nav-sub-link {
   color: #d9534f !important;
   font-weight: 700;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .qa-main {
-    margin-bottom: 80px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .qa-main {
-    margin-bottom: 80px;
-  }
 }
 .qa-main-hidden {
   background-color: #fbfbfb;
@@ -2316,6 +2342,19 @@ header#top-header .top-html-block a:visited {
 .page-title.has-favorite .qa-rss-feed {
   right: 35px;
 }
+.qa-favoriting {
+  float: right !important;
+  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+}
+.qa-favoriting .qa-waiting {
+  font-size: 20px;
+  position: absolute;
+  right: -6px;
+  top: 30%;
+}
 /* Answers and views count */
 .qa-a-count {
   background: #dff0d8;
@@ -2370,19 +2409,6 @@ header#top-header .top-html-block a:visited {
 }
 .qa-view-count-pad {
   font-size: 12px;
-}
-.qa-favoriting {
-  float: right !important;
-  float: right;
-  position: absolute;
-  right: 0;
-  bottom: 5px;
-}
-.qa-favoriting .qa-waiting {
-  font-size: 20px;
-  position: absolute;
-  right: -6px;
-  top: 30%;
 }
 .qa-template-question .qa-part-q-view {
   position: relative;
@@ -2618,12 +2644,6 @@ header#top-header .top-html-block a:visited {
 .qa-q-list-item:last-child {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-}
-@media only screen and (max-width: 767px) {
-  .qa-q-list-item {
-    margin-left: -8px;
-    margin-right: -8px;
-  }
 }
 .qa-template-user-answers .qa-q-item-stats,
 .qa-template-user-activity .qa-q-item-stats {
@@ -3571,20 +3591,6 @@ a.qa-browse-cat-link:visited {
   font-size: 12px;
   color: #777777;
 }
-.qa-message-buttons {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 12px;
-  margin-left: 12px;
-  float: right !important;
-  float: right;
-}
-.qa-message-buttons .qa-form-light-button {
-  padding: 1px 5px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 3px;
-}
 /* Related questions widgets*/
 .qa-related-qs {
   font-size: 14px;
@@ -3613,28 +3619,6 @@ a.qa-browse-cat-link:visited {
 }
 .qa-related-q-item:last-child {
   border-bottom: none;
-}
-/*activity count widgets */
-.qa-widget-side-low {
-  border-top: 1px solid #e2e2e2;
-}
-.qa-widget-side-low div {
-  padding: 0 10px 10px;
-}
-.qa-activity-count {
-  background-color: #ffffff;
-  border-radius: 5px;
-  font-size: 18px;
-  color: #777777;
-  padding: 10px;
-}
-.qa-activity-count-item {
-  margin: 0;
-}
-.qa-activity-count-data {
-  font-size: 24px;
-  font-weight: 700;
-  color: #337ab7;
 }
 /* Classes passed to theme */
 .qa-user-link,
@@ -3699,10 +3683,6 @@ a.qa-browse-cat-link:visited {
   background: none;
   border: none;
   text-transform: none;
-}
-.qa-avatar-image {
-  border: 0;
-  vertical-align: middle;
 }
 .qa-avatar-link,
 .qa-avatar-link:hover {

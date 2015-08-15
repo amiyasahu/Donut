@@ -1029,7 +1029,7 @@
                 } else {
                     $this->output( '
 								<div class="no-items">
-									<div class="alert alert-info"><span class="fa fa-warning"></span> ' . qa_lang_html( 'main/no_active_users' ) . '</div>
+									<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $this->content['title'] . '</div>
 								</div>' );
                 }
 
@@ -1066,7 +1066,7 @@
                 } else
                     $this->output( '
 						<div class="no-items">
-						<div class="alert alert-info"><span class="fa fa-warning"></span> ' . qa_lang_html('main/no_tags_found') . '</div>
+						<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $this->content['title'] . '</div>
 						</div>' );
 
             } else {
