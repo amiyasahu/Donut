@@ -13,6 +13,11 @@
 
 ?>
 <ul class="nav navbar-nav navbar-right user-nav">
+    <?php if (qa_opt('q2apro_onsitenotifications_enabled') && !empty($this->content['loggedin']['suffix'])): ?>
+    <li class="notf-bubble visible-lg">
+        <?php echo $this->content['loggedin']['suffix'] ?>
+    </li>
+    <?php endif ?>
     <li class="dropdown user-dropdown">
         <a href="#" class="navbar-user-img dropdown-toggle" data-toggle="dropdown">
             <?php echo $logged_in_user_avatar; ?>

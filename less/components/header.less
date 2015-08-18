@@ -78,7 +78,7 @@ header#top-header {
 	.logo-wrapper {
 		display: table;
 		height: 60px;
-		padding: 0 15px;
+		padding: 0;
 	}
 
 	.qa-logo {
@@ -228,9 +228,17 @@ header#top-header {
 
 .nav.navbar-nav.navbar-right {
 	&.login-nav,
-	&.user-nav {
+	&.user-nav ,
+	&.notf-bubble {
 		margin: 0;
 		padding: 15px 0;
+		display: inline-block;
+		float: right;
+		@media @mobile {
+			> li{
+				display: inline-block;
+			}
+		}
 	}
 }
 
@@ -356,4 +364,8 @@ header#top-header {
 			}
 		}
 	}
+}
+/*Styling for the Onsite Noification*/
+#osnbox {
+	margin-top: 15px;
 }

@@ -337,7 +337,7 @@ header#top-header .top-html-block a:visited {
 .navbar .logo-wrapper {
   display: table;
   height: 60px;
-  padding: 0 15px;
+  padding: 0;
 }
 .navbar .qa-logo {
   height: 100%;
@@ -482,9 +482,19 @@ header#top-header .top-html-block a:visited {
   left: -160px;
 }
 .nav.navbar-nav.navbar-right.login-nav,
-.nav.navbar-nav.navbar-right.user-nav {
+.nav.navbar-nav.navbar-right.user-nav,
+.nav.navbar-nav.navbar-right.notf-bubble {
   margin: 0;
   padding: 15px 0;
+  display: inline-block;
+  float: right;
+}
+@media only screen and (max-width: 767px) {
+  .nav.navbar-nav.navbar-right.login-nav > li,
+  .nav.navbar-nav.navbar-right.user-nav > li,
+  .nav.navbar-nav.navbar-right.notf-bubble > li {
+    display: inline-block;
+  }
 }
 .navbar-nav > li > a.navbar-user-img,
 .navbar-nav > li > a.navbar-login-button {
@@ -596,6 +606,10 @@ header#top-header .top-html-block a:visited {
   border-bottom: 6px solid #ffffff;
   border-left: 6px solid transparent;
   content: '';
+}
+/*Styling for the Onsite Noification*/
+#osnbox {
+  margin-top: 15px;
 }
 .qa-form-wide-button:before,
 .qa-form-tall-button:before,
