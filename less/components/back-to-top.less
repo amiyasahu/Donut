@@ -1,0 +1,56 @@
+
+.donut-top {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	position: fixed;
+	cursor: pointer;
+	border-radius: 4px;
+	bottom: 10%;
+	right: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	background: @brand-warning url(../images/top-arrow.svg) no-repeat center 50%;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity .3s 0s, visibility 0s .3s;
+	-moz-transition: opacity .3s 0s, visibility 0s .3s;
+	transition: opacity .3s 0s, visibility 0s .3s;
+
+	&.is-visible {
+		visibility: visible;
+		opacity: 1;
+	}
+	&.fade-out {
+		opacity: .5;
+	}
+
+	@media only screen and (min-width: 768px) {
+		right: 20px;
+		bottom: 10%;
+	}
+	@media only screen and (min-width: 1024px) {
+		height: 40px;
+		width: 40px;
+		right: 30px;
+		bottom: 10%;
+	}
+}
+
+.donut-top.is-visible,
+.donut-top.fade-out,
+.no-touch .donut-top:hover {
+	.opacity-transition();
+}
+
+.no-touch {
+	.donut-top:hover {
+		background-color: @brand-warning;
+		opacity: 1;
+	}
+}
+
+.opacity-transition() {
+	-webkit-transition: opacity .3s 0s, visibility 0s 0s;
+	-moz-transition: opacity .3s 0s, visibility 0s 0s;
+	transition: opacity .3s 0s, visibility 0s 0s;
+}

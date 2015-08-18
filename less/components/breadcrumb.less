@@ -1,0 +1,72 @@
+.donut-breadcrumb {
+	border-bottom: 1px solid #e2e2e2;
+	position: relative;
+	padding: 10px 5px ;
+}
+
+.donut-breadcrumb {
+
+	.breadcrumb {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		background-color: transparent;
+		display: block;
+	}
+
+	.breadcrumb > li {
+		display: inline-block;
+	}
+
+	.breadcrumb > li + li:before {
+		padding: 0 5px;
+		color: #ccc;
+		font-weight: normal;
+		content: "/\00a0";
+	}
+
+	.breadcrumb > .active {
+		color: @light-primary-color;
+	}
+
+	.breadcrumb > li > a,
+	.breadcrumb > li i,
+	.breadcrumb > li span {
+		color: @brand-primary;
+		font-size: 15px;
+		font-weight: normal;
+		cursor: pointer;
+	}
+
+	.breadcrumb > li > a:hover {
+		text-decoration: none;
+	}
+
+	.breadcrumb > .active > a {
+		color: @light-primary-color;
+	}
+
+	.breadcrumb > li:last-child > a,
+	.breadcrumb > li:last-child i,
+	.breadcrumb > li:last-child span {
+		color: @light-primary-color;
+	}
+
+	.qa-widget-full.qa-widget-full-high {
+		margin-top: 0px;
+	}
+
+	.breadcrumb > li i,
+	.breadcrumb > li:last-child i {
+		font-weight: normal;
+	}
+}
+
+@media @mobile {
+	.breadcrumb,
+	.breadcrumb > li > a,
+	.breadcrumb > li i,
+	.breadcrumb > li span {
+		font-size: 12px;
+	}
+}

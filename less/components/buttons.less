@@ -1,0 +1,570 @@
+.login-btn-colors() {
+	&.facebook {
+		background-color: #3b5998;
+	}
+	&.github {
+		background-color: #444444;
+	}
+	&.foursquare {
+		background-color: #f94877;
+	}
+	&.google,
+	&.googleplus {
+		background-color: #dd4b39;
+	}
+	&.windows {
+		background-color: #2672ec;
+	}
+	&.tumblr {
+		background-color: #2c4762;
+	}
+	&.yahoo {
+		background-color: #720e9e;
+	}
+	&.twitter {
+		background-color: #55acee;
+	}
+	&.linkedin {
+		background-color: #007bb6;
+	}
+	&.vk {
+		background-color: #587ea3;
+	}
+}
+
+.qa-vote-one-button,
+.qa-vote-first-button,
+.qa-vote-second-button,
+.qa-vote-up-button,
+.qa-favorite-button,
+.qa-unfavorite-button,
+.qa-form-tall-button,
+.qa-form-tall-table input[type="button"],
+.qa-form-wide-button,
+.qa-form-basic-button,
+.qa-form-tall-button-cancel,
+.qa-form-wide-button-save,
+.qa-form-wide-button-saverecalc,
+.qa-form-tall-button-save,
+.qa-form-light-button,
+.qa-a-select-button,
+.qa-a-unselect-button,
+.qa-a-selected,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a,
+#login-dropdown-menu.open-login-buttons a,
+.qa-template-register div.qa-part-custom a.open-login-button,
+.qa-template-login div.qa-part-custom a.open-login-button {
+	display: inline-block;
+	margin-bottom: 0; // For input.btn
+	font-weight: @btn-font-weight;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border: 1px solid transparent;
+	white-space: nowrap;
+	.button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
+	.user-select(none);
+	outline: none;
+	&:hover,
+	&:focus,
+	&.focus {
+		color: @btn-default-color;
+		text-decoration: none;
+	}
+
+	&:active {
+		outline: 0;
+		background-image: none;
+		.box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+	}
+
+}
+
+/*Default Buttons*/
+.qa-form-light-button,
+.qa-a-select-button,
+.qa-a-unselect-button,
+.qa-a-selected {
+	color: @btn-default-color;
+	background-color: @btn-default-bg;
+	border-color: @btn-default-border;
+	&:hover, &:active, &:focus {
+		color: @btn-default-color;
+		background-color: @btn-default-bg;
+		border-color: @btn-default-border;
+	}
+}
+
+/*primary buttons*/
+.qa-form-tall-button,
+.qa-form-tall-table input[type="button"],
+.qa-form-wide-button,
+.qa-form-basic-button,
+.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a {
+	color: @btn-primary-color;
+	background-color: @btn-primary-bg;
+	border-color: @btn-primary-border;
+	&:hover, &:active, &:focus {
+		color: @btn-primary-color;
+	}
+}
+
+.qa-template-admin {
+	.qa-form-wide-button,
+	.qa-form-basic-button,
+	.qa-form-tall-button {
+		margin-bottom: 5px ;
+		margin-top: 5px;
+	}
+}
+
+/*Danger buttons*/
+.qa-form-light-button-reject,
+.qa-form-light-button-delete,
+{
+	color: @btn-danger-color;
+	background-color: @btn-danger-bg;
+	border-color: @btn-danger-border;
+	&:hover, &:active, &:focus {
+		color: @btn-danger-color;
+		background-color: @btn-danger-bg;
+		border-color: @btn-danger-border;
+	}
+}
+
+/*success buttons*/
+.qa-form-wide-button-save,
+.qa-form-wide-button-saverecalc,
+.qa-form-tall-button-save,
+.qa-unfavorite-button,
+.qa-form-light-button-answer,
+.qa-form-light-button-approve {
+	color: @btn-success-color;
+	background-color: @btn-success-bg;
+	border-color: @btn-success-border;
+	&:hover, &:active, &:focus {
+		color: @btn-success-color;
+		background-color: @btn-success-bg;
+		border-color: @btn-success-border;
+	}
+}
+
+/*Warning buttons*/
+.qa-favorite-button,
+.qa-form-tall-button-cancel {
+	color: @btn-warning-color;
+	background-color: @btn-warning-bg;
+	border-color: @btn-warning-border;
+	&:hover, &:active, &:focus {
+		color: @btn-warning-color;
+	}
+}
+
+/*Link buttons*/
+.qa-vote-one-button,
+.qa-vote-first-button,
+.qa-vote-second-button,
+.qa-vote-up-button,
+.qa-vote-buttons-up-disabled,
+.qa-vote-buttons-up-button,
+.qa-vote-buttons-down-disabled,
+.qa-vote-buttons-down-button,
+.qa-voted-up-button,
+.qa-voted-down-button {
+	color: @link-color;
+	font-weight: normal;
+	border-radius: 0;
+
+	&,
+	&:active {
+		background-color: transparent;
+		.box-shadow(none);
+	}
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: transparent;
+	}
+	&:hover,
+	&:focus {
+		color: @link-hover-color;
+		text-decoration: @link-hover-decoration;
+		background-color: transparent;
+	}
+	background-color: transparent;
+}
+
+.qa-vote {
+	&-buttons {
+		position: relative;
+		height: 60px;
+		width: 16px;
+		float: left;
+		div.tooltip-inner {
+			max-width: 200px;
+		}
+	}
+
+	&-one-button,
+	&-first-button,
+	&-second-button,
+	&-up-button {
+		.btn-xs();
+		padding: 4px;
+		&:active {
+			outline: none;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	&-up-disabled {
+		color: @gray-light;
+	}
+	&-up-button {
+		color: @brand-info;
+	}
+
+	&-down-button {
+		color: @brand-warning;
+	}
+
+	&-down-disabled {
+		color: @gray-light;
+	}
+	
+	&-one-button {
+		position: absolute;
+		left: 2px;
+		top: 15px;
+	}
+
+	&-first-button {
+		position: absolute;
+		left: 2px;
+		top: 6px;
+	}
+
+	&-second-button {
+		position: absolute;
+		left: 2px;
+		bottom: 6px;
+	}
+}
+
+.qa-q-list-vote-disabled {
+	.qa-vote-buttons {
+		display: none;
+	}
+}
+
+.qa-voted {
+	&-up-button {
+		color: @brand-success;
+	}
+
+	&-down-button {
+		color: @brand-danger;
+	}
+}
+
+/* Standard form (light version - buttons only) */
+.qa-form-light {
+	&-button {
+		.btn-sm();
+		text-transform: capitalize;
+		margin-bottom: 5px;
+		&:before {
+			margin-right: 5px;
+		}
+	}
+	&-button-edit,
+	&-button-retagcat {
+		&:before {
+			content: @fa-var-edit;
+		}
+	}
+	&-button-flag {
+		&:before {
+			content: @fa-var-flag;
+		}
+	}
+	&-button-unflag,
+	&-button-clearflags {
+		&:before {
+			content: @fa-var-flag-checkered;
+		}
+	}
+	&-button-hide {
+		&:before {
+			content: @fa-var-eye-slash;
+		}
+	}
+	&-button-follow {
+		&:before {
+			content: @fa-var-question;
+		}
+	}
+	&-button-comment ,
+	&-button-reply
+	{
+		&:before {
+			content: @fa-var-mail-reply;
+		}
+	}
+	&-button-answer {
+		&:before {
+			content: @fa-var-plus;
+		}
+	}
+	&-button-reshow {
+		&:before {
+			content: @fa-var-eye;
+		}
+	}
+	&-button-claim {
+		&:before {
+			content: @fa-var-thumb-tack;
+		}
+	}
+	&-button-delete {
+		&:before {
+			content: @fa-var-trash-o;
+		}
+	}
+	&-button-approve {
+		&:before {
+			content: @fa-var-thumbs-o-up;
+		}
+	}
+	&-button-reject {
+		&:before {
+			content: @fa-var-thumbs-o-down;
+		}
+	}
+	&-button-close {
+		&:before {
+			content: @fa-var-lock;
+		}
+	}
+	&-button-reopen {
+		&:before {
+			content: @fa-var-unlock;
+		}
+	}
+}
+
+/* Standard form (basic version - buttons only) */
+.qa-form-basic-button {
+	.btn-sm();
+}
+
+.qa-a-select-button,
+.qa-a-unselect-button,
+.qa-a-selected {
+	height: 50px;
+	width: 50px;
+	font-size: 25px;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+	border-radius: 200px !important;
+}
+
+.qa-a-select-button {
+	color: @state-info-text;
+	&:hover, &:active, &:focus {
+		color: lighten(@state-info-text, 10);
+	}
+}
+
+.qa-a-unselect-button {
+	background-color: @state-success-bg;
+	color: @state-success-text;
+	&:hover, &:active, &:focus {
+		color: @state-success-text;
+	}
+}
+
+.qa-a-selected {
+	padding-top: 6px;
+	background-color: @state-success-bg;
+	color: @state-success-text;
+	&:hover, &:active, &:focus {
+		color: @state-success-text;
+	}
+	&-text {
+		font-size: 9px;
+		display: block;
+		color: @state-success-text;
+		margin-top: 2px;
+	}
+}
+
+#login-dropdown-menu {
+	&.open-login-buttons {
+		a {
+			.btn-block();
+			color: #fff;
+			&:hover {
+				color: #fff;
+			}
+
+			&:before {
+				margin-right: 5px;
+			}
+			margin-top: 2px;
+			.login-btn-colors();
+		}
+	}
+}
+
+.qa-template-register,
+.qa-template-login {
+	div.qa-part-custom {
+		a.open-login-button.context-register.action-login,
+		a.open-login-button.context-login.action-login, {
+			color: #fff;
+			margin-right: 5%;
+			width: 40%;
+			&:hover {
+				color: #fff;
+			}
+			@media @mobile {
+				.btn-block();
+			}
+			@media @tablet {
+				.btn-block();
+			}
+			.login-btn-colors();
+		}
+	}
+}
+
+.qa-favorite-button,
+.qa-unfavorite-button {
+	border: 0;
+	padding: 6px 8px;
+}
+
+.qa-favorite-button:hover {
+	color: @btn-success-color;
+	background-color: @btn-success-bg;
+	border-color: @btn-success-border
+}
+
+.qa-unfavorite-button:hover {
+	color: @btn-danger-color;
+	background-color: @btn-danger-bg;
+	border-color: @btn-danger-border;
+}
+
+.qa-template-user {
+	.qa-part-form-profile {
+		#level .qa-form-wide-static a {
+			.btn-sm();
+			&:before {
+				margin-right: 5px;
+				content: @fa-var-envelope-o;
+			}
+		}
+	}
+}
+
+.qa-form-wide-button,
+.qa-form-tall-button {
+	&:before {
+		margin-right: 5px;
+	}
+	&-login {
+		&:before {
+			content: @fa-var-sign-in;
+		}
+	}
+	&-register {
+		&:before {
+			content: @fa-var-user;
+		}
+	}
+	&-save {
+		&:before {
+			content: @fa-var-save;
+		}
+	}
+	&-reset {
+		&:before {
+			content: @fa-var-rotate-right;
+		}
+	}
+	&-change {
+		&:before {
+			content: @fa-var-repeat;
+		}
+	}
+	&-account {
+		&:before {
+			content: @fa-var-edit;
+		}
+	}
+	&-setbonus {
+		&:before {
+			content: @fa-var-plus-square;
+		}
+	}
+	&-post {
+		&:before {
+			content: @fa-var-plus-square;
+		}
+	}
+	&-send {
+		&:before {
+			content: @fa-var-send;
+		}
+	}
+	&-ask {
+		&:before {
+			content: @fa-var-question;
+		}
+	}
+	&-answer {
+		&:before {
+			content: @fa-var-plus;
+		}
+	}
+	&-comment {
+		&:before {
+			content: @fa-var-reply;
+		}
+	}
+	&-cancel {
+		&:before {
+			content: @fa-var-times;
+		}
+	}
+	&-close {
+		&:before {
+			content: @fa-var-lock;
+		}
+	}
+}
+
+
+.qa-message-buttons {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	margin-left: 12px;
+	.pull-right();
+}
+
+.qa-message-buttons {
+	.qa-form-light-button {
+		.btn-xs();
+	}
+}
+

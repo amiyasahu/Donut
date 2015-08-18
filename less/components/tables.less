@@ -1,0 +1,85 @@
+table {
+	.table();
+}
+
+
+/*standed form tall version*/
+
+.qa-form-tall-table,
+.qa-form-wide-table {
+	width: 100%;
+	border-collapse: collapse;
+	> tbody + tbody {
+		border-top: 0;
+	}
+	& > thead > tr > th,
+	& > tbody > tr > th,
+	& > tfoot > tr > th,
+	& > thead > tr > td,
+	& > tbody > tr > td,
+	& > tfoot > tr > td {
+		border-top: 0;
+	}
+}
+
+.qa-form-table-boxed {
+	.light-border();
+	margin-bottom: 1em;
+}
+
+.qa-form-tall-ok,
+.qa-form-wide-ok,
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok {
+	.alert-success();
+	display: block;
+}
+
+.qa-form-tall-error,
+.qa-form-wide-error,
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-error,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-error {
+	.text-danger();
+	margin-top: 10px;
+	display: block;
+}
+
+.qa-form-tall {
+	&-label,
+	&-data {
+		padding: 8px;
+	}
+	&-label {
+		select {
+			margin-bottom: 5px;
+		}
+	}
+	&-text,
+	&-number {
+		/* padding:3px;
+			width:48px;
+			background:@body-bg;
+			border:1px solid @input-border;  */
+	}
+	&tall-checkbox {
+		/* float:left;
+			margin-right:4px; */
+	}
+	&-image {
+		text-align: center;
+		img {
+			.img-thumbnail();
+		}
+	}
+	&-suffix {
+		font-weight: 400;
+		font-size: 10px;
+		color: @gray-light;
+	}
+	&-note {
+		padding: 10px 5px;
+	}
+	&-buttons {
+		padding: 8px 8px 8px 8px;
+	}
+}

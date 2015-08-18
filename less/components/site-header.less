@@ -1,0 +1,99 @@
+
+.site-header {
+	font-family: 'Varela Round', 'Helvetica Neue', cursive, Arial, sans-serif;
+
+	@media @mobile {
+		height: auto;
+	}
+	.site-header-cover {
+		background-color: @brand-primary;
+	}
+
+	.site-header-entry {
+		padding: 10px 0;
+		position: relative;
+		z-index: 5;
+	}
+
+	.hide-btn-wrap {
+		position: absolute;
+		right: 2%;
+	}
+
+	.site-header-cover {
+		background-color: @brand-primary;
+		color: @body-bg;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		h1.top-heading {
+			font-size: 70px;
+			font-weight: bolder;
+			text-shadow: 4px 3px 0px @brand-primary, 9px 8px 0px rgba(0, 0, 0, 0.15);
+			@media @tablet {
+				font-size: 40px;
+			}
+			@media @mobile {
+				font-size: 32px;
+			}
+		}
+	}
+
+	.site-header-fade {
+		background-image: url("../images/discuss.jpg");
+		background-position: 0% 40%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		height: 100%;
+		opacity: 0.1;
+		position: absolute;
+		width: 100%;
+		z-index: 2;
+	}
+
+	.jumbo-box {
+		padding: 10px 50px;
+		.wrap {
+			.light-border();
+			border-color: darken(@brand-primary , 5%);
+			border-radius: 10px;
+			padding: 10px 5px ;
+			.hint {
+				padding: 10px 0;
+				font-size: 30px;
+			}
+		}
+		.icon-wrap {
+			.large-icon {
+				font-size: 7em;
+				text-shadow: 4px 3px 0px @brand-primary, 9px 8px 0px rgba(0, 0, 0, 0.15);
+			}
+		}
+	}
+	.search-wrapper {
+		padding-top: 20px;
+		.light-border-top();
+		border-top-color: darken(@brand-primary , 5%);
+	}
+	.search-bar {
+		.form-inline {
+			.form-group {
+				@media (min-width: 300px) {
+					display: inline-block;
+					width: 80%;
+					margin-bottom: 0;
+				}
+			}
+		}
+		padding: 10px 5px;
+		margin: auto;
+		background-color: darken(@brand-primary , 5%);
+		.ask-field {
+			width: 100%;
+		}
+		.ask-btn {
+			border-radius: 0;
+		}
+	}
+}

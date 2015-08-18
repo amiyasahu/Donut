@@ -2,18 +2,18 @@
 {
 	// The mappings of source directory and output directory
 	"mappings": [
-		{	
+		  {
 			"src": "donut.less",
 			"dest": "../css/donut.css"
-		},
-		{	
+		  },
+		  {
 			"src": "donut-rtl.less",
 			"dest": "../css/donut-rtl.css"
-		},
-		{	
+		  },
+		  {
 			"src": "donut-responsive.less",
 			"dest": "../css/donut-responsive.css"
-		}
+		  }
 	],
 
 	// Add the ignore rules that Koala will not search them.
@@ -36,7 +36,11 @@
 
 		"strictUnits": false,
 
-		"sourceMap": false
+        // Create sourcemap files next to the generated CSS files
+		"sourceMap": false,
+
+        // auto add vendor prefixes to rules
+        "autoprefix": false
 	},
 
 	// Other compile options.
@@ -45,5 +49,5 @@
 	"customOptions": [],
 
 	// An array of filesystem paths or importers which should be searched for LESS templates imported with the @import directive.
-	"includePaths": []
+	"includePaths": ["bootstrap/" , "bootstrap-rtl/" , "font-awesome" , "utils"]
 }
