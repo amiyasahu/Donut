@@ -886,18 +886,15 @@ class qa_html_theme extends qa_html_theme_base {
 						$user_raw    = !empty($user['raw']) ? $user['raw'] : $user ;
 						$handle      = @$user_raw['handle'];
 						$handle_html = @$usershtml[$user_raw['userid']];
-						if(defined('QA_WORDPRESS_INTEGRATE_PATH')){
-							$level_html = $user['score'];
-							unset( $user['score'] );
-						} else {
-							if ( is_numeric( $user['score'] ) ) {
-								$user_level = donut_get_user_level( $user_raw['userid'] );
-								$level_html = qa_user_level_string( $user_level );
-							} else {
-								$level_html = $user['score'];
-								unset( $user['score'] );
-							}
-						}
+
+	                    if (is_numeric($user['score'])) {
+	                    	$user_level = donut_get_user_level($user_raw['userid']);
+	                    	$level_html = qa_user_level_string($user_level);
+	                    }else  {
+	                    	$level_html = $user['score'] ;
+	                    	unset($user['score']);
+	                    }
+
 	                    if (empty($handle_html)) {
 	                    	$handle_html = $user['label'];
 	                    }
