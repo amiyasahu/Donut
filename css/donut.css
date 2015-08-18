@@ -1939,9 +1939,6 @@ header#top-header .top-html-block a:visited {
   border-bottom-right-radius: 0 !important;
   border-top-right-radius: 0 !important;
 }
-.qa-nav-cat-item {
-  text-align: right;
-}
 .qa-nav-cat-item a {
   padding-bottom: 1px;
 }
@@ -1958,10 +1955,7 @@ header#top-header .top-html-block a:visited {
   text-align: center;
   border-radius: 10px;
   background-color: #f0ad4e;
-}
-.qa-nav-cat-item .qa-nav-cat-link {
-  clear: both;
-  float: left;
+  float: right;
 }
 .qa-nav-cat-note {
   color: #000000;
@@ -2891,6 +2885,9 @@ header#top-header .top-html-block a:visited {
   font-weight: bold;
 }
 /* Tags, users and categories */
+.qa-part-ranking {
+  margin-bottom: 20px;
+}
 .qa-top-tags ul.donut-tags-list {
   list-style-type: none;
   padding-left: 5px;
