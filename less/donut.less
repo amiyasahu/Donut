@@ -888,11 +888,7 @@ html, body {
 	}
 
 	&-c-list {
-		.clearfix();
-		margin: 15px -15px 15px 15px;
-		@media @mobile {
-			margin-right: -5px;
-		}
+
 	}
 
 	&-hidden {
@@ -931,6 +927,7 @@ html, body {
 	border: 1px solid @light-border;
 	border-radius: 4px;
 }
+
 
 /* Answer form */
 .qa-part-a-form {
@@ -992,7 +989,7 @@ html, body {
 
 .qa-a-item-main {
 	float: left;
-	width: 85%;
+	width: 90%;
 	min-height: 1px;
 	padding: 0 10px 10px 10px;
 	@media @mobile {
@@ -1044,7 +1041,6 @@ html, body {
 
 	&-flags {
 		display: inline-block;
-		// font-weight: bolder;
 		padding: 2px 4px;
 		color: @state-danger-text;
 		background-color: @state-danger-bg;
@@ -1057,11 +1053,7 @@ html, body {
 	}
 
 	&-c-list {
-		.clearfix();
-		margin: 15px -15px 15px 15px;
-		@media @mobile {
-			margin-right: -5px;
-		}
+
 	}
 }
 
@@ -1086,38 +1078,24 @@ html, body {
 	}
 }
 
+.qa-q-view-c-list ,
+.qa-a-item-c-list {
+	margin-top: 20px;
+	border-top: 1px solid @light-border;
+}
+
 /* Comment list  */
 .qa-c-list-item {
 	padding: 8px;
-	.make-xs-column(12);
-	.light-border();
-	margin-bottom: -1px;
-
-	&:first-child {
-		border-top-right-radius: 3px;
-		border-top-left-radius: 3px;
-	}
-
-	&:last-child {
-		border-bottom-right-radius: 3px;
-		border-bottom-left-radius: 3px;
-	}
+	border-bottom: 1px solid @light-border;
 }
 
 .qa-a-list-item-selected {
 	.qa-c-list-item {
-		border: 1px solid @state-success-border;
-		& + .qa-c-list-item {
-			border-top: 0;
-		}
-		&:first-child {
-			border-top-right-radius: 3px;
-			border-top-left-radius: 3px;
-		}
-		&:last-child {
-			border-bottom-right-radius: 3px;
-			border-bottom-left-radius: 3px;
-		}
+		border-bottom: 1px solid @state-success-border;
+	}
+	.qa-a-item-c-list {
+		border-top: 1px solid @state-success-border;
 	}
 	.qa-c-item-hidden {
 		.qa-c-item-content {

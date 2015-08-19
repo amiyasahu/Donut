@@ -3165,30 +3165,6 @@ a.qa-browse-cat-link:visited {
 .qa-q-view-buttons {
   margin-top: 16px;
 }
-.qa-q-view-c-list {
-  margin: 15px -15px 15px 15px;
-}
-.qa-q-view-c-list:before,
-.qa-q-view-c-list:after {
-  content: " ";
-  display: table;
-}
-.qa-q-view-c-list:after {
-  clear: both;
-}
-.qa-q-view-c-list:before,
-.qa-q-view-c-list:after {
-  content: " ";
-  display: table;
-}
-.qa-q-view-c-list:after {
-  clear: both;
-}
-@media only screen and (max-width: 767px) {
-  .qa-q-view-c-list {
-    margin-right: -5px;
-  }
-}
 .qa-q-view-hidden .qa-voting {
   color: #555555;
 }
@@ -3280,7 +3256,7 @@ a.qa-browse-cat-link:visited {
 }
 .qa-a-item-main {
   float: left;
-  width: 85%;
+  width: 90%;
   min-height: 1px;
   padding: 0 10px 10px 10px;
 }
@@ -3336,30 +3312,6 @@ a.qa-browse-cat-link:visited {
 .qa-a-item-buttons {
   margin-top: 16px;
 }
-.qa-a-item-c-list {
-  margin: 15px -15px 15px 15px;
-}
-.qa-a-item-c-list:before,
-.qa-a-item-c-list:after {
-  content: " ";
-  display: table;
-}
-.qa-a-item-c-list:after {
-  clear: both;
-}
-.qa-a-item-c-list:before,
-.qa-a-item-c-list:after {
-  content: " ";
-  display: table;
-}
-.qa-a-item-c-list:after {
-  clear: both;
-}
-@media only screen and (max-width: 767px) {
-  .qa-a-item-c-list {
-    margin-right: -5px;
-  }
-}
 /* Answer selection */
 .qa-a-selection {
   position: absolute;
@@ -3382,42 +3334,21 @@ a.qa-browse-cat-link:visited {
     float: right ;
   }
 }
+.qa-q-view-c-list,
+.qa-a-item-c-list {
+  margin-top: 20px;
+  border-top: 1px solid #e2e2e2;
+}
 /* Comment list  */
 .qa-c-list-item {
   padding: 8px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border: 1px solid transparent;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  border-color: #dddddd;
-  margin-bottom: -1px;
-}
-.qa-c-list-item:first-child {
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-}
-.qa-c-list-item:last-child {
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom: 1px solid #e2e2e2;
 }
 .qa-a-list-item-selected .qa-c-list-item {
-  border: 1px solid #d6e9c6;
+  border-bottom: 1px solid #d6e9c6;
 }
-.qa-a-list-item-selected .qa-c-list-item + .qa-c-list-item {
-  border-top: 0;
-}
-.qa-a-list-item-selected .qa-c-list-item:first-child {
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-}
-.qa-a-list-item-selected .qa-c-list-item:last-child {
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+.qa-a-list-item-selected .qa-a-item-c-list {
+  border-top: 1px solid #d6e9c6;
 }
 .qa-a-list-item-selected .qa-c-item-hidden .qa-c-item-content {
   color: #777777;
