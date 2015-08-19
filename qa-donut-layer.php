@@ -959,7 +959,7 @@
                 $this->output( '<div class="page-users-list clearfix"><div class="row">' );
 
                 if ( count( $ranking['items'] ) ) {
-                    $columns = qa_opt('columns_users');
+                    $columns = qa_opt( 'columns_users' );
                     $pagesize = qa_opt( 'page_size_users' );
                     $start = qa_get_start();
                     $users = qa_db_select_with_pending( qa_db_top_users_selectspec( $start, qa_opt_if_loaded( 'page_size_users' ) ) );
@@ -1042,7 +1042,7 @@
                 if ( count( $ranking['items'] ) ) {
                     $this->output( '<div id="tags-list" class="row ' . $class . '">' );
 
-                    $columns = qa_opt('columns_tags');
+                    $columns = qa_opt( 'columns_tags' );
 
                     for ( $column = 0 ; $column < $columns ; $column++ ) {
                         $this->set_context( 'ranking_column', $column );
@@ -1070,7 +1070,7 @@
 						</div>' );
 
             } else {
-               parent::ranking($ranking);
+                parent::ranking( $ranking );
             }
         }
 
@@ -1255,8 +1255,13 @@
 
         public function donut_site_header()
         {
-            if ( $this->is_home() ) {
-                donut_include_template('site-header.php');
+            if ( $this->is_home() && donut_opt( 'show_home_page_banner' ) ) {
+                //check if user closed the header intentionally
+                $user_hidden = donut_opt( 'allow_user_to_close_home_page_banner' ) ?
+                    @$_COOKIE['donut_hide_site_header'] : 'no';
+
+                if ( $user_hidden !== 'yes' )
+                    donut_include_template( 'site-header.php' );
             }
         }
 
@@ -1264,10 +1269,10 @@
         {
             $suggest = @$this->content['suggest_next'];
 
-            if (!empty($suggest)) {
-                $this->output('<div class="qa-suggest-next col-xs-12 text-center clearfix alert">');
-                $this->output($suggest);
-                $this->output('</div>');
+            if ( !empty( $suggest ) ) {
+                $this->output( '<div class="qa-suggest-next col-xs-12 text-center clearfix alert">' );
+                $this->output( $suggest );
+                $this->output( '</div>' );
             }
         }
     }

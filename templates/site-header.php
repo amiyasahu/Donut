@@ -3,11 +3,14 @@
     <div class="site-header-cover">
         <div class="site-header-fade"></div>
         <div class="site-header-entry">
-            <div class="hide-btn-wrap">
-                <button title="Hide this banner" id="hide-site-header" type="button" class="close" data-dismiss="site-header-entry" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+            <?php if (donut_opt('allow_user_to_close_home_page_banner')): ?>
+                <div class="hide-btn-wrap">
+                    <button title="Hide this banner" id="hide-site-header" type="button" class="close" data-dismiss="site-header-entry" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif ?>
+            
             <h1 class="top-heading">Donut Discussion Forum</h1>
 
             <div class="container visible-md visible-lg">
