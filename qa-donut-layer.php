@@ -286,13 +286,9 @@
         function header() // removes user navigation and search from header and replaces with custom header content. Also opens new <div>s
         {
             $this->output( '<div class="qa-header clearfix">' );
-
-            // $this->logo();
             $this->header_clear();
             $this->header_custom();
-
             $this->output( '</div> <!-- END qa-header -->', '' );
-
             $this->output( '<div class="qa-main-shadow clearfix">', '' );
             $this->output( '<div class="qa-main-wrapper clearfix row">', '' );
         }
@@ -885,14 +881,17 @@
          */
         function attribution()
         {
-            /*Please do not remove this as you are using this for free . I will appriciate if you keep this on your site */
+            $this->output('<div class="donut-attribution">');
+
+            /*Please do not remove this as you are using this for free . I will appreciate if you keep this on your site */
             $this->output(
                 '<div class="qa-attribution">',
-                '&nbsp;| Donut <span class="fa fa-code"></span> with <span class="fa fa-heart"></span> by <a href="http://amiyasahu.com">Amiya Sahu</a>',
+                '<a href="https://github.com/amiyasahu/Donut">Donut Theme</a> <span class="fa fa-code"></span> with <span class="fa fa-heart"></span> by <a href="http://amiyasahu.com">Amiya Sahu</a>',
                 '</div>'
             );
 
             parent::attribution();
+            $this->output('</div>');
         }
 
         /**

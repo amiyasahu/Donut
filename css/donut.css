@@ -1475,22 +1475,27 @@ header#nav-header {
   }
 }
 .donut-footer {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px 0;
   margin-top: 50px;
-  color: #777777;
-  text-align: center;
-  border-top: 1px solid #e2e2e2;
-  background-color: #fbfbfb;
-  position: relative;
+  background-color: #333333;
 }
 .qa-footer {
   color: #777777;
-  text-align: center;
+  font-size: 16px;
+  line-height: 1.42857143;
 }
-.qa-footer a,
+.qa-footer a {
+  color: #777777;
+}
 .qa-footer a:visited {
-  text-decoration: underline;
+  color: #777777;
+}
+.qa-footer a:hover,
+.qa-footer a:active,
+.qa-footer a:focus {
+  color: #c4c4c4;
+  text-decoration: none;
+  outline: none;
 }
 .qa-footer-left {
   float: left !important;
@@ -1502,21 +1507,29 @@ header#nav-header {
 }
 .qa-nav-footer {
   float: left;
+  font-size: 80%;
 }
 .qa-nav-footer-list {
   float: left;
   list-style-type: none;
-  margin: 0;
-  margin-right: 2px;
+  margin: 0 0 10px;
   padding: 0;
 }
 .qa-nav-footer-item {
   float: left;
-  margin-right: 5px;
+  padding: 0 15px 5px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.qa-nav-footer-item:last-child {
+  padding-right: 0;
+}
+.donut-attribution {
+  clear: both;
 }
 .qa-attribution {
-  float: right !important;
-  float: right;
+  float: left;
+  margin-right: 20px ;
 }
 .site-header {
   font-family: 'Varela Round', 'Helvetica Neue', cursive, Arial, sans-serif;
