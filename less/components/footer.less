@@ -33,13 +33,12 @@
 }
 
 .qa-nav-footer {
-	float: left;
 	font-size: 80%;
 
 	&-list {
 		float: left;
 		list-style-type: none;
-		margin: 0 0 10px;
+		margin: 10px 0 10px;
 		padding: 0;
 	}
 
@@ -60,10 +59,46 @@
 	clear: both;
 }
 
+.footer-social ,
 .qa-attribution {
-	float: left;
-	margin-right: 20px ;
+	margin-bottom: 10px;
 }
+
+.footer-social {
+	font-size: @font-size-large;
+	overflow: auto;
+
+	ul {
+		list-style-type: none;
+		margin: 0 ;
+		padding: 0 ;
+
+		li {
+			float: left;
+			margin-right: 5px ;
+			background-color: @gray-darker;
+			padding: 4px 10px;
+			border-radius: 3px ;
+		}
+	}
+}
+
+@media @tablet-and-above {
+	.qa-attribution {
+		float: left;
+		margin-right: 20px ;
+	}
+	.donut-copyright {
+		float: right;
+	}
+	.footer-social {
+		float: right;
+	}
+	.qa-nav-footer {
+		float: left;
+	}
+}
+
 
 .donut-site-stats-bottom {
 	&{

@@ -1515,13 +1515,12 @@ header#nav-header {
   }
 }
 .qa-nav-footer {
-  float: left;
   font-size: 80%;
 }
 .qa-nav-footer-list {
   float: left;
   list-style-type: none;
-  margin: 0 0 10px;
+  margin: 10px 0 10px;
   padding: 0;
 }
 .qa-nav-footer-item {
@@ -1536,9 +1535,40 @@ header#nav-header {
 .footer-bottom {
   clear: both;
 }
+.footer-social,
 .qa-attribution {
+  margin-bottom: 10px;
+}
+.footer-social {
+  font-size: 18px;
+  overflow: auto;
+}
+.footer-social ul {
+  list-style-type: none;
+  margin: 0 ;
+  padding: 0 ;
+}
+.footer-social ul li {
   float: left;
-  margin-right: 20px ;
+  margin-right: 5px ;
+  background-color: #222222;
+  padding: 4px 10px;
+  border-radius: 3px ;
+}
+@media only screen and (min-width: 768px) {
+  .qa-attribution {
+    float: left;
+    margin-right: 20px ;
+  }
+  .donut-copyright {
+    float: right;
+  }
+  .footer-social {
+    float: right;
+  }
+  .qa-nav-footer {
+    float: left;
+  }
 }
 .donut-site-stats-bottom {
   padding: 15px;

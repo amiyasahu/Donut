@@ -883,16 +883,11 @@
          */
         function attribution()
         {
+            $this->footer_social_links();
             $this->output('<div class="footer-bottom">');
-
-            /*Please do not remove this as you are using this for free . I will appreciate if you keep this on your site */
-            $this->output(
-                '<div class="qa-attribution">',
-                '<a href="https://github.com/amiyasahu/Donut">Donut Theme</a> <span class="fa fa-code"></span> with <span class="fa fa-heart"></span> by <a href="http://amiyasahu.com">Amiya Sahu</a>',
-                '</div>'
-            );
-
+            $this->donut_attribution();
             parent::attribution();
+            $this->donut_copyright();
             $this->output('</div>');
         }
 
@@ -1280,6 +1275,44 @@
         private function donut_site_stats_bottom()
         {
             donut_include_template('site-stats-bottom.php');
+        }
+
+        /**
+         * Attribution for Donut theme
+         * Please do not remove this as you are using this for free .
+         * I will appreciate if you keep this on your site
+         */
+        private function donut_attribution()
+        {
+            $this->output(
+                '<div class="qa-attribution">',
+                '<a href="https://github.com/amiyasahu/Donut">Donut Theme</a> <span class="fa fa-code"></span> with <span class="fa fa-heart"></span> by <a href="http://amiyasahu.com">Amiya Sahu</a>',
+                '</div>'
+            );
+        }
+
+        private function donut_copyright()
+        {
+            $this->output(
+                '<div class="donut-copyright">',
+                '<span class="fa fa-copyright"></span> 2015 Donut Theme',
+                '</div>'
+            );
+        }
+
+        private function footer_social_links()
+        {
+            $this->output('<div class="footer-social">');
+            $social_links = donut_opt( 'social_links' );
+            $this->output('<ul>');
+            foreach($social_links as $key => $value ){
+                $this->output('<li>');
+                $this->output(donut_get_social_link( $value, true ));
+                $this->output('</li>');
+            }
+            $this->output('</ul>');
+
+            $this->output('</div>');
         }
     }
 /*
