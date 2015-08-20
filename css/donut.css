@@ -428,7 +428,7 @@ header#nav-header {
 }
 #login-dropdown-menu {
   width: 250px;
-  left: -195px;
+  left: -208px;
   padding: 10px;
 }
 #login-dropdown-menu li {
@@ -482,7 +482,7 @@ header#nav-header {
 }
 #user-dropdown-menu {
   width: 200px;
-  left: -160px;
+  left: -155px;
 }
 .nav.navbar-nav.navbar-right.login-nav,
 .nav.navbar-nav.navbar-right.user-nav,
@@ -499,10 +499,16 @@ header#nav-header {
     display: inline-block;
   }
 }
+.navbar-nav > li > a.navbar-user-img {
+  padding: 4px 6px;
+}
+.navbar-nav > li > a.navbar-login-button {
+  padding: 4px 10px;
+}
 .navbar-nav > li > a.navbar-user-img,
 .navbar-nav > li > a.navbar-login-button {
-  padding: 4px 6px;
   border-radius: 4px;
+  opacity: 1;
 }
 .navbar-nav > li > a.navbar-user-img,
 .navbar-nav > li > a.navbar-login-button,
@@ -586,8 +592,7 @@ header#nav-header {
 }
 /* small caret at the dropdown right menu */
 .navbar-nav.navbar-right li .dropdown-menu {
-  margin-top: 10px;
-  right: 10px;
+  margin-top: 7px;
 }
 .navbar-nav.navbar-right li .dropdown-menu:before {
   position: absolute;
@@ -1476,7 +1481,6 @@ header#nav-header {
 }
 .donut-footer {
   padding: 25px 0;
-  margin-top: 50px;
   background-color: #333333;
 }
 .qa-footer {
@@ -1505,6 +1509,11 @@ header#nav-header {
   float: right !important;
   float: right;
 }
+@media only screen and (max-width: 767px) {
+  .qa-footer {
+    font-size: 14px;
+  }
+}
 .qa-nav-footer {
   float: left;
   font-size: 80%;
@@ -1524,12 +1533,43 @@ header#nav-header {
 .qa-nav-footer-item:last-child {
   padding-right: 0;
 }
-.donut-attribution {
+.footer-bottom {
   clear: both;
 }
 .qa-attribution {
   float: left;
   margin-right: 20px ;
+}
+.donut-site-stats-bottom {
+  padding: 15px;
+  background-color: #eeeeee;
+  border-top: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #eeeeee;
+}
+.donut-site-stats-bottom .stats-wrap {
+  margin: 0 auto;
+  display: table;
+}
+.donut-site-stats-bottom .count-item {
+  float: left !important;
+  float: left;
+  color: #000000;
+  font-size: 18px;
+  margin: 0 30px 0 0;
+  min-width: 100px;
+  padding: 5px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.donut-site-stats-bottom .count-data {
+  background: none repeat scroll 0 0 #555555;
+  border-radius: 5px;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-right: 6px;
+  padding: 0 10px;
 }
 .site-header {
   font-family: 'Varela Round', 'Helvetica Neue', cursive, Arial, sans-serif;
@@ -2097,6 +2137,9 @@ header#nav-header {
   margin: 40px 0 20px;
   border-bottom: 1px solid #eeeeee;
   margin: 20px 0 10px;
+}
+.qa-body-wrapper {
+  margin-bottom: 50px;
 }
 .qa-notice {
   margin: 10px 0 5px 0;

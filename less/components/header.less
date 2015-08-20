@@ -174,7 +174,7 @@ header#nav-header{
 
 #login-dropdown-menu {
 	width: 250px;
-	left: -195px;
+	left: -208px;
 	padding: 10px;
 	li {
 		padding: 2px;
@@ -227,7 +227,7 @@ header#nav-header{
 
 #user-dropdown-menu {
 	width: 200px;
-	left: -160px;
+	left: -155px;
 }
 
 .nav.navbar-nav.navbar-right {
@@ -247,11 +247,17 @@ header#nav-header{
 }
 
 .navbar-nav > li > a {
+	&.navbar-user-img {
+		padding: 4px 6px;
+	}
+	&.navbar-login-button {
+		padding: 4px 10px;
+	}
 	&.navbar-user-img,
 	&.navbar-login-button {
 		& {
-			padding: 4px 6px;
 			border-radius: 4px;
+			opacity: 1;
 		}
 		&, &:hover, &:active, &:focus {
 			background-color: #fff;
@@ -343,8 +349,7 @@ header#nav-header{
 .navbar-nav.navbar-right {
 	li {
 		.dropdown-menu {
-			margin-top: 10px;
-			right: 10px;
+			margin-top: 7px;
 			&:before {
 				position: absolute;
 				top: -7px;

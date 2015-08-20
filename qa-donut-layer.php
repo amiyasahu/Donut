@@ -431,6 +431,9 @@
 
         function body_suffix() // to replace standard Q2A footer
         {
+
+            $this->donut_site_stats_bottom();
+
             $this->output( '<footer class="donut-footer">' );
 
             if ( donut_opt( 'enable_back_to_top_button' ) ) {
@@ -438,9 +441,8 @@
             }
 
             $this->output( '<div class="container">' );
-
             parent::footer();
-            $this->output( '</div>' );
+            $this->output( '</div> <!--END Container-->' );
             $this->output( '</footer> <!-- END footer -->', '' );
         }
 
@@ -881,7 +883,7 @@
          */
         function attribution()
         {
-            $this->output('<div class="donut-attribution">');
+            $this->output('<div class="footer-bottom">');
 
             /*Please do not remove this as you are using this for free . I will appreciate if you keep this on your site */
             $this->output(
@@ -1273,6 +1275,11 @@
                 $this->output( $suggest );
                 $this->output( '</div>' );
             }
+        }
+
+        private function donut_site_stats_bottom()
+        {
+            donut_include_template('site-stats-bottom.php');
         }
     }
 /*

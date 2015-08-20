@@ -284,3 +284,15 @@
 
         return donut_get_link( $params );
     }
+
+    function donut_stats_output( $value, $langsingular, $langplural )
+    {
+        echo '<div class="count-item">';
+
+        if ( $value == 1 )
+            echo qa_lang_html_sub( $langsingular, '<span class="count-data">1</span>', '1' );
+        else
+            echo qa_lang_html_sub( $langplural, '<span class="count-data">' . number_format( (int) $value ) . '</span>' );
+
+        echo '</div>';
+    }

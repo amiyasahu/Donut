@@ -1,7 +1,6 @@
 
 .donut-footer {
 	padding: 25px 0;
-	margin-top: 50px;
 	background-color: @gray-dark;
 }
 
@@ -27,6 +26,9 @@
 	}
 	&-right {
 		.pull-right();
+	}
+	@media @mobile {
+		font-size: @font-size-base;
 	}
 }
 
@@ -54,11 +56,41 @@
 	}
 }
 
-.donut-attribution {
+.footer-bottom {
 	clear: both;
 }
 
 .qa-attribution {
 	float: left;
 	margin-right: 20px ;
+}
+
+.donut-site-stats-bottom {
+	&{
+		padding: 15px;
+		background-color: @gray-lighter;
+		.light-border-top();
+	}
+	.stats-wrap{
+		margin: 0 auto;
+		display: table;
+	}
+	.count-item{
+		.pull-left();
+		color: @gray-base;
+		font-size: @font-size-large;
+		margin: 0 30px 0 0;
+		min-width: 100px;
+		padding: 5px;
+		text-align: center;
+		text-transform: capitalize;
+	}
+	.count-data {
+		background: none repeat scroll 0 0 @gray;
+		border-radius: 5px;
+		color: #FFFFFF;
+		display: inline-block;
+		margin-right: 6px;
+		padding: 0 10px;
+	}
 }
