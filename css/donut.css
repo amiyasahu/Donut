@@ -299,6 +299,9 @@ header#top-header .top-html-block a:visited {
   color: #ffffff;
   text-decoration: none;
 }
+header#nav-header {
+  min-height: 80px;
+}
 .navbar {
   background-color: #ffffff;
   margin-bottom: 0px;
