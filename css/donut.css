@@ -2088,14 +2088,13 @@ header#nav-header {
 }
 /* Votes */
 .qa-voting {
-  background: #d9edf7;
   border: 1px solid #bce8f1;
   float: left;
   width: 65px;
   height: 60px;
   margin-right: 5px;
   padding: 0 0 0 3px;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .qa-netvote-count {
   text-align: center;
@@ -2455,8 +2454,7 @@ header#nav-header {
 }
 /* Answers and views count */
 .qa-a-count {
-  background: #dff0d8;
-  border: 1px solid #d6e9c6;
+  border: 2px solid #d6e9c6;
   color: #3c763d;
   float: left;
   width: 60px;
@@ -2464,15 +2462,13 @@ header#nav-header {
   text-align: center;
   margin-right: 5px;
   padding: 0;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .qa-a-count-zero {
-  background: #fcf8e3;
   border: 1px solid #ebccd1;
   color: #a94442;
 }
 .qa-a-count-selected {
-  background: #c1e2b3;
   border: 1px solid #bbdba1;
   color: #2b542c;
 }
@@ -2488,15 +2484,14 @@ header#nav-header {
 }
 .qa-view-count {
   float: left;
-  background: #ffffff;
-  border: 1px solid #dddddd;
+  border: 2px solid #dddddd;
   width: 60px;
   height: 60px;
   text-align: center;
   margin-right: 5px;
   padding: 0;
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .qa-view-count-data {
   font-size: 20px;

@@ -228,8 +228,7 @@ html, body {
 
 /* Answers and views count */
 .qa-a-count {
-	background: @alert-success-bg;
-	border: 1px solid @alert-success-border;
+	border: 2px solid @alert-success-border;
 	color: @alert-success-text;
 	float: left;
 	width: 60px;
@@ -237,14 +236,12 @@ html, body {
 	text-align: center;
 	margin-right: 5px;
 	padding: 0;
-	border-radius: 3px;
+	border-radius: 5px;
 	&-zero {
-		background: @alert-warning-bg;
 		border: 1px solid @alert-danger-border;
 		color: @alert-danger-text;
 	}
 	&-selected {
-		background: darken(@alert-success-bg , 10%);
 		border: 1px solid darken(@alert-success-border , 10%);
 		color: darken(@alert-success-text , 10%);
 	}
@@ -262,15 +259,14 @@ html, body {
 
 .qa-view-count {
 	float: left;
-	background: @body-bg;
-	border: 1px solid @table-border-color;
+	border: 2px solid @table-border-color;
 	width: 60px;
 	height: 60px;
 	text-align: center;
 	margin-right: 5px;
 	padding: 0;
 	overflow: hidden;
-	border-radius: 3px;
+	border-radius: 5px;
 	&-data {
 		font-size: 20px;
 		line-height: 24px;
