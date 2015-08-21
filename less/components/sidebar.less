@@ -1,23 +1,25 @@
 
 .qa-feed {
 	padding: 15px;
-	margin: 0 0 10px 0;
-	border: 1px solid #e5e5e5;
+	margin: 0 0 20px 0;
+	overflow: auto;
+	.light-border();
+
 	.icon-wrapper {
-		display: block;
-		.pull-left();
-		height: 50px;
 		margin-right: 10px;
-		margin-top: -4px;
 	}
+
 	.qa-feed-icon {
+		display: inline-block;
 		background-color: @brand-warning;
 		color: @body-bg;
-		padding: 5px 6px 5px 9px;
+		padding: 4px 8px;
 		border: 1px solid @alert-warning-border;
 		border-radius: 5px;
-		.pull-left();
+		font-size: 16px;
+		line-height: @line-height-base;
 	}
+
 	.qa-feed-link {
 		font-size: @font-size-base;
 		color: @gray;

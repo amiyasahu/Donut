@@ -1802,25 +1802,25 @@ header#nav-header {
 }
 .qa-feed {
   padding: 15px;
-  margin: 0 0 10px 0;
-  border: 1px solid #e5e5e5;
+  margin: 0 0 20px 0;
+  overflow: auto;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #dddddd;
 }
 .qa-feed .icon-wrapper {
-  display: block;
-  float: left !important;
-  float: left;
-  height: 50px;
   margin-right: 10px;
-  margin-top: -4px;
 }
 .qa-feed .qa-feed-icon {
+  display: inline-block;
   background-color: #f0ad4e;
   color: #ffffff;
-  padding: 5px 6px 5px 9px;
+  padding: 4px 8px;
   border: 1px solid #faebcc;
   border-radius: 5px;
-  float: left !important;
-  float: left;
+  font-size: 16px;
+  line-height: 1.42857143;
 }
 .qa-feed .qa-feed-link {
   font-size: 14px;
