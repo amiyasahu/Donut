@@ -61,15 +61,57 @@
         /**
          * Header sticks to the top of tha page if this option is enabled
          * Allowed values true | false
-         * Default : false
+         * Default : true
          */
         'enable_stiky_header_upon_scroll'      => true,
+
+        /**
+         * Enable back to top button
+         * Allowed values true | false
+         * Default : true
+         */
         'enable_back_to_top_button'            => true,
+
+        /**
+         * Enable home page banner
+         * Allowed values true | false
+         * Default : true
+         */
         'show_home_page_banner'                => true,
+
+        /**
+         * Allow user to close the home page banner
+         * Allowed values true | false
+         * Default : false
+         */
         'allow_user_to_close_home_page_banner' => false,
+
+        /**
+         * Allow site stats above footer
+         * Allowed values true | false
+         * Default : true
+         */
         'allow_site_stats_above_footer'        => true,
+
+        /**
+         * Allow site stats above footer
+         * Allowed values true | false
+         * Default : true
+         */
         'show_social_links_on_footer'          => true,
+
+        /**
+         * Show copyright at footer
+         * Allowed values true | false
+         * Default : true
+         */
         'show_copy_right_at_footer'            => true,
+
+        /**
+         * Copyright text
+         * Allowed values text/html
+         * Default : '<span class="fa fa-copyright"></span> 2015 Donut Theme'
+         */
         'copyright_text'                       => '<span class="fa fa-copyright"></span> 2015 Donut Theme',
 
         'social_links'                         => array(
