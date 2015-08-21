@@ -3470,7 +3470,7 @@ a.qa-browse-cat-link:visited {
 }
 .qa-c-item-content {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 15px;
   font-size: 12px;
 }
 .qa-c-item-footer {
@@ -3694,6 +3694,7 @@ a.qa-browse-cat-link:visited {
 }
 .qa-tag-link:hover {
   color: #286090;
+  background-color: #eeeeee;
   text-decoration: none;
 }
 .qa-widget-side > div > a {
