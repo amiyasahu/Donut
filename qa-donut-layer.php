@@ -431,8 +431,9 @@
 
         function body_suffix() // to replace standard Q2A footer
         {
-
-            $this->donut_site_stats_bottom();
+            if(donut_opt('allow_site_stats_above_footer')){
+                $this->donut_site_stats_bottom();
+            }
 
             $this->output( '<footer class="donut-footer">' );
 
@@ -883,11 +884,18 @@
          */
         function attribution()
         {
-            $this->footer_social_links();
+            if(donut_opt('show_social_links_on_footer')){
+                $this->footer_social_links();
+            }
+
             $this->output('<div class="footer-bottom">');
             $this->donut_attribution();
             parent::attribution();
-            $this->donut_copyright();
+
+            if(donut_opt('show_copy_right_at_footer')){
+                $this->donut_copyright();
+            }
+
             $this->output('</div>');
         }
 
@@ -1295,7 +1303,7 @@
         {
             $this->output(
                 '<div class="donut-copyright">',
-                '<span class="fa fa-copyright"></span> 2015 Donut Theme',
+                donut_opt('copyright_text'),
                 '</div>'
             );
         }
