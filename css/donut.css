@@ -1682,6 +1682,7 @@ header#nav-header {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   border-color: #eeeeee;
   border-top-color: #2e6da4;
+  overflow: auto;
 }
 .site-header .search-bar {
   padding: 10px 5px;
