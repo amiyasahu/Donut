@@ -1107,7 +1107,7 @@ header#nav-header {
   content: "\f112";
 }
 .qa-form-light-button-answer:before {
-  content: "\f067";
+  content: "\f0fe";
 }
 .qa-form-light-button-reshow:before {
   content: "\f06e";
@@ -1379,6 +1379,8 @@ header#nav-header {
 .qa-form-tall-button-setbonus:before {
   content: "\f0fe";
 }
+.qa-form-wide-button-add:before,
+.qa-form-tall-button-add:before,
 .qa-form-wide-button-post:before,
 .qa-form-tall-button-post:before {
   content: "\f0fe";
@@ -1393,7 +1395,7 @@ header#nav-header {
 }
 .qa-form-wide-button-answer:before,
 .qa-form-tall-button-answer:before {
-  content: "\f067";
+  content: "\f0fe";
 }
 .qa-form-wide-button-comment:before,
 .qa-form-tall-button-comment:before {
