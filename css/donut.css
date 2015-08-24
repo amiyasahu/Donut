@@ -2775,7 +2775,6 @@ header#nav-header {
   .qa-template-user-answers .qa-q-item-stats,
   .qa-template-user-activity .qa-q-item-stats {
     float: left !important;
-    float: left;
   }
 }
 .qa-template-user-answers .qa-q-item-main,
