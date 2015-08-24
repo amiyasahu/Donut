@@ -79,12 +79,6 @@ html,
 body {
   font-family: 'Lato', sans-serif;
 }
-*,
-*:focus,
-*:active {
-  outline: 0 !important;
-  -moz-outline: 0 !important;
-}
 .qa-q-view-avatar-meta,
 .qa-nav-sub-admin-moderate {
   clear: left;
