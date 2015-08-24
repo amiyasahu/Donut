@@ -2514,10 +2514,12 @@ header#nav-header {
   padding: 4px 6px;
   font-size: 12px;
   line-height: 1.42857143;
-  color: #ffffff;
-  border-radius: 3px;
-  background-color: #5cb85c;
-  border: 1px solid #dddddd;
+  border: medium none;
+  border-radius: 0;
+  border-bottom: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #eeeeee;
 }
 .qa-template-question .qa-view-count-data {
   font-size: 12px;
@@ -3674,7 +3676,6 @@ a.qa-browse-cat-link:visited {
 .qa-tags-rank-tag-item {
   float: left;
   font-size: 12px;
-  border-left: 8px solid #337ab7;
   margin-right: 5px;
 }
 .qa-tags-rank-tag-item {
@@ -3687,9 +3688,7 @@ a.qa-browse-cat-link:visited {
   cursor: pointer;
   padding: 2px 8px;
   border: 1px solid #e2e2e2;
-  border-left: medium none;
-  border-bottom-right-radius: 4px;
-  border-top-right-radius: 4px;
+  border-radius: 4px;
 }
 .qa-tag-link:hover {
   color: #286090;
