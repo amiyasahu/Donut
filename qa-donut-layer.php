@@ -1116,7 +1116,7 @@
         private function donut_breadcrumb()
         {
             if ( class_exists( 'Ami_Breadcrumb' ) && donut_opt( 'enable_breadcrumbs' ) ) {
-                if ( !$this->is_home() ) {
+                if ( !$this->is_home() && $this->template !== 'admin') {
                     $args = array(
                         'themeobject' => $this,
                         'content'     => $this->content,
