@@ -8,6 +8,13 @@ html, body {
 	font-family: 'Lato', sans-serif;
 }
 
+* {
+	& , &:focus , &:active {
+		outline: 0 !important;
+		-moz-outline : 0 !important;
+	}
+}
+
 @import "utils/border.less";
 @import "components/clears.less";
 @import "components/inputs.less";
