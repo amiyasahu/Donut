@@ -1735,7 +1735,8 @@ header#nav-header {
 }
 .top-search-bar .qa-search-field.form-control {
   border-radius: 0;
-  padding: 20px 12px;
+  padding: 10px 12px;
+  height: auto;
 }
 .side-search-bar {
   margin-bottom: 20px;
@@ -1752,7 +1753,8 @@ header#nav-header {
 }
 .side-search-bar .qa-search-field.form-control {
   border-radius: 4px;
-  padding: 20px 12px;
+  padding: 10px 12px;
+  height: auto;
 }
 .donut-top {
   display: inline-block;
