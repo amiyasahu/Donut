@@ -2509,12 +2509,11 @@ header#nav-header {
 }
 .qa-template-question .qa-view-count {
   position: absolute;
-  right: 0;
-  top: 5px;
-  width: auto;
+  width: 75px;
   height: auto;
-  padding: 4px 8px ;
+  padding: 4px 6px;
   font-size: 12px;
+  line-height: 1.42857143;
   color: #ffffff;
   border-radius: 3px;
   background-color: #5cb85c;
@@ -2528,7 +2527,18 @@ header#nav-header {
 .qa-template-question .qa-view-count-pad {
   font-size: 12px;
   line-height: 1.42857143;
-  letter-spacing: 1px;
+}
+@media only screen and (max-width: 767px) {
+  .qa-template-question .qa-view-count {
+    right: 0;
+    top: 5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .qa-template-question .qa-view-count {
+    left: 5px;
+    top: 70px;
+  }
 }
 .qa-error {
   padding: 15px;
@@ -3107,12 +3117,8 @@ a.qa-browse-cat-link:visited {
   border-radius: 5px;
   padding: 5px;
 }
-.qa-q-view {
-  padding-top: 20px;
-}
 .qa-q-view .qa-voting {
   width: 75px;
-  margin-top: -20px;
 }
 @media only screen and (max-width: 767px) {
   .qa-q-view .qa-voting {
@@ -3140,7 +3146,7 @@ a.qa-browse-cat-link:visited {
 }
 .qa-q-view-main {
   float: left;
-  width: 85%;
+  width: 90%;
   min-height: 1px;
   padding: 0 5px 10px 5px;
 }
