@@ -125,7 +125,7 @@ html, body {
 	background-color: @light-background;
 	opacity: 0.8;
 	.qa-voting {
-		color: @gray;
+		color: @gray-light;
 	}
 	.qa-q-view,
 	.qa-a-item {
@@ -228,7 +228,7 @@ html, body {
 
 /* Answers and views count */
 .qa-a-count {
-	border: 2px solid @alert-success-border;
+	border: 1px solid @alert-success-border;
 	color: @alert-success-text;
 	float: left;
 	width: 60px;
@@ -259,7 +259,7 @@ html, body {
 
 .qa-view-count {
 	float: left;
-	border: 2px solid @table-border-color;
+	border: 1px solid @table-border-color;
 	width: 60px;
 	height: 60px;
 	text-align: center;
@@ -414,11 +414,12 @@ html, body {
 	}
 	@media @mobile {
 		.qa-voting {
-			width: 40px;
-			height: 40px;
-			margin-right: 5px;
-			padding: 0 0 0 3px;
+			width: 45px;
+			height: 45px;
+			margin: 0;
+			padding: 0;
 			margin-bottom: 5px;
+			border-radius: @border-radius-small;
 			&.qa-voting-net {
 				.qa-netvote-count-data {
 					font-size: 14px;
@@ -432,8 +433,11 @@ html, body {
 		}
 
 		.qa-a-count {
-			width: 40px;
-			height: 40px;
+			width: 45px;
+			height: 45px;
+			margin: 0;
+			padding: 0;
+			border-radius: @border-radius-small;
 			.qa-a-count-data {
 				font-size: 14px;
 				line-height: 16px;
@@ -446,6 +450,7 @@ html, body {
 
 		.qa-q-item-main {
 			padding-left: 0;
+			padding-right: 5px;
 		}
 	}
 }
@@ -473,9 +478,6 @@ html, body {
 		.make-md-column(1.5);
 		.make-lg-column(1.2);
 		float: right !important;
-		@media @mobile {
-			float: left !important;
-		}
 	}
 
 	.qa-q-item-main {
@@ -521,6 +523,7 @@ html, body {
 		float: right !important;
 		@media @mobile {
 			float: left !important;
+			padding: 0 5px ;
 		}
 	}
 
@@ -529,7 +532,6 @@ html, body {
 		.make-sm-column(9.3);
 		.make-md-column(9.2);
 		.make-lg-column(9.6);
-		margin-top: 5px;
 	}
 
 	&-avatar-meta {
