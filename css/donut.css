@@ -392,7 +392,6 @@ header#nav-header {
   margin-left: 8px;
   margin-right: 0px;
   font-size: 20px;
-  float: left !important;
   float: left;
 }
 .nav .open > a,
@@ -1504,11 +1503,9 @@ header#nav-header {
   outline: none;
 }
 .qa-footer-left {
-  float: left !important;
   float: left;
 }
 .qa-footer-right {
-  float: right !important;
   float: right;
 }
 @media only screen and (max-width: 767px) {
@@ -1585,7 +1582,6 @@ header#nav-header {
   display: table;
 }
 .donut-site-stats-bottom .count-item {
-  float: left !important;
   float: left;
   color: #000000;
   font-size: 18px;
@@ -2445,7 +2441,6 @@ header#nav-header {
   right: 35px;
 }
 .qa-favoriting {
-  float: right !important;
   float: right;
   position: absolute;
   right: 0;
@@ -2747,14 +2742,13 @@ header#nav-header {
 }
 .qa-template-user-answers .qa-q-item-stats,
 .qa-template-user-activity .qa-q-item-stats {
-  float: right !important;
-  float: right;
   float: left;
   width: 16.66666667%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  float: right !important;
 }
 @media (min-width: 768px) {
   .qa-template-user-answers .qa-q-item-stats,
@@ -2841,14 +2835,13 @@ header#nav-header {
   display: block;
 }
 .qa-q-item-stats {
-  float: right !important;
-  float: right;
   float: left;
   width: 22.5%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  float: right !important;
 }
 @media (min-width: 768px) {
   .qa-q-item-stats {
@@ -2871,7 +2864,6 @@ header#nav-header {
 @media only screen and (max-width: 767px) {
   .qa-q-item-stats {
     float: left !important;
-    float: left;
   }
 }
 .qa-q-item-main {
@@ -2905,7 +2897,6 @@ header#nav-header {
   margin: 5px;
 }
 .qa-q-item-avatar-warp {
-  float: left !important;
   float: left;
   margin: 5px 10px 0 10px;
 }

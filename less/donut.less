@@ -214,7 +214,7 @@ html, body {
 }
 
 .qa-favoriting {
-	.pull-right();
+	float: right;
 	position: absolute;
 	right: 0;
 	bottom: 5px;
@@ -462,13 +462,13 @@ html, body {
 .qa-template-user-answers,
 .qa-template-user-activity {
 	.qa-q-item-stats {
-		.pull-right();
 		.make-xs-column(2);
 		.make-sm-column(1.4);
 		.make-md-column(1.5);
 		.make-lg-column(1.2);
+		float: right !important;
 		@media @mobile {
-			.pull-left();
+			float: left !important;
 		}
 	}
 
@@ -508,13 +508,13 @@ html, body {
 .qa-q-item {
 
 	&-stats {
-		.pull-right();
 		.make-xs-column(2.7);
 		.make-sm-column(2.7);
 		.make-md-column(2.8);
 		.make-lg-column(2.4);
+		float: right !important;
 		@media @mobile {
-			.pull-left();
+			float: left !important;
 		}
 	}
 
@@ -530,7 +530,7 @@ html, body {
 		margin: 5px;
 	}
 	&-avatar-warp {
-		.pull-left();
+		float: left;
 		margin: 5px 10px 0 10px;
 		img {
 			.img-thumbnail();
