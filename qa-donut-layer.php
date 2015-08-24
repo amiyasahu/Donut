@@ -431,7 +431,7 @@
 
         function body_suffix() // to replace standard Q2A footer
         {
-            if(donut_opt('allow_site_stats_above_footer')){
+            if ( donut_opt( 'allow_site_stats_above_footer' ) ) {
                 $this->donut_site_stats_bottom();
             }
 
@@ -884,19 +884,19 @@
          */
         function attribution()
         {
-            if(donut_opt('show_social_links_on_footer')){
+            if ( donut_opt( 'show_social_links_on_footer' ) ) {
                 $this->footer_social_links();
             }
 
-            $this->output('<div class="footer-bottom">');
+            $this->output( '<div class="footer-bottom">' );
             $this->donut_attribution();
             parent::attribution();
 
-            if(donut_opt('show_copy_right_at_footer')){
+            if ( donut_opt( 'show_copy_right_at_footer' ) ) {
                 $this->donut_copyright();
             }
 
-            $this->output('</div>');
+            $this->output( '</div>' );
         }
 
         /**
@@ -1116,7 +1116,7 @@
         private function donut_breadcrumb()
         {
             if ( class_exists( 'Ami_Breadcrumb' ) && donut_opt( 'enable_breadcrumbs' ) ) {
-                if ( !$this->is_home() && $this->template !== 'admin') {
+                if ( !$this->is_home() && $this->template !== 'admin' ) {
                     $args = array(
                         'themeobject' => $this,
                         'content'     => $this->content,
@@ -1282,7 +1282,7 @@
 
         private function donut_site_stats_bottom()
         {
-            donut_include_template('site-stats-bottom.php');
+            donut_include_template( 'site-stats-bottom.php' );
         }
 
         /**
@@ -1303,24 +1303,44 @@
         {
             $this->output(
                 '<div class="donut-copyright">',
-                donut_opt('copyright_text'),
+                donut_opt( 'copyright_text' ),
                 '</div>'
             );
         }
 
         private function footer_social_links()
         {
-            $this->output('<div class="footer-social">');
+            $this->output( '<div class="footer-social">' );
             $social_links = donut_opt( 'social_links' );
-            $this->output('<ul>');
-            foreach($social_links as $key => $value ){
-                $this->output('<li>');
-                $this->output(donut_get_social_link( $value, true ));
-                $this->output('</li>');
+            $this->output( '<ul>' );
+            foreach ( $social_links as $key => $value ) {
+                $this->output( '<li>' );
+                $this->output( donut_get_social_link( $value, true ) );
+                $this->output( '</li>' );
             }
-            $this->output('</ul>');
+            $this->output( '</ul>' );
 
-            $this->output('</div>');
+            $this->output( '</div>' );
+        }
+
+        public function widgets( $region, $place )
+            /*
+                Output the widgets (as provided in $this->content['widgets']) for $region and $place
+            */
+        {
+            if ( count( @$this->content['widgets'][ $region ][ $place ] ) ) {
+                $col = ( $region == 'full' ) ? ' col-xs-12' : '';
+
+                $this->output( '<div class="qa-widgets-' . $region . ' qa-widgets-' . $region . '-' . $place . $col . '">' );
+
+                foreach ( $this->content['widgets'][ $region ][ $place ] as $module ) {
+                    $this->output( '<div class="qa-widget-' . $region . ' qa-widget-' . $region . '-' . $place . '">' );
+                    $module->output_widget( $region, $place, $this, $this->template, $this->request, $this->content );
+                    $this->output( '</div>' );
+                }
+
+                $this->output( '</div>', '' );
+            }
         }
     }
 /*
