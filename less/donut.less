@@ -23,33 +23,7 @@ html, body {
 @import "components/back-to-top.less";
 @import "components/sidebar.less";
 @import "components/votes.less";
-
-.top-divider {
-	border-top: 1px solid @gray-lighter;
-	position: relative;
-	top: 1px;
-}
-
-/* top portion of the body */
-.donut-masthead {
-	position: relative;
-	margin-bottom: 20px;
-	color: @brand-primary;
-	.page-title {
-		border-bottom: 1px solid @light-border;
-	}
-}
-
-/* page title */
-.page-title {
-	position: relative;
-	padding: 30px 0;
-	h1 {
-		clear: none;
-		font-size: 29px;
-		margin: 0;
-	}
-}
+@import "components/tags.less";
 
 .qa-main,
 .qa-main-wrapper {
@@ -345,10 +319,7 @@ html, body {
 // paginations
 
 .qa-page-links {
-	font-size: 12px;
 	clear: both;
-	zoom: 1;
-	padding: 12px 0;
 	&-label {
 		display: none;
 	}
@@ -357,14 +328,15 @@ html, body {
 	}
 }
 
+.qa-form-wide-spacer ,
 .qa-form-tall-spacer {
 	line-height: 1px;
 	font-size: 1px;
+}
+.qa-form-tall-spacer {
 	padding: 0;
 }
-
 .qa-form-wide-spacer {
-	&:extend(.qa-form-tall-spacer);
 	padding: 15px;
 }
 
@@ -591,30 +563,12 @@ html, body {
 		padding-left: 4px;
 	}
 
-	&-tags {
-		margin: 5px 0;
-		overflow: auto;
-	}
-
-	&-tag-list {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	&-tag-item {
-		display: inline;
-		margin-top: 2px;
-		.qa-tag-link {
-
-		}
-	}
-
 	&-buttons {
 		.clearfix();
 		float: left;
 		margin: 10px 0;
 	}
+
 	&-view-count {
 		color: @gray;
 		.fa:before {
@@ -632,27 +586,9 @@ html, body {
 	}
 }
 
-/* Tags, users and categories */
+/* Users and categories */
 .qa-part-ranking {
 	margin-bottom: 20px;
-}
-
-.qa-top-tags {
-	ul.donut-tags-list {
-		list-style-type: none;
-		padding-left: 5px;
-		margin-bottom: 0;
-		.qa-tag-link {
-			margin-right: 2px;
-		}
-		li.tag-item {
-			padding: 5px;
-			overflow: auto;
-			.tag-head span {
-				float: left;
-			}
-		}
-	}
 }
 
 /* users page */
@@ -883,22 +819,6 @@ html, body {
 		border-radius: 3px;
 	}
 
-	&-tags {
-		clear: both;
-		margin-bottom: 14px;
-		overflow: auto;
-	}
-
-	&-tag-list {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	&-tag-item {
-		display: inline-block;
-	}
-
 	&-buttons {
 		margin-top: 16px;
 	}
@@ -931,17 +851,6 @@ html, body {
 			opacity: .5;
 		}
 	}
-}
-
-#tag_examples_title,
-#tag_complete_title {
-	float: left;
-	margin-right: 5px;
-}
-
-#tag_hints .qa-tag-link {
-	border: 1px solid @light-border;
-	border-radius: 4px;
 }
 
 /* Answer form */
@@ -1346,61 +1255,6 @@ html, body {
 	font-weight: 700;
 }
 
-// .qa-tag-link,
-.qa-widget-side .qa-q-view-tag-item,
-.qa-widget-side > div > a {
-	background: @body-bg;
-	border: 1px solid @light-border;
-	border-radius: 3px;
-	color: inherit;
-	font-size: @font-size-small;
-	line-height: 16px;
-	margin: 2px 1px;
-	padding: 5px 10px;
-	&:hover {
-		background: @light-background;
-		box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-		text-decoration: none;
-	}
-}
-
-.qa-q-view-tag-item,
-.qa-q-item-tag-item,
-.qa-tag-link,
-.qa-tags-rank-tag-item {
-	float: left;
-	font-size: @font-size-small;
-	margin-right: 5px;
-}
-
-.qa-tags-rank-tag-item {
-	display: inline-block;
-	margin-left: 10px;
-}
-
-.qa-tag-link {
-	color: @brand-primary;
-	text-decoration: none;
-	cursor: pointer;
-	padding: 2px 8px;
-	border: 1px solid @light-border;
-	border-radius: 4px;
-
-	&:hover {
-		color: darken(@brand-primary, 10%);
-		background-color: @gray-lighter;
-		text-decoration: none;
-	}
-}
-
-.qa-q-view-tag-item {
-
-}
-
-.qa-widget-side > div > a {
-	line-height: normal;
-}
-
 .qa-widget-side a {
 	margin: 0 3px 3px 0;
 	display: inline-block;
@@ -1412,10 +1266,6 @@ html, body {
 	background: none;
 	border: none;
 	text-transform: none;
-}
-
-.qa-avatar-image {
-
 }
 
 .qa-avatar-link,

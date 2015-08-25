@@ -263,6 +263,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+.qa-q-view-content .entry-content img,
+.qa-a-item-content .entry-content img,
+.qa-c-item-content .entry-content img {
+  height: auto !important;
+}
 /* Header */
 header#top-header {
   background-color: #337ab7;
@@ -621,6 +626,30 @@ header#nav-header {
 /*Styling for the Onsite Noification*/
 #osnbox {
   margin-top: 15px;
+}
+.top-divider {
+  border-top: 1px solid #eeeeee;
+  position: relative;
+  top: 1px;
+}
+/* top portion of the body */
+.donut-masthead {
+  position: relative;
+  margin-bottom: 20px;
+  color: #337ab7;
+}
+.donut-masthead .page-title {
+  border-bottom: 1px solid #e2e2e2;
+}
+/* page title */
+.page-title {
+  position: relative;
+  padding: 30px 0;
+}
+.page-title h1 {
+  clear: none;
+  font-size: 29px;
+  margin: 0;
 }
 .qa-form-wide-button:before,
 .qa-form-tall-button:before,
@@ -2137,29 +2166,80 @@ header#nav-header {
 .qa-downvote-count-pad {
   display: none;
 }
-.top-divider {
-  border-top: 1px solid #eeeeee;
-  position: relative;
-  top: 1px;
+.qa-tags-rank-tags,
+.qa-q-item-tags,
+.qa-q-view-tags {
+  margin: 5px 0;
+  overflow: auto;
 }
-/* top portion of the body */
-.donut-masthead {
-  position: relative;
-  margin-bottom: 20px;
-  color: #337ab7;
-}
-.donut-masthead .page-title {
-  border-bottom: 1px solid #e2e2e2;
-}
-/* page title */
-.page-title {
-  position: relative;
-  padding: 30px 0;
-}
-.page-title h1 {
-  clear: none;
-  font-size: 29px;
+.qa-tags-rank-tag-list,
+.qa-q-item-tag-list,
+.qa-q-view-tag-list {
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+.qa-tags-rank-tag-item,
+.qa-q-item-tag-item,
+.qa-q-view-tag-item {
+  display: inline-block;
+  margin: 2px 5px 0 0 ;
+  float: left;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.qa-q-view-tags {
+  margin-bottom: 14px;
+}
+#tag_examples_title,
+#tag_complete_title {
+  float: left;
+  margin-right: 5px;
+}
+.qa-widget-side .qa-q-view-tag-item,
+.qa-widget-side > div > a {
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #dddddd;
+  border-radius: 3px;
+  color: inherit;
+  line-height: normal;
+  padding: 5px 10px;
+}
+.qa-widget-side .qa-q-view-tag-item:hover,
+.qa-widget-side > div > a:hover {
+  background: #fbfbfb;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+.qa-tags-rank-tag-item {
+  margin-left: 10px;
+}
+.qa-tag-link {
+  color: #337ab7;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 2px 8px;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+}
+.qa-tag-link:hover {
+  color: #286090;
+  background-color: #eeeeee;
+  text-decoration: none;
+}
+.qa-top-tags ul.donut-tags-list {
+  list-style-type: none;
+  padding-left: 5px;
+  margin-bottom: 0;
+}
+.qa-top-tags ul.donut-tags-list li.tag-item {
+  padding: 5px;
+  overflow: auto;
+}
+.qa-top-tags ul.donut-tags-list li.tag-item .tag-head span {
+  float: left;
 }
 .qa-main h1,
 .qa-main-wrapper h1 {
@@ -2596,10 +2676,7 @@ header#nav-header {
   color: #843534;
 }
 .qa-page-links {
-  font-size: 12px;
   clear: both;
-  zoom: 1;
-  padding: 12px 0;
 }
 .qa-page-links-label {
   display: none;
@@ -2668,10 +2745,12 @@ header#nav-header {
   border-color: #dddddd;
   cursor: not-allowed;
 }
-.qa-form-tall-spacer,
-.qa-form-wide-spacer {
+.qa-form-wide-spacer,
+.qa-form-tall-spacer {
   line-height: 1px;
   font-size: 1px;
+}
+.qa-form-tall-spacer {
   padding: 0;
 }
 .qa-form-wide-spacer {
@@ -2952,19 +3031,6 @@ header#nav-header {
   font-weight: bold;
   padding-left: 4px;
 }
-.qa-q-item-tags {
-  margin: 5px 0;
-  overflow: auto;
-}
-.qa-q-item-tag-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.qa-q-item-tag-item {
-  display: inline;
-  margin-top: 2px;
-}
 .qa-q-item-buttons {
   float: left;
   margin: 10px 0;
@@ -3002,24 +3068,9 @@ header#nav-header {
 .qa-suggest-next a {
   font-weight: bold;
 }
-/* Tags, users and categories */
+/* Users and categories */
 .qa-part-ranking {
   margin-bottom: 20px;
-}
-.qa-top-tags ul.donut-tags-list {
-  list-style-type: none;
-  padding-left: 5px;
-  margin-bottom: 0;
-}
-.qa-top-tags ul.donut-tags-list .qa-tag-link {
-  margin-right: 2px;
-}
-.qa-top-tags ul.donut-tags-list li.tag-item {
-  padding: 5px;
-  overflow: auto;
-}
-.qa-top-tags ul.donut-tags-list li.tag-item .tag-head span {
-  float: left;
 }
 /* users page */
 .user-box {
@@ -3249,19 +3300,6 @@ a.qa-browse-cat-link:visited {
   border: 1px solid #ebccd1;
   border-radius: 3px;
 }
-.qa-q-view-tags {
-  clear: both;
-  margin-bottom: 14px;
-  overflow: auto;
-}
-.qa-q-view-tag-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.qa-q-view-tag-item {
-  display: inline-block;
-}
 .qa-q-view-buttons {
   margin-top: 16px;
 }
@@ -3286,15 +3324,6 @@ a.qa-browse-cat-link:visited {
 .qa-q-view-hidden .qa-tag-link {
   color: #555555;
   opacity: .5;
-}
-#tag_examples_title,
-#tag_complete_title {
-  float: left;
-  margin-right: 5px;
-}
-#tag_hints .qa-tag-link {
-  border: 1px solid #e2e2e2;
-  border-radius: 4px;
 }
 /* Answer form */
 .qa-part-a-form form {
@@ -3664,51 +3693,6 @@ a.qa-browse-cat-link:visited {
 .qa-category-link {
   color: #337ab7;
   font-weight: 700;
-}
-.qa-widget-side .qa-q-view-tag-item,
-.qa-widget-side > div > a {
-  background: #ffffff;
-  border: 1px solid #e2e2e2;
-  border-radius: 3px;
-  color: inherit;
-  font-size: 12px;
-  line-height: 16px;
-  margin: 2px 1px;
-  padding: 5px 10px;
-}
-.qa-widget-side .qa-q-view-tag-item:hover,
-.qa-widget-side > div > a:hover {
-  background: #fbfbfb;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-  text-decoration: none;
-}
-.qa-q-view-tag-item,
-.qa-q-item-tag-item,
-.qa-tag-link,
-.qa-tags-rank-tag-item {
-  float: left;
-  font-size: 12px;
-  margin-right: 5px;
-}
-.qa-tags-rank-tag-item {
-  display: inline-block;
-  margin-left: 10px;
-}
-.qa-tag-link {
-  color: #337ab7;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 2px 8px;
-  border: 1px solid #e2e2e2;
-  border-radius: 4px;
-}
-.qa-tag-link:hover {
-  color: #286090;
-  background-color: #eeeeee;
-  text-decoration: none;
-}
-.qa-widget-side > div > a {
-  line-height: normal;
 }
 .qa-widget-side a {
   margin: 0 3px 3px 0;
