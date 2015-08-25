@@ -2258,6 +2258,9 @@ header#nav-header {
   padding: 5px;
   margin-bottom: 10px;
 }
+.qa-top-tags ul.donut-tags-list li.tag-item .tag-head {
+  padding: 5px 0;
+}
 .qa-top-tags ul.donut-tags-list li.tag-item .tag-head span {
   float: left;
 }

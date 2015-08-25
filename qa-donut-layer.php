@@ -1085,7 +1085,7 @@
             if ( isset( $item ) )
                 $this->output(
                     '<li class="tag-item">',
-                    '<div class="tag-head">',
+                    '<div class="tag-head clearfix">',
                     '<span> ' . $item['count'] . ' &#215;</span>',
                     '<div class="qa-tags-rank-tag-item">',
                     $item['label'],
