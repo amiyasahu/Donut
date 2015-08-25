@@ -2169,8 +2169,7 @@ header#nav-header {
 .qa-tags-rank-tags,
 .qa-q-item-tags,
 .qa-q-view-tags {
-  margin: 5px 0;
-  overflow: auto;
+  padding: 5px 0;
 }
 .qa-tags-rank-tag-list,
 .qa-q-item-tag-list,
@@ -2185,11 +2184,25 @@ header#nav-header {
   display: inline-block;
   margin: 2px 5px 0 0 ;
   float: left;
-  font-size: 12px;
-  line-height: 1.5;
 }
 .qa-q-view-tags {
-  margin-bottom: 14px;
+  margin-bottom: 20px;
+}
+.qa-tag-link {
+  color: #337ab7;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 2px 8px;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+}
+.qa-tag-link:hover {
+  color: #286090;
+  background-color: #eeeeee;
+  text-decoration: none;
+}
+.qa-tags-rank-tag-item {
+  margin-left: 10px;
 }
 #tag_examples_title,
 #tag_complete_title {
@@ -2211,22 +2224,6 @@ header#nav-header {
 .qa-widget-side > div > a:hover {
   background: #fbfbfb;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-  text-decoration: none;
-}
-.qa-tags-rank-tag-item {
-  margin-left: 10px;
-}
-.qa-tag-link {
-  color: #337ab7;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 2px 8px;
-  border: 1px solid #e2e2e2;
-  border-radius: 3px;
-}
-.qa-tag-link:hover {
-  color: #286090;
-  background-color: #eeeeee;
   text-decoration: none;
 }
 .qa-top-tags ul.donut-tags-list {

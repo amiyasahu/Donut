@@ -2,8 +2,7 @@
 .qa-q-item ,
 .qa-q-view {
 	&-tags {
-		margin: 5px 0;
-		overflow: auto;
+		padding: 5px 0;
 	}
 
 	&-tag-list {
@@ -16,8 +15,6 @@
 		display: inline-block;
 		margin: 2px 5px 0 0 ;
 		float: left;
-		font-size: @font-size-small;
-		line-height: 1.5;
 		.qa-tag-link {
 
 		}
@@ -26,8 +23,27 @@
 
 .qa-q-view {
 	&-tags {
-		margin-bottom: 14px;
+		margin-bottom: 20px;
 	}
+}
+
+.qa-tag-link {
+	color: @brand-primary;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 2px 8px;
+	border: 1px solid @light-border;
+	border-radius: @border-radius-small;
+
+	&:hover {
+		color: darken(@brand-primary, 10%);
+		background-color: @gray-lighter;
+		text-decoration: none;
+	}
+}
+
+.qa-tags-rank-tag-item {
+	margin-left: 10px;
 }
 
 #tag_examples_title,
@@ -46,25 +62,6 @@
 	&:hover {
 		background: @light-background;
 		box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-		text-decoration: none;
-	}
-}
-
-.qa-tags-rank-tag-item {
-	margin-left: 10px;
-}
-
-.qa-tag-link {
-	color: @brand-primary;
-	text-decoration: none;
-	cursor: pointer;
-	padding: 2px 8px;
-	border: 1px solid @light-border;
-	border-radius: @border-radius-small;
-
-	&:hover {
-		color: darken(@brand-primary, 10%);
-		background-color: @gray-lighter;
 		text-decoration: none;
 	}
 }

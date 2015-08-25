@@ -1342,6 +1342,15 @@
                 $this->output( '</div>', '' );
             }
         }
+
+        public function post_tags($post, $class)
+        {
+            if (!empty($post['q_tags'])) {
+                $this->output('<div class="'.$class.'-tags clearfix">');
+                $this->post_tag_list($post, $class);
+                $this->output('</div>');
+            }
+        }
     }
 /*
 	Omit PHP closing tag to help avoid accidental output
