@@ -2182,8 +2182,7 @@ header#nav-header {
 .qa-q-item-tag-item,
 .qa-q-view-tag-item {
   display: inline-block;
-  margin: 2px 5px 0 0 ;
-  float: left;
+  margin-right: 5px;
 }
 .qa-q-view-tags {
   margin-bottom: 20px;
@@ -2192,7 +2191,7 @@ header#nav-header {
   color: #337ab7;
   text-decoration: none;
   cursor: pointer;
-  padding: 2px 8px;
+  padding: 4px 10px;
   border: 1px solid #e2e2e2;
   border-radius: 3px;
 }
@@ -2233,7 +2232,7 @@ header#nav-header {
 }
 .qa-top-tags ul.donut-tags-list li.tag-item {
   padding: 5px;
-  overflow: auto;
+  margin-bottom: 10px;
 }
 .qa-top-tags ul.donut-tags-list li.tag-item .tag-head span {
   float: left;
