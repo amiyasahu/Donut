@@ -931,17 +931,21 @@ header#nav-header {
 }
 /*Warning buttons*/
 .qa-favorite-button,
-.qa-form-tall-button-cancel {
+.qa-form-tall-button-cancel,
+.qa-form-wide-button-cancel {
   color: #ffffff;
   background-color: #f0ad4e;
   border-color: #eea236;
 }
 .qa-favorite-button:hover,
 .qa-form-tall-button-cancel:hover,
+.qa-form-wide-button-cancel:hover,
 .qa-favorite-button:active,
 .qa-form-tall-button-cancel:active,
+.qa-form-wide-button-cancel:active,
 .qa-favorite-button:focus,
-.qa-form-tall-button-cancel:focus {
+.qa-form-tall-button-cancel:focus,
+.qa-form-wide-button-cancel:focus {
   color: #ffffff;
 }
 /*Link buttons*/
