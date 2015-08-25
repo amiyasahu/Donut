@@ -1415,6 +1415,8 @@ header#nav-header {
 .qa-form-tall-button-change:before {
   content: "\f01e";
 }
+.qa-form-wide-button-edit:before,
+.qa-form-tall-button-edit:before,
 .qa-form-wide-button-account:before,
 .qa-form-tall-button-account:before {
   content: "\f044";
