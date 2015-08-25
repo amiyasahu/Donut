@@ -869,17 +869,25 @@ header#nav-header {
 }
 /*Danger buttons*/
 .qa-form-light-button-reject,
-.qa-form-light-button-delete {
+.qa-form-light-button-delete,
+.qa-form-wide-button-block,
+.qa-form-wide-button-hideall {
   color: #ffffff;
   background-color: #d9534f;
   border-color: #d43f3a;
 }
 .qa-form-light-button-reject:hover,
 .qa-form-light-button-delete:hover,
+.qa-form-wide-button-block:hover,
+.qa-form-wide-button-hideall:hover,
 .qa-form-light-button-reject:active,
 .qa-form-light-button-delete:active,
+.qa-form-wide-button-block:active,
+.qa-form-wide-button-hideall:active,
 .qa-form-light-button-reject:focus,
-.qa-form-light-button-delete:focus {
+.qa-form-light-button-delete:focus,
+.qa-form-wide-button-block:focus,
+.qa-form-wide-button-hideall:focus {
   color: #ffffff;
   background-color: #d9534f;
   border-color: #d43f3a;
@@ -890,7 +898,8 @@ header#nav-header {
 .qa-form-tall-button-save,
 .qa-unfavorite-button,
 .qa-form-light-button-answer,
-.qa-form-light-button-approve {
+.qa-form-light-button-approve,
+.qa-form-wide-button-unblock {
   color: #ffffff;
   background-color: #5cb85c;
   border-color: #4cae4c;
@@ -901,18 +910,21 @@ header#nav-header {
 .qa-unfavorite-button:hover,
 .qa-form-light-button-answer:hover,
 .qa-form-light-button-approve:hover,
+.qa-form-wide-button-unblock:hover,
 .qa-form-wide-button-save:active,
 .qa-form-wide-button-saverecalc:active,
 .qa-form-tall-button-save:active,
 .qa-unfavorite-button:active,
 .qa-form-light-button-answer:active,
 .qa-form-light-button-approve:active,
+.qa-form-wide-button-unblock:active,
 .qa-form-wide-button-save:focus,
 .qa-form-wide-button-saverecalc:focus,
 .qa-form-tall-button-save:focus,
 .qa-unfavorite-button:focus,
 .qa-form-light-button-answer:focus,
-.qa-form-light-button-approve:focus {
+.qa-form-light-button-approve:focus,
+.qa-form-wide-button-unblock:focus {
   color: #ffffff;
   background-color: #5cb85c;
   border-color: #4cae4c;
@@ -1440,6 +1452,18 @@ header#nav-header {
 .qa-form-wide-button-close:before,
 .qa-form-tall-button-close:before {
   content: "\f023";
+}
+.qa-form-wide-button-block:before,
+.qa-form-tall-button-block:before {
+  content: "\f05e";
+}
+.qa-form-wide-button-unblock:before,
+.qa-form-tall-button-unblock:before {
+  content: "\f09c";
+}
+.qa-form-wide-button-hideall:before,
+.qa-form-tall-button-hideall:before {
+  content: "\f127";
 }
 .qa-message-buttons {
   display: inline-block;

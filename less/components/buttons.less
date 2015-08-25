@@ -123,6 +123,8 @@
 /*Danger buttons*/
 .qa-form-light-button-reject,
 .qa-form-light-button-delete,
+.qa-form-wide-button-block,
+.qa-form-wide-button-hideall
 {
 	color: @btn-danger-color;
 	background-color: @btn-danger-bg;
@@ -140,7 +142,8 @@
 .qa-form-tall-button-save,
 .qa-unfavorite-button,
 .qa-form-light-button-answer,
-.qa-form-light-button-approve {
+.qa-form-light-button-approve ,
+.qa-form-wide-button-unblock {
 	color: @btn-success-color;
 	background-color: @btn-success-bg;
 	border-color: @btn-success-border;
@@ -552,6 +555,22 @@
 			content: @fa-var-lock;
 		}
 	}
+	&-block {
+		&:before {
+			content: @fa-var-ban;
+		}
+	}
+	&-unblock {
+		&:before {
+			content: @fa-var-unlock;
+		}
+	}
+	&-hideall {
+		&:before {
+			content: @fa-var-chain-broken;
+		}
+	}
+
 }
 
 
