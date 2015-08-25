@@ -1444,7 +1444,7 @@ header#nav-header {
 }
 .qa-form-wide-button-ask:before,
 .qa-form-tall-button-ask:before {
-  content: "\f128";
+  content: "\f0fe";
 }
 .qa-form-wide-button-answer:before,
 .qa-form-tall-button-answer:before {
