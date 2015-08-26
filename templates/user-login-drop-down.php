@@ -5,7 +5,7 @@
         <li class="dropdown login-dropdown login active">
             <a href="#" data-toggle="dropdown" class="navbar-login-button">
                 <?php //echo qa_lang_html('users/login_button'); ?>
-                <span class="fa fa-key"></span>
+                <span class="fa fa-sign-in text-muted"></span>
             </a>
             <ul class="dropdown-menu" role="menu" id="login-dropdown-menu">
                 <?php
