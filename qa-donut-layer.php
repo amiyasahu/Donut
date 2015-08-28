@@ -1343,14 +1343,113 @@
             }
         }
 
-        public function post_tags($post, $class)
+        public function post_tags( $post, $class )
         {
-            if (!empty($post['q_tags'])) {
-                $this->output('<div class="'.$class.'-tags clearfix">');
-                $this->post_tag_list($post, $class);
-                $this->output('</div>');
+            if ( !empty( $post['q_tags'] ) ) {
+                $this->output( '<div class="' . $class . '-tags clearfix">' );
+                $this->post_tag_list( $post, $class );
+                $this->output( '</div>' );
             }
         }
+
+        public function q_view_buttons( $q_view )
+        {
+            if ( donut_opt( 'collapse_buttons' ) ) {
+                if ( !empty( $q_view['form'] ) ) {
+                    $q_view_temp = $q_view;
+                    $allowed_main_btns = array( 'answer', 'comment' );
+                    $q_view_temp['form']['buttons'] = $this->donut_divide_array( $q_view['form']['buttons'], $allowed_main_btns );
+                    $this->output( '<div class="qa-q-view-buttons clearfix">' );
+                    $this->output( '<div class="default-buttons pull-left">' );
+                    $this->form( $q_view['form'] );
+                    $this->output( '</div>' );
+                    $this->donut_generate_action_button( $q_view_temp );
+                    $this->output( '</div>' );
+                }
+            } else {
+                parent::q_view_buttons( $q_view );
+            }
+        }
+
+        public function a_item_buttons( $a_item )
+        {
+            if ( donut_opt( 'collapse_buttons' ) ) {
+                if ( !empty( $a_item['form'] ) ) {
+                    $a_item_temp = $a_item;
+                    $allowed_main_btns = array( 'comment' );
+                    $a_item_temp['form']['buttons'] = $this->donut_divide_array( $a_item['form']['buttons'], $allowed_main_btns );
+                    $this->output( '<div class="qa-a-item-buttons clearfix">' );
+                    $this->output( '<div class="default-buttons pull-left">' );
+                    $this->form( $a_item['form'] );
+                    $this->output( '</div>' );
+                    $this->donut_generate_action_button( $a_item_temp );
+                    $this->output( '</div>' );
+                }
+            } else {
+                parent::a_item_buttons( $a_item );
+            }
+        }
+
+        public function c_item_buttons( $c_item )
+        {
+            if ( donut_opt( 'collapse_buttons' ) ) {
+                if ( !empty( $c_item['form'] ) ) {
+                    $this->output( '<div class="qa-c-item-buttons collapsed">' );
+                    $this->donut_generate_action_button( $c_item );
+                    $this->output( '</div>' );
+                }
+            } else {
+                parent::c_item_buttons( $c_item );
+            }
+        }
+
+        private function donut_generate_action_button( $action_view, $btn_style = 'vertical' )
+        {
+            $this->output( '<div class="action-buttons pull-right">' );
+            $this->output( '<div class="btn-group">' );
+            $this->output( '<button type="button" class="qa-form-light-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' );
+            $this->output( '<span class="glyphicon glyphicon-option-' . $btn_style . '"></span>' );
+            $this->output( '</button>' );
+            $this->donut_generate_action_dropdown( $action_view['form'] );
+            $this->output( '</div>' );
+            $this->output( '</div>' );
+        }
+
+        function donut_generate_action_dropdown( $form )
+        {
+            if ( !empty( $form['buttons'] ) ) {
+                $this->output( '<ul class="dropdown-menu action-buttons-dropdown">' );
+                foreach ( $form['buttons'] as $key => $btn ) {
+                    $this->output( '<li>' );
+                    $this->output( $this->form_button_data( $btn, $key, @$form['style'] ) );
+                    $this->output( '</li>' );
+                }
+                $this->output( '</ul>' );
+            }
+        }
+
+        function donut_divide_array( &$original, $allowed_keys )
+        {
+            if ( count( $original ) && count( $allowed_keys ) ) {
+                $copy = $original;
+                foreach ( $original as $key => $btn ) {
+                    if ( !in_array( $key, $allowed_keys ) ) {
+                        unset( $original[ $key ] );
+                    }
+                }
+
+                foreach ( $copy as $key => $btn ) {
+                    if ( in_array( $key, $allowed_keys ) ) {
+                        unset( $copy[ $key ] );
+                    }
+                }
+
+                return $copy;
+            }
+
+            return $original;
+        }
+
     }
 /*
 	Omit PHP closing tag to help avoid accidental output

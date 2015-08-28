@@ -1488,6 +1488,25 @@ header#nav-header {
   line-height: 1.5;
   border-radius: 3px;
 }
+/*Action buttons*/
+.action-buttons-dropdown {
+  left: initial ;
+  right: 0;
+}
+.action-buttons-dropdown button.qa-form-light-button,
+.action-buttons-dropdown button.qa-form-light-button:hover,
+.action-buttons-dropdown button.qa-form-light-button:active,
+.action-buttons-dropdown button.qa-form-light-button:focus {
+  border: medium none;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  margin: 0;
+  text-align: left;
+}
 .donut-breadcrumb {
   border-bottom: 1px solid #e2e2e2;
   position: relative;
@@ -3575,6 +3594,12 @@ a.qa-browse-cat-link:visited {
   background-color: #f2dede;
   border: 0.5px solid #ebccd1;
   border-radius: 3px;
+}
+.qa-c-item-buttons.collapsed {
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  right: -7px;
 }
 @media only screen and (max-width: 767px) {
   .qa-c-item-buttons {

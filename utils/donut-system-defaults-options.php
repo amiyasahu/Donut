@@ -94,6 +94,13 @@
         'allow_site_stats_above_footer'        => true,
 
         /**
+         * Allow collapse the buttons
+         * Allowed values true | false
+         * Default : true
+         */
+        'collapse_buttons'                     => true,
+
+        /**
          * Allow site stats above footer
          * Allowed values true | false
          * Default : true
