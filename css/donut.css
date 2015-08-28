@@ -2542,9 +2542,6 @@ header#nav-header {
 .qa-ask-box tr .qa-form-tall-text:focus {
   outline: none;
 }
-.entry-title {
-  font-weight: 700;
-}
 .qa-rss-feed {
   border-radius: 4px;
   color: #ffffff;
@@ -3240,6 +3237,9 @@ a.qa-browse-cat-link:visited {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   border-color: #dddddd;
   border-color: #d6e9c6;
+}
+.qa-q-view {
+  position: relative;
 }
 .qa-q-view-main {
   float: left;
