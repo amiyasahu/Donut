@@ -3841,75 +3841,59 @@ a.qa-browse-cat-link:visited {
   color: #f2b866;
 }
 .qa-template-user .qa-part-form-activity,
-.qa-template-user .qa-part-message-list {
+.qa-template-user .qa-part-message-list,
+.qa-template-user .qa-part-form-badges-list,
+.qa-template-user .qa-part-form-profile {
+  overflow: auto;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #dddddd;
+}
+.qa-template-user .qa-part-form-profile,
+.qa-template-user .qa-part-form-activity,
+.qa-template-user .qa-part-message-list,
+.qa-template-user .qa-part-form-badges-list {
   float: left;
   width: 100%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  border: 1px solid #e2e2e2;
+  margin-left: -1px;
+  margin-bottom: -1px;
   padding: 15px;
 }
 @media (min-width: 768px) {
+  .qa-template-user .qa-part-form-profile,
   .qa-template-user .qa-part-form-activity,
-  .qa-template-user .qa-part-message-list {
+  .qa-template-user .qa-part-message-list,
+  .qa-template-user .qa-part-form-badges-list {
     float: left;
     width: 100%;
   }
 }
 @media (min-width: 992px) {
+  .qa-template-user .qa-part-form-profile,
   .qa-template-user .qa-part-form-activity,
-  .qa-template-user .qa-part-message-list {
+  .qa-template-user .qa-part-message-list,
+  .qa-template-user .qa-part-form-badges-list {
     float: left;
     width: 50%;
   }
 }
+.qa-template-user .qa-part-form-profile > h2 > a:hover,
 .qa-template-user .qa-part-form-activity > h2 > a:hover,
-.qa-template-user .qa-part-message-list > h2 > a:hover {
+.qa-template-user .qa-part-message-list > h2 > a:hover,
+.qa-template-user .qa-part-form-badges-list > h2 > a:hover {
   text-decoration: none;
   cursor: pointer;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .qa-template-user .qa-part-form-activity,
-  .qa-template-user .qa-part-message-list {
-    border-left: 0;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .qa-template-user .qa-part-form-activity,
-  .qa-template-user .qa-part-message-list {
-    border-left: 0;
-  }
-}
-.qa-template-user .qa-part-message-list {
-  border-top: 0;
-  border-bottom: 0;
-  padding-bottom: 30px;
-}
-.qa-template-user .qa-part-form-profile {
-  float: left;
-  width: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding: 15px;
-  min-height: 630px;
-  border: 1px solid #e2e2e2;
-  border-bottom: 0;
-}
-@media (min-width: 768px) {
-  .qa-template-user .qa-part-form-profile {
-    float: left;
-    width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .qa-template-user .qa-part-form-profile {
-    float: left;
-    width: 50%;
-  }
+.qa-template-user .qa-part-form-activity,
+.qa-template-user .qa-part-message-list,
+.qa-template-user .qa-part-form-badges-list {
+  float: right;
+  clear: right;
 }
 .qa-template-user .qa-part-form-profile tr#permits {
   height: 100%;
@@ -3937,11 +3921,6 @@ a.qa-browse-cat-link:visited {
 }
 .qa-template-user .qa-part-form-activity h2 {
   margin-top: 0;
-}
-.qa-template-user .qa-part-form-activity,
-.qa-template-user .qa-part-message-list,
-.qa-template-user .qa-part-form-profile {
-  overflow: hidden;
 }
 .qa-template-user .qa-part-message-list .qa-form-tall-text,
 .qa-template-user .qa-part-form-profile .qa-form-wide-text {

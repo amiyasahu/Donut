@@ -1354,12 +1354,23 @@ html, body {
 }
 
 .qa-template-user {
+
 	.qa-part-form-activity,
-	.qa-part-message-list {
+	.qa-part-message-list ,
+	.qa-part-form-badges-list ,
+	.qa-part-form-profile {
+		overflow: auto;
+		.light-border();
+	}
+	.qa-part-form-profile,
+	.qa-part-form-activity,
+	.qa-part-message-list ,
+	.qa-part-form-badges-list {
 		.make-xs-column(12);
 		.make-sm-column(12);
 		.make-md-column(6);
-		border: 1px solid @light-border;
+		margin-left: -1px;
+		margin-bottom: -1px;
 		padding: 15px;
 		> h2 > a {
 			&:hover {
@@ -1367,29 +1378,17 @@ html, body {
 				cursor: pointer;
 			}
 		}
-		@media @desktop {
-			border-left: 0;
-		}
-		@media @desktop-xl {
-			border-left: 0;
-		}
 	}
-
-	.qa-part-message-list {
-		border-top: 0;
-		border-bottom: 0;
-		padding-bottom: 30px;
+	.qa-part-form-activity,
+	.qa-part-message-list ,
+	.qa-part-form-badges-list
+	{
+		float: right;
+		clear: right;
 	}
-
 	.qa-part-form-profile {
-		.make-xs-column(12);
-		.make-sm-column(12);
-		.make-md-column(6);
-		padding: 15px;
-		min-height: 630px;
-		border: 1px solid @light-border;
-		border-bottom: 0;
 		table.qa-form-wide-table {
+
 		}
 		tr#permits {
 			height: 100%;
@@ -1415,16 +1414,11 @@ html, body {
 		}
 	}
 
-	.qa-part-form-activity,
-	.qa-part-message-list,
-	.qa-part-form-profile {
-		overflow: hidden;
-	}
-
 	.qa-part-message-list .qa-form-tall-text,
 	.qa-part-form-profile .qa-form-wide-text {
 		width: 100% !important;
 	}
+
 	.qa-part-form-activity {
 		td {
 			span.qa-uf-user-points,
