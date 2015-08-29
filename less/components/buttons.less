@@ -115,7 +115,7 @@
 	.qa-form-wide-button,
 	.qa-form-basic-button,
 	.qa-form-tall-button {
-		margin-bottom: 5px ;
+		margin-bottom: 5px;
 		margin-top: 5px;
 	}
 }
@@ -124,8 +124,7 @@
 .qa-form-light-button-reject,
 .qa-form-light-button-delete,
 .qa-form-wide-button-block,
-.qa-form-wide-button-hideall
-{
+.qa-form-wide-button-hideall {
 	color: @btn-danger-color;
 	background-color: @btn-danger-bg;
 	border-color: @btn-danger-border;
@@ -142,7 +141,7 @@
 .qa-form-tall-button-save,
 .qa-unfavorite-button,
 .qa-form-light-button-answer,
-.qa-form-light-button-approve ,
+.qa-form-light-button-approve,
 .qa-form-wide-button-unblock {
 	color: @btn-success-color;
 	background-color: @btn-success-bg;
@@ -156,7 +155,7 @@
 
 /*Warning buttons*/
 .qa-favorite-button,
-.qa-form-tall-button-cancel ,
+.qa-form-tall-button-cancel,
 .qa-form-wide-button-cancel {
 	color: @btn-warning-color;
 	background-color: @btn-warning-bg;
@@ -312,9 +311,8 @@
 			content: @fa-var-question;
 		}
 	}
-	&-button-comment ,
-	&-button-reply
-	{
+	&-button-comment,
+	&-button-reply {
 		&:before {
 			content: @fa-var-mail-reply;
 		}
@@ -521,7 +519,7 @@
 			content: @fa-var-plus-square;
 		}
 	}
-	&-add ,
+	&-add,
 	&-post {
 		&:before {
 			content: @fa-var-plus-square;
@@ -575,7 +573,6 @@
 
 }
 
-
 .qa-message-buttons {
 	display: inline-block;
 	vertical-align: middle;
@@ -592,19 +589,62 @@
 
 /*Action buttons*/
 .action-buttons-dropdown {
-	left : initial ;
-	right: 0;
+	&.dropdown-menu {
+		margin-top: 2px;
+		&:before {
+			position: absolute;
+			top: -7px;
+			right: 10px;
+			display: inline-block;
+			border-right: 7px solid transparent;
+			border-bottom: 7px solid #ccc;
+			border-left: 7px solid transparent;
+			border-bottom-color: rgba(0, 0, 0, 0.2);
+			content: '';
+		}
+		&:after {
+			position: absolute;
+			top: -6px;
+			right: 11px;
+			display: inline-block;
+			border-right: 6px solid transparent;
+			border-bottom: 6px solid @body-bg;
+			border-left: 6px solid transparent;
+			content: '';
+		}
+	}
+
 	button.qa-form-light-button {
-		& , &:hover , &:active , &:focus {
+		&, &:hover, &:active, &:focus {
 			border: medium none;
 			box-shadow: none;
 			display: block;
 			width: 100%;
-			padding: 3px 20px;
+			padding: 6px 10px;
 			clear: both;
+			font-size: @font-size-base;
 			font-weight: 400;
 			margin: 0;
 			text-align: left;
+			border-radius: 0;
+		}
+	}
+}
+
+.open > .action-buttons-dropdown {
+	left: initial;
+	right: 0
+}
+
+.qa-c-item-buttons.collapsed {
+	.action-buttons-dropdown {
+		&.dropdown-menu {
+			&:before {
+				right: 5px;
+			}
+			&:after {
+				right: 6px;
+			}
 		}
 	}
 }
