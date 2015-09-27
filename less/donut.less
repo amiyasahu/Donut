@@ -92,7 +92,7 @@ html, body {
 }
 
 .qa-main {
-	
+
 }
 
 .qa-main-hidden {
@@ -858,21 +858,29 @@ html, body {
     & {
       margin-bottom: 20px;
     }
-	form {
-		.light-border();
-		padding: 5px;
-		border-top: medium none;
-		margin-top: -10px;
-		.border-bottom-radius(5px);
+	.qa-a-form {
+      &{
+        .light-border();
+        padding: 5px;
+        border-radius: @border-radius-base;
+      }
+      h2 {
+        margin: 0 -5px;
+        font-size: 22px;
+        border-bottom: 1px solid #e2e2e2;
+        padding: 15px;
+      }
 	}
 }
 
-.qa-part-a-form div#anew h2,
-.qa-part-a-list > h2#a_list_title {
+.qa-part-a-list > h2 {
 	font-size: 22px;
 	position: relative;
-	padding: 15px 0;
-	border-bottom: 1px solid #e2e2e2;
+	padding: 15px 5px;
+    background-color: @brand-success;
+    color: @body-bg;
+	border: 1px solid darken(@brand-success, 5%);
+    border-radius: @border-radius-base;
 }
 
 .qa-a-list-item {

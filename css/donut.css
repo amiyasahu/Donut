@@ -3411,23 +3411,28 @@ a.qa-browse-cat-link:visited {
 .qa-part-a-form {
   margin-bottom: 20px;
 }
-.qa-part-a-form form {
+.qa-part-a-form .qa-a-form {
   border: 1px solid transparent;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   border-color: #dddddd;
   padding: 5px;
-  border-top: medium none;
-  margin-top: -10px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 4px;
 }
-.qa-part-a-form div#anew h2,
-.qa-part-a-list > h2#a_list_title {
+.qa-part-a-form .qa-a-form h2 {
+  margin: 0 -5px;
+  font-size: 22px;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 15px;
+}
+.qa-part-a-list > h2 {
   font-size: 22px;
   position: relative;
-  padding: 15px 0;
-  border-bottom: 1px solid #e2e2e2;
+  padding: 15px 5px;
+  background-color: #5cb85c;
+  color: #ffffff;
+  border: 1px solid #4cae4c;
+  border-radius: 4px;
 }
 .qa-a-list-item {
   position: relative;
