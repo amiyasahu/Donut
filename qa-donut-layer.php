@@ -1407,7 +1407,7 @@
         {
             $this->output( '<div class="action-buttons pull-right">' );
             $this->output( '<div class="btn-group">' );
-            $this->output( '<button type="button" class="qa-form-light-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' );
+            $this->output( '<button type="button" class="qa-form-light-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="More actions">' );
             $this->output( '<span class="glyphicon glyphicon-option-' . $btn_style . '"></span>' );
             $this->output( '</button>' );
             $this->donut_generate_action_dropdown( $action_view['form'] );
