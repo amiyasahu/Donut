@@ -960,9 +960,10 @@
             $item_count = min( $ranking['rows'], count( $ranking['items'] ) );
 
             if ( @$ranking['type'] == 'users' ) {
-                $this->output( '<div class="page-users-list clearfix"><div class="row">' );
+
 
                 if ( count( $ranking['items'] ) ) {
+                    $this->output( '<div class="page-users-list clearfix"><div class="row">' );
                     $columns = qa_opt( 'columns_users' );
                     $pagesize = qa_opt( 'page_size_users' );
                     $start = qa_get_start();
@@ -1030,16 +1031,17 @@
                         $this->output( '</div>' );
 
                     }
+                    $this->output( '</div>' );
+                    $this->output( '</div>' );
                 } else {
                     $this->output( '
 								<div class="no-items">
-									<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $this->content['title'] . '</div>
+									<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $this->content['ranking_users']['title'] . '</div>
 								</div>' );
                 }
 
 
-                $this->output( '</div>' );
-                $this->output( '</div>' );
+
 
             } elseif ( @$ranking['type'] == 'tags' ) {
 
@@ -1070,7 +1072,7 @@
                 } else
                     $this->output( '
 						<div class="no-items">
-						<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $this->content['title'] . '</div>
+						<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $this->content['ranking_tags']['title'] . '</div>
 						</div>' );
 
             } else {
