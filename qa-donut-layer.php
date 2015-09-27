@@ -1069,11 +1069,12 @@
                     $this->clear_context( 'ranking_row' );
 
                     $this->output( '</div>' );
-                } else
+                } else {
                     $this->output( '
 						<div class="no-items">
 						<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $this->content['ranking_tags']['title'] . '</div>
 						</div>' );
+                }
 
             } else {
                 parent::ranking( $ranking );
