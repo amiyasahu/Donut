@@ -60,10 +60,6 @@
                 'responsive' => 'css/donut-responsive.css',
             );
 
-            if ( donut_opt( 'is_rtl' ) && $this->isRTL ) {
-                $css_paths['rtl'] = 'css/donut-rtl.css';
-            }
-
             if ( donut_opt( 'activate_prod_mode' ) ) {
                 $cdn_css_paths = array(
                     'bootstrap' => Donut_Option_Keys::BS_CSS_CDN,
