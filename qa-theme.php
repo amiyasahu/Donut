@@ -22,7 +22,7 @@
     /**
      * define the version of the theme that is installed
      */
-    @define( 'DONUT_THEME_VERSION', 1.0 );
+    @define( 'DONUT_THEME_VERSION', "1.4.0" );
 
     /**
      * Please DO NOT Change the version Unique id .

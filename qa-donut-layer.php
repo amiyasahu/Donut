@@ -55,12 +55,12 @@
             parent::head_css();
 
             $css_paths = array(
-                'fonts'      => 'css/font-awesome.min.css',
-                'bootstrap'  => 'css/bootstrap.min.css',
-                'donut'      => 'css/donut.css',
+                'fonts'      => 'css/font-awesome.min.css?4.2.0',
+                'bootstrap'  => 'css/bootstrap.min.css?3.3.5',
+                'donut'      => 'css/donut.css?'. DONUT_THEME_VERSION ,
             );
 
-            if ( donut_opt( 'activate_prod_mode' ) ) {
+            if ( qa_opt( 'donut_activate_prod_mode' ) ) {
                 $cdn_css_paths = array(
                     'bootstrap' => Donut_Option_Keys::BS_CSS_CDN,
                     'fonts'     => Donut_Option_Keys::FA_CDN,
@@ -70,7 +70,7 @@
                 unset( $css_paths['fonts'] );
                 $this->donut_resources( $cdn_css_paths, 'css', true );
 
-                $css_paths['donut'] = 'css/donut.min.css' ;  //put the donut.min.css for the prod mode
+                $css_paths['donut'] = 'css/donut.min.css?' . DONUT_THEME_VERSION ;  //put the donut.min.css for the prod mode
             }
 
             $this->donut_resources( $css_paths, 'css' );
@@ -154,15 +154,15 @@
             parent::head_script();
 
             $js_paths = array(
-                'bootstrap' => 'js/bootstrap.min.js',
-                'donut'     => 'js/donut.js',
+                'bootstrap' => 'js/bootstrap.min.js?3.3.5',
+                'donut'     => 'js/donut.js?' . DONUT_THEME_VERSION,
             );
 
             if ( $this->template == 'admin' ) {
-                $js_paths['admin'] = 'js/admin.js';
+                $js_paths['admin'] = 'js/admin.js?'.DONUT_THEME_VERSION;
             }
 
-            if ( donut_opt( 'activate_prod_mode' ) ) {
+            if ( qa_opt( 'donut_activate_prod_mode' ) ) {
                 $cdn_js_paths = array(
                     'bootstrap' => Donut_Option_Keys::BS_JS_CDN,
                 );
