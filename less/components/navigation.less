@@ -1,0 +1,37 @@
+
+.subnav-row {
+  margin-bottom: 10px;
+}
+
+.qa-nav-sub {
+  padding-left: 0;
+  padding-right: 0;
+  .hidden-xs();
+  .qa-nav-sub-list {
+    .nav();
+    .nav-tabs();
+    .qa-nav-sub-item {
+      .qa-nav-sub-link {
+        &:hover {
+
+        }
+        &.qa-nav-sub-selected {
+
+        }
+      }
+    }
+
+    .qa-nav-sub-hot {
+      .qa-nav-sub-link {
+        color: @brand-danger !important;
+        font-weight: 700;
+        &:hover {
+
+        }
+        .qa-nav-sub-selected {
+
+        }
+      }
+    }
+  }
+}

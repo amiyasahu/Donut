@@ -57,7 +57,6 @@
                 'fonts'      => 'css/font-awesome.min.css',
                 'bootstrap'  => 'css/bootstrap.min.css',
                 'donut'      => 'css/donut.css',
-                'responsive' => 'css/donut-responsive.css',
             );
 
             if ( donut_opt( 'activate_prod_mode' ) ) {
@@ -1030,9 +1029,10 @@
                     $this->output( '</div>' );
                     $this->output( '</div>' );
                 } else {
+                    $title = isset($this->content['ranking_users']['title']) ? $this->content['ranking_users']['title'] : @$this->content['title'] ;
                     $this->output( '
 								<div class="no-items">
-									<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $this->content['ranking_users']['title'] . '</div>
+									<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $title . '</div>
 								</div>' );
                 }
 

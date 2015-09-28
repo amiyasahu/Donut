@@ -5,14 +5,6 @@
 		  {
 			"src": "donut.less",
 			"dest": "../css/donut.css"
-		  },
-		  {
-			"src": "donut-rtl.less",
-			"dest": "../css/donut-rtl.css"
-		  },
-		  {
-			"src": "donut-responsive.less",
-			"dest": "../css/donut-responsive.css"
 		  }
 	],
 
@@ -49,5 +41,5 @@
 	"customOptions": [],
 
 	// An array of filesystem paths or importers which should be searched for LESS templates imported with the @import directive.
-	"includePaths": ["bootstrap/" , "bootstrap-rtl/" , "font-awesome" , "utils"]
+	"includePaths": ["bootstrap/" , "font-awesome" , "utils"]
 }
