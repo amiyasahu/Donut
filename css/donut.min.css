@@ -77,6 +77,7 @@ header#nav-header{min-height:80px}
 @media only screen and (max-width:767px){#login-dropdown-menu li .span-or{background-color:#eee}}
 #login-dropdown-menu li .hr-or{background-color:#cdcdcd;height:5px;margin-top:0!important;margin-bottom:0!important}
 #login-dropdown-menu li+#login-dropdown-menu li{margin-top:2px}
+#login-dropdown-menu .btn:active,#login-dropdown-menu .btn:focus,#login-dropdown-menu .btn:hover,#login-dropdown-menu .btn:visited{color:#fff;text-decoration:none}
 #user-dropdown-menu{width:200px;left:-155px}
 .nav.navbar-nav.navbar-right.login-nav,.nav.navbar-nav.navbar-right.notf-bubble,.nav.navbar-nav.navbar-right.user-nav{margin:0;padding:15px 0;display:inline-block;float:right}
 @media only screen and (max-width:767px){.nav.navbar-nav.navbar-right.login-nav,.nav.navbar-nav.navbar-right.notf-bubble,.nav.navbar-nav.navbar-right.user-nav{padding:7px 0}
@@ -259,7 +260,7 @@ header#nav-header{min-height:80px}
 .site-header .site-header-cover h1.top-heading{font-size:70px;font-weight:bolder;text-shadow:4px 3px 0 #337ab7,9px 8px 0 rgba(0,0,0,.15)}
 @media only screen and (min-width:768px) and (max-width:991px){.site-header .site-header-cover h1.top-heading{font-size:40px}}
 @media only screen and (max-width:767px){.site-header .site-header-cover h1.top-heading{font-size:32px}}
-.site-header .site-header-fade{background-image:url(../images/discuss.jpg?1509281205);background-position:0 40%;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;height:100%;opacity:.1;position:absolute;width:100%;z-index:2}
+.site-header .site-header-fade{background-image:url(../images/discuss.jpg?1509281303);background-position:0 40%;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;height:100%;opacity:.1;position:absolute;width:100%;z-index:2}
 .site-header .jumbo-box{padding:10px 50px}
 .site-header .jumbo-box .wrap{border:1px solid transparent;box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd;border-color:#2e6da4;border-radius:10px;padding:10px 5px}
 .site-header .jumbo-box .wrap .hint{padding:10px 0;font-size:30px}
@@ -279,7 +280,7 @@ header#nav-header{min-height:80px}
 .side-search-bar .input-group{display:block}
 .side-search-bar .input-group-btn{position:absolute;right:25px;top:4px}
 .side-search-bar .qa-search-field.form-control{border-radius:4px;padding:10px 12px;height:auto}
-.donut-top{display:inline-block;height:40px;width:40px;position:fixed;cursor:pointer;border-radius:4px;bottom:10%;right:10px;box-shadow:0 0 10px rgba(0,0,0,.05);background:#f0ad4e url(../images/top-arrow.svg?1509281205) no-repeat center 50%;visibility:hidden;opacity:0;-webkit-transition:opacity .3s 0s,visibility 0s .3s;transition:opacity .3s 0s,visibility 0s .3s}
+.donut-top{display:inline-block;height:40px;width:40px;position:fixed;cursor:pointer;border-radius:4px;bottom:10%;right:10px;box-shadow:0 0 10px rgba(0,0,0,.05);background:#f0ad4e url(../images/top-arrow.svg?1509281303) no-repeat center 50%;visibility:hidden;opacity:0;-webkit-transition:opacity .3s 0s,visibility 0s .3s;transition:opacity .3s 0s,visibility 0s .3s}
 .donut-top.is-visible{visibility:visible;opacity:1}
 .donut-top.fade-out{opacity:.5}
 @media only screen and (min-width:768px){.donut-top{right:20px;bottom:10%}}

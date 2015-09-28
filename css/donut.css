@@ -486,6 +486,13 @@ header#nav-header {
 #login-dropdown-menu li + #login-dropdown-menu li {
   margin-top: 2px;
 }
+#login-dropdown-menu .btn:hover,
+#login-dropdown-menu .btn:active,
+#login-dropdown-menu .btn:focus,
+#login-dropdown-menu .btn:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
 #user-dropdown-menu {
   width: 200px;
   left: -155px;
