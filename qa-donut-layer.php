@@ -53,6 +53,7 @@
         function head_css()
         {
             parent::head_css();
+
             $css_paths = array(
                 'fonts'      => 'css/font-awesome.min.css',
                 'bootstrap'  => 'css/bootstrap.min.css',
@@ -64,9 +65,12 @@
                     'bootstrap' => Donut_Option_Keys::BS_CSS_CDN,
                     'fonts'     => Donut_Option_Keys::FA_CDN,
                 );
+
                 unset( $css_paths['bootstrap'] );
                 unset( $css_paths['fonts'] );
                 $this->donut_resources( $cdn_css_paths, 'css', true );
+
+                $css_paths['donut'] = 'css/donut.min.css' ;  //put the donut.min.css for the prod mode
             }
 
             $this->donut_resources( $css_paths, 'css' );
