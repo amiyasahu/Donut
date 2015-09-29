@@ -1,7 +1,7 @@
 <?php
-    $header_left_text = donut_opt( 'top_bar_left_text' );
-    $header_right_text = donut_opt( 'top_bar_right_text' );
-    $social_links = donut_opt( 'social_links' );
+    $header_left_text = qa_opt( 'donut_top_bar_left_text' );
+    $header_right_text = qa_opt( 'donut_top_bar_right_text' );
+    $social_links = donut_generate_social_links();
 ?>
 <header id="top-header">
     <div class="container">
@@ -17,7 +17,7 @@
                     <?php if ( !empty( $header_right_text ) ): ?>
                         <?php echo $header_right_text ?>
                     <?php endif ?>
-                    <?php if ( donut_opt( 'top_bar_add_social_links' ) ): ?>
+                    <?php if ( qa_opt( 'donut_show_top_social_icons' ) ): ?>
                         <div class="top-html-block">
                             <div class="social-links">
                                 <?php foreach ( $social_links as $key => $value ): ?>

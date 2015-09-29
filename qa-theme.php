@@ -25,12 +25,6 @@
     @define( 'DONUT_THEME_VERSION', "1.4.0" );
 
     /**
-     * Please DO NOT Change the version Unique id .
-     * This will increase in each version , that helps you in adding new theme defaults
-     */
-    @define( 'DONUT_THEME_VERSION_UID', 1 );
-
-    /**
      * include the required files for the theme
      */
     require_once DONUT_THEME_BASE_DIR . '/utils/qa-donut-utils.php';

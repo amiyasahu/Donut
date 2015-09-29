@@ -23,8 +23,8 @@
         function head()
         {
             $this->output(
-                '<head>',
-                '<meta http-equiv="content-type" content="' . $this->content['content_type'] . '"/>'
+                    '<head>',
+                    '<meta http-equiv="content-type" content="' . $this->content['content_type'] . '"/>'
             );
 
             $this->donut_default_meta();
@@ -42,6 +42,7 @@
 
         /**
          * prints the defult meta and view ports
+         *
          * @return  null
          */
         function donut_default_meta()
@@ -55,22 +56,22 @@
             parent::head_css();
 
             $css_paths = array(
-                'fonts'      => 'css/font-awesome.min.css?4.2.0',
-                'bootstrap'  => 'css/bootstrap.min.css?3.3.5',
-                'donut'      => 'css/donut.css?'. DONUT_THEME_VERSION ,
+                    'fonts'     => 'css/font-awesome.min.css?4.2.0',
+                    'bootstrap' => 'css/bootstrap.min.css?3.3.5',
+                    'donut'     => 'css/donut.css?' . DONUT_THEME_VERSION,
             );
 
             if ( qa_opt( 'donut_activate_prod_mode' ) ) {
                 $cdn_css_paths = array(
-                    'bootstrap' => Donut_Option_Keys::BS_CSS_CDN,
-                    'fonts'     => Donut_Option_Keys::FA_CDN,
+                        'bootstrap' => Donut_Option_Keys::BS_CSS_CDN,
+                        'fonts'     => Donut_Option_Keys::FA_CDN,
                 );
 
                 unset( $css_paths['bootstrap'] );
                 unset( $css_paths['fonts'] );
                 $this->donut_resources( $cdn_css_paths, 'css', true );
 
-                $css_paths['donut'] = 'css/donut.min.css?' . DONUT_THEME_VERSION ;  //put the donut.min.css for the prod mode
+                $css_paths['donut'] = 'css/donut.min.css?' . DONUT_THEME_VERSION;  //put the donut.min.css for the prod mode
             }
 
             $this->donut_resources( $css_paths, 'css' );
@@ -78,9 +79,11 @@
 
         /**
          * prints the CSS and JS links
-         * @param  array $paths list of the resources
-         * @param  string $type type of the resource css or js
+         *
+         * @param  array   $paths    list of the resources
+         * @param  string  $type     type of the resource css or js
          * @param  boolean $external weather it is relative to the theme or a external to the theme
+         *
          * @return null
          */
         function donut_resources( $paths, $type = 'css', $external = false )
@@ -98,8 +101,10 @@
 
         /**
          * prints the js path
-         * @param  string $path path of the js file
+         *
+         * @param  string  $path     path of the js file
          * @param  boolean $external weather it is relative to the theme or a external to the theme
+         *
          * @return null
          */
         function donut_js( $path, $external = false )
@@ -117,8 +122,10 @@
 
         /**
          * prints the css path
-         * @param  string $path path of the css file
+         *
+         * @param  string  $path     path of the css file
          * @param  boolean $external weather it is relative to the theme or a external to the theme
+         *
          * @return null
          */
         function donut_css( $path, $external = false )
@@ -154,17 +161,17 @@
             parent::head_script();
 
             $js_paths = array(
-                'bootstrap' => 'js/bootstrap.min.js?3.3.5',
-                'donut'     => 'js/donut.js?' . DONUT_THEME_VERSION,
+                    'bootstrap' => 'js/bootstrap.min.js?3.3.5',
+                    'donut'     => 'js/donut.js?' . DONUT_THEME_VERSION,
             );
 
             if ( $this->template == 'admin' ) {
-                $js_paths['admin'] = 'js/admin.js?'.DONUT_THEME_VERSION;
+                $js_paths['admin'] = 'js/admin.js?' . DONUT_THEME_VERSION;
             }
 
             if ( qa_opt( 'donut_activate_prod_mode' ) ) {
                 $cdn_js_paths = array(
-                    'bootstrap' => Donut_Option_Keys::BS_JS_CDN,
+                        'bootstrap' => Donut_Option_Keys::BS_JS_CDN,
                 );
                 unset( $js_paths['bootstrap'] );
                 $this->donut_resources( $cdn_js_paths, 'js', true );
@@ -272,6 +279,7 @@
 
         /**
          * add RSS feed icon after the page title
+         *
          * @return null
          */
         function feed_link()
@@ -322,13 +330,15 @@
 
         /**
          * nav item for the sidebar
+         *
          * @param  array $nav_item navigation item
+         *
          * @return null
          */
         function donut_nav_side_bar_item( $nav_item )
         {
-            $class = ( ! !@$nav_item['selected'] ) ? ' active' : '';
-            $icon = ( ! !@$nav_item['icon'] ) ? donut_get_fa_icon( @$nav_item['icon'] ) : '';
+            $class = ( !!@$nav_item['selected'] ) ? ' active' : '';
+            $icon = ( !!@$nav_item['icon'] ) ? donut_get_fa_icon( @$nav_item['icon'] ) : '';
             $this->output( '<a href="' . $nav_item['url'] . '" class="list-group-item ' . $class . '">' . $icon . $nav_item['label'] . '</a>' );
         }
 
@@ -369,6 +379,7 @@
 
         /**
          * prints sidebar navigation
+         *
          * @return  null
          */
         function donut_sidebar_toggle_nav_btn()
@@ -401,6 +412,7 @@
 
         /**
          * the feed icon with a link
+         *
          * @return null
          */
         function feed()
@@ -410,9 +422,6 @@
             if ( !empty( $feed ) ) {
                 $icon = donut_get_fa_icon( 'rss' );
                 $this->output( '<div class="qa-feed">' );
-                /*$this->output('<span class="qa-feed-icon">');
-                $this->output($icon);
-                $this->output('</span>');*/
                 $this->output( '<a href="' . $feed['url'] . '" class="qa-feed-link"> <span class="icon-wrapper"> <span class="qa-feed-icon">' . $icon . ' </span></span>' . @$feed['label'] . '</a>' );
                 $this->output( '</div>' );
             }
@@ -420,6 +429,7 @@
 
         /**
          * prevent display of regular footer content (see body_suffix()) and replace with closing new <div>s
+         *
          * @return  null
          */
         function footer()
@@ -430,13 +440,13 @@
 
         function body_suffix() // to replace standard Q2A footer
         {
-            if ( donut_opt( 'allow_site_stats_above_footer' ) ) {
+            if ( qa_opt( 'donut_show_site_stats_above_footer' ) ) {
                 $this->donut_site_stats_bottom();
             }
 
             $this->output( '<footer class="donut-footer">' );
 
-            if ( donut_opt( 'enable_back_to_top_button' ) ) {
+            if ( qa_opt( 'donut_enable_back_to_top_btn' ) ) {
                 $this->output( '<a class="donut-top"></a>' );
             }
 
@@ -450,13 +460,13 @@
         {
             if ( qa_is_logged_in() ) // output user avatar to login bar
                 $this->output(
-                    '<div class="qa-logged-in-avatar">',
-                    QA_FINAL_EXTERNAL_USERS
-                        ? qa_get_external_avatar_html( qa_get_logged_in_userid(), 24, true )
-                        : qa_get_user_avatar_html( qa_get_logged_in_flags(), qa_get_logged_in_email(), qa_get_logged_in_handle(),
-                        qa_get_logged_in_user_field( 'avatarblobid' ), qa_get_logged_in_user_field( 'avatarwidth' ), qa_get_logged_in_user_field( 'avatarheight' ),
-                        24, true ),
-                    '</div>'
+                        '<div class="qa-logged-in-avatar">',
+                        QA_FINAL_EXTERNAL_USERS
+                                ? qa_get_external_avatar_html( qa_get_logged_in_userid(), 24, true )
+                                : qa_get_user_avatar_html( qa_get_logged_in_flags(), qa_get_logged_in_email(), qa_get_logged_in_handle(),
+                                qa_get_logged_in_user_field( 'avatarblobid' ), qa_get_logged_in_user_field( 'avatarwidth' ), qa_get_logged_in_user_field( 'avatarheight' ),
+                                24, true ),
+                        '</div>'
                 );
 
             parent::logged_in();
@@ -465,13 +475,13 @@
                 $userpoints = qa_get_logged_in_points();
 
                 $pointshtml = ( $userpoints == 1 )
-                    ? qa_lang_html_sub( 'main/1_point', '1', '1' )
-                    : qa_lang_html_sub( 'main/x_points', qa_html( number_format( $userpoints ) ) );
+                        ? qa_lang_html_sub( 'main/1_point', '1', '1' )
+                        : qa_lang_html_sub( 'main/x_points', qa_html( number_format( $userpoints ) ) );
 
                 $this->output(
-                    '<span class="qa-logged-in-points">',
-                    '(' . $pointshtml . ')',
-                    '</span>'
+                        '<span class="qa-logged-in-points">',
+                        '(' . $pointshtml . ')',
+                        '</span>'
                 );
             }
         }
@@ -486,21 +496,23 @@
 
         /**
          * prints the complete navbar
+         *
          * @param  $navigation
+         *
          * @return text
          */
         function donut_nav_bar( $navigation )
         {
             ob_start();
 
-            if ( donut_opt( 'enable_top_bar' ) ) {
+            if ( qa_opt( 'donut_enable_top_bar' ) ) {
                 donut_include_template( 'top-header.php' );
             }
 
             ?>
             <header id="nav-header">
                 <nav id="nav" class="navbar navbar-static-top"
-                     role="navigation" <?php echo( donut_opt( 'enable_stiky_header_upon_scroll' ) ? 'data-spy="affix" data-offset-top="60"' : '' ) ?>>
+                     role="navigation" <?php echo( qa_opt( 'donut_enable_sticky_header' ) ? 'data-spy="affix" data-offset-top="60"' : '' ) ?>>
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -529,6 +541,7 @@
 
         /**
          * prints the navbar search on the top
+         *
          * @return null
          */
         function search()
@@ -536,28 +549,30 @@
             $search = $this->content['search'];
 
             $this->output(
-                '<form class="search-form" role="form" ' . $search['form_tags'] . '>',
-                @$search['form_extra']
+                    '<form class="search-form" role="form" ' . $search['form_tags'] . '>',
+                    @$search['form_extra']
             );
 
             $this->search_field( $search );
             // $this->search_button($search);
 
             $this->output(
-                '</form>'
+                    '</form>'
             );
         }
 
         /**
          * prints the search field
+         *
          * @param  array $search
+         *
          * @return null
          */
         function search_field( $search )
         {
             $this->output(
-                '<div class="input-group">',
-                '<input type="text" ' . $search['field_tags'] . ' value="' . @$search['value'] . '" class="qa-search-field form-control" placeholder="' . $search['button_label'] . '"/>' );
+                    '<div class="input-group">',
+                    '<input type="text" ' . $search['field_tags'] . ' value="' . @$search['value'] . '" class="qa-search-field form-control" placeholder="' . $search['button_label'] . '"/>' );
             $this->search_button( $search );
             $this->output( '</div>' );
         }
@@ -599,9 +614,9 @@
 
             foreach ( $field['options'] as $key => $value ) {
                 $selected = isset( $field['value'] ) && (
-                        ( $matchbykey && $key === $field['value'] ) ||
-                        ( !$matchbykey && $value === $field['value'] )
-                    );
+                                ( $matchbykey && $key === $field['value'] ) ||
+                                ( !$matchbykey && $value === $field['value'] )
+                        );
                 $this->output( '<option value="' . $key . '"' . ( $selected ? ' selected' : '' ) . '>' . $value . '</option>' );
             }
 
@@ -622,7 +637,9 @@
 
         /**
          * prints the aearch button
+         *
          * @param  array $search
+         *
          * @return null
          */
         function search_button( $search )
@@ -647,7 +664,9 @@
 
         /**
          * grabs the sub-nav links for the navigation items
+         *
          * @param  array $navigation navigation links
+         *
          * @return null
          */
         function donut_nav_bar_main_links( $navigation )
@@ -661,13 +680,15 @@
 
         /**
          * Prints the drop down menu
-         * @param  array $nav_item the navigation item
+         *
+         * @param  array $nav_item      the navigation item
          * @param  array $sub_nav_items sub-nav items to be displayed
+         *
          * @return null
          */
         function donut_nav_bar_drop_down( $nav_item, $sub_nav_items )
         {
-            $class = ( ! !@$nav_item['selected'] ) ? 'active' : '';
+            $class = ( !!@$nav_item['selected'] ) ? 'active' : '';
 
             if ( !empty( $sub_nav_items ) && count( $sub_nav_items ) ) {
                 $nav_item['class'] = "dropdown-split-left";
@@ -687,19 +708,21 @@
 
         /**
          * prints a single nav-bar item
+         *
          * @param  array $nav_item navigation item
+         *
          * @return null
          */
         function donut_nav_bar_item( $nav_item )
         {
-            $class = ( ! !@$nav_item['class'] ) ? $nav_item['class'] . ' ' : '';
-            $class .= ( ! !@$nav_item['selected'] ) ? 'active' : '';
+            $class = ( !!@$nav_item['class'] ) ? $nav_item['class'] . ' ' : '';
+            $class .= ( !!@$nav_item['selected'] ) ? 'active' : '';
 
             if ( !empty( $class ) ) {
                 $class = 'class="' . $class . '"';
             }
 
-            $icon = ( ! !@$nav_item['icon'] ) ? donut_get_fa_icon( @$nav_item['icon'] ) : '';
+            $icon = ( !!@$nav_item['icon'] ) ? donut_get_fa_icon( @$nav_item['icon'] ) : '';
 
             $this->output( '<li ' . $class . '><a href="' . $nav_item['url'] . '">' . $icon . $nav_item['label'] . '</a></li>' );
         }
@@ -732,9 +755,9 @@
 
         function post_hover_button( $post, $element, $value, $class )
         {
-            if ( isset( $post[ $element ] ) ) {
+            if ( isset( $post[$element] ) ) {
                 $icon = donut_get_voting_icon( $element );
-                $this->output( '<button ' . $post[ $element ] . ' type="submit" value="' . $value . '" class="' . $class . '-button"/> ' . $icon . '</button>' );
+                $this->output( '<button ' . $post[$element] . ' type="submit" value="' . $value . '" class="' . $class . '-button"/> ' . $icon . '</button>' );
             }
         }
 
@@ -760,7 +783,9 @@
 
         /**
          * add view count to question list
+         *
          * @param  array $q_item
+         *
          * @return null
          */
         function q_item_stats( $q_item )
@@ -828,7 +853,9 @@
 
         /**
          * prints the view count
+         *
          * @param  array
+         *
          * @return null
          */
         function donut_view_count( $post )
@@ -849,9 +876,9 @@
 
         function post_disabled_button( $post, $element, $value, $class )
         {
-            if ( isset( $post[ $element ] ) ) {
+            if ( isset( $post[$element] ) ) {
                 $icon = donut_get_voting_icon( $element );
-                $this->output( '<button ' . $post[ $element ] . ' type="submit" value="' . $value . '" class="' . $class . '-disabled" disabled="disabled"/> ' . $icon . '</button>' );
+                $this->output( '<button ' . $post[$element] . ' type="submit" value="' . $value . '" class="' . $class . '-disabled" disabled="disabled"/> ' . $icon . '</button>' );
             }
         }
 
@@ -860,13 +887,15 @@
             $baseclass = 'qa-form-' . $style . '-button qa-form-' . $style . '-button-' . $key;
 
             $this->output( '<button' . rtrim( ' ' . @$button['tags'] ) . ' title="' . @$button['popup'] . '" type="submit"' .
-                ( isset( $style ) ? ( ' class="' . $baseclass . '"' ) : '' ) . '>' . @$button['label'] . '</button>' );
+                    ( isset( $style ) ? ( ' class="' . $baseclass . '"' ) : '' ) . '>' . @$button['label'] . '</button>' );
         }
 
         /**
          * prints the favorite button
+         *
          * @param  array $tags parameters
          * @param  [type] $class class
+         *
          * @return null
          */
         function favorite_button( $tags, $class )
@@ -879,11 +908,12 @@
 
         /**
          * Attribution link for the theme which adds the authors name
+         *
          * @return null
          */
         function attribution()
         {
-            if ( donut_opt( 'show_social_links_on_footer' ) ) {
+            if ( qa_opt( 'donut_show_social_links_at_footer' ) ) {
                 $this->footer_social_links();
             }
 
@@ -891,7 +921,7 @@
             $this->donut_attribution();
             parent::attribution();
 
-            if ( donut_opt( 'show_copy_right_at_footer' ) ) {
+            if ( qa_opt( 'donut_show_copyright_at_footer' ) ) {
                 $this->donut_copyright();
             }
 
@@ -900,6 +930,7 @@
 
         /**
          * beautifies the default waiting template with a font aswome icon
+         *
          * @return null
          */
         function waiting_template()
@@ -909,7 +940,9 @@
 
         /**
          * beautifies the default notice
+         *
          * @param  array $notice notice parameters
+         *
          * @return null
          */
         function notice( $notice )
@@ -936,16 +969,17 @@
         {
             if ( strlen( $error ) ) {
                 $this->output(
-                    '<div class="donut-error alert alert-dismissible" role="alert">',
-                    $error,
-                    '<button class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>',
-                    '</div>'
+                        '<div class="donut-error alert alert-dismissible" role="alert">',
+                        $error,
+                        '<button class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>',
+                        '</div>'
                 );
             }
         }
 
         /**
          * prints the favicon icon
+         *
          * @return  null
          */
         function donut_favicon()
@@ -974,7 +1008,7 @@
                         $this->output( '<div class="user-box col-sm-' . ceil( 12 / $columns ) . ' col-xs-12">' );
                         $user_raw = !empty( $user['raw'] ) ? $user['raw'] : $user;
                         $handle = @$user_raw['handle'];
-                        $handle_html = @$usershtml[ $user_raw['userid'] ];
+                        $handle_html = @$usershtml[$user_raw['userid']];
 
                         if ( defined( 'QA_WORDPRESS_INTEGRATE_PATH' ) ) {
                             $level_html = $user['score'];
@@ -994,15 +1028,15 @@
                         }
 
                         $avatar = ( QA_FINAL_EXTERNAL_USERS
-                            ? qa_get_external_avatar_html( @$user_raw['userid'], qa_opt( 'avatar_users_size' ), true )
-                            : qa_get_user_avatar_html( @$user_raw['flags'], @$user_raw['email'], @$user_raw['handle'],
-                                @$user_raw['avatarblobid'], @$user_raw['avatarwidth'], @$user_raw['avatarheight'], 70, true )
+                                ? qa_get_external_avatar_html( @$user_raw['userid'], qa_opt( 'avatar_users_size' ), true )
+                                : qa_get_user_avatar_html( @$user_raw['flags'], @$user_raw['email'], @$user_raw['handle'],
+                                        @$user_raw['avatarblobid'], @$user_raw['avatarwidth'], @$user_raw['avatarheight'], 70, true )
                         );
 
                         if ( isset( $user['score'] ) ) {
                             $userpoints = $user['score'];
                             $pointshtml = ( $userpoints === 1 ) ? qa_lang_html_sub( 'main/1_point', '1', '1' )
-                                : qa_lang_html_sub( 'main/x_points', qa_html( $userpoints ) );
+                                    : qa_lang_html_sub( 'main/x_points', qa_html( $userpoints ) );
                             if ( !empty( $pointshtml ) ) {
                                 $pointshtml = '<p class="score">' . $pointshtml . '</p>';
                             }
@@ -1033,14 +1067,12 @@
                     $this->output( '</div>' );
                     $this->output( '</div>' );
                 } else {
-                    $title = isset($this->content['ranking_users']['title']) ? $this->content['ranking_users']['title'] : @$this->content['title'] ;
+                    $title = isset( $this->content['ranking_users']['title'] ) ? $this->content['ranking_users']['title'] : @$this->content['title'];
                     $this->output( '
 								<div class="no-items">
 									<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $title . '</div>
 								</div>' );
                 }
-
-
 
 
             } elseif ( @$ranking['type'] == 'tags' ) {
@@ -1057,7 +1089,7 @@
 
                         for ( $row = 0 ; $row < $item_count ; $row++ ) {
                             $this->set_context( 'ranking_row', $row );
-                            $this->donut_tags_item( @$ranking['items'][ $column * $item_count + $row ], $class, $column > 0 );
+                            $this->donut_tags_item( @$ranking['items'][$column * $item_count + $row], $class, $column > 0 );
                         }
 
                         $this->clear_context( 'ranking_column' );
@@ -1087,18 +1119,18 @@
 
             if ( isset( $item ) )
                 $this->output(
-                    '<li class="tag-item">',
-                    '<div class="tag-head clearfix">',
-                    '<span> ' . $item['count'] . ' &#215;</span>',
-                    '<div class="qa-tags-rank-tag-item">',
-                    $item['label'],
-                    '</div>',
-                    '</div>'
+                        '<li class="tag-item">',
+                        '<div class="tag-head clearfix">',
+                        '<span> ' . $item['count'] . ' &#215;</span>',
+                        '<div class="qa-tags-rank-tag-item">',
+                        $item['label'],
+                        '</div>',
+                        '</div>'
                 );
             if ( !empty( $content ) ) {
                 $this->output( '<p class="desc">',
-                    $this->truncate( $content, 150 ),
-                    '</p>' );
+                        $this->truncate( $content, 150 ),
+                        '</p>' );
             }
             $this->output( '</li>' );
         }
@@ -1118,13 +1150,13 @@
 
         private function donut_breadcrumb()
         {
-            if ( class_exists( 'Ami_Breadcrumb' ) && donut_opt( 'enable_breadcrumbs' ) ) {
+            if ( class_exists( 'Ami_Breadcrumb' ) && qa_opt( 'donut_show_breadcrumbs' ) ) {
                 if ( !$this->is_home() && $this->template !== 'admin' ) {
                     $args = array(
-                        'themeobject' => $this,
-                        'content'     => $this->content,
-                        'template'    => $this->template,
-                        'request'     => qa_request(),
+                            'themeobject' => $this,
+                            'content'     => $this->content,
+                            'template'    => $this->template,
+                            'request'     => qa_request(),
                     );
                     $breadcrumb = new Ami_Breadcrumb( $args );
                     $this->output( '<div class="donut-breadcrumb">' );
@@ -1149,72 +1181,72 @@
         public function vote_clear()
         {
             $this->output(
-                '<div class="qa-vote-clear clearfix">',
-                '</div>'
+                    '<div class="qa-vote-clear clearfix">',
+                    '</div>'
             );
         }
 
         public function page_links_clear()
         {
             $this->output(
-                '<div class="qa-page-links-clear clearfix">',
-                '</div>'
+                    '<div class="qa-page-links-clear clearfix">',
+                    '</div>'
             );
         }
 
         public function q_view_clear()
         {
             $this->output(
-                '<div class="qa-q-view-clear clearfix">',
-                '</div>'
+                    '<div class="qa-q-view-clear clearfix">',
+                    '</div>'
             );
         }
 
         public function a_item_clear()
         {
             $this->output(
-                '<div class="qa-a-item-clear clearfix">',
-                '</div>'
+                    '<div class="qa-a-item-clear clearfix">',
+                    '</div>'
             );
         }
 
         public function c_item_clear()
         {
             $this->output(
-                '<div class="qa-c-item-clear clearfix">',
-                '</div>'
+                    '<div class="qa-c-item-clear clearfix">',
+                    '</div>'
             );
         }
 
         public function nav_clear( $navtype )
         {
             $this->output(
-                '<div class="qa-nav-' . $navtype . '-clear clearfix">',
-                '</div>'
+                    '<div class="qa-nav-' . $navtype . '-clear clearfix">',
+                    '</div>'
             );
         }
 
         public function header_clear()
         {
             $this->output(
-                '<div class="qa-header-clear clearfix">',
-                '</div>'
+                    '<div class="qa-header-clear clearfix">',
+                    '</div>'
             );
         }
 
         public function footer_clear()
         {
             $this->output(
-                '<div class="qa-footer-clear clearfix">',
-                '</div>'
+                    '<div class="qa-footer-clear clearfix">',
+                    '</div>'
             );
         }
 
         public function q_item_clear()
         {
             $this->output(
-                '<div class="qa-q-item-clear clearfix">',
-                '</div>'
+                    '<div class="qa-q-item-clear clearfix">',
+                    '</div>'
             );
         }
 
@@ -1224,11 +1256,11 @@
         private function donut_hide_sidebar_for_template()
         {
             return array(
-                'users',
+                    'users',
                 /*'tags', 'categories' ,*/
-                'admin', 'user', 'account',
-                'favorites', 'user-wall', 'messages',
-                'user-activity', 'user-questions', 'user-answers' );
+                    'admin', 'user', 'account',
+                    'favorites', 'user-wall', 'messages',
+                    'user-activity', 'user-questions', 'user-answers' );
         }
 
         /**
@@ -1252,6 +1284,7 @@
         /**
          * =================================================
          * Check if the current page is home page or not
+         *
          * @return bool
          * =================================================
          */
@@ -1262,10 +1295,10 @@
 
         public function donut_site_header()
         {
-            if ( $this->is_home() && donut_opt( 'show_home_page_banner' ) ) {
+            if ( $this->is_home() && qa_opt( 'donut_show_home_page_banner' ) ) {
                 //check if user closed the header intentionally
-                $user_hidden = donut_opt( 'allow_user_to_close_home_page_banner' ) ?
-                    @$_COOKIE['donut_hide_site_header'] : 'no';
+                $user_hidden = qa_opt( 'donut_banner_closable' ) ?
+                        @$_COOKIE['donut_hide_site_header'] : 'no';
 
                 if ( $user_hidden !== 'yes' )
                     donut_include_template( 'site-header.php' );
@@ -1296,25 +1329,26 @@
         private function donut_attribution()
         {
             $this->output(
-                '<div class="qa-attribution">',
-                '<a href="https://github.com/amiyasahu/Donut">Donut Theme</a> <span class="fa fa-code"></span> with <span class="fa fa-heart"></span> by <a href="http://amiyasahu.com">Amiya Sahu</a>',
-                '</div>'
+                    '<div class="qa-attribution">',
+                    '<a href="https://github.com/amiyasahu/Donut">Donut Theme</a> <span class="fa fa-code"></span> with <span class="fa fa-heart"></span> by <a href="http://amiyasahu.com">Amiya Sahu</a>',
+                    '</div>'
             );
         }
 
         private function donut_copyright()
         {
             $this->output(
-                '<div class="donut-copyright">',
-                donut_opt( 'copyright_text' ),
-                '</div>'
+                    '<div class="donut-copyright">',
+                    '<span class="fa fa-copyright"></span>',
+                    qa_opt( 'donut_copyright_text' ),
+                    '</div>'
             );
         }
 
         private function footer_social_links()
         {
             $this->output( '<div class="footer-social">' );
-            $social_links = donut_opt( 'social_links' );
+            $social_links = donut_generate_social_links();
             $this->output( '<ul>' );
             foreach ( $social_links as $key => $value ) {
                 $this->output( '<li>' );
@@ -1331,12 +1365,12 @@
                 Output the widgets (as provided in $this->content['widgets']) for $region and $place
             */
         {
-            if ( count( @$this->content['widgets'][ $region ][ $place ] ) ) {
+            if ( count( @$this->content['widgets'][$region][$place] ) ) {
                 $col = ( $region == 'full' ) ? ' col-xs-12' : '';
 
                 $this->output( '<div class="qa-widgets-' . $region . ' qa-widgets-' . $region . '-' . $place . $col . '">' );
 
-                foreach ( $this->content['widgets'][ $region ][ $place ] as $module ) {
+                foreach ( $this->content['widgets'][$region][$place] as $module ) {
                     $this->output( '<div class="qa-widget-' . $region . ' qa-widget-' . $region . '-' . $place . '">' );
                     $module->output_widget( $region, $place, $this, $this->template, $this->request, $this->content );
                     $this->output( '</div>' );
@@ -1357,7 +1391,7 @@
 
         public function q_view_buttons( $q_view )
         {
-            if ( donut_opt( 'collapse_buttons' ) ) {
+            if ( qa_opt( 'donut_show_collapsible_btns' ) ) {
                 if ( !empty( $q_view['form'] ) ) {
                     $q_view_temp = $q_view;
                     $allowed_main_btns = array( 'answer', 'comment' );
@@ -1376,7 +1410,7 @@
 
         public function a_item_buttons( $a_item )
         {
-            if ( donut_opt( 'collapse_buttons' ) ) {
+            if ( qa_opt( 'donut_show_collapsible_btns' ) ) {
                 if ( !empty( $a_item['form'] ) ) {
                     $a_item_temp = $a_item;
                     $allowed_main_btns = array( 'comment' );
@@ -1395,7 +1429,7 @@
 
         public function c_item_buttons( $c_item )
         {
-            if ( donut_opt( 'collapse_buttons' ) ) {
+            if ( qa_opt( 'donut_show_collapsible_btns' ) ) {
                 if ( !empty( $c_item['form'] ) ) {
                     $this->output( '<div class="qa-c-item-buttons collapsed">' );
                     $this->donut_generate_action_button( $c_item );
@@ -1435,15 +1469,16 @@
         {
             if ( count( $original ) && count( $allowed_keys ) ) {
                 $copy = $original;
+
                 foreach ( $original as $key => $btn ) {
                     if ( !in_array( $key, $allowed_keys ) ) {
-                        unset( $original[ $key ] );
+                        unset( $original[$key] );
                     }
                 }
 
                 foreach ( $copy as $key => $btn ) {
                     if ( in_array( $key, $allowed_keys ) ) {
-                        unset( $copy[ $key ] );
+                        unset( $copy[$key] );
                     }
                 }
 

@@ -64,7 +64,16 @@
         }
     }
 
-
+    /**
+     *
+     * Reads the configuration file
+     *
+     * @param $key
+     *
+     * @return string
+     *
+     * @deprecated
+     */
     function donut_opt( $key )
     {
         return Donut_Options::getInstance()->getConfig( strtolower($key) );

@@ -112,8 +112,8 @@
             $query = qa_db_select_with_pending( qa_db_user_profile_selectspec( $userid, true ) );
 
             if ( !$field ) return $query;
-            if ( isset( $query[ $field ] ) )
-                return $query[ $field ];
+            if ( isset( $query[$field] ) )
+                return $query[$field];
         }
 
         return false;
@@ -123,7 +123,7 @@
     {
         if ( qa_opt( 'badge_active' ) ) {
             $userids = qa_handles_to_userids( array( $handle ) );
-            $userid = $userids[ $handle ];
+            $userid = $userids[$handle];
 
 
             // displays small badge widget, suitable for meta
@@ -139,12 +139,12 @@
 
             $badges = qa_get_badge_list();
             foreach ( $result as $slug ) {
-                $bcount[ $badges[ $slug ]['type'] ] = isset( $bcount[ $badges[ $slug ]['type'] ] ) ? $bcount[ $badges[ $slug ]['type'] ] + 1 : 1;
+                $bcount[$badges[$slug]['type']] = isset( $bcount[$badges[$slug]['type']] ) ? $bcount[$badges[$slug]['type']] + 1 : 1;
             }
             $output = '<ul class="user-badge clearfix">';
             for ( $x = 2 ; $x >= 0 ; $x-- ) {
-                if ( !isset( $bcount[ $x ] ) ) continue;
-                $count = $bcount[ $x ];
+                if ( !isset( $bcount[$x] ) ) continue;
+                $count = $bcount[$x];
                 if ( $count == 0 ) continue;
 
                 $type = qa_get_badge_type( $x );
@@ -167,8 +167,8 @@
             $donut_userid_and_levels = qa_db_read_all_assoc( qa_db_query_sub( "SELECT userid , level from ^users" ), 'userid' );
         }
 
-        if ( isset( $donut_userid_and_levels[ $userid ] ) ) {
-            return $donut_userid_and_levels[ $userid ]['level'];
+        if ( isset( $donut_userid_and_levels[$userid] ) ) {
+            return $donut_userid_and_levels[$userid]['level'];
         } else {
             return 0;
         }
@@ -295,4 +295,67 @@
             echo qa_lang_html_sub( $langplural, '<span class="count-data">' . number_format( (int) $value ) . '</span>' );
 
         echo '</div>';
+    }
+
+    function donut_generate_social_links()
+    {
+
+        $social_links = array(
+            'facebook'    => array(
+                'icon'       => 'facebook',
+                'text'       => donut_lang( 'facebook' ),
+                'hover-text' => donut_lang( 'follow_us_on_x', donut_lang( 'facebook' ) ),
+            ),
+            'twitter'     => array(
+                'icon'       => 'twitter',
+                'text'       => donut_lang( 'twitter' ),
+                'hover-text' => donut_lang( 'follow_us_on_x', donut_lang( 'twitter' ) ),
+            ),
+            'email'       => array(
+                'icon'       => 'envelope',
+                'text'       => donut_lang( 'email' ),
+                'hover-text' => donut_lang( 'send_us_an_email' ),
+            ),
+            'pinterest'   => array(
+                'icon'       => 'pinterest',
+                'text'       => donut_lang( 'pinterest' ),
+                'hover-text' => donut_lang( 'follow_us_on_x', donut_lang( 'pinterest' ) ),
+            ),
+            'google-plus' => array(
+                'icon'       => 'google-plus',
+                'text'       => donut_lang( 'google-plus' ),
+                'hover-text' => donut_lang( 'follow_us_on_x', donut_lang( 'google-plus' ) ),
+            ),
+            'vk'          => array(
+                'icon'       => 'vk',
+                'text'       => donut_lang( 'vk' ),
+                'hover-text' => donut_lang( 'follow_us_on_x', donut_lang( 'vk' ) ),
+            ),
+        );
+
+        foreach ( $social_links as $key => $s ) {
+
+            if ( $key == 'email' ) {
+
+                $address = qa_opt( 'donut_email_address' );
+                if ( empty( $address ) ) {
+                    unset( $social_links[$key] );
+                    continue;
+                }
+
+                $social_links[$key]['link'] = 'mailto:' . $address ;
+                continue;
+            }
+
+            $url = qa_opt( 'donut_' . $key . '_url' );
+
+            if ( empty( $url ) ) {
+                unset( $social_links[$key] );
+                continue;
+            }
+
+            $social_links[$key]['link'] = $url;
+        }
+
+        return $social_links;
     }
