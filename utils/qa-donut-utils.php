@@ -338,6 +338,7 @@
             if ( $key == 'email' ) {
 
                 $address = qa_opt( 'donut_email_address' );
+                
                 if ( empty( $address ) ) {
                     unset( $social_links[$key] );
                     continue;
