@@ -260,7 +260,7 @@ header#nav-header{min-height:80px}
 .site-header .site-header-cover h1.top-heading{font-size:70px;font-weight:bolder;text-shadow:4px 3px 0 #337ab7,9px 8px 0 rgba(0,0,0,.15)}
 @media only screen and (min-width:768px) and (max-width:991px){.site-header .site-header-cover h1.top-heading{font-size:40px}}
 @media only screen and (max-width:767px){.site-header .site-header-cover h1.top-heading{font-size:32px}}
-.site-header .site-header-fade{background-image:url(../images/discuss.jpg?1509300915);background-position:0 40%;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;height:100%;opacity:.1;position:absolute;width:100%;z-index:2}
+.site-header .site-header-fade{background-image:url(../images/discuss.jpg?1509300937);background-position:0 40%;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;height:100%;opacity:.1;position:absolute;width:100%;z-index:2}
 .site-header .jumbo-box{padding:10px 50px}
 .site-header .jumbo-box .wrap{border:1px solid transparent;box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd;border-color:#2e6da4;border-radius:10px;padding:10px 5px}
 .site-header .jumbo-box .wrap .hint{padding:10px 0;font-size:30px}
@@ -280,7 +280,7 @@ header#nav-header{min-height:80px}
 .side-search-bar .input-group{display:block}
 .side-search-bar .input-group-btn{position:absolute;right:25px;top:4px}
 .side-search-bar .qa-search-field.form-control{border-radius:4px;padding:10px 12px;height:auto}
-.donut-top{display:inline-block;height:40px;width:40px;position:fixed;cursor:pointer;border-radius:4px;bottom:10%;right:10px;box-shadow:0 0 10px rgba(0,0,0,.05);background:#f0ad4e url(../images/top-arrow.svg?1509300915) no-repeat center 50%;visibility:hidden;opacity:0;-webkit-transition:opacity .3s 0s,visibility 0s .3s;transition:opacity .3s 0s,visibility 0s .3s}
+.donut-top{display:inline-block;height:40px;width:40px;position:fixed;cursor:pointer;border-radius:4px;bottom:10%;right:10px;box-shadow:0 0 10px rgba(0,0,0,.05);background:#f0ad4e url(../images/top-arrow.svg?1509300937) no-repeat center 50%;visibility:hidden;opacity:0;-webkit-transition:opacity .3s 0s,visibility 0s .3s;transition:opacity .3s 0s,visibility 0s .3s}
 .donut-top.is-visible{visibility:visible;opacity:1}
 .donut-top.fade-out{opacity:.5}
 @media only screen and (min-width:768px){.donut-top{right:20px;bottom:10%}}
@@ -636,9 +636,8 @@ a.qa-browse-cat-link,a.qa-browse-cat-link:visited{font-weight:700;text-decoratio
 .qa-a-selection .qa-waiting{position:absolute;padding:0;left:50%;top:50%;margin:-7px 0 0 -7px}
 .qa-browse-cat-favorited:before,.qa-cat-favorited:before,.qa-nav-cat-favorited:before,.qa-q-favorited .qa-q-item-title a:before,.qa-tag-favorited:before,.qa-tag-favorited:hover:before,.qa-user-favorited:before{content:"\f005";padding-right:5px;color:#f0ad4e}
 .qa-cat-parent-favorited:before{content:"\f005";padding-right:5px;color:#f2b866}
-.qa-template-user .qa-part-form-activity,.qa-template-user .qa-part-form-badges-list,.qa-template-user .qa-part-form-profile,.qa-template-user .qa-part-message-list{overflow:auto;border:1px solid transparent;box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd;float:left;width:100%;position:relative;min-height:1px;margin-left:-1px;margin-bottom:-1px;padding:15px}
-@media (min-width:768px){.qa-template-user .qa-part-form-activity,.qa-template-user .qa-part-form-badges-list,.qa-template-user .qa-part-form-profile,.qa-template-user .qa-part-message-list{float:left;width:100%}}
-@media (min-width:992px){.qa-template-user .qa-part-form-activity,.qa-template-user .qa-part-form-badges-list,.qa-template-user .qa-part-form-profile,.qa-template-user .qa-part-message-list{float:left;width:50%}}
+.qa-template-user .qa-part-form-activity,.qa-template-user .qa-part-form-badges-list,.qa-template-user .qa-part-form-profile,.qa-template-user .qa-part-message-list{border:1px solid transparent;box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd;position:relative;min-height:1px;padding:15px;margin-bottom:3px;overflow:hidden;width:100%}
+@media only screen and (min-width:992px){.qa-template-user .qa-part-form-activity,.qa-template-user .qa-part-form-badges-list,.qa-template-user .qa-part-form-profile,.qa-template-user .qa-part-message-list{width:49.9%;float:left}}
 .qa-template-user .qa-part-form-activity>h2>a:hover,.qa-template-user .qa-part-form-badges-list>h2>a:hover,.qa-template-user .qa-part-form-profile>h2>a:hover,.qa-template-user .qa-part-message-list>h2>a:hover{text-decoration:none;cursor:pointer}
 .qa-template-user .qa-part-form-activity,.qa-template-user .qa-part-form-badges-list,.qa-template-user .qa-part-message-list{float:right;clear:right}
 .qa-template-user .qa-part-form-profile tr#permits{height:100%}

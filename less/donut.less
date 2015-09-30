@@ -1323,23 +1323,23 @@ html, body {
 
 .qa-template-user {
 
-  .qa-part-form-activity,
-  .qa-part-message-list,
-  .qa-part-form-badges-list,
-  .qa-part-form-profile {
-    overflow: auto;
-    .light-border();
-  }
   .qa-part-form-profile,
   .qa-part-form-activity,
   .qa-part-message-list,
   .qa-part-form-badges-list {
-    .make-xs-column(12);
-    .make-sm-column(12);
-    .make-md-column(6);
-    margin-left: -1px;
-    margin-bottom: -1px;
+    .light-border();
+    position: relative;
+    min-height: 1px;
     padding: 15px;
+    margin-bottom: 3px;
+    overflow: hidden;
+    width: 100%;
+
+    @media @desktop-and-above {
+      width: 49.9%;
+      float: left;
+    }
+
     > h2 > a {
       &:hover {
         text-decoration: none;
@@ -1347,12 +1347,14 @@ html, body {
       }
     }
   }
+
   .qa-part-form-activity,
   .qa-part-message-list,
   .qa-part-form-badges-list {
     float: right;
     clear: right;
   }
+
   .qa-part-form-profile {
     table.qa-form-wide-table {
 

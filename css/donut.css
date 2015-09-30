@@ -3938,46 +3938,28 @@ a.qa-browse-cat-link:visited {
   padding-right: 5px;
   color: #f2b866;
 }
-.qa-template-user .qa-part-form-activity,
-.qa-template-user .qa-part-message-list,
-.qa-template-user .qa-part-form-badges-list,
-.qa-template-user .qa-part-form-profile {
-  overflow: auto;
-  border: 1px solid transparent;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  border-color: #dddddd;
-}
 .qa-template-user .qa-part-form-profile,
 .qa-template-user .qa-part-form-activity,
 .qa-template-user .qa-part-message-list,
 .qa-template-user .qa-part-form-badges-list {
-  float: left;
-  width: 100%;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #dddddd;
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: -1px;
-  margin-bottom: -1px;
   padding: 15px;
+  margin-bottom: 3px;
+  overflow: hidden;
+  width: 100%;
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .qa-template-user .qa-part-form-profile,
   .qa-template-user .qa-part-form-activity,
   .qa-template-user .qa-part-message-list,
   .qa-template-user .qa-part-form-badges-list {
+    width: 49.9%;
     float: left;
-    width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .qa-template-user .qa-part-form-profile,
-  .qa-template-user .qa-part-form-activity,
-  .qa-template-user .qa-part-message-list,
-  .qa-template-user .qa-part-form-badges-list {
-    float: left;
-    width: 50%;
   }
 }
 .qa-template-user .qa-part-form-profile > h2 > a:hover,
