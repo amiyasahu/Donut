@@ -52,7 +52,7 @@ header#nav-header{min-height:80px}
 .navbar .logo-wrapper{display:table;height:70px;padding:0}
 .navbar .qa-logo{height:100%;display:table-cell;vertical-align:middle}
 .navbar .qa-logo-link{font-size:30px;opacity:1}
-.navbar .qa-logo-link:active,.navbar .qa-logo-link:focus,.navbar .qa-logo-link:hover{text-decoration:none;outline:0}
+.navbar .qa-logo-link:active,.navbar .qa-logo-link:focus,.navbar .qa-logo-link:hover{text-decoration:none}
 .navbar .qa-logo-link img{border:none;box-shadow:none;max-height:70px}
 .navbar.navbar-static-top{border-width:0}
 @media only screen and (max-width:767px){.navbar{text-align:center}
@@ -85,7 +85,7 @@ header#nav-header{min-height:80px}
 .navbar-nav>li>a.navbar-user-img{padding:4px 6px}
 .navbar-nav>li>a.navbar-login-button{padding:4px 10px}
 .navbar-nav>li>a.navbar-login-button,.navbar-nav>li>a.navbar-user-img{border-radius:4px;opacity:1}
-.navbar-nav>li>a.navbar-login-button,.navbar-nav>li>a.navbar-login-button:active,.navbar-nav>li>a.navbar-login-button:focus,.navbar-nav>li>a.navbar-login-button:hover,.navbar-nav>li>a.navbar-user-img,.navbar-nav>li>a.navbar-user-img:active,.navbar-nav>li>a.navbar-user-img:focus,.navbar-nav>li>a.navbar-user-img:hover{background-color:#fff;border:1px solid transparent;box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd;outline:0}
+.navbar-nav>li>a.navbar-login-button,.navbar-nav>li>a.navbar-login-button:active,.navbar-nav>li>a.navbar-login-button:focus,.navbar-nav>li>a.navbar-login-button:hover,.navbar-nav>li>a.navbar-user-img,.navbar-nav>li>a.navbar-user-img:active,.navbar-nav>li>a.navbar-user-img:focus,.navbar-nav>li>a.navbar-user-img:hover{background-color:#fff;border:1px solid transparent;box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd}
 .navbar-nav>li>a.navbar-login-button{font-size:20px;line-height:30px}
 .navbar-nav>li>a.navbar-user-img img.qa-avatar-image{display:inline-block}
 @media only screen and (max-width:767px){.navbar .container{padding-bottom:0}
@@ -95,7 +95,7 @@ header#nav-header{min-height:80px}
 .main-nav .inner-drop-nav{margin-bottom:0}}
 @media (min-width:768px){.navbar-nav>li{margin-left:15px}
 .navbar-nav>li>a{padding:20px 0;line-height:30px}
-.navbar-nav>li>a,.navbar-nav>li>a:active,.navbar-nav>li>a:focus,.navbar-nav>li>a:hover{background-color:#fff;outline:0}}
+.navbar-nav>li>a,.navbar-nav>li>a:active,.navbar-nav>li>a:focus,.navbar-nav>li>a:hover{background-color:#fff}}
 .navbar-nav:not(.navbar-right) li .dropdown-menu{margin-top:7px}
 .navbar-nav:not(.navbar-right) li .dropdown-menu:before{position:absolute;top:-7px;left:9px;display:inline-block;border-right:7px solid transparent;border-bottom:7px solid #ccc;border-left:7px solid transparent;border-bottom-color:rgba(0,0,0,.2);content:''}
 .navbar-nav:not(.navbar-right) li .dropdown-menu::after{position:absolute;top:-6px;left:10px;display:inline-block;border-right:6px solid transparent;border-bottom:6px solid #fff;border-left:6px solid transparent;content:''}
@@ -109,7 +109,7 @@ header#nav-header{min-height:80px}
 .page-title{position:relative;padding:30px 0}
 .page-title h1{clear:none;font-size:29px;margin:0}
 .qa-browse-cat-favorited:before,.qa-cat-favorited:before,.qa-cat-parent-favorited:before,.qa-favorite-image:before,.qa-form-light-button:before,.qa-form-tall-button:before,.qa-form-wide-button:before,.qa-nav-cat-favorited:before,.qa-part-form-profile #level .qa-form-wide-static a:before,.qa-q-favorited .qa-q-item-title a:before,.qa-tag-favorited:before,.qa-tag-favorited:hover:before,.qa-user-favorited:before{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-#login-dropdown-menu.open-login-buttons a,.qa-a-select-button,.qa-a-selected,.qa-a-unselect-button,.qa-favorite-button,.qa-form-basic-button,.qa-form-light-button,.qa-form-tall-button,.qa-form-tall-button-cancel,.qa-form-tall-button-save,.qa-form-tall-table input[type=button],.qa-form-wide-button,.qa-form-wide-button-save,.qa-form-wide-button-saverecalc,.qa-template-login div.qa-part-custom a.open-login-button,.qa-template-register div.qa-part-custom a.open-login-button,.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a,.qa-unfavorite-button,.qa-vote-first-button,.qa-vote-one-button,.qa-vote-second-button,.qa-vote-up-button{display:inline-block;margin-bottom:0;font-weight:400;text-align:center;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;background-image:none;border:1px solid transparent;white-space:nowrap;padding:6px 12px;font-size:14px;line-height:1.42857143;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;outline:0}
+#login-dropdown-menu.open-login-buttons a,.qa-a-select-button,.qa-a-selected,.qa-a-unselect-button,.qa-favorite-button,.qa-form-basic-button,.qa-form-light-button,.qa-form-tall-button,.qa-form-tall-button-cancel,.qa-form-tall-button-save,.qa-form-tall-table input[type=button],.qa-form-wide-button,.qa-form-wide-button-save,.qa-form-wide-button-saverecalc,.qa-template-login div.qa-part-custom a.open-login-button,.qa-template-register div.qa-part-custom a.open-login-button,.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a,.qa-unfavorite-button,.qa-vote-first-button,.qa-vote-one-button,.qa-vote-second-button,.qa-vote-up-button{display:inline-block;margin-bottom:0;font-weight:400;text-align:center;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;background-image:none;border:1px solid transparent;white-space:nowrap;padding:6px 12px;font-size:14px;line-height:1.42857143;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 #login-dropdown-menu.open-login-buttons a.focus,#login-dropdown-menu.open-login-buttons a:focus,#login-dropdown-menu.open-login-buttons a:hover,.qa-a-select-button.focus,.qa-a-select-button:focus,.qa-a-select-button:hover,.qa-a-selected.focus,.qa-a-selected:focus,.qa-a-selected:hover,.qa-a-unselect-button.focus,.qa-a-unselect-button:focus,.qa-a-unselect-button:hover,.qa-favorite-button.focus,.qa-favorite-button:focus,.qa-favorite-button:hover,.qa-form-basic-button.focus,.qa-form-basic-button:focus,.qa-form-basic-button:hover,.qa-form-light-button.focus,.qa-form-light-button:focus,.qa-form-light-button:hover,.qa-form-tall-button-cancel.focus,.qa-form-tall-button-cancel:focus,.qa-form-tall-button-cancel:hover,.qa-form-tall-button-save.focus,.qa-form-tall-button-save:focus,.qa-form-tall-button-save:hover,.qa-form-tall-button.focus,.qa-form-tall-button:focus,.qa-form-tall-button:hover,.qa-form-tall-table input[type=button].focus,.qa-form-tall-table input[type=button]:focus,.qa-form-tall-table input[type=button]:hover,.qa-form-wide-button-save.focus,.qa-form-wide-button-save:focus,.qa-form-wide-button-save:hover,.qa-form-wide-button-saverecalc.focus,.qa-form-wide-button-saverecalc:focus,.qa-form-wide-button-saverecalc:hover,.qa-form-wide-button.focus,.qa-form-wide-button:focus,.qa-form-wide-button:hover,.qa-template-login div.qa-part-custom a.open-login-button.focus,.qa-template-login div.qa-part-custom a.open-login-button:focus,.qa-template-login div.qa-part-custom a.open-login-button:hover,.qa-template-register div.qa-part-custom a.open-login-button.focus,.qa-template-register div.qa-part-custom a.open-login-button:focus,.qa-template-register div.qa-part-custom a.open-login-button:hover,.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.focus,.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus,.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:hover,.qa-unfavorite-button.focus,.qa-unfavorite-button:focus,.qa-unfavorite-button:hover,.qa-vote-first-button.focus,.qa-vote-first-button:focus,.qa-vote-first-button:hover,.qa-vote-one-button.focus,.qa-vote-one-button:focus,.qa-vote-one-button:hover,.qa-vote-second-button.focus,.qa-vote-second-button:focus,.qa-vote-second-button:hover,.qa-vote-up-button.focus,.qa-vote-up-button:focus,.qa-vote-up-button:hover{color:#333;text-decoration:none}
 #login-dropdown-menu.open-login-buttons a:active,.qa-a-select-button:active,.qa-a-selected:active,.qa-a-unselect-button:active,.qa-favorite-button:active,.qa-form-basic-button:active,.qa-form-light-button:active,.qa-form-tall-button-cancel:active,.qa-form-tall-button-save:active,.qa-form-tall-button:active,.qa-form-tall-table input[type=button]:active,.qa-form-wide-button-save:active,.qa-form-wide-button-saverecalc:active,.qa-form-wide-button:active,.qa-template-login div.qa-part-custom a.open-login-button:active,.qa-template-register div.qa-part-custom a.open-login-button:active,.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:active,.qa-unfavorite-button:active,.qa-vote-first-button:active,.qa-vote-one-button:active,.qa-vote-second-button:active,.qa-vote-up-button:active{outline:0;background-image:none;box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}
 .qa-a-select-button,.qa-a-select-button:active,.qa-a-select-button:focus,.qa-a-select-button:hover,.qa-a-selected,.qa-a-selected:active,.qa-a-selected:focus,.qa-a-selected:hover,.qa-a-unselect-button,.qa-a-unselect-button:active,.qa-a-unselect-button:focus,.qa-a-unselect-button:hover,.qa-form-light-button,.qa-form-light-button:active,.qa-form-light-button:focus,.qa-form-light-button:hover{color:#333;background-color:#fff;border-color:#ccc}
@@ -127,7 +127,7 @@ header#nav-header{min-height:80px}
 .qa-vote-buttons{position:relative;height:60px;width:16px;float:left}
 .qa-vote-buttons div.tooltip-inner{max-width:200px}
 .qa-vote-first-button,.qa-vote-one-button,.qa-vote-second-button,.qa-vote-up-button{font-size:12px;line-height:1.5;border-radius:3px;padding:4px}
-.qa-vote-first-button:active,.qa-vote-first-button:focus,.qa-vote-one-button:active,.qa-vote-one-button:focus,.qa-vote-second-button:active,.qa-vote-second-button:focus,.qa-vote-up-button:active,.qa-vote-up-button:focus{outline:0}
+.qa-vote-first-button:active,.qa-vote-one-button:active,.qa-vote-second-button:active,.qa-vote-up-button:active{outline:0}
 .qa-vote-up-disabled{color:#777}
 .qa-vote-up-button{color:#5bc0de}
 .qa-vote-down-button{color:#f0ad4e}
@@ -233,7 +233,7 @@ header#nav-header{min-height:80px}
 .donut-footer{padding:25px 0;background-color:#333}
 .qa-footer{color:#777;font-size:16px;line-height:1.42857143}
 .qa-footer a,.qa-footer a:visited{color:#777}
-.qa-footer a:active,.qa-footer a:focus,.qa-footer a:hover{color:#c4c4c4;text-decoration:none;outline:0}
+.qa-footer a:active,.qa-footer a:focus,.qa-footer a:hover{color:#c4c4c4;text-decoration:none}
 .qa-footer-left{float:left}
 .qa-footer-right{float:right}
 @media only screen and (max-width:767px){.qa-footer{font-size:14px}}
@@ -260,7 +260,7 @@ header#nav-header{min-height:80px}
 .site-header .site-header-cover h1.top-heading{font-size:70px;font-weight:bolder;text-shadow:4px 3px 0 #337ab7,9px 8px 0 rgba(0,0,0,.15)}
 @media only screen and (min-width:768px) and (max-width:991px){.site-header .site-header-cover h1.top-heading{font-size:40px}}
 @media only screen and (max-width:767px){.site-header .site-header-cover h1.top-heading{font-size:32px}}
-.site-header .site-header-fade{background-image:url(../images/discuss.jpg?1509300937);background-position:0 40%;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;height:100%;opacity:.1;position:absolute;width:100%;z-index:2}
+.site-header .site-header-fade{background-image:url(../images/discuss.jpg?1509301042);background-position:0 40%;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;height:100%;opacity:.1;position:absolute;width:100%;z-index:2}
 .site-header .jumbo-box{padding:10px 50px}
 .site-header .jumbo-box .wrap{border:1px solid transparent;box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd;border-color:#2e6da4;border-radius:10px;padding:10px 5px}
 .site-header .jumbo-box .wrap .hint{padding:10px 0;font-size:30px}
@@ -274,13 +274,13 @@ header#nav-header{min-height:80px}
 .qa-search-button:active,.qa-search-button:active:focus,.qa-search-button:focus,.qa-search-button:hover{outline:0;box-shadow:none}
 .top-search-bar{margin-top:10px;display:block;position:relative}
 .top-search-bar .input-group{display:block}
-.top-search-bar .input-group-btn{position:absolute;right:25px;top:4px}
-.top-search-bar .qa-search-field.form-control{border-radius:0;padding:10px 12px;height:auto}
+.top-search-bar .input-group-btn{position:absolute;right:30px;top:4px}
+.top-search-bar .qa-search-field.form-control{border-radius:0;padding:10px 45px 10px 12px;height:auto}
 .side-search-bar{margin-bottom:20px;display:block;overflow:hidden}
 .side-search-bar .input-group{display:block}
-.side-search-bar .input-group-btn{position:absolute;right:25px;top:4px}
-.side-search-bar .qa-search-field.form-control{border-radius:4px;padding:10px 12px;height:auto}
-.donut-top{display:inline-block;height:40px;width:40px;position:fixed;cursor:pointer;border-radius:4px;bottom:10%;right:10px;box-shadow:0 0 10px rgba(0,0,0,.05);background:#f0ad4e url(../images/top-arrow.svg?1509300937) no-repeat center 50%;visibility:hidden;opacity:0;-webkit-transition:opacity .3s 0s,visibility 0s .3s;transition:opacity .3s 0s,visibility 0s .3s}
+.side-search-bar .input-group-btn{position:absolute;right:30px;top:4px}
+.side-search-bar .qa-search-field.form-control{border-radius:4px;padding:10px 45px 10px 12px;height:auto}
+.donut-top{display:inline-block;height:40px;width:40px;position:fixed;cursor:pointer;border-radius:4px;bottom:10%;right:10px;box-shadow:0 0 10px rgba(0,0,0,.05);background:#f0ad4e url(../images/top-arrow.svg?1509301042) no-repeat center 50%;visibility:hidden;opacity:0;-webkit-transition:opacity .3s 0s,visibility 0s .3s;transition:opacity .3s 0s,visibility 0s .3s}
 .donut-top.is-visible{visibility:visible;opacity:1}
 .donut-top.fade-out{opacity:.5}
 @media only screen and (min-width:768px){.donut-top{right:20px;bottom:10%}}
@@ -419,7 +419,6 @@ header#nav-header{min-height:80px}
 .qa-ask-box tr .qa-form-tall-label{font-weight:700;color:#fff;padding:15px!important;font-size:20px}
 .qa-ask-box tr .qa-form-tall-text{display:block;height:34px;padding:6px 12px;border:1px solid #ccc;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}
 .qa-ask-box tr .qa-form-tall-text::-ms-expand{border:0;background-color:transparent}
-.qa-ask-box tr .qa-form-tall-text:focus{outline:0}
 .qa-rss-feed{border-radius:4px;color:#fff;padding:6px 10px;position:absolute;right:0;bottom:5px;background-color:#f0ad4e;float:right}
 .qa-rss-feed:active,.qa-rss-feed:focus,.qa-rss-feed:hover,.qa-rss-feed:visited{background-color:#f0ad4e;color:#fff}
 .page-title.has-favorite .qa-rss-feed{right:35px}

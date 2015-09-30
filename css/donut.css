@@ -363,7 +363,6 @@ header#nav-header {
 .navbar .qa-logo-link:active,
 .navbar .qa-logo-link:focus {
   text-decoration: none;
-  outline: none;
 }
 .navbar .qa-logo-link img {
   border: none;
@@ -541,7 +540,6 @@ header#nav-header {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   border-color: #dddddd;
-  outline: none;
 }
 .navbar-nav > li > a.navbar-login-button {
   font-size: 20px;
@@ -580,7 +578,6 @@ header#nav-header {
   .navbar-nav > li > a:active,
   .navbar-nav > li > a:focus {
     background-color: #fff;
-    outline: none;
   }
 }
 /* small caret at the dropdown menu */
@@ -721,7 +718,6 @@ header#nav-header {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  outline: none;
 }
 .qa-vote-one-button:hover,
 .qa-vote-first-button:hover,
@@ -1087,13 +1083,7 @@ header#nav-header {
 .qa-vote-first-button:active,
 .qa-vote-second-button:active,
 .qa-vote-up-button:active {
-  outline: none;
-}
-.qa-vote-one-button:focus,
-.qa-vote-first-button:focus,
-.qa-vote-second-button:focus,
-.qa-vote-up-button:focus {
-  outline: none;
+  outline: 0;
 }
 .qa-vote-up-disabled {
   color: #777777;
@@ -1624,7 +1614,6 @@ header#nav-header {
 .qa-footer a:focus {
   color: #c4c4c4;
   text-decoration: none;
-  outline: none;
 }
 .qa-footer-left {
   float: left;
@@ -1845,12 +1834,12 @@ header#nav-header {
 }
 .top-search-bar .input-group-btn {
   position: absolute;
-  right: 25px;
+  right: 30px;
   top: 4px;
 }
 .top-search-bar .qa-search-field.form-control {
   border-radius: 0;
-  padding: 10px 12px;
+  padding: 10px 45px 10px 12px;
   height: auto;
 }
 .side-search-bar {
@@ -1863,12 +1852,12 @@ header#nav-header {
 }
 .side-search-bar .input-group-btn {
   position: absolute;
-  right: 25px;
+  right: 30px;
   top: 4px;
 }
 .side-search-bar .qa-search-field.form-control {
   border-radius: 4px;
-  padding: 10px 12px;
+  padding: 10px 45px 10px 12px;
   height: auto;
 }
 .donut-top {
@@ -2679,9 +2668,6 @@ header#nav-header {
 .qa-ask-box tr .qa-form-tall-text::-ms-expand {
   border: 0;
   background-color: transparent;
-}
-.qa-ask-box tr .qa-form-tall-text:focus {
-  outline: none;
 }
 .qa-rss-feed {
   border-radius: 4px;
