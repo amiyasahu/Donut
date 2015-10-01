@@ -512,7 +512,7 @@
             ?>
             <header id="nav-header">
                 <nav id="nav" class="navbar navbar-static-top"
-                     role="navigation" <?php echo( qa_opt( 'donut_enable_sticky_header' ) ? 'data-spy="affix" data-offset-top="60"' : '' ) ?>>
+                     role="navigation" <?php echo( qa_opt( 'donut_enable_sticky_header' ) ? 'data-spy="affix" data-offset-top="120"' : '' ) ?>>
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
