@@ -3552,11 +3552,11 @@ a.qa-browse-cat-link:visited {
 }
 .qa-a-item-main {
   float: left;
-  width: 90%;
+  width: 88%;
   min-height: 1px;
   padding: 0 10px 10px 10px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .qa-a-item-main {
     width: 100%;
   }
@@ -3622,7 +3622,7 @@ a.qa-browse-cat-link:visited {
   -o-transition: all .5s ease;
   transition: all .5s ease;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .qa-a-selection {
     left: initial ;
     right: 5px;
