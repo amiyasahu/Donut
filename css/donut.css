@@ -3380,7 +3380,7 @@ a.qa-browse-cat-link:visited {
     margin-top: 5px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
   .qa-q-view-main {
     width: 85%;
   }
@@ -3622,7 +3622,7 @@ a.qa-browse-cat-link:visited {
   -o-transition: all .5s ease;
   transition: all .5s ease;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1200px) {
   .qa-a-selection {
     left: initial ;
     right: 5px;
