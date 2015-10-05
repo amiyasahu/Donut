@@ -1,50 +1,43 @@
-# Created by .ignore support plugin (hsz.mobi)
-### JetBrains template
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
 
-*.iml
+# Folder config file
+Desktop.ini
 
-## Directory-based project format:
-.idea/
-# if you remove the above rule, at least ignore the following:
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# User-specific stuff:
-# .idea/workspace.xml
-# .idea/tasks.xml
-# .idea/dictionaries
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
 
-# Sensitive or high-churn files:
-# .idea/dataSources.ids
-# .idea/dataSources.xml
-# .idea/sqlDataSources.xml
-# .idea/dynamic.xml
-# .idea/uiDesigner.xml
+# Windows shortcuts
+*.lnk
 
-# Gradle:
-# .idea/gradle.xml
-# .idea/libraries
+# =========================
+# Operating System Files
+# =========================
 
-# Mongo Explorer plugin:
-# .idea/mongoSettings.xml
+# OSX
+# =========================
 
-## File-based project format:
-*.ipr
-*.iws
+.DS_Store
+.AppleDouble
+.LSOverride
 
-## Plugin-specific files:
+# Thumbnails
+._*
 
-# IntelliJ
-/out/
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
 
-# mpeltonen/sbt-idea plugin
-.idea_modules/
-
-# JIRA plugin
-atlassian-ide-plugin.xml
-
-# Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-
-
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
