@@ -18,3 +18,7 @@ Clean Minimal Responsive theme for Question2Answer ( Q2A ) websites
 * Code review
 * Other guidelines
 * Help me writing a better software 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/amiyasahu/donut/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
