@@ -32,6 +32,12 @@
                         <?php echo qa_lang_html( 'main/nav_admin' ); ?>
                     </a>
                 </li>
+                <li>
+                    <a href="<?php echo qa_path_html( 'admin/donut-theme/general-settings' ) ?>">
+                        <span class="fa fa-wrench"></span>
+                        <?php echo donut_lang( 'donut_theme_settings' ); ?>
+                    </a>
+                </li>
                 <li class="dropdown-header">Profile Section</li>
             <?php endif ?>
             <li>
