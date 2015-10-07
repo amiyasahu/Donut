@@ -41,3 +41,32 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#Q2A Default directories and files to be excluded 
+.htaccess
+*.yml
+*.html
+*.png
+*.jpeg
+*.txt
+*.php
+CONTRIBUTING.md
+qa-tests/
+qa-lang/
+qa-content/
+qa-plugin/recaptcha-captcha
+qa-plugin/tag-cloud-widget
+qa-plugin/wysiwyg-editor
+qa-plugin/xml-sitemap
+qa-plugin/basic-adsense
+qa-plugin/event-logger
+qa-plugin/example-page
+qa-plugin/mouseover-layer
+qa-plugin/opensearch-support
+qa-plugin/facebook-login
+qa-plugin/blog-tool
+qa-plugin/q2a*
+qa-theme/Candy
+qa-theme/Classic
+qa-theme/Snow
+qa-theme/SnowFlat
