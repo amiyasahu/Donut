@@ -42,7 +42,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-#Q2A Default directories and files to be excluded 
+#Q2A Default directories and files to be excluded
 .htaccess
 *.yml
 *.html
@@ -51,6 +51,8 @@ Temporary Items
 *.txt
 *.php
 CONTRIBUTING.md
+qa-include/
+qa-external-example/
 qa-tests/
 qa-lang/
 qa-content/
@@ -71,5 +73,5 @@ qa-theme/Classic
 qa-theme/Snow
 qa-theme/SnowFlat
 
-#PHPStroam config files 
+#PHPStroam config files
 .idea
