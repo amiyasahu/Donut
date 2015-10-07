@@ -70,3 +70,6 @@ qa-theme/Candy
 qa-theme/Classic
 qa-theme/Snow
 qa-theme/SnowFlat
+
+#PHPStroam config files 
+.idea
