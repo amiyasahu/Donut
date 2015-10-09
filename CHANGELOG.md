@@ -39,6 +39,7 @@
 
 * Bootstrap updated to 3.3 and FontAwesome updated to 4.2.0
 * Major LESS refractoring for saving KBs in the generated CSS file
+* Full compactibility with q2a 1.7
 * [Fixed](https://github.com/amiyasahu/Donut/pull/21) wordpress integration (Thanks to [Fabio Brunelli](https://github.com/arioch1984))
 * More light CSS than the previous versions 
 * File based customization options 
