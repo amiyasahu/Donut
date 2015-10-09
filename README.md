@@ -1,5 +1,5 @@
-# Donut Theme#
-A clean minimal responsive theme for Question2Answer ( Q2A ) websites 
+# Donut Theme
+Modern and Responsive theme for Question2Answer ( Q2A ) websites
 
 ### What is this repository for? ###
 
