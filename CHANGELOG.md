@@ -1,1 +1,104 @@
 # Change Log #
+
+## Version 1.6 ##
+
+* Added new Admin plugin 
+* Added Admin page settings for Donut theme 
+* Added settings link for user dropdown navigation (Only visible for Admin ans Super Admin)
+* All theme options can be set / reset from admin panel 
+* Several CSS bug fixes 
+* Bug fix for answer selection on tablets 
+* Added minified donut.css file for the prod mode 
+* Offset fix for the navigation bar 
+* Fix for action buttons dropdown 
+* Fixed overflow of search box in chrome 
+* Fixed hidden questions page 
+
+
+## Version 1.5 ## 
+
+* Several minor CSS bug fixes 
+* fixed view count overlaps when error is shown on question page
+* fixed badge plugin integration on profile page 
+* fixed text overlap for the profile page 
+* Improved profile page layout 
+* Improved tags page layout 
+* fixed tags page layout  
+* fixed users page layout
+* Improved layout for the wall posts and messages 
+* fixed RSS widget 
+* fixed positioning RSS and the favorite button 
+* Improved question title 
+* Improved comments layout 
+* Changed icons for login and logout 
+* Fixed flicker issue when the page size is smaller (http://stackoverflow.com/a/32110545)
+* [Fixed](https://github.com/amiyasahu/Donut/pull/27) the search bar padding issue for FF (Thanks to [Hamza Yusuf Çakır](https://github.com/hckrtech))
+* Updated Ask button icon 
+* Added IP block and unblock icons 
+* Improved 
+
+## Version 1.4 ##
+
+* Bootstrap updated to 3.3 and FontAwesome updated to 4.2.0
+* Major LESS refractoring for saving KBs in the generated CSS file
+* [Fixed](https://github.com/amiyasahu/Donut/pull/21) wordpress integration (Thanks to [Fabio Brunelli](https://github.com/arioch1984))
+* More light CSS than the previous versions 
+* File system based customization options 
+* Improved color scheme 
+* Improved the question and answer list layout 
+* Added top bar above the main navigation bar (Can be hidden from option settings)
+* Completely rewritten main navigation bar 
+* Fixed navigation bar (Can be configured from option settings)
+* The search box on the header moved to sidebar and for mobile devices on the top of every page 
+* Added website header for the home page 
+* Allow users to close the home page banner 
+* New elegant footer design 
+* Added social settings for the topbar and the footer 
+* Added new `Ask box` for home page 
+* Inbuilt [breadcrumbs](https://github.com/amiyasahu/q2a-breadcrumbs) support 
+* On question page the extra buttons collapses to a single action button (configurable from the option settings)
+* Added site stats above the footer 
+* Added back to top button 
+* Added support to show the copyright text at the footer 
+* Updated tags 
+* Styled default q2a askbox 
+* Fixed blocked users page 
+* Fixed Separate vote buttons 
+* Updated attribution
+* Fixed #22
+* Fixed Admin buttons issue 
+* Fixed tool tips issue on the voting buttons 
+* Added style for disabled voting buttons 
+* Updated sidebar layout 
+* Updated navbar for non loggedin users
+* Fixed responsive navigation bar 
+* Improved Answer form
+* Closable error boxes 
+* Updated for errors when ajax response
+* Added PM link in the user dropdown navigation 
+
+## Version 1.3 ## 
+
+* CSS bug fixes 
+* Added template files 
+
+
+## Version 1.2##
+* several bug fixes 
+* Improved CSS 
+* Improved nav bar 
+* Improevd navbar for mobile devices 
+
+## Version 1.1 ## 
+
+* Several minor CSS bug fixes 
+
+##Version 1.0##
+* Initial version 
+* Responsive layout 
+* Powered by [Bootstrap](http://getbootstrap.com/) 
+* LESS files for generating CSS 
+* Icons provided by [FontAwesome] (http://fortawesome.github.io/Font-Awesome)
+* Nice question page view 
+* Nice profile page view 
+* Inbuilt CDN support for the bootstrap and fontAwesome libraries for faster loading 
