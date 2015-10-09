@@ -1,8 +1,8 @@
-# Change Log #
+# Change Log 
 
-## Version 1.6 ##
+## Version 1.6
 
-* Added new Admin plugin 
+* Added new Donut Admin plugin 
 * Added Admin page settings for Donut theme 
 * Added settings link for user dropdown navigation (Only visible for Admin ans Super Admin)
 * All theme options can be set / reset from admin panel 
@@ -14,20 +14,19 @@
 * Fixed overflow of search box in chrome 
 * Fixed hidden questions page 
 
-
-## Version 1.5 ## 
+## Version 1.5
 
 * Several minor CSS bug fixes 
-* fixed view count overlaps when error is shown on question page
-* fixed badge plugin integration on profile page 
-* fixed text overlap for the profile page 
+* Fixed view count overlaps when error is shown on question page
+* Fixed badge plugin integration on profile page 
+* Fixed text overlap for the profile page 
 * Improved profile page layout 
 * Improved tags page layout 
-* fixed tags page layout  
-* fixed users page layout
+* Fixed tags page layout  
+* Fixed users page layout
 * Improved layout for the wall posts and messages 
-* fixed RSS widget 
-* fixed positioning RSS and the favorite button 
+* Fixed RSS widget 
+* Fixed positioning RSS and the favorite button 
 * Improved question title 
 * Improved comments layout 
 * Changed icons for login and logout 
@@ -35,15 +34,14 @@
 * [Fixed](https://github.com/amiyasahu/Donut/pull/27) the search bar padding issue for FF (Thanks to [Hamza Yusuf Çakır](https://github.com/hckrtech))
 * Updated Ask button icon 
 * Added IP block and unblock icons 
-* Improved 
 
-## Version 1.4 ##
+## Version 1.4 
 
 * Bootstrap updated to 3.3 and FontAwesome updated to 4.2.0
 * Major LESS refractoring for saving KBs in the generated CSS file
 * [Fixed](https://github.com/amiyasahu/Donut/pull/21) wordpress integration (Thanks to [Fabio Brunelli](https://github.com/arioch1984))
 * More light CSS than the previous versions 
-* File system based customization options 
+* File based customization options 
 * Improved color scheme 
 * Improved the question and answer list layout 
 * Added top bar above the main navigation bar (Can be hidden from option settings)
@@ -55,7 +53,8 @@
 * New elegant footer design 
 * Added social settings for the topbar and the footer 
 * Added new `Ask box` for home page 
-* Inbuilt [breadcrumbs](https://github.com/amiyasahu/q2a-breadcrumbs) support 
+* Better integration with the [Breadcrumbs plugin](https://github.com/amiyasahu/q2a-breadcrumbs) 
+* Better integration with the [Onsite notifications plugin](https://github.com/q2apro/q2apro-on-site-notifications/) 
 * On question page the extra buttons collapses to a single action button (configurable from the option settings)
 * Added site stats above the footer 
 * Added back to top button 
@@ -65,7 +64,8 @@
 * Fixed blocked users page 
 * Fixed Separate vote buttons 
 * Updated attribution
-* Fixed #22
+* Fixed [#22](https://github.com/amiyasahu/Donut/issues/22)
+* Fixed [#23](https://github.com/amiyasahu/Donut/issues/23)
 * Fixed Admin buttons issue 
 * Fixed tool tips issue on the voting buttons 
 * Added style for disabled voting buttons 
@@ -77,23 +77,23 @@
 * Updated for errors when ajax response
 * Added PM link in the user dropdown navigation 
 
-## Version 1.3 ## 
+## Version 1.3 
 
 * CSS bug fixes 
 * Added template files 
 
 
-## Version 1.2##
+## Version 1.2
 * several bug fixes 
 * Improved CSS 
 * Improved nav bar 
 * Improevd navbar for mobile devices 
 
-## Version 1.1 ## 
+## Version 1.1
 
 * Several minor CSS bug fixes 
 
-##Version 1.0##
+##Version 1.0
 * Initial version 
 * Responsive layout 
 * Powered by [Bootstrap](http://getbootstrap.com/) 
