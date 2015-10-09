@@ -1,6 +1,6 @@
-# Change Log 
+# Change Log #
 
-## Version 1.6
+## Version 1.6 ##
 
 * Added new Donut Admin plugin 
 * Added Admin page settings for Donut theme 
@@ -14,7 +14,7 @@
 * Fixed overflow of search box in chrome 
 * Fixed hidden questions page 
 
-## Version 1.5
+## Version 1.5 ##
 
 * Several minor CSS bug fixes 
 * Fixed view count overlaps when error is shown on question page
@@ -35,7 +35,7 @@
 * Updated Ask button icon 
 * Added IP block and unblock icons 
 
-## Version 1.4 
+## Version 1.4 ##
 
 * Bootstrap updated to 3.3 and FontAwesome updated to 4.2.0
 * Major LESS refractoring for saving KBs in the generated CSS file
@@ -59,11 +59,11 @@
 * Added site stats above the footer 
 * Added back to top button 
 * Added support to show the copyright text at the footer 
-* Updated tags 
-* Styled default q2a askbox 
+* Updated tag element for better stability 
+* Styled default q2a `ask box`
 * Fixed blocked users page 
 * Fixed Separate vote buttons 
-* Updated attribution
+* Updated attribution of the Donut theme 
 * Fixed [#22](https://github.com/amiyasahu/Donut/issues/22)
 * Fixed [#23](https://github.com/amiyasahu/Donut/issues/23)
 * Fixed Admin buttons issue 
@@ -72,28 +72,28 @@
 * Updated sidebar layout 
 * Updated navbar for non loggedin users
 * Fixed responsive navigation bar 
-* Improved Answer form
+* Improved `Answer form`
 * Closable error boxes 
 * Updated for errors when ajax response
-* Added PM link in the user dropdown navigation 
+* Added private message link in the user dropdown navigation 
 
-## Version 1.3 
+## Version 1.3 ##
 
 * CSS bug fixes 
 * Added template files 
 
 
-## Version 1.2
+## Version 1.2 ##
 * several bug fixes 
 * Improved CSS 
 * Improved nav bar 
 * Improevd navbar for mobile devices 
 
-## Version 1.1
+## Version 1.1 ##
 
 * Several minor CSS bug fixes 
 
-##Version 1.0
+## Version 1.0 ##
 * Initial version 
 * Responsive layout 
 * Powered by [Bootstrap](http://getbootstrap.com/) 
