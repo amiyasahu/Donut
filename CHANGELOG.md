@@ -61,7 +61,7 @@
 * Added back to top button 
 * Added support to show the copyright text at the footer 
 * Updated tag element for better stability 
-* Styled default q2a `ask box`
+* Styled default q2a `Ask box`
 * Fixed blocked users page 
 * Fixed Separate vote buttons 
 * Updated attribution of the Donut theme 
@@ -74,7 +74,7 @@
 * Updated navbar for non loggedin users
 * Fixed responsive navigation bar 
 * Improved `Answer form`
-* Closable error boxes 
+* Added Closable error boxes 
 * Updated for errors when ajax response
 * Added private message link in the user dropdown navigation 
 
