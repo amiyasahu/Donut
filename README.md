@@ -36,9 +36,10 @@ Also it comes with an admin panel with bunch of options to let you change nearly
      
      - **Note :** The master branch will be under development , so you should download the released versions
      - To download using git, install git and then type 
+     
           `git clone https://github.com/amiyasahu/Donut.git` 
-          
           `git checkout tags/<latest_tagged_version>`
+          
      - To download directly, go to the [latest release][latest release] page and click **Source code** in the **Downloads** section
      
 3. Copy the [Donut-admin](https://github.com/amiyasahu/Donut/tree/master/qa-plugin/Donut-admin) folder to `qa-plugin` directory of your q2a installation (eg. `qa-plugin/Donut-admin`) 
