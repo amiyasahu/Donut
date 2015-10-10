@@ -38,6 +38,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
      - To download using git, install git and then type 
      
           `git clone https://github.com/amiyasahu/Donut.git` 
+
           `git checkout tags/<latest_tagged_version>`
           
      - To download directly, go to the [latest release][latest release] page and click **Source code** in the **Downloads** section
