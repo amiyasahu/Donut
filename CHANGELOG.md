@@ -17,6 +17,7 @@
 * Fix for action buttons dropdown 
 * Fixed overflow of search box in chrome 
 * Fixed hidden questions page 
+* Added cache boosting for the newer css and JS files 
 
 ## Version 1.5 ##
 
