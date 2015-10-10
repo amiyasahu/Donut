@@ -2,9 +2,9 @@
 
 Modern and Responsive bootstrap theme for Question2Answer ( Q2A ) which is made for great readability with awesome user experience.
 
-## How does it look #
+##### Screenshot #####
 
-(Screen shot will be added)
+[![Donut theme](https://raw.githubusercontent.com/amiyasahu/Donut/gh-pages/screenshots/home-page-banner.png)](https://github.com/amiyasahu/Donut)
 
 ## Description ##
 [Donut theme][] is a free and open-source **Responsive Question2Answer Theme** designed for great readability with a clean interface based on [twitter bootstrap](http://getbootstrap.com/). 
@@ -28,7 +28,6 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 * Better integration with the [Onsite notifications plugin](https://github.com/q2apro/q2apro-on-site-notifications/) 
 
 
-
 ## Installation ##
 
 1. [Install Question2Answer][]. This plugin requires at latest version 1.7 (see the [change log][] for details)   
@@ -45,7 +44,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 5. Visit `http://your-q2a-site.com/admin/donut-theme/general-settings` for configuring the theme as per your taste 
 7. Enjoy the great [Question2Answer][] theme on your great forum website
 
-### Contribution guidelines ###
+## Contribution guidelines ##
 
 * Fork the [repositary][] and make improvements . Feel free to send a Pull requests
 * Help me in testing the theme and finding the bugs 
@@ -54,7 +53,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 * Help me writing a better software 
 * Tell your friends about Q2A (and Donut theme :smile:) and help Q2A growing 
 
-## Author
+## Author ##
 
 This free theme is created by [Amiya Sahu](http://amiyasahu.com) and [contributors](https://github.com/amiyasahu/Donut/graphs/contributors)
 
