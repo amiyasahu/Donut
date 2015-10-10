@@ -22,8 +22,8 @@ Also it comes with an admin panel with bunch of options to let you change nearly
           `git clone https://github.com/amiyasahu/Donut.git` 
           `git checkout tags/<latest_tagged_version>`
      - To download directly, go to the [latest release][latest release] page and click **Source code** in the **Downloads** section
-3. Copy the [Donut admin](https://github.com/amiyasahu/Donut/tree/master/qa-plugin/Donut-admin) folder to `qa-plugin` directory of your q2a installation 
-4. Copy the [Donut theme](https://github.com/amiyasahu/Donut/tree/master/qa-theme/Donut-theme) folder to `qa-theme` directory of your q2a installation 
+3. Copy the [Donut-admin](https://github.com/amiyasahu/Donut/tree/master/qa-plugin/Donut-admin) folder to `qa-plugin` directory of your q2a installation (eg. `qa-plugin/Donut-admin`) 
+4. Copy the [Donut-theme](https://github.com/amiyasahu/Donut/tree/master/qa-theme/Donut-theme) folder to `qa-theme` directory of your q2a installation (eg. `qa-theme/Donut-theme`)
 5. Visit `http://your-q2a-site.com/admin/donut-theme/general-settings` for configuring the theme as per your taste 
 7. Enjoy the great [Question2Answer][] theme on your great forum website
 
