@@ -4,13 +4,15 @@ Modern and Responsive theme for Question2Answer ( Q2A ) which is made for great 
 
 # How does it look #
 
-<<Screenshot will be added>>
+(Screen shot will be added)
 
 # Description #
 [Donut theme][] is a free and open-source **Responsive Question2Answer Theme** designed for great readability with a clean interface. 
 Also it comes with an admin panel with bunch of options to let you change nearly any aspect of your theme and customize your website .
 
-### How do I get set up? ###
+[Theme Demo](http://demo.amiyasahu.com/donut/) [Change log](https://github.com/amiyasahu/Donut/blob/master/CHANGELOG.md)
+
+### Installation ###
 
 1. [Install Question2Answer][]. This plugin requires at latest version 1.7 (see the [change log][] for details)   
 2. [Download the latest version][latest release] of theme from GitHub , either using [Git][], or downloading directly:
