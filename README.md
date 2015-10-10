@@ -42,7 +42,8 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 3. Copy the [Donut-admin](https://github.com/amiyasahu/Donut/tree/master/qa-plugin/Donut-admin) folder to `qa-plugin` directory of your q2a installation (eg. `qa-plugin/Donut-admin`) 
 4. Copy the [Donut-theme](https://github.com/amiyasahu/Donut/tree/master/qa-theme/Donut-theme) folder to `qa-theme` directory of your q2a installation (eg. `qa-theme/Donut-theme`)
 5. Visit `http://your-q2a-site.com/admin/donut-theme/general-settings` for configuring the theme as per your taste 
-7. Enjoy the great [Question2Answer][] theme on your great forum website
+6. Visit `http://your-q2a-site.com/admin/general` , select the `Donut` for both the `Site theme` and `Theme for mobile`
+7. Congratulations , Donut theme is now up and running on your website :smile:
 
 ## Contribution guidelines ##
 
