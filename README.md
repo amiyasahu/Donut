@@ -31,7 +31,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 
 ## Installation ##
 
-1. [Install Question2Answer][]. This plugin requires at latest version 1.7 (see the [change log][] for details)   
+1. [Install Question2Answer][]. This theme requires at latest version 1.7 (see the [change log][] for details)   
 2. [Download the latest version][latest release] of theme from GitHub , either using [Git][], or downloading directly:
      
      - **Note :** The master branch will be under development , so you should download the released versions
