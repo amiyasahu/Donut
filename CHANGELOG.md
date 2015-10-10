@@ -1,5 +1,9 @@
 # Change Log #
 
+## Version 1.6.1 ( in progress ) ##
+
+* Added custom 404 page
+
 ## Version 1.6 ##
 
 * Added new Donut Admin plugin 
