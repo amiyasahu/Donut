@@ -4040,3 +4040,25 @@ a.qa-browse-cat-link:visited {
 .qa-template-login .qa-part-custom {
   clear: both;
 }
+.page-not-found {
+  padding: 20px 0;
+}
+.page-not-found .icon-wrap {
+  width: 12em;
+  height: 12em;
+  margin: auto;
+  padding: 2em;
+  border-radius: 50%;
+  border: 2px dashed transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #777777;
+}
+.page-not-found .large-icon {
+  font-size: 8em;
+  text-shadow: 4px 3px 0px #ffffff, 9px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.page-not-found .not-found-text {
+  font-size: 2em;
+  padding: 20px 0;
+}

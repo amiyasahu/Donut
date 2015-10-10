@@ -33,6 +33,7 @@
             'donut_show_site_stats_above_footer' => 1,
             'donut_show_social_links_at_footer'  => 1,
             'donut_show_copyright_at_footer'     => 1,
+            'donut_show_custom_404_page'         => 1,
             'donut_copyright_text'               => donut_lang( 'donut_theme' ),
             'donut_banner_head_text'             => donut_lang( 'donut_discussion_forum' ),
             'donut_banner_div1_text'             => donut_lang( 'search_answers' ),
@@ -43,6 +44,7 @@
             'donut_banner_div3_icon'             => 'fa fa-check-square-o',
             'donut_top_bar_left_text'            => donut_lang( 'responsive_q2a_theme' ),
             'donut_top_bar_right_text'           => donut_lang( 'ask_us_anything' ),
+            'donut_custom_404_text'              => donut_lang( 'page_not_found_default_text' ),
         );
 
         if ( isset( $fixed_defaults[$name] ) ) {

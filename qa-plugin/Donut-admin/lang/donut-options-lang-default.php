@@ -34,6 +34,8 @@
         'donut_google-plus_url'              => 'Google plus url',
         'donut_vk_url'                       => 'VK url',
         'donut_email_address'                => 'Email adderss',
+        'donut_show_custom_404_page'         => 'Show custom 404 page',
+        'donut_custom_404_text'              => 'Custom 404 text',
     );
 
     /*

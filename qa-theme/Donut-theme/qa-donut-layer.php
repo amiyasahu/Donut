@@ -268,7 +268,9 @@
             $this->title();
             $this->output( '</h1>' );
 
-            if ( isset( $this->content['error'] ) )
+            if ( $this->template == 'not-found' && qa_opt( 'donut_show_custom_404_page' ) ) {
+                $this->output( donut_include_template( 'page-not-found.php', false ) );
+            } else if ( isset( $this->content['error'] ) )
                 $this->error( @$this->content['error'] );
 
             if ( isset( $favorite ) ) {
