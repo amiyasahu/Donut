@@ -72,8 +72,8 @@ This program is free software; you can redistribute it and/or modify it under th
 ## Disclaimer ##
 This code has not been extensively tested on high-traffic installations of Q2A. You should perform your own tests before using this plugin on a live (production) environment. 
 
-## About Q2A ##
-**[Question2Answer](http://qa-themes.com/question2answer "Q2A Features")** is a free and open source PHP and MySQL based platform for creating Question & Answer sites. For more information visit Q2A's official site at [question2answer.org](http://www.question2answer.org/)
+## About Question2Answer ##
+**Question2Answer** is a free and open source PHP and MySQL based platform for creating Question & Answer sites. For more information visit Q2A's official site at [question2answer.org](http://www.question2answer.org/)
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/amiyasahu/donut/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
