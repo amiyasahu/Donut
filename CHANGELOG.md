@@ -3,6 +3,8 @@
 ## Version 1.6.1 ( in progress ) ##
 
 * Added custom 404 page
+* Added update uri to check for the updates of the theme
+* Added installation instructions 
 
 ## Version 1.6 ##
 
