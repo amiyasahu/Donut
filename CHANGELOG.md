@@ -5,6 +5,7 @@
 * Added custom 404 page
 * Added update uri to check for the updates of the theme
 * Added installation instructions 
+* Fixed a minor bug for the admin panel page 
 
 ## Version 1.6 ##
 

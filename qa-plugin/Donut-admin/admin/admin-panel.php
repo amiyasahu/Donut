@@ -4,12 +4,12 @@
         exit;
     }
 
+    require_once QA_INCLUDE_DIR . '/app/admin.php';
     $adminsection = strtolower( qa_request_part( 2 ) );
 
     //	Get list of categories and all options
 
     $categories = qa_db_select_with_pending( qa_db_category_nav_selectspec( null, true ) );
-
 
 //	See if we need to redirect
 
@@ -23,7 +23,6 @@
             qa_redirect( key( $subnav ) );
         }
     }
-
 
 //	Check admin privileges (do late to allow one DB query)
     if ( !qa_admin_check_privileges( $qa_content ) )
