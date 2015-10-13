@@ -1,6 +1,6 @@
 # Change Log #
 
-## Version 1.6.1 ( in progress ) ##
+## Version 1.6.1 ##
 
 * Added custom 404 page
 * Added update uri to check for the updates of the theme
