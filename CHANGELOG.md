@@ -97,6 +97,7 @@
 * Improved CSS 
 * Improved nav bar 
 * Improevd navbar for mobile devices 
+* Better integration with the [Open login plugin](https://github.com/alixandru/q2a-open-login) 
 
 ## Version 1.1 ##
 
