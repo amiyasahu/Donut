@@ -21,6 +21,7 @@
 * Fixed overflow of search box in chrome 
 * Fixed hidden questions page 
 * Added cache boosting for the newer css and JS files 
+* Support for multiple languages
 
 ## Version 1.5 ##
 
