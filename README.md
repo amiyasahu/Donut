@@ -14,9 +14,10 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 
 ## Features ##
 
-* Responsive layout 
+* Mobile first responsive layout 
 * Powered by [Twitter Bootstrap](http://getbootstrap.com/)
-* Great readability with awesome user experience  
+* Made with [less](http://lesscss.org/) (less files included)
+* Clean interface which provides great readability and awesome user experience  
 * Flexible theme with a admin panel settings 
 * Inbuilt CDN support and minified assets which loads your website faster and consumes less site resources
 * Enable / Disable top bat above navigation 
@@ -28,6 +29,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 * Better integration with the [Breadcrumbs plugin](https://github.com/amiyasahu/q2a-breadcrumbs) 
 * Better integration with the [Onsite notifications plugin](https://github.com/q2apro/q2apro-on-site-notifications/) 
 * Better integration with the [Open login plugin](https://github.com/alixandru/q2a-open-login) 
+* Multilingual support
 
 
 ## Installation ##
