@@ -796,7 +796,6 @@
 
             $this->voting( $q_item );
             $this->a_count( $q_item );
-            // parent::view_count($q_item);
 
             $this->output( '</div>' );
         }
@@ -862,7 +861,7 @@
          */
         function donut_view_count( $post )
         {
-            if ( !empty( $post['views'] ) && $this->template !== 'question' ) {
+            if ( !empty( $post['views'] ) ) {
                 $this->output( '<span class="qa-q-item-view-count">' );
                 $this->output( ' | <i class="fa fa-eye"></i>' );
                 $this->output_split( @$post['views'], 'q-item-view' );
@@ -872,7 +871,7 @@
 
         function view_count( $q_item ) // prevent display of view count in the usual place
         {
-            if ( $this->template == 'question' )
+            if ( isset($q_item['content']) )
                 parent::view_count( $q_item );
         }
 
