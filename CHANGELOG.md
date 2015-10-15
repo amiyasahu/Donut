@@ -1,6 +1,6 @@
 # Change Log #
 
-## Version 1.6.1 ( in progress ) ##
+## Version 1.6.1 ##
 
 * Added custom 404 page
 * Added update uri to check for the updates of the theme
@@ -21,6 +21,7 @@
 * Fixed overflow of search box in chrome 
 * Fixed hidden questions page 
 * Added cache boosting for the newer css and JS files 
+* Support for multiple languages
 
 ## Version 1.5 ##
 
@@ -97,6 +98,7 @@
 * Improved CSS 
 * Improved nav bar 
 * Improevd navbar for mobile devices 
+* Better integration with the [Open login plugin](https://github.com/alixandru/q2a-open-login) 
 
 ## Version 1.1 ##
 
