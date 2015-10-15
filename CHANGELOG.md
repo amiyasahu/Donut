@@ -4,6 +4,7 @@
 
 * Fixed issue in related questions widget in questions bottom [issue #33](https://github.com/amiyasahu/Donut/issues/33)
 * Fixed issue in users page when default avatar is not set [issue #34](https://github.com/amiyasahu/Donut/issues/34)
+* Improved back to top button
 
 ## Version 1.6.1 ##
 
