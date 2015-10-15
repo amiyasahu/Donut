@@ -512,7 +512,7 @@ header#nav-header{min-height:80px}
 .qa-suggest-next{background:#fbfbfb;border:1px solid transparent;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd;box-shadow:0 10px 15px 0 #fff inset,0 0 5px 0 rgba(0,0,0,.05)}
 .qa-suggest-next a{font-weight:700}
 .qa-part-ranking,.user-box{margin-bottom:20px}
-.user-box-inner{display:block;text-align:center;border:1px solid transparent;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd;border-radius:5px;padding:5px}
+.user-box-inner{display:block;text-align:center;border:1px solid transparent;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd;border-radius:5px;padding:6px;min-height:165px}
 .user-box-inner .user-avatar{display:inline-block}
 .user-box-inner .user-avatar .qa-avatar-image{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto;border-radius:50%}
 .user-box-inner .user-data{margin-top:5px}
