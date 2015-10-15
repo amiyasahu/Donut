@@ -1,5 +1,10 @@
 # Change Log #
 
+## Version 1.6.2 ##
+
+* Fixed issue in related questions widget in questions bottom [#33](https://github.com/amiyasahu/Donut/issues/33)
+* Fixed issue in users page when default avatar is not set [#34](https://github.com/amiyasahu/Donut/issues/34)
+
 ## Version 1.6.1 ##
 
 * Added custom 404 page

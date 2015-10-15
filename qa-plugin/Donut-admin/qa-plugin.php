@@ -3,13 +3,13 @@
         Plugin Name: Donut theme Admin Panel
         Plugin URI: https://github.com/amiyasahu/Donut/
         Plugin Description: Provides customization support for Donut theme
-        Plugin Version: 1.6.0
-        Plugin Date: 2015-07-23
+        Plugin Version: 1.6.2
+        Plugin Date: 2015-10-15
         Plugin Author: Amiya Sahu
         Plugin Author URI: http://www.amiyasahu.com/
         Plugin License: GPLv2
         Plugin Minimum Question2Answer Version: 1.6
-        Plugin Update Check URI:
+        Plugin Update Check URI: https://github.com/amiyasahu/Donut/blob/master/qa-plugin/Donut-admin/metadata.json
     */
 
     if ( !defined( 'QA_VERSION' ) ) { // don't allow this page to be requested directly from browser
