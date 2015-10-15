@@ -280,7 +280,8 @@ header#nav-header{min-height:80px}
 .side-search-bar .input-group{display:block}
 .side-search-bar .input-group-btn{position:absolute;right:30px;top:4px}
 .side-search-bar .qa-search-field.form-control{border-radius:4px;padding:10px 45px 10px 12px;height:auto}
-.donut-top{display:inline-block;height:40px;width:40px;position:fixed;cursor:pointer;border-radius:4px;bottom:10%;right:10px;box-shadow:0 0 10px rgba(0,0,0,.05);background:#f0ad4e url(../images/top-arrow.svg) no-repeat center 50%;visibility:hidden;opacity:0;-webkit-transition:opacity .3s 0s,visibility 0s .3s;-moz-transition:opacity .3s 0s,visibility 0s .3s;transition:opacity .3s 0s,visibility 0s .3s}
+.donut-top{display:inline-block;height:40px;width:40px;position:fixed;cursor:pointer;border-radius:4px;bottom:10%;right:10px;box-shadow:0 0 10px rgba(0,0,0,.05);visibility:hidden;opacity:0;-webkit-transition:opacity .3s 0s,visibility 0s 0s;-moz-transition:opacity .3s 0s,visibility 0s 0s;transition:opacity .3s 0s,visibility 0s 0s;text-align:center;background-color:#f0ad4e;font-size:1.4em;padding:4px 0}
+.donut-top,.donut-top:active,.donut-top:focus,.donut-top:hover{color:#fff}
 .donut-top.is-visible{visibility:visible;opacity:1}
 .donut-top.fade-out{opacity:.5}
 @media only screen and (min-width:768px){.donut-top{right:20px;bottom:10%}}

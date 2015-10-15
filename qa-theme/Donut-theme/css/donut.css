@@ -1870,12 +1870,21 @@ header#nav-header {
   bottom: 10%;
   right: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  background: #f0ad4e url(../images/top-arrow.svg) no-repeat center 50%;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-  -moz-transition: opacity .3s 0s, visibility 0s .3s;
-  transition: opacity .3s 0s, visibility 0s .3s;
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+  text-align: center;
+  background-color: #f0ad4e;
+  font-size: 1.4em;
+  padding: 4px 0 ;
+}
+.donut-top,
+.donut-top:hover,
+.donut-top:active,
+.donut-top:focus {
+  color: #fff;
 }
 .donut-top.is-visible {
   visibility: visible;

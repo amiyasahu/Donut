@@ -9,12 +9,17 @@
 	bottom: 10%;
 	right: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-	background: @brand-warning url(../images/top-arrow.svg) no-repeat center 50%;
 	visibility: hidden;
 	opacity: 0;
-	-webkit-transition: opacity .3s 0s, visibility 0s .3s;
-	-moz-transition: opacity .3s 0s, visibility 0s .3s;
-	transition: opacity .3s 0s, visibility 0s .3s;
+	.opacity-transition();
+    text-align: center;
+    background-color: @brand-warning;
+    font-size: 1.4em;
+    padding: 4px 0 ;
+
+    & , &:hover , &:active , &:focus {
+      color: #fff;
+    }
 
 	&.is-visible {
 		visibility: visible;

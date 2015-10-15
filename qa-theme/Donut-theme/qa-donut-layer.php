@@ -449,7 +449,7 @@
             $this->output( '<footer class="donut-footer">' );
 
             if ( qa_opt( 'donut_enable_back_to_top_btn' ) ) {
-                $this->output( '<a class="donut-top"></a>' );
+                $this->output( '<a class="donut-top"><span class="fa fa-chevron-up"></span></a>' );
             }
 
             $this->output( '<div class="container">' );
