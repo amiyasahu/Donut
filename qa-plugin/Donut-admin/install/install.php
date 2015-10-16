@@ -3,7 +3,7 @@
         header( 'Location: ../' );
         exit;
     }
-    
+
     class donut_theme_install
     {
         const RESET_BTN = 'donut_admin_reset_btn';
@@ -23,7 +23,7 @@
             return null;
         }
 
-        private function qas_blog_upgrade_tables( $current_db_version )
+        private function donut_upgrade_tables( $current_db_version )
         {
             //currently we dont have anything to upgrade
             return false;

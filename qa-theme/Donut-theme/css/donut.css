@@ -3512,6 +3512,9 @@ a.qa-browse-cat-link:visited {
   border-bottom: 1px solid #e2e2e2;
   padding: 15px;
 }
+.qa-part-a-form .qa-a-form h2:last-child {
+  border-bottom: medium none;
+}
 .qa-part-a-list > h2 {
   font-size: 22px;
   position: relative;
