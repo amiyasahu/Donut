@@ -6,6 +6,7 @@
 * Fixed issue in users page when default avatar is not set [issue #34](https://github.com/amiyasahu/Donut/issues/34)
 * Improved back to top button
 * Fixed duplicate border bottoms if the answer form does not exists 
+* Fixed the compatibility of official facebook login plugin [#35](https://github.com/amiyasahu/Donut/issues/35)
 
 ## Version 1.6.1 ##
 
@@ -104,7 +105,7 @@
 * several bug fixes 
 * Improved CSS 
 * Improved nav bar 
-* Improevd navbar for mobile devices 
+* Improved navbar for mobile devices 
 * Better integration with the [Open login plugin](https://github.com/alixandru/q2a-open-login) 
 
 ## Version 1.1 ##
