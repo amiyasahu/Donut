@@ -113,7 +113,7 @@
                 'donut_banner_show_ask_box'   => 'option_donut_show_home_page_banner',
                 'donut_banner_closable'       => 'option_donut_show_home_page_banner',
                 'donut_copyright_text'        => 'option_donut_show_copyright_at_footer',
-                'donut_custom_404_page_text'  => 'option_donut_show_custom_404_page',
+                'donut_custom_404_text'       => 'option_donut_show_custom_404_page',
             );
             break;
 
