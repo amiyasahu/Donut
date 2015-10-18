@@ -7,6 +7,7 @@
 * Improved back to top button
 * Fixed duplicate border bottoms if the answer form does not exists 
 * Fixed the compatibility of official facebook login plugin [#35](https://github.com/amiyasahu/Donut/issues/35)
+* Fixed 404 page issue 
 
 ## Version 1.6.1 ##
 
