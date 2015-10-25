@@ -1,11 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Lato);
 .carousel-inner>.item>a>img,.carousel-inner>.item>img,.thumbnail a>img,.thumbnail>img{display:block;max-width:100%;height:auto}
 .btn-group-lg>.btn{padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:6px}
 .btn-group-sm>.btn{padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}
 .btn-group-xs>.btn{padding:1px 5px;font-size:12px;line-height:1.5;border-radius:3px}
 .btn-group-vertical>.btn-group:after,.btn-group-vertical>.btn-group:before,.btn-toolbar:after,.btn-toolbar:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.dl-horizontal dd:after,.dl-horizontal dd:before,.form-horizontal .form-group:after,.form-horizontal .form-group:before,.modal-footer:after,.modal-footer:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before,.pager:after,.pager:before,.panel-body:after,.panel-body:before,.qa-nav-sub .qa-nav-sub-list:after,.qa-nav-sub .qa-nav-sub-list:before,.row:after,.row:before{content:" ";display:table}
 .btn-group-vertical>.btn-group:after,.btn-toolbar:after,.container-fluid:after,.container:after,.dl-horizontal dd:after,.form-horizontal .form-group:after,.modal-footer:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after,.pager:after,.panel-body:after,.qa-nav-sub .qa-nav-sub-list:after,.row:after{clear:both}
-body,html{font-family:Lato,sans-serif}
+body,html{font-family:'Open Sans',sans-serif}
 .qa-nav-sub-admin-moderate,.qa-q-view-avatar-meta{clear:left}
 .form-control:focus{border-color:#66afe9;outline:0;-webkit-box-shadow:none;box-shadow:none}
 input[type=submit]{cursor:pointer}
@@ -253,11 +252,10 @@ header#nav-header{min-height:80px}
 .donut-site-stats-bottom .stats-wrap{margin:0 auto;display:table}
 .donut-site-stats-bottom .count-item{float:left;color:#000;font-size:18px;margin:0 30px 0 0;min-width:100px;padding:5px;text-align:center;text-transform:capitalize}
 .donut-site-stats-bottom .count-data{background:none repeat scroll 0 0 #555;border-radius:5px;color:#FFF;display:inline-block;margin-right:6px;padding:0 10px}
-.site-header{font-family:'Varela Round','Helvetica Neue',cursive,Arial,sans-serif}
 .site-header .site-header-entry{padding:10px 0;position:relative;z-index:5}
 .site-header .hide-btn-wrap{position:absolute;right:2%}
 .site-header .site-header-cover{background-color:#337ab7;color:#fff;height:100%;overflow:hidden;position:relative}
-.site-header .site-header-cover h1.top-heading{font-size:70px;font-weight:bolder;text-shadow:4px 3px 0 #337ab7,9px 8px 0 rgba(0,0,0,.15)}
+.site-header .site-header-cover h1.top-heading{font-size:70px;font-weight:700;text-shadow:4px 3px 0 #337ab7,9px 8px 0 rgba(0,0,0,.15)}
 @media only screen and (min-width:768px) and (max-width:991px){.site-header .site-header-cover h1.top-heading{font-size:40px}}
 @media only screen and (max-width:767px){.site-header .site-header-cover h1.top-heading{font-size:32px}}
 .site-header .site-header-fade{background-image:url(../images/discuss.jpg);background-position:0 40%;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;height:100%;opacity:.1;position:absolute;width:100%;z-index:2}

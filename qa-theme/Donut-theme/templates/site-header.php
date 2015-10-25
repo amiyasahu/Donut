@@ -1,4 +1,3 @@
-<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'/>
 <div id="site-header" class="site-header text-center">
     <div class="site-header-cover">
         <div class="site-header-fade"></div>

@@ -67,6 +67,7 @@ qa-plugin/mouseover-layer
 qa-plugin/opensearch-support
 qa-plugin/facebook-login
 qa-plugin/blog-tool
+qa-plugin/extra-blog-field
 qa-plugin/q2a*
 qa-theme/Candy
 qa-theme/Classic

@@ -7,6 +7,9 @@
     class qa_html_theme extends qa_html_theme_base
     {
 
+        // use local font files instead of Google Fonts
+        private $localfonts = true;
+
         /**
          * Doctype function
          */
@@ -75,6 +78,12 @@
             }
 
             $this->donut_resources( $css_paths, 'css' );
+
+            if($this->localfonts){
+                $this->donut_resources(array('css/open-sans.css'));
+            } else {
+                $this->donut_resources(array('https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic'));
+            }
         }
 
         /**
