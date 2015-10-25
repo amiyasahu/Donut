@@ -21,6 +21,7 @@
     {
         $fixed_defaults = array(
             'donut_activate_prod_mode'           => 0,
+            'donut_use_local_font'               => 1,
             'donut_enable_top_bar'               => 1,
             'donut_show_top_social_icons'        => 1,
             'donut_enable_sticky_header'         => 1,
@@ -78,6 +79,7 @@
     {
         return array(
             'donut_activate_prod_mode',
+            'donut_use_local_font',
             'donut_enable_top_bar',
             'donut_show_top_social_icons',
             'donut_enable_sticky_header',

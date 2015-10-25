@@ -1,7 +1,6 @@
 <?php
     return array(
-        'donut_activate_prod_mode'           => 'Activate Prod Mode',
-        'donut_activate_prod_mode_note'      => 'use minified css , js and Bootstrap CDN',
+        'donut_activate_prod_mode'           => 'Activate Prod Mode (use minified css , js and Bootstrap CDN)',
         'donut_enable_top_bar'               => 'Enable top bar (above the main navigation)',
         'donut_top_bar_left_text'            => 'Top bar left text',
         'donut_top_bar_right_text'           => 'Top bar right text',
@@ -36,6 +35,7 @@
         'donut_email_address'                => 'Email adderss',
         'donut_show_custom_404_page'         => 'Show custom 404 page',
         'donut_custom_404_text'              => 'Custom 404 text',
+        'donut_use_local_font'               => 'Use local font (Google fonts will be loaded if unchecked)',
     );
 
     /*

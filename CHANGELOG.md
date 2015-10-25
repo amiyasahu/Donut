@@ -1,5 +1,10 @@
 # Change Log #
 
+# Version 1.6.3 ##
+
+* Used Open-sans font for better readibility 
+* Used local font for supporting both http and https
+
 ## Version 1.6.2 ##
 
 * Fixed issue in related questions widget in questions bottom [issue #33](https://github.com/amiyasahu/Donut/issues/33)

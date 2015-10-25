@@ -7,9 +7,6 @@
     class qa_html_theme extends qa_html_theme_base
     {
 
-        // use local font files instead of Google Fonts
-        private $localfonts = true;
-
         /**
          * Doctype function
          */
@@ -61,7 +58,7 @@
             $css_paths = array(
                     'fonts'     => 'css/font-awesome.min.css?4.2.0',
                     'bootstrap' => 'css/bootstrap.min.css?3.3.5',
-                    'donut'     => 'css/donut.css?' . DONUT_THEME_VERSION,
+                    'donut'     => 'css/donut.cssS?' . DONUT_THEME_VERSION,
             );
 
             if ( qa_opt( 'donut_activate_prod_mode' ) ) {
@@ -79,10 +76,10 @@
 
             $this->donut_resources( $css_paths, 'css' );
 
-            if($this->localfonts){
-                $this->donut_resources(array('css/open-sans.css'));
+            if( qa_opt('donut_use_local_font') ){
+                $this->donut_resources( array( 'css/open-sans.css?' . DONUT_THEME_VERSION) );
             } else {
-                $this->donut_resources(array('https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic'));
+                $this->donut_resources( array( 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic' ) , 'css' , true );
             }
         }
 

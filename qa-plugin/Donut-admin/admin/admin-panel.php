@@ -33,6 +33,7 @@
 
     $optiontype = array(
         'donut_activate_prod_mode'           => 'checkbox',
+        'donut_use_local_font'               => 'checkbox',
         'donut_enable_top_bar'               => 'checkbox',
         'donut_show_top_social_icons'        => 'checkbox',
         'donut_enable_sticky_header'         => 'checkbox',
@@ -83,7 +84,7 @@
 
         case 'general-settings':
             $subtitle = 'general';
-            $showoptions = array( 'donut_general_settings_notice', 'donut_activate_prod_mode', 'donut_enable_top_bar', 'donut_top_bar_left_text', 'donut_top_bar_right_text', 'donut_show_top_social_icons', 'donut_enable_sticky_header', 'donut_enable_back_to_top_btn' );
+            $showoptions = array( 'donut_general_settings_notice', 'donut_activate_prod_mode', 'donut_use_local_font','donut_enable_top_bar', 'donut_top_bar_left_text', 'donut_top_bar_right_text', 'donut_show_top_social_icons', 'donut_enable_sticky_header', 'donut_enable_back_to_top_btn' );
             array_push( $showoptions, 'donut_show_collapsible_btns' );
             array_push( $showoptions, 'donut_show_custom_404_page', 'donut_custom_404_text' );
 
@@ -272,13 +273,15 @@
 
             switch ( $optionname ) { // special treatment for certain options
 
-                case 'donut_activate_prod_mode':
+                case 'special_opt': //not using for now
                     $optionfield['note'] = donut_options_lang_html( $optionname . '_note' );
                     break;
 
             }
 
             switch ( $optionname ) {
+                case 'donut_activate_prod_mode':
+                case 'donut_use_local_font':
                 case 'donut_top_bar_left_text':
                 case 'donut_top_bar_right_text':
                 case 'donut_enable_top_bar':
