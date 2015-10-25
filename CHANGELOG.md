@@ -2,7 +2,7 @@
 
 # Version 1.6.3 ##
 
-* Used Open-sans font for better readibility 
+* Used Open-sans font for better readability 
 * Used local font for supporting both http and https
 
 ## Version 1.6.2 ##
