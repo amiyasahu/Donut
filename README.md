@@ -87,7 +87,7 @@ This code has not been extensively tested on high-traffic installations of Q2A. 
   [Install Question2Answer]: http://www.question2answer.org/install.php
   [Git]: http://git-scm.com/
   [Donut theme]: https://github.com/amiyasahu/Donut
-  [change log]: https://github.com/amiyasahu/Donut/CHANGELOG.md
+  [change log]: https://github.com/amiyasahu/Donut/blob/master/CHANGELOG.md
   [GitHub]: https://github.com/amiyasahu/Donut
   [repositary]: https://github.com/amiyasahu/Donut
   [latest release]: https://github.com/amiyasahu/Donut/releases/latest
