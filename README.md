@@ -69,7 +69,7 @@ This free theme is created with :heart: by [Amiya Sahu](http://amiyasahu.com) an
 
 * [Bootstrap](http://getbootstrap.com/)
 * [FontAwesome](http://fortawesome.github.io/Font-Awesome/) for cool icons
-* [BootstrapCDN](http://www.bootstrapcdn.com/) for providing free CDN for bootstrap and FoneAwesome
+* [BootstrapCDN](http://www.bootstrapcdn.com/) for providing free CDN for Bootstrap and FontAwesome
 * [Freepik.com](http://www.freepik.com/) for the awesome vectors
 
 ## License ##
