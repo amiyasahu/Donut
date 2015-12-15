@@ -12,39 +12,42 @@
             <?php endif ?>
 
             <h1 class="top-heading"><?php echo qa_opt( 'donut_banner_head_text' ) ?></h1>
-
-            <div class="container visible-md visible-lg">
-                <div class="col-md-4 jumbo-box">
-                    <div class="wrap">
-                        <div class="icon-wrap">
-                            <span class="<?php echo qa_opt( 'donut_banner_div1_icon' ) ?>  large-icon"></span>
+            
+            <?php if ( qa_opt( 'donut_banner_div1_text' ) or qa_opt( 'donut_banner_div2_text' ) or qa_opt( 'donut_banner_div2_text' ) or qa_opt( 'donut_banner_div1_icon' ) or qa_opt( 'donut_banner_div2_icon' ) or qa_opt( 'donut_banner_div3_icon' ) ): ?>
+                <div class="container visible-md visible-lg">
+                    <div class="col-md-4 jumbo-box">
+                        <div class="wrap">
+                            <div class="icon-wrap">
+                                <span class="<?php echo qa_opt( 'donut_banner_div1_icon' ) ?>  large-icon"></span>
+                            </div>
+                            <div class="hint">
+                                <?php echo qa_opt( 'donut_banner_div1_text' ) ?>
+                            </div>
                         </div>
-                        <div class="hint">
-                            <?php echo qa_opt( 'donut_banner_div1_text' ) ?>
+                    </div>
+                    <div class="col-md-4 jumbo-box">
+                        <div class="wrap">
+                            <div class="icon-wrap">
+                                <span class="<?php echo qa_opt( 'donut_banner_div2_icon' ) ?> large-icon"></span>
+                            </div>
+                            <div class="hint">
+                                <?php echo qa_opt( 'donut_banner_div2_text' ) ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 jumbo-box">
+                        <div class="wrap">
+                            <div class="icon-wrap">
+                                <span class="<?php echo qa_opt( 'donut_banner_div3_icon' ) ?> large-icon"></span>
+                            </div>
+                            <div class="hint">
+                                <?php echo qa_opt( 'donut_banner_div3_text' ) ?>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 jumbo-box">
-                    <div class="wrap">
-                        <div class="icon-wrap">
-                            <span class="<?php echo qa_opt( 'donut_banner_div2_icon' ) ?> large-icon"></span>
-                        </div>
-                        <div class="hint">
-                            <?php echo qa_opt( 'donut_banner_div2_text' ) ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 jumbo-box">
-                    <div class="wrap">
-                        <div class="icon-wrap">
-                            <span class="<?php echo qa_opt( 'donut_banner_div3_icon' ) ?> large-icon"></span>
-                        </div>
-                        <div class="hint">
-                            <?php echo qa_opt( 'donut_banner_div3_text' ) ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endif ?>
+            
             <div class="search-wrapper">
                 <?php if ( qa_opt( 'donut_banner_show_ask_box' ) ): ?>
                     <div class="search-bar col-lg-4 col-lg-push-4 col-md-6 col-md-push-3 col-sm-8 col-sm-push-2 col-xs-10 col-xs-push-1">
