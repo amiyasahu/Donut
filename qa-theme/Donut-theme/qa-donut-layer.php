@@ -403,7 +403,7 @@
 
         function sidepanel()
         {
-            $this->output( '<div class="qa-sidepanel col-md-3 pull-right">' );
+            $this->output( '<div class="qa-sidepanel col-md-3 col-xs-12 pull-right">' );
             $this->output( '<div class="side-search-bar hidden-xs">' );
             $this->search();
             $this->output( '</div>' );
