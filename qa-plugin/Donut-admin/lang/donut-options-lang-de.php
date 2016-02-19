@@ -1,0 +1,43 @@
+<?php
+    return array(
+        'donut_activate_prod_mode'           => 'Activate Prod Mode (use minified css , js and Bootstrap CDN)',
+        'donut_enable_top_bar'               => 'Aktiviert die Top Leiste (oberhalb des Hauptmenüs)',
+        'donut_top_bar_left_text'            => 'Top Leiste linker Text',
+        'donut_top_bar_right_text'           => 'Top Leiste rechter Text',
+        'donut_show_top_social_icons'        => 'Zeige die Sozialen Verlinkungen im Kopfbereich',
+        'donut_enable_sticky_header'         => 'Fixiere den Kopfbereich auch beim scrollen',
+        'donut_enable_back_to_top_btn'       => 'Aktiviert den zurück nach oben Button',
+        'donut_show_home_page_banner'        => 'Zeige das Homepage Banner',
+        'donut_banner_head_text'             => 'Banner Kopfbereich Text',
+        'donut_banner_div1_text'             => 'Erste Box Text',
+        'donut_banner_div1_icon'             => 'Erste Box Icon',
+        'donut_banner_div2_text'             => 'Zweite Box Text',
+        'donut_banner_div2_icon'             => 'Zweite Box Icon',
+        'donut_banner_div3_text'             => 'Dritte Box Text',
+        'donut_banner_div3_icon'             => 'Dritte Box Icon',
+        'donut_banner_show_ask_box'          => 'Zeige die Frage stellen Box im Banner',
+        'donut_banner_closable'              => 'Erlaube Benutzern das Banner zu schließen',
+        'donut_show_collapsible_btns'        => 'Führe alle extra Buttons zu einem Action Button auf der Fragen Seite zusammen.',
+        'donut_show_breadcrumbs'             => 'Zeige die Brotnavigation unterhalb des Titels (Für eine bessere Darstellung, füge es nicht zusätzlich über Admin/Layout hinzu)',
+        'donut_show_site_stats_above_footer' => 'Zeige den Seitenstatusüber dem footer Bereich',
+        'donut_show_social_links_at_footer'  => 'Zeige die social Links im footer Bereich',
+        'donut_show_copyright_at_footer'     => 'Zeige das Copyright im footer Bereich',
+        'donut_copyright_text'               => 'Copyright Text',
+        'donut_general_settings_notice'      => '<h3 class="text-center">Donut Allgemeine Einstellungen</h3>',
+        'donut_homepage_settings_notice'     => '<h3 class="text-center">Donut Homepage Einstellungen</h3>',
+        'donut_footer_settings_notice'       => '<h3 class="text-center">Donut footer Einstellungen</h3>',
+        'donut_social_settings_notice'       => '<h3 class="text-center">Donut social Einstellungen</h3>',
+        'donut_facebook_url'                 => 'Facebook URL',
+        'donut_twitter_url'                  => 'Twitter URL',
+        'donut_pinterest_url'                => 'Pinterest URL',
+        'donut_google-plus_url'              => 'Google plus URL',
+        'donut_vk_url'                       => 'VK URL',
+        'donut_email_address'                => 'E-Mail Adresse',
+        'donut_show_custom_404_page'         => 'Zeige individuelle 404 Seite',
+        'donut_custom_404_text'              => 'Individueller 404 Text',
+        'donut_use_local_font'               => 'Benutze lokale Schriftart (Google fonts will be loaded if unchecked)',
+    );
+
+    /*
+        Omit PHP closing tag to help avoid accidental output
+    */
