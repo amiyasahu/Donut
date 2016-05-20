@@ -9,7 +9,7 @@
         'donut_enable_back_to_top_btn'       => 'Enable back to top button',
         'donut_show_home_page_banner'        => 'Show home page banner',
         'donut_banner_head_text'             => 'Banner header text',
-        'donut_banner_div1_text'             => 'Fist box text',
+        'donut_banner_div1_text'             => 'First box text',
         'donut_banner_div1_icon'             => 'First box icon',
         'donut_banner_div2_text'             => 'Second box text',
         'donut_banner_div2_icon'             => 'Second box icon',
