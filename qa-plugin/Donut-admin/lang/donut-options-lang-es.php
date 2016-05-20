@@ -21,7 +21,7 @@
         'donut_show_breadcrumbs'             => 'Mostrar breadcrumbs debajo del titulo (Para unas breadcrumbs mas vistosas, no tienes que agregarlas desde Admin/Layout)',
         'donut_show_site_stats_above_footer' => 'Mostrar estadísticas del sitio en el pie de página',
         'donut_show_social_links_at_footer'  => 'Mostrar iconos sociales en el pie de página',
-        'donut_show_copyright_at_footer'     => 'Mosgtrar copyright el pie de página',
+        'donut_show_copyright_at_footer'     => 'Mostrar copyright el pie de página',
         'donut_copyright_text'               => 'Texto de copyright',
         'donut_general_settings_notice'      => '<h3 class="text-center">Configuraciones generales de Donut</h3>',
         'donut_homepage_settings_notice'     => '<h3 class="text-center">Configuraciones de Portada de Donut</h3>',
