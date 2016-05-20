@@ -19,7 +19,7 @@
         'donut_banner_closable'              => 'Permitir que los usuarios cierren el banner',
         'donut_show_collapsible_btns'        => 'Colapsar los botones extras en un boton de acción en la página de preuntas',
         'donut_show_breadcrumbs'             => 'Mostrar breadcrumbs debajo del titulo (Para unas breadcrumbs mas vistosas, no tienes que agregarlas desde Admin/Layout)',
-        'donut_show_site_stats_above_footer' => 'Mostrar estado del sitio sobre el pie de página',
+        'donut_show_site_stats_above_footer' => 'Mostrar estadísticas del sitio en el pie de página',
         'donut_show_social_links_at_footer'  => 'Mostrar iconos sociales en el pie de página',
         'donut_show_copyright_at_footer'     => 'Mosgtrar copyright el pie de página',
         'donut_copyright_text'               => 'Texto de copyright',
