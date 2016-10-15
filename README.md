@@ -1,18 +1,18 @@
-# Donut Theme #
+# Donut Theme
 
 Modern and Responsive theme for Question2Answer ( Q2A ) which is made for great readability with awesome user experience powered by [Bootstrap](http://getbootstrap.com/).
 
-##### Screenshot #####
+##### Screenshot
 
 [![Donut theme](https://raw.githubusercontent.com/amiyasahu/Donut/gh-pages/screenshots/home-page-banner.png)](https://github.com/amiyasahu/Donut)
 
-## Description ##
+## Description
 [Donut theme][] is a free and open-source **responsive Question2Answer theme** designed for great readability with a clean interface powered by [Bootstrap](http://getbootstrap.com/). 
 Also it comes with an admin panel with bunch of options to let you change nearly any aspect of your theme and customize your website .
 
 [Theme Demo](http://demo.amiyasahu.com/donut/) and [Change log](https://github.com/amiyasahu/Donut/blob/master/CHANGELOG.md)
 
-## Features ##
+## Features
 
 * Mobile first responsive layout 
 * Powered by [Bootstrap](http://getbootstrap.com/)
@@ -32,7 +32,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 * Multilingual support
 
 
-## Installation ##
+## Installation
 
 1. [Install Question2Answer][]. This theme requires at latest version 1.7 (see the [change log][] for details)   
 2. [Download the latest version][latest release] of theme from GitHub , either using [Git][], or downloading directly:
@@ -52,36 +52,35 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 6. Visit `http://your-q2a-site.com/admin/general` , select the `Donut` for both the `Site theme` and `Theme for mobile`
 7. Congratulations , Donut theme is now up and running on your website :smile:
 
-## Contribution guidelines ##
+## Contribution guidelines
 
 * Fork the [repositary][] and make improvements . Feel free to send a Pull requests
 * Help me in testing the theme and finding the bugs 
 * Report [bugs][] here if you find any 
 * Review the code if you are a developer who loves q2a platform
+* Star the repository which is very encouraging 
 * Help me writing a better software 
 * Tell your friends about Q2A (and Donut theme :smile:) and help Q2A growing 
 
-## Author ##
+## Author
 
 This free theme is created with :heart: by [Amiya Sahu](http://amiyasahu.com) and [contributors](https://github.com/amiyasahu/Donut/graphs/contributors)
 
-## Credits ##
+## Credits
 
 * [Bootstrap](http://getbootstrap.com/)
 * [FontAwesome](http://fortawesome.github.io/Font-Awesome/) for cool icons
 * [BootstrapCDN](http://www.bootstrapcdn.com/) for providing free CDN for Bootstrap and FontAwesome
 * [Freepik.com](http://www.freepik.com/) for the awesome vectors
 
-## License ##
+## License
 This program is free software; you can redistribute it and/or modify it under the terms of the [GNU General Public License](https://github.com/amiyasahu/Donut/blob/master/LICENSE) as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
-## Disclaimer ##
+## Disclaimer
 This code has not been extensively tested on high-traffic installations of Q2A. You should perform your own tests before using this plugin on a live (production) environment. 
 
-## About Question2Answer ##
+## About Question2Answer
 **Question2Answer** is a free and open source PHP and MySQL based platform for creating Question & Answer sites. For more information visit Q2A's official site at [question2answer.org](http://www.question2answer.org/)
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/amiyasahu/donut/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
   [Question2Answer]: http://www.question2answer.org/
   [Install Question2Answer]: http://www.question2answer.org/install.php
