@@ -1,11 +1,11 @@
-# Change Log #
+# Change Log
 
-# Version 1.6.3 ##
+# Version 1.6.3
 
 * Used Open-sans font for better readability 
 * Used local font for supporting both http and https
 
-## Version 1.6.2 ##
+## Version 1.6.2
 
 * Fixed issue in related questions widget in questions bottom [issue #33](https://github.com/amiyasahu/Donut/issues/33)
 * Fixed issue in users page when default avatar is not set [issue #34](https://github.com/amiyasahu/Donut/issues/34)
@@ -14,14 +14,14 @@
 * Fixed the compatibility of official facebook login plugin [#35](https://github.com/amiyasahu/Donut/issues/35)
 * Fixed 404 page issue 
 
-## Version 1.6.1 ##
+## Version 1.6.1
 
 * Added custom 404 page
 * Added update uri to check for the updates of the theme
 * Added installation instructions 
 * Fixed a minor bug for the admin panel page 
 
-## Version 1.6 ##
+## Version 1.6
 
 * Added new Donut Admin plugin 
 * Added Admin page settings for Donut theme 
@@ -37,7 +37,7 @@
 * Added cache boosting for the newer css and JS files 
 * Support for multiple languages
 
-## Version 1.5 ##
+## Version 1.5
 
 * Several minor CSS bug fixes 
 * Fixed view count overlaps when error is shown on question page
@@ -58,7 +58,7 @@
 * Updated Ask button icon 
 * Added IP block and unblock icons 
 
-## Version 1.4 ##
+## Version 1.4
 
 * Bootstrap updated to 3.3 and FontAwesome updated to 4.2.0
 * Major LESS refractoring for saving KBs in the generated CSS file
@@ -101,24 +101,24 @@
 * Updated for errors when ajax response
 * Added private message link in the user dropdown navigation 
 
-## Version 1.3 ##
+## Version 1.3
 
 * CSS bug fixes 
 * Added template files 
 
 
-## Version 1.2 ##
+## Version 1.2
 * several bug fixes 
 * Improved CSS 
 * Improved nav bar 
 * Improved navbar for mobile devices 
 * Better integration with the [Open login plugin](https://github.com/alixandru/q2a-open-login) 
 
-## Version 1.1 ##
+## Version 1.1
 
 * Several minor CSS bug fixes 
 
-## Version 1.0 ##
+## Version 1.0
 * Initial version 
 * Responsive layout 
 * Powered by [Bootstrap](http://getbootstrap.com/) 
