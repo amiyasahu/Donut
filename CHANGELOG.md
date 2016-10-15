@@ -1,6 +1,6 @@
 # Change Log
 
-# Version 1.6.3
+## Version 1.6.3 (Latest stable version)
 
 * Used Open-sans font for better readability 
 * Used local font for supporting both http and https
