@@ -10,7 +10,7 @@ Modern and Responsive theme for Question2Answer ( Q2A ) which is made for great 
 [Donut theme][] is a free and open-source **responsive Question2Answer theme** designed for great readability with a clean interface powered by [Bootstrap](http://getbootstrap.com/). 
 Also it comes with an admin panel with bunch of options to let you change nearly any aspect of your theme and customize your website .
 
-[Theme Demo](http://demo.amiyasahu.com/donut/) and [Change log](https://github.com/amiyasahu/Donut/blob/master/CHANGELOG.md)
+[Change log](https://github.com/amiyasahu/Donut/blob/master/CHANGELOG.md)
 
 ## Features
 
