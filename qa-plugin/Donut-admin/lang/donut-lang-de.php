@@ -22,6 +22,8 @@
         'ask_us_anything'             => 'Frage uns alles',
         'page_not_found_default_text' => 'Oops.. Seite nicht gefunden',
         'admin_notes'                 => 'Bitte benutze die Theme Einstellung im Administrationsbereich um das Donut Theme anzupassen. Hier kannst du nur das Theme auf die Werkseinstellungen zurück setzen',
+        'ask_placeholder'             => 'Type your question',
+        'ask_button'                  => 'Ask !',
     );
 
     /*

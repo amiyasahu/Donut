@@ -22,6 +22,8 @@
         'ask_us_anything'             => 'Pergunte-nos alquer coisa',
         'page_not_found_default_text' => 'Oops.. Página não encontrada',
         'admin_notes'                 => 'Por favor, visite a seção "Admin/Configuração Tema Donut" para personalizar o tema Donut.',
+        'ask_placeholder'             => 'Faça sua pergunta',
+        'ask_button'                  => 'Pergunte!',
     );
 
     /*
