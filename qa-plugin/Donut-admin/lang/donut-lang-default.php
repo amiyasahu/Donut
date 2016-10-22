@@ -22,6 +22,8 @@
         'ask_us_anything'             => 'Ask us anything',
         'page_not_found_default_text' => 'Oops.. Page not found',
         'admin_notes'                 => 'Please visit to the `Admin/Donut theme settings` section for customizing the donut theme . Here only you can only reset the donut theme settings to its defaults',
+        'ask_placeholder'             => 'Type your question',
+        'ask_button'                  => 'Ask !',
     );
 
     /*
