@@ -355,7 +355,8 @@
             $content = $this->content;
             $width_class = ( $this->donut_do_hide_sidebar() && $this->template != 'admin' ) ? 'col-xs-12' : 'qa-main col-md-9 col-xs-12 pull-left';
 
-            $this->output( '<div class="' . $width_class . ( @$this->content['hidden'] ? ' qa-main-hidden' : '' ) . '">' );
+            $extratags = isset($this->content['main_tags']) ? $this->content['main_tags'] : '';
+            $this->output( '<div class="' . $width_class . ( @$this->content['hidden'] ? ' qa-main-hidden' : '' ) . '"'.$extratags.'>' );
 
             if ( !empty( $this->content['navigation']['sub'] ) || $this->template == 'admin' ) {
                 $this->donut_sidebar_toggle_nav_btn();
