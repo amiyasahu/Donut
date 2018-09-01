@@ -1064,14 +1064,10 @@
 											' . @$pointshtml . '
 										</div>
 								</div>' );
-
-                        if ( qa_opt( 'badge_active' ) && function_exists( 'qa_get_badge_list' ) )
-                            $this->output( '<div class="badge-list">' . donut_user_badge( $handle ) . '</div>' );
-
                         $this->output( '</div>' );
                         $this->output( '</div>' );
-
                     }
+                    
                     $this->output( '</div>' );
                     $this->output( '</div>' );
                 } else {

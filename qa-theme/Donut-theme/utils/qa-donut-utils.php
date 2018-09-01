@@ -119,47 +119,6 @@
         return false;
     }
 
-    function donut_user_badge( $handle )
-    {
-        if ( qa_opt( 'badge_active' ) ) {
-            $userids = qa_handles_to_userids( array( $handle ) );
-            $userid = $userids[$handle];
-
-
-            // displays small badge widget, suitable for meta
-
-            $result = qa_db_read_all_values(
-                qa_db_query_sub(
-                    'SELECT badge_slug FROM ^userbadges WHERE user_id=#',
-                    $userid
-                )
-            );
-
-            if ( count( $result ) == 0 ) return;
-
-            $badges = qa_get_badge_list();
-            foreach ( $result as $slug ) {
-                $bcount[$badges[$slug]['type']] = isset( $bcount[$badges[$slug]['type']] ) ? $bcount[$badges[$slug]['type']] + 1 : 1;
-            }
-            $output = '<ul class="user-badge clearfix">';
-            for ( $x = 2 ; $x >= 0 ; $x-- ) {
-                if ( !isset( $bcount[$x] ) ) continue;
-                $count = $bcount[$x];
-                if ( $count == 0 ) continue;
-
-                $type = qa_get_badge_type( $x );
-                $types = $type['slug'];
-                $typed = $type['name'];
-
-                $output .= '<li class="badge-medal ' . $types . '"><i class="icon-badge" title="' . $count . ' ' . $typed . '"></i><span class="badge-pointer badge-' . $types . '-count" title="' . $count . ' ' . $typed . '"> ' . $count . '</span></li>';
-            }
-            $output = substr( $output, 0, -1 );  // lazy remove space
-            $output .= '</ul>';
-
-            return ( $output );
-        }
-    }
-
     function donut_get_user_level( $userid )
     {
         global $donut_userid_and_levels;
