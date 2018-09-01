@@ -3933,10 +3933,8 @@ a.qa-browse-cat-link:visited {
   padding-right: 5px;
   color: #f2b866;
 }
-.qa-template-user .qa-part-form-profile,
-.qa-template-user .qa-part-form-activity,
-.qa-template-user .qa-part-message-list,
-.qa-template-user .qa-part-form-badges-list {
+.qa-template-user [class^="qa-part-form"],
+.qa-template-user .qa-part-message-list {
   border: 1px solid transparent;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -3947,28 +3945,23 @@ a.qa-browse-cat-link:visited {
   margin-bottom: 3px;
   overflow: hidden;
   width: 100%;
+  float: right;
+  clear: right;
 }
 @media only screen and (min-width: 992px) {
-  .qa-template-user .qa-part-form-profile,
-  .qa-template-user .qa-part-form-activity,
-  .qa-template-user .qa-part-message-list,
-  .qa-template-user .qa-part-form-badges-list {
+  .qa-template-user [class^="qa-part-form"],
+  .qa-template-user .qa-part-message-list {
     width: 49.9%;
     float: left;
   }
 }
-.qa-template-user .qa-part-form-profile > h2 > a:hover,
-.qa-template-user .qa-part-form-activity > h2 > a:hover,
-.qa-template-user .qa-part-message-list > h2 > a:hover,
-.qa-template-user .qa-part-form-badges-list > h2 > a:hover {
+.qa-template-user [class^="qa-part-form"] > h2 > a:hover,
+.qa-template-user .qa-part-message-list > h2 > a:hover {
   text-decoration: none;
   cursor: pointer;
 }
-.qa-template-user .qa-part-form-activity,
-.qa-template-user .qa-part-message-list,
-.qa-template-user .qa-part-form-badges-list {
-  float: right;
-  clear: right;
+.qa-template-user .qa-part-form-profile {
+  float: left;
 }
 .qa-template-user .qa-part-form-profile tr#permits {
   height: 100%;
@@ -4071,7 +4064,6 @@ a.qa-browse-cat-link:visited {
   font-size: 2em;
   padding: 20px 0;
 }
-
-.qa-template-favorites .qa-q-list{
-  float:none
+.qa-template-favorites .qa-q-list {
+  float: none;
 }

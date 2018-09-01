@@ -1323,10 +1323,8 @@ html, body {
 
 .qa-template-user {
 
-  .qa-part-form-profile,
-  .qa-part-form-activity,
-  .qa-part-message-list,
-  .qa-part-form-badges-list {
+[class^="qa-part-form"],
+  .qa-part-message-list{
     .light-border();
     position: relative;
     min-height: 1px;
@@ -1334,6 +1332,8 @@ html, body {
     margin-bottom: 3px;
     overflow: hidden;
     width: 100%;
+    float: right;
+    clear: right;
 
     @media @desktop-and-above {
       width: 49.9%;
@@ -1348,14 +1348,10 @@ html, body {
     }
   }
 
-  .qa-part-form-activity,
-  .qa-part-message-list,
-  .qa-part-form-badges-list {
-    float: right;
-    clear: right;
-  }
-
   .qa-part-form-profile {
+    
+    float: left;
+
     table.qa-form-wide-table {
 
     }
