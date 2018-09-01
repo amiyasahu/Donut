@@ -48,9 +48,10 @@ Also it comes with an admin panel with bunch of options to let you change nearly
      
 3. Copy the [Donut-admin][Plugin folder] folder to `qa-plugin` directory of your q2a installation (eg. `qa-plugin/Donut-admin`) 
 4. Copy the [Donut-theme][Theme folder] folder to `qa-theme` directory of your q2a installation (eg. `qa-theme/Donut-theme`)
-5. Visit `http://your-q2a-site.com/admin/donut-theme/general-settings` for configuring the theme as per your taste 
-6. Visit `http://your-q2a-site.com/admin/general` , select the `Donut` for both the `Site theme` and `Theme for mobile`
-7. Congratulations, Donut theme is now up and running on your website :smile:
+5. If your site language is other than English, Copy the appropriate language files from [here][Donut lang] to `qa-plugin/Donut-admin/lang` directory
+6. Visit `http://your-q2a-site.com/admin/donut-theme/general-settings` for configuring the theme as per your taste 
+7. Visit `http://your-q2a-site.com/admin/general` , select the `Donut` for both the `Site theme` and `Theme for mobile`
+8. Congratulations, Donut theme is now up and running on your website :smile:
 
 ## Contribution guidelines
 
@@ -86,6 +87,7 @@ This code has not been extensively tested on high-traffic installations of Q2A. 
   [Install Question2Answer]: http://www.question2answer.org/install.php
   [Git]: http://git-scm.com/
   [Donut theme]: https://github.com/amiyasahu/Donut
+  [Donut lang]: https://github.com/amiyasahu/Donut-language-files
   [change log]: https://github.com/amiyasahu/Donut/blob/master/CHANGELOG.md
   [GitHub]: https://github.com/amiyasahu/Donut
   [Theme folder]: https://github.com/amiyasahu/Donut/tree/master/qa-theme/Donut-theme
