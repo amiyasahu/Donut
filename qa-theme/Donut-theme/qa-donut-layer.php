@@ -766,7 +766,7 @@
         {
             if ( isset( $post[$element] ) ) {
                 $icon = donut_get_voting_icon( $element );
-                $this->output( '<button ' . $post[$element] . ' type="submit" value="' . $value . '" class="' . $class . '-button"/> ' . $icon . '</button>' );
+                $this->output( '<button ' . $post[$element] . ' type="submit" value="' . $value . '" class="' . $class . '-button"> ' . $icon . '</button>' );
             }
         }
 
@@ -1067,7 +1067,7 @@
                         $this->output( '</div>' );
                         $this->output( '</div>' );
                     }
-                    
+
                     $this->output( '</div>' );
                     $this->output( '</div>' );
                 } else {
