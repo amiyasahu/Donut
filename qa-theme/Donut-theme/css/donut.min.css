@@ -655,3 +655,4 @@ a.qa-browse-cat-link,a.qa-browse-cat-link:visited{font-weight:700;text-decoratio
 .page-not-found .icon-wrap{width:12em;height:12em;margin:auto;padding:2em;border-radius:50%;border:2px dashed transparent;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#777}
 .page-not-found .large-icon{font-size:8em;text-shadow:4px 3px 0 #fff,9px 8px 0 rgba(0,0,0,.15)}
 .page-not-found .not-found-text{font-size:2em;padding:20px 0}
+.qa-template-favorites .qa-q-list{float:none}

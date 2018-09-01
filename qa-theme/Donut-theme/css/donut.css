@@ -4071,3 +4071,7 @@ a.qa-browse-cat-link:visited {
   font-size: 2em;
   padding: 20px 0;
 }
+
+.qa-template-favorites .qa-q-list{
+  float:none
+}
