@@ -76,3 +76,4 @@ qa-theme/SnowFlat
 
 #PHPStroam config files
 .idea
+qa-cache/.htaccess
