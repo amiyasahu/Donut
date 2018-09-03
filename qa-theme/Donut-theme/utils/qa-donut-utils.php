@@ -133,13 +133,45 @@
         }
     }
 
+    function donut_get_user_avatar_image($flags, $email, $handle, $blobId, $width, $height, $size, $padding = false){
+
+        require_once QA_INCLUDE_DIR . 'app/format.php';
+
+        if (strlen($handle) == 0) {
+            return null;
+        }
+
+        $avatarSource = qa_get_user_avatar_source($flags, $email, $blobId);
+
+        switch ($avatarSource) {
+            case 'gravatar':
+                $html = qa_get_gravatar_html($email, $size);
+                break;
+            case 'local-user':
+                $html = qa_get_avatar_blob_html($blobId, $width, $height, $size, $padding);
+                break;
+            case 'local-default':
+                $html = qa_get_avatar_blob_html(qa_opt('avatar_default_blobid'), qa_opt('avatar_default_width'), qa_opt('avatar_default_height'), $size, $padding);
+                break;
+            default: // NULL
+                return null;
+        }
+
+        return $html;
+    }
+
     function donut_get_user_avatar( $userid, $size = 40 )
     {
         if ( !defined( 'QA_WORDPRESS_INTEGRATE_PATH' ) ) {
             $useraccount = qa_db_select_with_pending( qa_db_user_account_selectspec( $userid, true ) );
-
-            $user_avatar = qa_get_user_avatar_html( $useraccount['flags'], $useraccount['email'], null,
-                $useraccount['avatarblobid'], $useraccount['avatarwidth'], $useraccount['avatarheight'], $size );
+            $user_avatar = donut_get_user_avatar_image(
+                                $useraccount['flags'],
+                                $useraccount['email'],
+                                qa_get_logged_in_user_field('handle'),
+                                $useraccount['avatarblobid'],
+                                $useraccount['avatarwidth'],
+                                $useraccount['avatarheight'],
+                                $size );
         } else {
             $user_avatar = qa_get_external_avatar_html( $userid, qa_opt( 'avatar_users_size' ), true );
         }
