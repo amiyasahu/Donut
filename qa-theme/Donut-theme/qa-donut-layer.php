@@ -1015,7 +1015,7 @@
                     foreach ( $ranking['items'] as $user ) {
                         $this->output( '<div class="user-box col-sm-' . ceil( 12 / $columns ) . ' col-xs-12">' );
                         $user_raw = !empty( $user['raw'] ) ? $user['raw'] : $user;
-                        $handle = @$user_raw['handle'];
+                        
                         $handle_html = @$usershtml[$user_raw['userid']];
 
                         if ( defined( 'QA_WORDPRESS_INTEGRATE_PATH' ) ) {
