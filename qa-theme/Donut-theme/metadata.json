@@ -1,0 +1,10 @@
+{
+	"name": "Donut",
+	"description": "",
+	"version": "2.0",
+	"date": "2018-09-03",
+	"author": "Amiya Sahu",
+	"author_uri": "http://www.amiyasahu.github.io/",
+	"license": "GPLv2",
+	"min_q2a": "1.8"
+}
