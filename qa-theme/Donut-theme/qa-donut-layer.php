@@ -1369,7 +1369,10 @@
                 Output the widgets (as provided in $this->content['widgets']) for $region and $place
             */
         {
-            if ( count( @$this->content['widgets'][$region][$place] ) ) {
+            if ( isset($this->content['widgets'][$region][$place]) && 
+                  is_array($this->content['widgets'][$region][$place]) && 
+                  !empty($this->content['widgets'][$region][$place]) ) {
+                
                 $col = ( $region == 'full' ) ? ' col-xs-12' : '';
 
                 $this->output( '<div class="qa-widgets-' . $region . ' qa-widgets-' . $region . '-' . $place . $col . '">' );
