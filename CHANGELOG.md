@@ -15,6 +15,7 @@
 * Fixed microdata issue for upvoteCount ( issue #61 )
 * Compressed header image, saves 81% resource utilization. Page loads faster
 * Conversion text from banner's "ask" field to bundle properties (thanks to @edermfl for PR #64)
+* Dropped loading of qa-styles.css as it was not having any styling
 * Removed few unused methods, add some minor fixes and code improvements
 
 ## Version 1.6.3
