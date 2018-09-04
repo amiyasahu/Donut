@@ -58,7 +58,6 @@
             $css_paths = array(
                     'fonts'     => 'css/font-awesome.min.css?4.2.0',
                     'bootstrap' => 'css/bootstrap.min.css?3.3.5',
-                    'donut'     => 'css/donut.css?' . DONUT_THEME_VERSION,
             );
 
             if ( qa_opt( 'donut_activate_prod_mode' ) ) {
@@ -70,8 +69,6 @@
                 unset( $css_paths['bootstrap'] );
                 unset( $css_paths['fonts'] );
                 $this->donut_resources( $cdn_css_paths, 'css', true );
-
-                $css_paths['donut'] = 'css/donut.min.css?' . DONUT_THEME_VERSION;  //put the donut.min.css for the prod mode
             }
 
             $this->donut_resources( $css_paths, 'css' );
@@ -81,6 +78,15 @@
             } else {
                 $this->donut_resources( array( 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic' ) , 'css' , true );
             }
+        }
+
+        public function css_name()
+        {
+            if ( qa_opt( 'donut_activate_prod_mode' ) ) {
+                return 'css/donut.min.css?' . DONUT_THEME_VERSION;
+            }
+
+            return 'css/donut.css?' . DONUT_THEME_VERSION;
         }
 
         /**
