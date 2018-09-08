@@ -41,7 +41,7 @@
         }
 
         /**
-         * prints the defult meta and view ports
+         * prints the default meta and view ports
          *
          * @return  null
          */
