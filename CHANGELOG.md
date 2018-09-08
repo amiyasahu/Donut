@@ -2,21 +2,22 @@
 
 ## Version 2.0 (Latest stable version)
 
-* Imrpoved wordpress intrgration. Now displays login and register links in the dropdown when the user is not logged in
+* Improved wordpress integration. Now displays login and register links in the drop-down when the user is not logged in
 * Fixed PHP warning message (issue #86)
 * Fixed Issues while adding new sections to profile. (issue #66)
-* Fix the favorites page under user profile ( issue #68 )
+* Fix the favorites page under user profile (issue #68)
 * Fixed Rendering for voting button
 * Dropped badge output from the users page, this should be taken care by the badge plugin
 * Fixed message on tags page when there are no tags available (issue #74)
 * Moved other language files to separate Github Repo
 * Removed deprecated options framework
-* Bookstrap URL https issue ( issue #70 )
-* Fixed microdata issue for upvoteCount ( issue #61 )
+* Bootstrap URL https issue (issue #70)
+* Fixed micro-data issue for up-vote count (issue #61)
 * Compressed header image, saves 81% resource utilization. Page loads faster
 * Conversion text from banner's "ask" field to bundle properties (thanks to @edermfl for PR #64)
 * Dropped loading of qa-styles.css as it was not having any styling
 * Removed few unused methods, add some minor fixes and code improvements
+* Fixed the issue with homepage detection
 
 ## Version 1.6.3
 
