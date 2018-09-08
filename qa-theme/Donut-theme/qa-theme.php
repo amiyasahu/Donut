@@ -22,7 +22,7 @@
     /**
      * define the version of the theme that is installed
      */
-    @define( 'DONUT_THEME_VERSION', "1.6.2" );
+    @define( 'DONUT_THEME_VERSION', "2.0.0" );
 
     /**
      * include the required files for the theme
