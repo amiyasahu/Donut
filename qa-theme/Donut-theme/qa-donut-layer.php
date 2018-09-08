@@ -1300,7 +1300,7 @@
          */
         public function is_home()
         {
-            return empty( $this->request );
+            return empty( $this->request ) || $this->request === array_search('', qa_get_request_map());
         }
 
         public function donut_site_header()
