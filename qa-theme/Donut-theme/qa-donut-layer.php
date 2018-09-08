@@ -53,8 +53,6 @@
 
         function head_css()
         {
-            parent::head_css();
-
             $css_paths = array(
                     'fonts'     => 'css/font-awesome.min.css?4.2.0',
                     'bootstrap' => 'css/bootstrap.min.css?3.3.5',
@@ -78,6 +76,8 @@
             } else {
                 $this->donut_resources( array( 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic' ) , 'css' , true );
             }
+
+            parent::head_css();
         }
 
         public function css_name()
