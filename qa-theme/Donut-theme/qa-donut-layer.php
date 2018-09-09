@@ -41,7 +41,7 @@
         }
 
         /**
-         * prints the defult meta and view ports
+         * prints the default meta and view ports
          *
          * @return  null
          */
@@ -53,12 +53,9 @@
 
         function head_css()
         {
-            parent::head_css();
-
             $css_paths = array(
                     'fonts'     => 'css/font-awesome.min.css?4.2.0',
                     'bootstrap' => 'css/bootstrap.min.css?3.3.5',
-                    'donut'     => 'css/donut.css?' . DONUT_THEME_VERSION,
             );
 
             if ( qa_opt( 'donut_activate_prod_mode' ) ) {
@@ -70,8 +67,6 @@
                 unset( $css_paths['bootstrap'] );
                 unset( $css_paths['fonts'] );
                 $this->donut_resources( $cdn_css_paths, 'css', true );
-
-                $css_paths['donut'] = 'css/donut.min.css?' . DONUT_THEME_VERSION;  //put the donut.min.css for the prod mode
             }
 
             $this->donut_resources( $css_paths, 'css' );
@@ -81,6 +76,17 @@
             } else {
                 $this->donut_resources( array( 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic' ) , 'css' , true );
             }
+
+            parent::head_css();
+        }
+
+        public function css_name()
+        {
+            if ( qa_opt( 'donut_activate_prod_mode' ) ) {
+                return 'css/donut.min.css?' . DONUT_THEME_VERSION;
+            }
+
+            return 'css/donut.css?' . DONUT_THEME_VERSION;
         }
 
         /**
@@ -766,7 +772,7 @@
         {
             if ( isset( $post[$element] ) ) {
                 $icon = donut_get_voting_icon( $element );
-                $this->output( '<button ' . $post[$element] . ' type="submit" value="' . $value . '" class="' . $class . '-button"/> ' . $icon . '</button>' );
+                $this->output( '<button ' . $post[$element] . ' type="submit" value="' . $value . '" class="' . $class . '-button"> ' . $icon . '</button>' );
             }
         }
 
@@ -1015,7 +1021,7 @@
                     foreach ( $ranking['items'] as $user ) {
                         $this->output( '<div class="user-box col-sm-' . ceil( 12 / $columns ) . ' col-xs-12">' );
                         $user_raw = !empty( $user['raw'] ) ? $user['raw'] : $user;
-                        $handle = @$user_raw['handle'];
+                        
                         $handle_html = @$usershtml[$user_raw['userid']];
 
                         if ( defined( 'QA_WORDPRESS_INTEGRATE_PATH' ) ) {
@@ -1064,14 +1070,10 @@
 											' . @$pointshtml . '
 										</div>
 								</div>' );
-
-                        if ( qa_opt( 'badge_active' ) && function_exists( 'qa_get_badge_list' ) )
-                            $this->output( '<div class="badge-list">' . donut_user_badge( $handle ) . '</div>' );
-
                         $this->output( '</div>' );
                         $this->output( '</div>' );
-
                     }
+
                     $this->output( '</div>' );
                     $this->output( '</div>' );
                 } else {
@@ -1112,7 +1114,7 @@
                 } else {
                     $this->output( '
 						<div class="no-items">
-						<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $this->content['ranking_tags']['title'] . '</div>
+						<div class="alert alert-info"><span class="fa fa-warning"></span> ' . donut_lang('no_tags_message') . '</div>
 						</div>' );
                 }
 
@@ -1298,7 +1300,7 @@
          */
         public function is_home()
         {
-            return empty( $this->request );
+            return empty( $this->request ) || $this->request === array_search('', qa_get_request_map());
         }
 
         public function donut_site_header()
@@ -1338,7 +1340,7 @@
         {
             $this->output(
                     '<div class="qa-attribution">',
-                    '<a href="https://github.com/amiyasahu/Donut">Donut Theme</a> <span class="fa fa-code"></span> with <span class="fa fa-heart"></span> by <a href="http://amiyasahu.com">Amiya Sahu</a>',
+                    '<a href="https://github.com/amiyasahu/Donut">Donut Theme</a> <span class="fa fa-code"></span> with <span class="fa fa-heart"></span> by <a href="http://amiyasahu.github.io">Amiya Sahu</a>',
                     '</div>'
             );
         }
@@ -1373,7 +1375,10 @@
                 Output the widgets (as provided in $this->content['widgets']) for $region and $place
             */
         {
-            if ( count( @$this->content['widgets'][$region][$place] ) ) {
+            if ( isset($this->content['widgets'][$region][$place]) && 
+                  is_array($this->content['widgets'][$region][$place]) && 
+                  !empty($this->content['widgets'][$region][$place]) ) {
+                
                 $col = ( $region == 'full' ) ? ' col-xs-12' : '';
 
                 $this->output( '<div class="qa-widgets-' . $region . ' qa-widgets-' . $region . '-' . $place . $col . '">' );
@@ -1394,82 +1399,6 @@
                 $this->output( '<div class="' . $class . '-tags clearfix">' );
                 $this->post_tag_list( $post, $class );
                 $this->output( '</div>' );
-            }
-        }
-
-        public function q_view_buttons( $q_view )
-        {
-            if ( qa_opt( 'donut_show_collapsible_btns' ) ) {
-                if ( !empty( $q_view['form'] ) ) {
-                    $q_view_temp = $q_view;
-                    $allowed_main_btns = array( 'answer', 'comment' );
-                    $q_view_temp['form']['buttons'] = $this->donut_divide_array( $q_view['form']['buttons'], $allowed_main_btns );
-                    $this->output( '<div class="qa-q-view-buttons clearfix">' );
-                    $this->output( '<div class="default-buttons pull-left">' );
-                    $this->form( $q_view['form'] );
-                    $this->output( '</div>' );
-                    $this->donut_generate_action_button( $q_view_temp );
-                    $this->output( '</div>' );
-                }
-            } else {
-                parent::q_view_buttons( $q_view );
-            }
-        }
-
-        public function a_item_buttons( $a_item )
-        {
-            if ( qa_opt( 'donut_show_collapsible_btns' ) ) {
-                if ( !empty( $a_item['form'] ) ) {
-                    $a_item_temp = $a_item;
-                    $allowed_main_btns = array( 'comment' );
-                    $a_item_temp['form']['buttons'] = $this->donut_divide_array( $a_item['form']['buttons'], $allowed_main_btns );
-                    $this->output( '<div class="qa-a-item-buttons clearfix">' );
-                    $this->output( '<div class="default-buttons pull-left">' );
-                    $this->form( $a_item['form'] );
-                    $this->output( '</div>' );
-                    $this->donut_generate_action_button( $a_item_temp );
-                    $this->output( '</div>' );
-                }
-            } else {
-                parent::a_item_buttons( $a_item );
-            }
-        }
-
-        public function c_item_buttons( $c_item )
-        {
-            if ( qa_opt( 'donut_show_collapsible_btns' ) ) {
-                if ( !empty( $c_item['form'] ) ) {
-                    $this->output( '<div class="qa-c-item-buttons collapsed">' );
-                    $this->donut_generate_action_button( $c_item );
-                    $this->output( '</div>' );
-                }
-            } else {
-                parent::c_item_buttons( $c_item );
-            }
-        }
-
-        private function donut_generate_action_button( $action_view, $btn_style = 'vertical' )
-        {
-            $this->output( '<div class="action-buttons pull-right">' );
-            $this->output( '<div class="btn-group">' );
-            $this->output( '<button type="button" class="qa-form-light-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="More actions">' );
-            $this->output( '<span class="glyphicon glyphicon-option-' . $btn_style . '"></span>' );
-            $this->output( '</button>' );
-            $this->donut_generate_action_dropdown( $action_view['form'] );
-            $this->output( '</div>' );
-            $this->output( '</div>' );
-        }
-
-        function donut_generate_action_dropdown( $form )
-        {
-            if ( !empty( $form['buttons'] ) ) {
-                $this->output( '<ul class="dropdown-menu action-buttons-dropdown">' );
-                foreach ( $form['buttons'] as $key => $btn ) {
-                    $this->output( '<li>' );
-                    $this->output( $this->form_button_data( $btn, $key, @$form['style'] ) );
-                    $this->output( '</li>' );
-                }
-                $this->output( '</ul>' );
             }
         }
 

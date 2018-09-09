@@ -4,7 +4,7 @@ Modern and Responsive theme for Question2Answer ( Q2A ) which is made for great 
 
 ##### Screenshot
 
-[![Donut theme](https://raw.githubusercontent.com/amiyasahu/Donut/gh-pages/screenshots/home-page-banner.png)](https://github.com/amiyasahu/Donut)
+[![Donut theme](https://user-images.githubusercontent.com/2969035/44949562-470cf800-ae02-11e8-87cf-45072b4a88b1.png)](https://github.com/amiyasahu/Donut)
 
 ## Description
 [Donut theme][] is a free and open-source **responsive Question2Answer theme** designed for great readability with a clean interface powered by [Bootstrap](http://getbootstrap.com/). 
@@ -48,6 +48,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
      
 3. Copy the [Donut-admin][Plugin folder] folder to `qa-plugin` directory of your q2a installation (eg. `qa-plugin/Donut-admin`) 
 4. Copy the [Donut-theme][Theme folder] folder to `qa-theme` directory of your q2a installation (eg. `qa-theme/Donut-theme`)
+5. If your site language is other than English, Copy the appropriate language files from [here][Donut lang] to `qa-plugin/Donut-admin/lang` directory
 5. Visit `http://your-q2a-site.com/admin/donut-theme/general-settings` for configuring the theme as per your taste 
 6. Visit `http://your-q2a-site.com/admin/general` , select the `Donut` for both the `Site theme` and `Theme for mobile`
 7. Congratulations, Donut theme is now up and running on your website :smile:
@@ -55,6 +56,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 ## Contribution guidelines
 
 * Fork the [repositary][] and make improvements. Feel free to send a Pull requests
+* If you are contributing language files then please send pull request to [this repository][Donut lang]. Since Donut 2.0, this repository only will host default language files
 * Help me in testing the theme and finding the bugs 
 * Report [bugs][] here if you find any 
 * Review the code if you are a developer who loves q2a platform
@@ -86,6 +88,7 @@ This code has not been extensively tested on high-traffic installations of Q2A. 
   [Install Question2Answer]: http://www.question2answer.org/install.php
   [Git]: http://git-scm.com/
   [Donut theme]: https://github.com/amiyasahu/Donut
+  [Donut lang]: https://github.com/amiyasahu/Donut-language-files
   [change log]: https://github.com/amiyasahu/Donut/blob/master/CHANGELOG.md
   [GitHub]: https://github.com/amiyasahu/Donut
   [Theme folder]: https://github.com/amiyasahu/Donut/tree/master/qa-theme/Donut-theme

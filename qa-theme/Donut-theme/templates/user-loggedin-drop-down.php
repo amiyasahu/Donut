@@ -73,13 +73,13 @@
                         </li>
                     <?php endif ?>
                 <?php endforeach ?>
-                <li>
-                    <a href="<?php echo @$this->content['navigation']['user']['logout']['url'] ?>">
-                        <span class="fa fa-sign-out"></span>
-                        <?php echo @$this->content['navigation']['user']['logout']['label'] ?>
-                    </a>
-                </li>
             <?php endif; ?>
+            <li>
+                <a href="<?php echo @$this->content['navigation']['user']['logout']['url'] ?>">
+                    <span class="fa fa-sign-out"></span>
+                    <?php echo @$this->content['navigation']['user']['logout']['label'] ?>
+                </a>
+            </li>
         </ul>
     </li>
 </ul>
