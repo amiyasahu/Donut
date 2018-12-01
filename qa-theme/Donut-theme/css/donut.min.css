@@ -394,7 +394,7 @@ header#nav-header{min-height:50px}
 .qa-downvote-count-pad,.qa-upvote-count-pad{display:none}
 .qa-q-item-tags,.qa-q-view-tags,.qa-tags-rank-tags{padding:5px 0}
 .qa-q-item-tag-list,.qa-q-view-tag-list,.qa-tags-rank-tag-list{list-style:none;margin:0;padding:0}
-.qa-q-item-tag-item,.qa-q-view-tag-item,.qa-tags-rank-tag-item{display:inline-block;margin-right:5px}
+.qa-q-item-tag-item,.qa-q-view-tag-item,.qa-tags-rank-tag-item{display:inline-block;margin-right:5px;padding:6px 0}
 .qa-q-view-tags{margin-bottom:20px}
 .qa-tag-link{color:#337ab7;text-decoration:none;cursor:pointer;padding:4px 10px;border:1px solid #e2e2e2;border-radius:3px}
 .qa-tag-link:hover{color:#286090;background-color:#eee;text-decoration:none}
