@@ -2268,6 +2268,7 @@ header#nav-header {
 .qa-q-view-tag-item {
   display: inline-block;
   margin-right: 5px;
+  padding: 6px 0;
 }
 .qa-q-view-tags {
   margin-bottom: 20px;
