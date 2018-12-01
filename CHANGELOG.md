@@ -1,6 +1,11 @@
 # Change Log
 
-## Version 2.0 (Latest stable version)
+## Version 2.0.1 (Latest stable version)
+
+* Fix PHP warning when the subnavigation is not available (issue #91)
+* Fix tags overlaping on mobile devices (issue #92)
+
+## Version 2.0
 
 * Improved wordpress integration. Now displays login and register links in the drop-down when the user is not logged in
 * Fixed PHP warning message (issue #86)
