@@ -246,7 +246,7 @@
             $this->header();
             $this->widgets( 'full', 'high' );
 
-            if ( count( $sub_navigation ) ) {
+            if ( !empty( $sub_navigation ) ) {
                 // create the left side bar
                 $this->left_side_bar( $sub_navigation );
             }
