@@ -221,6 +221,9 @@
             $this->output( '</div>' );
             $this->output( '</div>' );
 
+            $extratags = isset($this->content['wrapper_tags']) ? $this->content['wrapper_tags'] : '';
+            $this->output( '<div class="qa-body-wrapper"' . $extratags . '>', '' );
+
             $this->output( '<main class="donut-masthead">' );
 
             $this->output( '<div class="container">' );
@@ -240,7 +243,7 @@
 
             $this->output( '</main>' );
 
-            $this->output( '<div class="qa-body-wrapper container">', '' );
+            $this->output( '<div class="container">', '' );
 
             $this->widgets( 'full', 'top' );
             $this->header();
@@ -261,6 +264,7 @@
             $this->footer();
             $this->widgets( 'full', 'bottom' );
 
+            $this->output( '</div> <!-- END container -->' );
             $this->output( '</div> <!-- END body-wrapper -->' );
 
             $this->body_suffix();
