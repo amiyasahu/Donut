@@ -1,6 +1,10 @@
 # Change Log
 
-## Version 2.0.1 (Latest stable version)
+## Version 2.0.2 (Current Development)
+
+* Fix errors in structured data with #99 (issue #98). (Thanks to @svivian)
+
+## Version 2.0.1
 
 * Fix PHP warning when the subnavigation is not available (issue #91)
 * Fix tags overlaping on mobile devices (issue #92)
