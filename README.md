@@ -66,7 +66,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 
 ## Author
 
-This free theme is created with :heart: by [Amiya Sahu](http://amiyasahu.com) and [contributors](https://github.com/amiyasahu/Donut/graphs/contributors)
+This free theme is created with :heart: by [Amiya Sahu](http://amiyasahu.github.io) and [contributors](https://github.com/amiyasahu/Donut/graphs/contributors)
 
 ## Credits
 
