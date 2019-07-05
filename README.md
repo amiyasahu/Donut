@@ -37,7 +37,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 1. [Install Question2Answer][]. This theme requires at latest version 1.7 (see the [change log][] for details)   
 2. [Download the latest version][latest release] of theme from GitHub , either using [Git][], or downloading directly:
      
-     - **Note :** The master branch will be under development , so you should download the released versions
+     - **Note :** The master branch may have some broken parts, so it is recomended to download the released versions from the releases page.
      - To download using git, install git and then type 
      
           `git clone https://github.com/amiyasahu/Donut.git` 
