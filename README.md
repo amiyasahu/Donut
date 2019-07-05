@@ -1,6 +1,6 @@
 # Donut Theme
 
-Modern and Responsive theme for Question2Answer ( Q2A ) which is made for great readability with awesome user experience powered by [Bootstrap](http://getbootstrap.com/).
+Modern and Responsive theme for [Question2Answer ( Q2A )](https://www.question2answer.org/) which is made for great readability and awesome user experience powered by [Bootstrap](http://getbootstrap.com/).
 
 ##### Screenshot
 
