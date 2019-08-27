@@ -27,13 +27,13 @@
             <?php if ( qa_get_logged_in_level() >= QA_USER_LEVEL_ADMIN ): ?>
                 <li class="dropdown-header">Admin Section</li>
                 <li>
-                    <a href="<?php echo qa_path_html( 'admin' ) ?>">
+                    <a class="user-menu-item"  href="<?php echo qa_path_html( 'admin' ) ?>">
                         <span class="fa fa-cog"></span>
                         <?php echo qa_lang_html( 'main/nav_admin' ); ?>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo qa_path_html( 'admin/donut-theme/general-settings' ) ?>">
+                    <a class="user-menu-item"  href="<?php echo qa_path_html( 'admin/donut-theme/general-settings' ) ?>">
                         <span class="fa fa-wrench"></span>
                         <?php echo donut_lang( 'donut_theme_settings' ); ?>
                     </a>
@@ -41,7 +41,7 @@
                 <li class="dropdown-header">Profile Section</li>
             <?php endif ?>
             <li>
-                <a href="<?php echo qa_path_html( 'user/' . qa_get_logged_in_handle() ); ?>">
+                <a class="user-menu-item" href="<?php echo qa_path_html( 'user/' . qa_get_logged_in_handle() ); ?>">
                     <span class="fa fa-user"></span>
                     <?php echo qa_get_logged_in_handle(); ?>
                 </a>
@@ -49,14 +49,14 @@
             <?php if ( !defined( 'QA_WORDPRESS_INTEGRATE_PATH' ) ): ?>
                 <?php if ( qa_opt( 'allow_private_messages' ) && !( $useraccount['flags'] & QA_USER_FLAGS_NO_MESSAGES ) ): ?>
                     <li>
-                        <a href="<?php echo qa_path_html( 'messages' ) ?>">
+                        <a class="user-menu-item"  href="<?php echo qa_path_html( 'messages' ) ?>">
                             <span class="fa fa-envelope"></span>
                             <?php echo qa_lang_html( 'misc/nav_user_pms' ) ?>
                         </a>
                     </li>
                 <?php endif ?>
                 <li>
-                    <a href="<?php echo qa_path_html( 'user/' . qa_get_logged_in_handle() ); ?>">
+                    <a class="user-menu-item"  href="<?php echo qa_path_html( 'user/' . qa_get_logged_in_handle() ); ?>">
                         <span class="fa fa-money"></span>
                         <?php echo qa_get_logged_in_points() . ' ' . qa_lang_html( 'admin/points_title' ) ?>
                     </a>
@@ -64,7 +64,7 @@
                 <?php foreach ( $this->content['navigation']['user'] as $key => $user_nav ): ?>
                     <?php if ( $key !== 'logout' ): ?>
                         <li>
-                            <a href="<?php echo @$user_nav['url']; ?>">
+                            <a class="user-menu-item" href="<?php echo @$user_nav['url']; ?>">
                                 <?php if ( !empty( $user_nav['icon'] ) ): ?>
                                     <span class="fa fa-<?php echo $user_nav['icon']; ?>"></span>
                                 <?php endif ?>
@@ -75,10 +75,21 @@
                 <?php endforeach ?>
             <?php endif; ?>
             <li>
-                <a href="<?php echo @$this->content['navigation']['user']['logout']['url'] ?>">
+<?php
+    if (!empty($this->content['navigation']['user']['logout']['label']))
+    {
+        // Check that the label does not contain a link already (this will happen with q2a-open-login):
+        $bAddLink = (strpos($this->content['navigation']['user']['logout']['label'], '<a') === false);
+    }
+?>
+                <?php if ($bAddLink): ?>
+                <a class="user-menu-item" href="<?php echo @$this->content['navigation']['user']['logout']['url'] ?>">
                     <span class="fa fa-sign-out"></span>
+                <?php endif; ?>
                     <?php echo @$this->content['navigation']['user']['logout']['label'] ?>
+                <?php if ($bAddLink): ?>
                 </a>
+                <?php endif; ?>
             </li>
         </ul>
     </li>
