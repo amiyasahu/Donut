@@ -23,9 +23,8 @@
             <?php echo $logged_in_user_avatar; ?>
         </a>
         <ul class="dropdown-menu" role="menu" id="user-dropdown-menu">
-            <li class="dropdown-header">Signed in as <?php echo qa_get_logged_in_handle(); ?></li>
             <?php if ( qa_get_logged_in_level() >= QA_USER_LEVEL_ADMIN ): ?>
-                <li class="dropdown-header">Admin Section</li>
+                <li class="dropdown-header"><?php echo donut_lang_html( 'admin_section' ); ?></li>
                 <li>
                     <a class="user-menu-item"  href="<?php echo qa_path_html( 'admin' ) ?>">
                         <span class="fa fa-cog"></span>
@@ -38,7 +37,7 @@
                         <?php echo donut_lang( 'donut_theme_settings' ); ?>
                     </a>
                 </li>
-                <li class="dropdown-header">Profile Section</li>
+                <li class="dropdown-header"><?php echo donut_lang_html( 'profile_section' ); ?></li>
             <?php endif ?>
             <li>
                 <a class="user-menu-item" href="<?php echo qa_path_html( 'user/' . qa_get_logged_in_handle() ); ?>">
