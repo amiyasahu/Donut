@@ -154,7 +154,7 @@
             case 'local-default':
                 $html = qa_get_avatar_blob_html(qa_opt('avatar_default_blobid'), qa_opt('avatar_default_width'), qa_opt('avatar_default_height'), $size, $padding);
                 break;
-            default: // NULL
+            default:
                 return null;
         }
 
