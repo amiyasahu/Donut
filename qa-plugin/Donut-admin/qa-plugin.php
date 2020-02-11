@@ -17,8 +17,8 @@
     }
 
     //Define global constants
-    @define( 'DONUT_ADMIN_PLUGIN_DIR', dirname( __FILE__ ) );
     @define( 'DONUT_ADMIN_PLUGIN_FOLDER', basename( dirname( __FILE__ ) ) );
+    @define( 'DONUT_ADMIN_PLUGIN_DIR', QA_BASE_DIR . 'qa-plugin/' . DONUT_ADMIN_PLUGIN_FOLDER);
 
     @define( 'DONUT_CURR_DB_VERSION', 1 ); //Helps in updating new mandatory options
 

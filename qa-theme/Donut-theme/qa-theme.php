@@ -7,7 +7,7 @@
     /**
      * Defines the base directory of the theme
      */
-    @define( 'DONUT_THEME_BASE_DIR', dirname( __FILE__ ) );
+    @define( 'DONUT_THEME_BASE_DIR', QA_BASE_DIR . 'qa-theme/Donut-theme');
 
     /**
      * define the directory name of the theme directory
