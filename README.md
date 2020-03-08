@@ -1,6 +1,6 @@
 # Donut Theme
 
-Modern and Responsive theme for Question2Answer ( Q2A ) which is made for great readability with awesome user experience powered by [Bootstrap](http://getbootstrap.com/).
+Modern and Responsive theme for [Question2Answer ( Q2A )](https://www.question2answer.org/) which is made for great readability and awesome user experience powered by [Bootstrap](http://getbootstrap.com/).
 
 ##### Screenshot
 
@@ -37,7 +37,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 1. [Install Question2Answer][]. This theme requires at latest version 1.7 (see the [change log][] for details)   
 2. [Download the latest version][latest release] of theme from GitHub , either using [Git][], or downloading directly:
      
-     - **Note :** The master branch will be under development , so you should download the released versions
+     - **Note :** The master branch may have some broken parts, so it is recomended to download the released versions from the releases page.
      - To download using git, install git and then type 
      
           `git clone https://github.com/amiyasahu/Donut.git` 
@@ -66,7 +66,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 
 ## Author
 
-This free theme is created with :heart: by [Amiya Sahu](http://amiyasahu.com) and [contributors](https://github.com/amiyasahu/Donut/graphs/contributors)
+This free theme is created with :heart: by [Amiya Sahu](http://amiyasahu.github.io) and [contributors](https://github.com/amiyasahu/Donut/graphs/contributors)
 
 ## Credits
 
