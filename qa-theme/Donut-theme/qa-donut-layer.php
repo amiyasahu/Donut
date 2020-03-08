@@ -74,7 +74,7 @@
             if( qa_opt('donut_use_local_font') ){
                 $this->donut_resources( array( 'css/open-sans.css?' . DONUT_THEME_VERSION) );
             } else {
-                $this->donut_resources( array( 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic' ) , 'css' , true );
+                $this->donut_resources( array( Donut_Option_Keys::OPEN_SANS_FONT_CDN ) , 'css' , true );
             }
 
             parent::head_css();
