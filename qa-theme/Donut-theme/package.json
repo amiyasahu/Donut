@@ -1,0 +1,17 @@
+{
+  "name": "donut-theme",
+  "version": "2.1.0",
+  "description": "Modern and Responsive theme for Question2Answer ( Q2A ) websites",
+  "scripts": {
+    "grunt:build": "grunt"
+  },
+  "author": "Amiya Sahu",
+  "license": "GPLv2",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "jit-grunt": "^0.10.0"
+  }
+}

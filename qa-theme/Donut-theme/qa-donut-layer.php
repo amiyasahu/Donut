@@ -177,10 +177,6 @@
                     'donut'     => 'js/donut.js?' . DONUT_THEME_VERSION,
             );
 
-            if ( $this->template == 'admin' ) {
-                $js_paths['admin'] = 'js/admin.js?' . DONUT_THEME_VERSION;
-            }
-
             if ( qa_opt( 'donut_activate_prod_mode' ) ) {
                 $cdn_js_paths = array(
                         'bootstrap' => Donut_Option_Keys::BS_JS_CDN,

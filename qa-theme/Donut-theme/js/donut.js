@@ -13,6 +13,7 @@ jQuery(document).ready(function () {
 		$('.qa-main-wrapper').toggleClass('active');
 		$this.find('i.toggle-icon').toggleClass('fa-chevron-left fa-chevron-right');
 	});
+	
 	var $selected_sub_nav = $('a.qa-nav-sub-link.qa-nav-sub-selected');
 	
 	if (!!$selected_sub_nav.length) {
@@ -58,3 +59,5 @@ jQuery(document).ready(function () {
 		Cookies.set('donut_hide_site_header', 'yes');
 	});
 });
+
+console.log("Hey!!");
