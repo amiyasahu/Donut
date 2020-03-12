@@ -59,5 +59,3 @@ jQuery(document).ready(function () {
 		Cookies.set('donut_hide_site_header', 'yes');
 	});
 });
-
-console.log("Hey!!");
