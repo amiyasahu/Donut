@@ -585,11 +585,12 @@ header#nav-header {
 }
 .donut-masthead .page-title {
   border-bottom: 1px solid #e2e2e2;
+  padding: 25px 40px 25px 0 ;
 }
 /* page title */
 .page-title {
   position: relative;
-  padding: 30px 0;
+  padding: 25px 0;
 }
 .page-title h1 {
   clear: none;
@@ -1312,6 +1313,8 @@ header#nav-header {
 .qa-unfavorite-button {
   border: 0;
   padding: 6px 8px;
+  height: 30px;
+  width: 30px;
 }
 .qa-favorite-button:hover {
   color: #fff;
@@ -1866,6 +1869,8 @@ header#nav-header {
   margin-right: 10px;
 }
 .qa-feed .qa-feed-icon {
+  height: 30px;
+  width: 30px;
   display: inline-block;
   background-color: #f0ad4e;
   color: #fff;
@@ -2616,11 +2621,13 @@ header#nav-header {
 }
 .qa-rss-feed {
   border-radius: 4px;
+  height: 30px;
+  width: 30px;
   color: #fff;
   padding: 6px 10px;
   position: absolute;
   right: 0;
-  bottom: 5px;
+  bottom: 26px;
   background-color: #f0ad4e;
   float: right;
 }
@@ -2632,7 +2639,8 @@ header#nav-header {
   color: #fff;
 }
 .page-title.has-favorite .qa-rss-feed {
-  right: 35px;
+  right: 0px;
+  bottom: 40px;
 }
 .qa-favoriting {
   float: right;

@@ -127,11 +127,13 @@ html, body {
 
 .qa-rss-feed {
   border-radius: 4px;
+  height: 30px;
+  width: 30px;
   color: @body-bg;
   padding: 6px 10px;
   position: absolute;
   right: 0;
-  bottom: 5px;
+  bottom: 26px;
   background-color: @brand-warning;
   float: right;
   &:hover, &:active, &:focus, &:visited {
@@ -140,9 +142,12 @@ html, body {
   }
 }
 
-.page-title.has-favorite {
-  .qa-rss-feed {
-    right: 35px;
+.page-title{
+  &.has-favorite {
+    .qa-rss-feed {
+      right: 0px;
+      bottom: 40px;
+    }
   }
 }
 
