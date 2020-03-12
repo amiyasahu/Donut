@@ -158,17 +158,6 @@ a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
 .qa-form-tall-label select {
   margin-bottom: 5px;
 }
-.qa-form-tall-text,
-.qa-form-tall-number {
-  /* padding:3px;
-			width:48px;
-			background:@body-bg;
-			border:1px solid @input-border;  */
-}
-.qa-form-talltall-checkbox {
-  /* float:left;
-			margin-right:4px; */
-}
 .qa-form-tall-image {
   text-align: center;
 }
