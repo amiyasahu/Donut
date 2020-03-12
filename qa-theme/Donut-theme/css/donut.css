@@ -690,29 +690,7 @@ header#nav-header {
 .qa-template-user .qa-part-form-profile #level .qa-form-wide-static a:focus,
 #login-dropdown-menu.open-login-buttons a:focus,
 .qa-template-register div.qa-part-custom a.open-login-button:focus,
-.qa-template-login div.qa-part-custom a.open-login-button:focus,
-.qa-vote-one-button.focus,
-.qa-vote-first-button.focus,
-.qa-vote-second-button.focus,
-.qa-vote-up-button.focus,
-.qa-favorite-button.focus,
-.qa-unfavorite-button.focus,
-.qa-form-tall-button.focus,
-.qa-form-tall-table input[type="button"].focus,
-.qa-form-wide-button.focus,
-.qa-form-basic-button.focus,
-.qa-form-tall-button-cancel.focus,
-.qa-form-wide-button-save.focus,
-.qa-form-wide-button-saverecalc.focus,
-.qa-form-tall-button-save.focus,
-.qa-form-light-button.focus,
-.qa-a-select-button.focus,
-.qa-a-unselect-button.focus,
-.qa-a-selected.focus,
-.qa-template-user .qa-part-form-profile #level .qa-form-wide-static a.focus,
-#login-dropdown-menu.open-login-buttons a.focus,
-.qa-template-register div.qa-part-custom a.open-login-button.focus,
-.qa-template-login div.qa-part-custom a.open-login-button.focus {
+.qa-template-login div.qa-part-custom a.open-login-button:focus {
   color: #333;
   text-decoration: none;
 }
