@@ -18,36 +18,6 @@
                                 continue;
                             }
 
-                            //support for open login plugin
-                            $icon = '';
-                            preg_match( '/class="([^"]+)"/', @$custom['label'], $class );
-
-                            if ( $k == 'facebook' )
-                                $icon = 'class="' . @$class[1] . ' fa fa-facebook"';
-                            elseif ( $k == 'github' )
-                                $icon = 'class="' . @$class[1] . ' fa fa-github"';
-                            elseif ( $k == 'foursquare' )
-                                $icon = 'class="' . @$class[1] . ' fa fa-foursquare"';
-                            elseif ( $k == 'google' )
-                                $icon = 'class="' . @$class[1] . ' fa fa-google"';
-                            elseif ( $k == 'googleplus' )
-                                $icon = 'class="' . @$class[1] . ' fa fa-google-plus"';
-                            elseif ( $k == 'live' )
-                                $icon = 'class="' . @$class[1] . ' fa fa-windows"';
-                            elseif ( $k == 'tumblr' )
-                                $icon = 'class="' . @$class[1] . ' fa fa-tumblr"';
-                            elseif ( $k == 'yahoo' )
-                                $icon = 'class="' . @$class[1] . ' fa fa-yahoo"';
-                            elseif ( $k == 'twitter' )
-                                $icon = 'class="' . @$class[1] . ' fa fa-twitter"';
-                            elseif ( $k == 'linkedin' )
-                                $icon = 'class="' . @$class[1] . ' fa fa-linkedin"';
-                            elseif ( $k == 'vk' )
-                                $icon = 'class="' . @$class[1] . ' fa fa-vk"';
-
-                            $pattern = "/_(?=[^>]*<)/";
-
-                            $custom['label'] = preg_replace( $pattern, $icon, $custom['label'] );
                             $this->output( str_replace( @$class[0], @$icon, @$custom['label'] ) );
                         }
                     }
@@ -96,9 +66,9 @@
                         </button>
                     </li>
                     <li class="forgot-password">
-                        <a href="<?php echo $this->content['navigation']['user']['register']['url']; ?>"><?php echo $this->content['navigation']['user']['register']['label']; ?></a>
+                        <a class="user-menu-item" href="<?php echo $this->content['navigation']['user']['register']['url']; ?>"><?php echo $this->content['navigation']['user']['register']['label']; ?></a>
                         |
-                        <a href="<?php echo qa_path_html( 'forgot' ); ?>"><?php echo qa_lang_html( 'users/forgot_link' ) ?></a>
+                        <a class="user-menu-item" href="<?php echo qa_path_html( 'forgot' ); ?>"><?php echo qa_lang_html( 'users/forgot_link' ) ?></a>
                     </li>
                 </form>
             <?php endif ?>

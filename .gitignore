@@ -77,3 +77,5 @@ qa-theme/SnowFlat
 #PHPStroam config files
 .idea
 qa-cache/.htaccess
+qa-plugin/Donut-admin/lang/donut-lang-fr.php
+qa-plugin/Donut-admin/lang/donut-options-lang-fr.php

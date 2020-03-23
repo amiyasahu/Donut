@@ -81,6 +81,12 @@
 
 }
 
+/*Some disabled style*/
+.qa-form-tall-button[disabled] {
+    cursor: not-allowed;
+	opacity: 0.5;
+}
+
 /*Default Buttons*/
 .qa-form-light-button,
 .qa-a-select-button,
@@ -122,6 +128,7 @@
 /*Danger buttons*/
 .qa-form-light-button-reject,
 .qa-form-light-button-delete,
+.qa-form-light-button-unlink,
 .qa-form-wide-button-block,
 .qa-form-wide-button-hideall {
 	color: @btn-danger-color;
@@ -234,7 +241,7 @@
 	&-down-disabled {
 		color: @gray-light;
 	}
-	
+
 	&-one-button {
 		position: absolute;
 		left: 2px;
@@ -343,6 +350,11 @@
 			content: @fa-var-thumbs-o-down;
 		}
 	}
+	&-button-unlink {
+		&:before {
+			content: @fa-var-times;
+		}
+	}
 	&-button-close {
 		&:before {
 			content: @fa-var-lock;
@@ -426,7 +438,7 @@
 .qa-template-login {
 	div.qa-part-custom {
 		a.open-login-button.context-register.action-login,
-		a.open-login-button.context-login.action-login, {
+		a.open-login-button.context-login.action-login {
 			color: #fff;
 			margin-right: 5%;
 			width: 40%;

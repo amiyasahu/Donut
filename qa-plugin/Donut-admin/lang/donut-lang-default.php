@@ -24,7 +24,9 @@
         'admin_notes'                 => 'Please visit to the `Admin/Donut theme settings` section for customizing the donut theme . Here only you can only reset the donut theme settings to its defaults',
         'ask_placeholder'             => 'Type your question',
         'ask_button'                  => 'Ask !',
-         'no_tags_message'             => 'There are no tags in your website. Tags will appear here as they are available.',
+        'no_tags_message'             => 'There are no tags in your website. Tags will appear here as they are available.',
+        'admin_section'               => 'Admin section',
+        'profile_section'             => 'Profile section',
     );
 
     /*
