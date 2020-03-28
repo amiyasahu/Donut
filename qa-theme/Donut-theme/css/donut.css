@@ -1670,13 +1670,7 @@ header#nav-header {
   padding: 10px 50px;
 }
 .site-header .jumbo-box .wrap {
-  border: 1px solid transparent;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  border-color: #dddddd;
-  border-color: #2e6da4;
-  border-radius: 10px;
-  padding: 10px 5px ;
+  padding: 10px 5px;
 }
 .site-header .jumbo-box .wrap .hint {
   padding: 10px 0;
@@ -1688,10 +1682,6 @@ header#nav-header {
 }
 .site-header .search-wrapper {
   padding-top: 20px;
-  border-top: 1px solid transparent;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  border-color: #eeeeee;
   border-top-color: #2e6da4;
   overflow: auto;
 }
@@ -1709,8 +1699,10 @@ header#nav-header {
 }
 .site-header .search-bar .ask-field {
   width: 100%;
+  border-radius: 0;
 }
 .site-header .search-bar .ask-btn {
+  height: 48px;
   border-radius: 0;
 }
 .qa-search-button {

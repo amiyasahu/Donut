@@ -50,10 +50,7 @@
 	.jumbo-box {
 		padding: 10px 50px;
 		.wrap {
-			.light-border();
-			border-color: darken(@brand-primary , 5%);
-			border-radius: 10px;
-			padding: 10px 5px ;
+			padding: 10px 5px;
 			.hint {
 				padding: 10px 0;
 				font-size: 30px;
@@ -68,7 +65,6 @@
 	}
 	.search-wrapper {
 		padding-top: 20px;
-		.light-border-top();
 		border-top-color: darken(@brand-primary , 5%);
 		overflow: auto;
 	}
@@ -87,8 +83,10 @@
 		background-color: darken(@brand-primary , 5%);
 		.ask-field {
 			width: 100%;
+			border-radius: 0;
 		}
 		.ask-btn {
+			height: 48px;
 			border-radius: 0;
 		}
 	}
