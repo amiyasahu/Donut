@@ -1,5 +1,19 @@
 # Change Log
 
+## Version 2.1.0
+
+* Code cleanup and removed un-necessary files from codebase
+* Improved build workflow using Grunt and NPM
+* Improved styling for the RSS feed and favorite button (Fixed #105)
+* Improved answer count display on question page
+* Improved search bar
+* Improved favorites page
+* Improved admin question list pages
+* Improved private message and wall section
+* Improved selected answer design
+* Improved site header on the home page
+* Improved form error messages (Fixed #103)
+
 ## Version 2.0.2 (Latest Stable Release)
 
 * Fix errors in structured data with #99 (issue #98). (Thanks to @svivian)
