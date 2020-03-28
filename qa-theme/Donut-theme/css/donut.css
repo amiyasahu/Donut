@@ -1640,18 +1640,21 @@ header#nav-header {
   position: relative;
 }
 .site-header .site-header-cover h1.top-heading {
-  font-size: 70px;
+  font-size: 80px;
   font-weight: 700;
   text-shadow: 4px 3px 0px #337ab7, 9px 8px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .site-header .site-header-cover h1.top-heading {
     font-size: 40px;
+    margin-bottom: 10px;
   }
 }
 @media only screen and (max-width: 767px) {
   .site-header .site-header-cover h1.top-heading {
     font-size: 32px;
+    margin-bottom: 8px;
   }
 }
 .site-header .site-header-fade {
