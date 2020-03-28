@@ -22,14 +22,17 @@
 		overflow: hidden;
 		position: relative;
 		h1.top-heading {
-			font-size: 70px;
+			font-size: 80px;
 			font-weight: 700;
 			text-shadow: 4px 3px 0px @brand-primary, 9px 8px 0px rgba(0, 0, 0, 0.15);
+			margin-bottom: 20px;
 			@media @tablet {
 				font-size: 40px;
+				margin-bottom: 10px;
 			}
 			@media @mobile {
 				font-size: 32px;
+				margin-bottom: 8px;
 			}
 		}
 	}
@@ -50,10 +53,7 @@
 	.jumbo-box {
 		padding: 10px 50px;
 		.wrap {
-			.light-border();
-			border-color: darken(@brand-primary , 5%);
-			border-radius: 10px;
-			padding: 10px 5px ;
+			padding: 10px 5px;
 			.hint {
 				padding: 10px 0;
 				font-size: 30px;
@@ -68,7 +68,6 @@
 	}
 	.search-wrapper {
 		padding-top: 20px;
-		.light-border-top();
 		border-top-color: darken(@brand-primary , 5%);
 		overflow: auto;
 	}
@@ -87,8 +86,10 @@
 		background-color: darken(@brand-primary , 5%);
 		.ask-field {
 			width: 100%;
+			border-radius: 0;
 		}
 		.ask-btn {
+			height: 48px;
 			border-radius: 0;
 		}
 	}

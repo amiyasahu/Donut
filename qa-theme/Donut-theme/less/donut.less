@@ -38,6 +38,10 @@ html, body {
   margin-bottom: 50px;
 }
 
+.qa-main-shadow{
+  margin-top: 10px;
+}
+
 .qa-notice {
   margin: 10px 0 5px 0;
 }
@@ -100,6 +104,10 @@ html, body {
 .qa-ask-box {
   background: @brand-primary;
   border-radius: 3px;
+  margin-top: 10px;
+  .qa-form-tall-table{
+    margin-bottom: 0;
+  }
   tr {
     td {
       vertical-align: middle;
@@ -127,11 +135,13 @@ html, body {
 
 .qa-rss-feed {
   border-radius: 4px;
+  height: 30px;
+  width: 30px;
   color: @body-bg;
   padding: 6px 10px;
   position: absolute;
   right: 0;
-  bottom: 5px;
+  bottom: 28px;
   background-color: @brand-warning;
   float: right;
   &:hover, &:active, &:focus, &:visited {
@@ -140,9 +150,12 @@ html, body {
   }
 }
 
-.page-title.has-favorite {
-  .qa-rss-feed {
-    right: 35px;
+.page-title{
+  &.has-favorite {
+    .qa-rss-feed {
+      right: 0px;
+      bottom: 40px;
+    }
   }
 }
 
@@ -551,7 +564,7 @@ html, body {
     display: block;
     text-align: center;
     .light-border();
-    border-radius: 5px;
+    border-radius: @border-radius-base;
     padding: 6px;
     min-height: 165px;
     .user-avatar {
@@ -706,6 +719,10 @@ html, body {
     word-wrap: break-word;
     .entry-content {
       font-size: @font-size-h4;
+      img {
+        display: block;
+        max-width: 100%;
+      }
     }
   }
 
@@ -823,20 +840,26 @@ html, body {
       border-bottom: 1px solid #e2e2e2;
       padding: 15px;
       &:last-child {
-        border-bottom: medium none;
+        // if the h2 a last element in the form, then it is a error message
+        border-bottom: transparent;
+        font-size: 18px;
+        margin: -5px -5px;
+        border-radius: @border-radius-base;
+        .alert-danger();
+        a {
+          .alert-link();
+        }
       }
     }
   }
 }
 
 .qa-part-a-list > h2 {
-  font-size: 22px;
-  position: relative;
-  padding: 15px 5px;
-  background-color: @brand-success;
-  color: @body-bg;
-  border: 1px solid darken(@brand-success, 5%);
-  border-radius: @border-radius-base;
+  font-size: 20px;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  color: @brand-primary;
+  border-bottom: 1px dashed @light-border;
 }
 
 .qa-a-list-item {
@@ -846,8 +869,7 @@ html, body {
   .light-border();
   border-radius: 5px;
   &-selected {
-    background: lighten(@state-success-bg , 5%);
-    border: 1px solid @state-success-border;
+    border: 2px dashed @state-success-border;
   }
   &-hidden {
     background-color: @light-background;
@@ -892,6 +914,16 @@ html, body {
   h2 {
     font-size: @font-size-h4;
     padding-left: 10px;
+    &:last-child {
+      // if the h2 a last element in the form, then it is a error message
+      font-size: 16px;
+      padding: 10px;
+      border-radius: @border-radius-base;
+      .alert-danger();
+      a {
+        .alert-link();
+      }
+    }
   }
 }
 
@@ -983,15 +1015,10 @@ html, body {
 
 .qa-a-list-item-selected {
   .qa-c-list-item {
-    border-bottom: 1px solid @state-success-border;
+    border-bottom: 1px dashed @state-success-border;
   }
   .qa-a-item-c-list {
-    border-top: 1px solid @state-success-border;
-  }
-  .qa-c-item-hidden {
-    .qa-c-item-content {
-      color: @gray-light;
-    }
+    border-top: 1px dashed @state-success-border;
   }
 }
 
@@ -1131,37 +1158,8 @@ html, body {
   margin-bottom: 10px;
 
   .qa-message-content {
-    background: @gray-lighter none repeat scroll 0 0;
-    color: @gray-light;
     display: block;
-    padding: 15px;
-    position: relative;
-    &:before {
-      width: 0;
-      height: 0;
-      right: 0;
-      bottom: 0;
-      content: " ";
-      display: block;
-      position: absolute;
-      border-bottom: 20px solid #fff;
-      border-right: 0 solid transparent;
-      border-left: 20px solid transparent;
-      border-left-style: inset; /*FF fixes*/
-      border-bottom-style: inset; /*FF fixes*/
-    }
-    &:after {
-      width: 0;
-      height: 0;
-      right: 0;
-      bottom: 0;
-      content: " ";
-      display: block;
-      position: absolute;
-      border-style: solid;
-      border-width: 20px 20px 0 0;
-      border-color: lighten(@brand-warning , 10%) transparent transparent transparent;
-    }
+    padding: 15px;   
   }
 }
 
@@ -1452,5 +1450,41 @@ html, body {
 .qa-template-favorites{
   .qa-q-list {
     float: none;
+  }
+  .qa-q-item-title {
+    margin-bottom: 10px;
+  }
+  .qa-q-item-content {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .qa-q-item-avatar-meta {
+    border-top: 1px dashed @gray-lighter;
+    border-bottom: 1px dashed @gray-lighter;
+    padding: 5px;
+    margin: 10px 0;
+  }
+}
+
+.qa-template-admin{
+  .qa-q-item-stats {
+    display: none;
+  }
+  .qa-q-item-main {
+    width: auto;
+    float: none;
+  }
+  .qa-q-item-title {
+    margin-bottom: 10px;
+  }
+  .qa-q-item-content {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .qa-q-item-avatar-meta {
+    border-top: 1px dashed @gray-lighter;
+    border-bottom: 1px dashed @gray-lighter;
+    padding: 5px;
+    margin: 10px 0;
   }
 }

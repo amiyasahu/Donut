@@ -1,6 +1,6 @@
 # Donut Theme
 
-Modern and Responsive theme for [Question2Answer ( Q2A )](https://www.question2answer.org/) which is made for great readability and awesome user experience powered by [Bootstrap](http://getbootstrap.com/).
+Modern and Responsive theme for [Question2Answer ( Q2A )](https://www.question2answer.org/) which is made for great readability and awesome user experience.
 
 ##### Screenshot
 
@@ -14,28 +14,24 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 
 ## Features
 
-* Mobile first responsive layout 
+* Mobile first, clean content focused, responsive layout designed for redability
+* Easy to install and setup
 * Powered by [Bootstrap](http://getbootstrap.com/)
 * Made with [less](http://lesscss.org/) (less files included)
-* Clean interface which provides great readability and awesome user experience  
 * Flexible theme with a admin panel settings 
 * Inbuilt CDN support and minified assets which loads your website faster and consumes less site resources
-* Enable / Disable top bat above navigation 
-* Enable / Disable Social integration
-* Enable / Disable sticky header upon scroll
-* Enable / Disable back to top button 
-* Enable / Disable beautiful home page banner (can be configured to be closed bu the user)
-* Enable / Disable to collapse extra buttons into an action button on question page
+* Theme settings in admin panel for better customization
 * Better integration with the [Breadcrumbs plugin](https://github.com/amiyasahu/q2a-breadcrumbs) 
 * Better integration with the [Onsite notifications plugin](https://github.com/q2apro/q2apro-on-site-notifications/) 
-* Better integration with the [Open login plugin](https://github.com/alixandru/q2a-open-login) 
+* Better integration with the [Open login plugin](https://github.com/alixandru/q2a-open-login)
+* Developer frendly
 * Multilingual support
 
 
 ## Installation
 
-1. [Install Question2Answer][]. This theme requires at latest version 1.7 (see the [change log][] for details)   
-2. [Download the latest version][latest release] of theme from GitHub , either using [Git][], or downloading directly:
+1. [Install Question2Answer][]. This theme requires version 1.7 or later (see the [change log][] for details)   
+2. [Download the latest version][latest release] of theme from GitHub, either using [Git][], or downloading directly:
      
      - **Note :** The master branch may have some broken parts, so it is recomended to download the released versions from the releases page.
      - To download using git, install git and then type 

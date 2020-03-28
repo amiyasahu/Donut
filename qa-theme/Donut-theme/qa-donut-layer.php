@@ -74,7 +74,7 @@
             if( qa_opt('donut_use_local_font') ){
                 $this->donut_resources( array( 'css/open-sans.css?' . DONUT_THEME_VERSION) );
             } else {
-                $this->donut_resources( array( 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic' ) , 'css' , true );
+                $this->donut_resources( array( Donut_Option_Keys::OPEN_SANS_FONT_CDN ) , 'css' , true );
             }
 
             parent::head_css();
@@ -176,10 +176,6 @@
                     'bootstrap' => 'js/bootstrap.min.js?3.3.5',
                     'donut'     => 'js/donut.js?' . DONUT_THEME_VERSION,
             );
-
-            if ( $this->template == 'admin' ) {
-                $js_paths['admin'] = 'js/admin.js?' . DONUT_THEME_VERSION;
-            }
 
             if ( qa_opt( 'donut_activate_prod_mode' ) ) {
                 $cdn_js_paths = array(

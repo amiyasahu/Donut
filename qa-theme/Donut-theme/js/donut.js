@@ -13,6 +13,7 @@ jQuery(document).ready(function () {
 		$('.qa-main-wrapper').toggleClass('active');
 		$this.find('i.toggle-icon').toggleClass('fa-chevron-left fa-chevron-right');
 	});
+	
 	var $selected_sub_nav = $('a.qa-nav-sub-link.qa-nav-sub-selected');
 	
 	if (!!$selected_sub_nav.length) {
