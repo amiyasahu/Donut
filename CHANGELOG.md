@@ -1,6 +1,6 @@
 # Change Log
 
-## Version 2.1.0
+## Version 2.1.0 (Latest Stable Release)
 
 * Code cleanup and removed un-necessary files from codebase
 * Improved build workflow using Grunt and NPM
@@ -14,7 +14,7 @@
 * Improved site header on the home page
 * Improved form error messages (Fixed #103)
 
-## Version 2.0.2 (Latest Stable Release)
+## Version 2.0.2
 
 * Fix errors in structured data with #99 (issue #98). (Thanks to @svivian)
 
