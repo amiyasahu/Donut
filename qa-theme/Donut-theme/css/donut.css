@@ -3427,7 +3427,22 @@ a.qa-browse-cat-link:visited {
   padding: 15px;
 }
 .qa-part-a-form .qa-a-form h2:last-child {
-  border-bottom: medium none;
+  border-bottom: transparent;
+  font-size: 18px;
+  margin: -5px -5px;
+  border-radius: 4px;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+.qa-part-a-form .qa-a-form h2:last-child hr {
+  border-top-color: #e4b9c0;
+}
+.qa-part-a-form .qa-a-form h2:last-child .alert-link {
+  color: #843534;
+}
+.qa-part-a-form .qa-a-form h2:last-child a {
+  color: #843534;
 }
 .qa-part-a-list > h2 {
   font-size: 20px;
@@ -3488,6 +3503,23 @@ a.qa-browse-cat-link:visited {
 .qa-c-form h2 {
   font-size: 18px;
   padding-left: 10px;
+}
+.qa-c-form h2:last-child {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+.qa-c-form h2:last-child hr {
+  border-top-color: #e4b9c0;
+}
+.qa-c-form h2:last-child .alert-link {
+  color: #843534;
+}
+.qa-c-form h2:last-child a {
+  color: #843534;
 }
 .qa-a-item-content {
   font-size: 18px;
