@@ -3452,8 +3452,7 @@ a.qa-browse-cat-link:visited {
   border-radius: 5px;
 }
 .qa-a-list-item-selected {
-  background: #eef7ea;
-  border: 1px solid #d6e9c6;
+  border: 2px dashed #d6e9c6;
 }
 .qa-a-list-item-hidden {
   background-color: #fbfbfb;
@@ -3571,13 +3570,10 @@ a.qa-browse-cat-link:visited {
   border-bottom: 1px solid #e2e2e2;
 }
 .qa-a-list-item-selected .qa-c-list-item {
-  border-bottom: 1px solid #d6e9c6;
+  border-bottom: 1px dashed #d6e9c6;
 }
 .qa-a-list-item-selected .qa-a-item-c-list {
-  border-top: 1px solid #d6e9c6;
-}
-.qa-a-list-item-selected .qa-c-item-hidden .qa-c-item-content {
-  color: #777777;
+  border-top: 1px dashed #d6e9c6;
 }
 .qa-c-item-hidden .qa-c-item-content {
   color: #777777;

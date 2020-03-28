@@ -861,8 +861,7 @@ html, body {
   .light-border();
   border-radius: 5px;
   &-selected {
-    background: lighten(@state-success-bg , 5%);
-    border: 1px solid @state-success-border;
+    border: 2px dashed @state-success-border;
   }
   &-hidden {
     background-color: @light-background;
@@ -998,15 +997,10 @@ html, body {
 
 .qa-a-list-item-selected {
   .qa-c-list-item {
-    border-bottom: 1px solid @state-success-border;
+    border-bottom: 1px dashed @state-success-border;
   }
   .qa-a-item-c-list {
-    border-top: 1px solid @state-success-border;
-  }
-  .qa-c-item-hidden {
-    .qa-c-item-content {
-      color: @gray-light;
-    }
+    border-top: 1px dashed @state-success-border;
   }
 }
 
