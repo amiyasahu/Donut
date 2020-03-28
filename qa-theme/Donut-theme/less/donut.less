@@ -1146,37 +1146,8 @@ html, body {
   margin-bottom: 10px;
 
   .qa-message-content {
-    background: @gray-lighter none repeat scroll 0 0;
-    color: @gray-light;
     display: block;
-    padding: 15px;
-    position: relative;
-    &:before {
-      width: 0;
-      height: 0;
-      right: 0;
-      bottom: 0;
-      content: " ";
-      display: block;
-      position: absolute;
-      border-bottom: 20px solid #fff;
-      border-right: 0 solid transparent;
-      border-left: 20px solid transparent;
-      border-left-style: inset; /*FF fixes*/
-      border-bottom-style: inset; /*FF fixes*/
-    }
-    &:after {
-      width: 0;
-      height: 0;
-      right: 0;
-      bottom: 0;
-      content: " ";
-      display: block;
-      position: absolute;
-      border-style: solid;
-      border-width: 20px 20px 0 0;
-      border-color: lighten(@brand-warning , 10%) transparent transparent transparent;
-    }
+    padding: 15px;   
   }
 }
 
