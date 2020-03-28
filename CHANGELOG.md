@@ -1,6 +1,6 @@
 # Change Log
 
-## Version 2.1.0 (Latest Stable Release)
+## Version 2.1.1 (Latest Stable Release)
 
 * Code cleanup and removed un-necessary files from codebase
 * Improved build workflow using Grunt and NPM
