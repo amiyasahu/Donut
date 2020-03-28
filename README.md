@@ -24,7 +24,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 * Better integration with the [Breadcrumbs plugin](https://github.com/amiyasahu/q2a-breadcrumbs) 
 * Better integration with the [Onsite notifications plugin](https://github.com/q2apro/q2apro-on-site-notifications/) 
 * Better integration with the [Open login plugin](https://github.com/alixandru/q2a-open-login)
-* Developer frendly
+* Developer friendly
 * Multilingual support
 
 
