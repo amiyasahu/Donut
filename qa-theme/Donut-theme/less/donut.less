@@ -38,6 +38,10 @@ html, body {
   margin-bottom: 50px;
 }
 
+.qa-main-shadow{
+  margin-top: 10px;
+}
+
 .qa-notice {
   margin: 10px 0 5px 0;
 }
@@ -100,6 +104,10 @@ html, body {
 .qa-ask-box {
   background: @brand-primary;
   border-radius: 3px;
+  margin-top: 10px;
+  .qa-form-tall-table{
+    margin-bottom: 0;
+  }
   tr {
     td {
       vertical-align: middle;
@@ -556,7 +564,7 @@ html, body {
     display: block;
     text-align: center;
     .light-border();
-    border-radius: 5px;
+    border-radius: @border-radius-base;
     padding: 6px;
     min-height: 165px;
     .user-avatar {
@@ -711,6 +719,10 @@ html, body {
     word-wrap: break-word;
     .entry-content {
       font-size: @font-size-h4;
+      img {
+        display: block;
+        max-width: 100%;
+      }
     }
   }
 
@@ -1455,5 +1467,41 @@ html, body {
 .qa-template-favorites{
   .qa-q-list {
     float: none;
+  }
+  .qa-q-item-title {
+    margin-bottom: 10px;
+  }
+  .qa-q-item-content {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .qa-q-item-avatar-meta {
+    border-top: 1px dashed @gray-lighter;
+    border-bottom: 1px dashed @gray-lighter;
+    padding: 5px;
+    margin: 10px 0;
+  }
+}
+
+.qa-template-admin{
+  .qa-q-item-stats {
+    display: none;
+  }
+  .qa-q-item-main {
+    width: auto;
+    float: none;
+  }
+  .qa-q-item-title {
+    margin-bottom: 10px;
+  }
+  .qa-q-item-content {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .qa-q-item-avatar-meta {
+    border-top: 1px dashed @gray-lighter;
+    border-bottom: 1px dashed @gray-lighter;
+    padding: 5px;
+    margin: 10px 0;
   }
 }
