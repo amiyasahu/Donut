@@ -16,7 +16,7 @@
 	}
 
 	.site-header-cover {
-		background-color: #4a4a4a;
+		background-color: @brand-primary;
 		color: @body-bg;
 		height: 100%;
 		overflow: hidden;
@@ -24,7 +24,7 @@
 		h1.top-heading {
 			font-size: 70px;
 			font-weight: 700;
-//			text-shadow: 4px 3px 0px @brand-primary, 9px 8px 0px rgba(0, 0, 0, 0.15);
+			text-shadow: 4px 3px 0px @brand-primary, 9px 8px 0px rgba(0, 0, 0, 0.15);
 			@media @tablet {
 				font-size: 40px;
 			}
@@ -35,13 +35,13 @@
 	}
 
 	.site-header-fade {
-		background-image: url("https://questions.tripleperformance.fr/qa-plugin/neayi/farmworkday.jpg");
+		background-image: url("../images/discuss.jpg");
 		background-position: 0% 40%;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
 		height: 100%;
-		opacity: 0.4;
+		opacity: 0.1;
 		position: absolute;
 		width: 100%;
 		z-index: 2;
@@ -51,7 +51,7 @@
 		padding: 10px 50px;
 		.wrap {
 			.light-border();
-//			border-color: darken(@brand-primary , 5%);
+			border-color: darken(@brand-primary , 5%);
 			border-radius: 10px;
 			padding: 10px 5px ;
 			.hint {
@@ -62,14 +62,14 @@
 		.icon-wrap {
 			.large-icon {
 				font-size: 7em;
-//				text-shadow: 4px 3px 0px @brand-primary, 9px 8px 0px rgba(0, 0, 0, 0.15);
+				text-shadow: 4px 3px 0px @brand-primary, 9px 8px 0px rgba(0, 0, 0, 0.15);
 			}
 		}
 	}
 	.search-wrapper {
 		padding-top: 20px;
-//		.light-border-top();
-//		border-top-color: darken(@brand-primary , 5%);
+		.light-border-top();
+		border-top-color: darken(@brand-primary , 5%);
 		overflow: auto;
 	}
 	.search-bar {
@@ -84,7 +84,7 @@
 		}
 		padding: 10px 5px;
 		margin: auto;
-		background-color:  rgba(56, 56, 56, 0.5607843137254902);
+		background-color: darken(@brand-primary , 5%);
 		.ask-field {
 			width: 100%;
 		}

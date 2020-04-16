@@ -61,6 +61,9 @@
                         </form>
                     </div>
                 <?php endif ?>
+
+                <!--IF you are using the default vector , you should not remove the attribution for freepik.com-->
+                <div class="col-lg-12 visible-lg text-right small">vector designed by Freepik.com</div>
             </div>
         </div>
     </div>

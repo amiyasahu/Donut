@@ -937,6 +937,7 @@
 
             $this->output( '<div class="footer-bottom">' );
             $this->donut_attribution();
+            parent::attribution();
 
             if ( qa_opt( 'donut_show_copyright_at_footer' ) ) {
                 $this->donut_copyright();
