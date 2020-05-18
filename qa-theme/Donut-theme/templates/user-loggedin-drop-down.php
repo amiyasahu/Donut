@@ -12,14 +12,14 @@
     }
 
 ?>
-<ul class="nav navbar-nav navbar-right user-nav">
+<ul class="nav navbar-nav navbar-right user-nav" role="presentation">
     <?php if (qa_opt('q2apro_onsitenotifications_enabled') && !empty($this->content['loggedin']['suffix'])): ?>
-    <li class="notf-bubble visible-lg">
+    <li class="notf-bubble visible-lg" role="presentation">
         <?php echo $this->content['loggedin']['suffix'] ?>
     </li>
     <?php endif ?>
-    <li class="dropdown user-dropdown">
-        <a href="#" class="navbar-user-img dropdown-toggle" data-toggle="dropdown">
+    <li class="dropdown user-dropdown" role="presentation">
+        <a href="javascript:;" title="<?php echo qa_lang_sub( 'main/nav_login_link_title' , qa_get_logged_in_handle()); ?>" class="navbar-user-img dropdown-toggle" data-toggle="dropdown">
             <?php echo $logged_in_user_avatar; ?>
         </a>
         <ul class="dropdown-menu" role="menu" id="user-dropdown-menu">
