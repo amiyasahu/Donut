@@ -220,7 +220,7 @@
             $extratags = isset($this->content['wrapper_tags']) ? $this->content['wrapper_tags'] : '';
             $this->output( '<div class="qa-body-wrapper"' . $extratags . '>', '' );
 
-            $this->output( '<main class="donut-masthead">' );
+            $this->output( '<div class="donut-masthead">' );
 
             $this->output( '<div class="container">' );
             $this->notices();
@@ -237,7 +237,7 @@
             $this->donut_breadcrumb();
             $this->output( '</div>' );
 
-            $this->output( '</main>' );
+            $this->output( '</div>' );
 
             $this->output( '<div class="container">', '' );
 
@@ -276,9 +276,9 @@
             $this->feed_link();
 
             $this->output( '<h1>' );
-            $this->favorite();
             $this->title();
             $this->output( '</h1>' );
+            $this->favorite();
 
             if ( $this->template == 'not-found' && qa_opt( 'donut_show_custom_404_page' ) ) {
                 $this->output( donut_include_template( 'page-not-found.php', false ) );
@@ -362,7 +362,7 @@
             $width_class = ( $this->donut_do_hide_sidebar() && $this->template != 'admin' ) ? 'col-xs-12' : 'qa-main col-md-9 col-xs-12 pull-left';
 
             $extratags = isset($this->content['main_tags']) ? $this->content['main_tags'] : '';
-            $this->output( '<div class="' . $width_class . ( @$this->content['hidden'] ? ' qa-main-hidden' : '' ) . '"'.$extratags.'>' );
+            $this->output( '<main class="' . $width_class . ( @$this->content['hidden'] ? ' qa-main-hidden' : '' ) . '"'.$extratags.'>' );
 
             if ( !empty( $this->content['navigation']['sub'] ) || $this->template == 'admin' ) {
                 $this->donut_sidebar_toggle_nav_btn();
@@ -389,7 +389,7 @@
 
             $this->widgets( 'main', 'bottom' );
 
-            $this->output( '</div> <!-- END qa-main -->', '' );
+            $this->output( '</main> <!-- END qa-main -->', '' );
         }
 
         /**
@@ -410,7 +410,8 @@
 
         function sidepanel()
         {
-            $this->output( '<div class="qa-sidepanel col-md-3 col-xs-12 pull-right">' );
+            $this->output( '<aside class="qa-sidepanel col-md-3 col-xs-12 pull-right">' );
+            $this->output('<h1 class="sr-only">' . qa_lang_html("main/label_sidebar") . '</h1>');
             $this->output( '<div class="side-search-bar hidden-xs">' );
             $this->search();
             $this->output( '</div>' );
@@ -422,7 +423,7 @@
             $this->output_raw( @$this->content['sidepanel'] );
             $this->feed();
             $this->widgets( 'side', 'bottom' );
-            $this->output( '</div>', '' );
+            $this->output( '</aside>', '' );
         }
 
         /**
@@ -587,7 +588,7 @@
         {
             $this->output(
                     '<div class="input-group">',
-                    '<input type="text" ' . $search['field_tags'] . ' value="' . @$search['value'] . '" class="qa-search-field form-control" placeholder="' . $search['button_label'] . '"/>' );
+                    '<input type="search" aria-label="' . qa_lang_html('main/search_button') . '" ' . $search['field_tags'] . ' value="' . @$search['value'] . '" class="qa-search-field form-control" placeholder="' . $search['button_label'] . '"/>' );
             $this->search_button( $search );
             $this->output( '</div>' );
         }
@@ -660,7 +661,7 @@
         function search_button( $search )
         {
             $this->output( '<span class="input-group-btn">' );
-            $this->output( '<button type="submit" value="" class="btn qa-search-button" ><span class="fa fa-search"></span></button>' );
+            $this->output( '<button type="submit" value="" class="btn qa-search-button" title="' . qa_lang_html('main/search_button') . '"><span class="fa fa-search"></span></button>' );
             $this->output( '</span>' );
         }
 
@@ -778,14 +779,14 @@
 
         public function q_list_item( $q_item )
         {
-            $this->output( '<div class="qa-q-list-item row' . rtrim( ' ' . @$q_item['classes'] ) . '" ' . @$q_item['tags'] . '>' );
+            $this->output( '<li class="qa-q-list-item row' . rtrim( ' ' . @$q_item['classes'] ) . '" ' . @$q_item['tags'] . '>' );
 
             $this->q_item_stats( $q_item );
             //$this->q_item_avatar( $q_item );
             $this->q_item_main( $q_item );
             $this->q_item_clear();
 
-            $this->output( '</div> <!-- END qa-q-list-item -->', '' );
+            $this->output( '</li> <!-- END qa-q-list-item -->', '' );
         }
 
         function q_item_avatar( $q_item )
@@ -1021,7 +1022,7 @@
                     foreach ( $ranking['items'] as $user ) {
                         $this->output( '<div class="user-box col-sm-' . ceil( 12 / $columns ) . ' col-xs-12">' );
                         $user_raw = !empty( $user['raw'] ) ? $user['raw'] : $user;
-                        
+
                         $handle_html = @$usershtml[$user_raw['userid']];
 
                         if ( defined( 'QA_WORDPRESS_INTEGRATE_PATH' ) ) {
@@ -1339,8 +1340,8 @@
         private function donut_attribution()
         {
             $this->output(
-                    '<div class="qa-attribution">',
-                    '<a href="https://github.com/amiyasahu/Donut">Donut Theme</a> <span class="fa fa-code"></span> with <span class="fa fa-heart"></span> by <a href="http://amiyasahu.github.io">Amiya Sahu</a>',
+                    '<div class="qa-attribution" lang="en">',
+                    '<a href="https://github.com/amiyasahu/Donut">Donut Theme</a> <span aria-hidden="true" class="fa fa-code"></span><span class="sr-only">code</span> with <span aria-hidden="true" class="fa fa-heart"></span><span class="sr-only">heart</span> by <a href="http://amiyasahu.github.io">Amiya Sahu</a>',
                     '</div>'
             );
         }
@@ -1348,8 +1349,8 @@
         private function donut_copyright()
         {
             $this->output(
-                    '<div class="donut-copyright">',
-                    '<span class="fa fa-copyright"></span>',
+                    '<div class="donut-copyright" lang="en">',
+                    '<span aria-hidden="true" class="fa fa-copyright"></span><span class="sr-only">Copyright by </span>',
                     qa_opt( 'donut_copyright_text' ),
                     '</div>'
             );
@@ -1375,10 +1376,10 @@
                 Output the widgets (as provided in $this->content['widgets']) for $region and $place
             */
         {
-            if ( isset($this->content['widgets'][$region][$place]) && 
-                  is_array($this->content['widgets'][$region][$place]) && 
+            if ( isset($this->content['widgets'][$region][$place]) &&
+                  is_array($this->content['widgets'][$region][$place]) &&
                   !empty($this->content['widgets'][$region][$place]) ) {
-                
+
                 $col = ( $region == 'full' ) ? ' col-xs-12' : '';
 
                 $this->output( '<div class="qa-widgets-' . $region . ' qa-widgets-' . $region . '-' . $place . $col . '">' );
