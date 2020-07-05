@@ -8,16 +8,16 @@ Modern and Responsive theme for [Question2Answer ( Q2A )](https://www.question2a
 
 ## Description
 [Donut theme][] is a free and open-source **responsive Question2Answer theme** designed for great readability with a clean interface powered by [Bootstrap](http://getbootstrap.com/). 
-Also it comes with an admin panel with bunch of options to let you change nearly any aspect of your theme and customize your website .
+It comes with an admin panel with bunch of options that lets you change nearly every aspect of the theme and customize your website.
 
 [Change log](https://github.com/amiyasahu/Donut/blob/master/CHANGELOG.md)
 
 ## Features
 
 * Mobile first, clean content focused, responsive layout designed for redability
-* Easy to install and setup
+* Easy to install, setup, customize
 * Powered by [Bootstrap](http://getbootstrap.com/)
-* Made with [less](http://lesscss.org/) (less files included)
+* Made with [less](http://lesscss.org/) (less files included with source code)
 * Flexible theme with a admin panel settings 
 * Inbuilt CDN support and minified assets which loads your website faster and consumes less site resources
 * Theme settings in admin panel for better customization
@@ -33,7 +33,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 1. [Install Question2Answer][]. This theme requires version 1.7 or later (see the [change log][] for details)   
 2. [Download the latest version][latest release] of theme from GitHub, either using [Git][], or downloading directly:
      
-     - **Note :** The master branch may have some broken parts, so it is recomended to download the released versions from the releases page.
+     - **Note :** The master branch may have some broken parts, so it is recomended to download the released versions from the releases page and latest release is prefered. 
      - To download using git, install git and then type 
      
           `git clone https://github.com/amiyasahu/Donut.git` 
