@@ -78,3 +78,5 @@ qa-theme/SnowFlat
 .idea
 qa-cache/.htaccess
 .vscode/*
+
+*.iml

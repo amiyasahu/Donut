@@ -1,6 +1,6 @@
-<ul class="nav navbar-nav navbar-right login-nav">
-    <li class="dropdown login-dropdown login active">
-        <a href="#" data-toggle="dropdown" class="navbar-login-button">
+<ul class="nav navbar-nav navbar-right login-nav" role="presentation">
+    <li class="dropdown login-dropdown login active" role="presentation">
+        <a href="#" data-toggle="dropdown" class="navbar-login-button" title="<?php echo qa_lang_html( 'users/login_button' ); ?>">
             <span class="fa fa-sign-in text-muted"></span>
         </a>
         <ul class="dropdown-menu" role="menu" id="login-dropdown-menu">
@@ -66,22 +66,22 @@
                 <form role="form" action="<?php echo $this->content['navigation']['user']['login']['url']; ?>"
                       method="post">
                     <li>
-                        <label>
+                        <label for="qa-userid">
                             <?php echo trim( qa_lang_html( 'users/email_handle_label' ), ':' ); ?>
                         </label>
-                        <input type="text" class="form-control" id="qa-userid" name="emailhandle"
+                        <input type="text" class="form-control" id="qa-userid" name="emailhandle" autocomplete="username"
                                placeholder="<?php echo trim( qa_lang_html( 'users/email_handle_label' ), ':' ); ?>"/>
                     </li>
 
                     <li>
-                        <label>
+                        <label for="qa-password">
                             <?php echo trim( qa_lang_html( 'users/password_label' ), ':' ); ?>
                         </label>
-                        <input type="password" class="form-control" id="qa-password" name="password"
+                        <input type="password" class="form-control" id="qa-password" name="password" autocomplete="current-password"
                                placeholder="<?php echo trim( qa_lang_html( 'users/password_label' ), ':' ); ?>"/>
                     </li>
                     <li>
-                        <label class="checkbox inline">
+                        <label for="qa-rememberme" class="checkbox inline">
                             <input type="checkbox" name="remember" id="qa-rememberme"
                                    value="1"> <?php echo qa_lang_html( 'users/remember' ); ?>
                         </label>
