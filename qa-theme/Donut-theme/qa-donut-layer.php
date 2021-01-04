@@ -417,7 +417,6 @@
             $this->widgets( 'side', 'top' );
             $this->sidebar();
             $this->widgets( 'side', 'high' );
-            $this->nav( 'cat', 1 );
             $this->widgets( 'side', 'low' );
             $this->output_raw( @$this->content['sidepanel'] );
             $this->feed();
