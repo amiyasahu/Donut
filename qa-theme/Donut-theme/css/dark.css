@@ -31,7 +31,10 @@
   }
 
   .navbar,
-  .navbar a {
+  .navbar a,
+  .qa-a-select-button,
+  .qa-a-unselect-button,
+  .qa-a-selected {
     /* Prevent white-to-black fade during loading. */
     transition: none;
   }
@@ -209,6 +212,19 @@
   .qa-widget-side h2 {
     /* The base CSS uses `!important`, so we have to use it too. */
     border-color: var(--gray-600) !important;
+  }
+
+  .qa-a-select-button:hover {
+    color: var(--gray-200);
+    background-color: var(--gray-600);
+    border-color: var(--gray-500);
+  }
+
+  .qa-a-unselect-button:hover,
+  .qa-a-selected:hover {
+    color: white;
+    background-color: var(--green-800);
+    border-color: var(--gray-200);
   }
 
   .qa-a-unselect-button {
