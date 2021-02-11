@@ -1,0 +1,325 @@
+@media (prefers-color-scheme: dark) {
+  /* Colors taken from the Tailwind 2.0 color palette: https://www.themes.dev/tailwindcss-colors/ */
+  :root {
+    --gray-200: #e4e4e7;
+    --gray-500: #71717a;
+    --gray-600: #52525b;
+    --gray-700: #3f3f46;
+    --gray-800: #27272a;
+    --red-200: #fecaca;
+    --red-400: #f87171;
+    --red-800: #991b1b;
+    --red-900: #7f1d1d;
+    --green-500: #22c55e;
+    --green-700: #206020;
+    --green-800: #166534;
+    --light-blue-200: #bae6fd;
+    --light-blue-300: #7dd3fc;
+    --light-blue-400: #38bdf8;
+    --light-blue-900: #0c4a6e;
+    --yellow-100: #fef9c3;
+    --yellow-800: #854d0e;
+    --yellow-900: #713f12;
+  }
+
+  html,
+  body,
+  .navbar,
+  .navbar a {
+    background-color: var(--gray-800);
+    color: var(--gray-200);
+  }
+
+  .navbar,
+  .navbar a {
+    /* Prevent white-to-black fade during loading. */
+    transition: none;
+  }
+
+  .qa-footer {
+    color: var(--gray-200);
+  }
+
+  .text-muted {
+    color: var(--gray-300);
+  }
+
+  a,
+  .qa-feed .qa-feed-link,
+  .qa-category-link,
+  .qa-user-link,
+  .qa-tag-link,
+  .qa-c-item-expand,
+  .qa-q-view-follows a,
+  .qa-footer a,
+  .qa-footer a:visited {
+    color: var(--light-blue-300);
+  }
+
+  a:hover,
+  a:focus,
+  .qa-footer a:hover,
+  .qa-footer a:focus,
+  .qa-feed .qa-feed-link:hover,
+  .qa-feed .qa-feed-link:focus {
+    color: var(--light-blue-200);
+  }
+
+  code {
+    background-color: var(--gray-700);
+    border-color: var(--gray-600);
+    color: var(--red-200);
+  }
+
+  .navbar-nav > li > a,
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li > a:active,
+  .navbar-nav > li > a:focus {
+    background: none;
+    color: white;
+  }
+
+  .qa-template-user .qa-part-form-activity td span.qa-uf-user-points,
+  .qa-template-user .qa-part-form-activity td span.qa-uf-user-q-posts,
+  .qa-template-user .qa-part-form-activity td span.qa-uf-user-a-posts,
+  .qa-template-user .qa-part-form-activity td span.qa-uf-user-c-posts,
+  .qa-template-user .qa-part-form-activity td span.qa-uf-user-q-votes,
+  .qa-template-user .qa-part-form-activity td span.qa-uf-user-a-votes,
+  .qa-template-user .qa-part-form-activity td span.qa-uf-user-upvotes,
+  .qa-template-user .qa-part-form-activity td span.qa-uf-user-downvotes,
+  .qa-template-user .qa-part-form-activity td span.qa-uf-user-upvoteds,
+  .qa-template-user .qa-part-form-activity td span.qa-uf-user-downvoteds {
+    color: var(--light-blue-300);
+  }
+
+  .qa-template-user .qa-part-form-profile tbody#avatar .qa-avatar-image,
+  .user-box-inner {
+    background-color: var(--gray-700);
+    border-color: var(--gray-600);
+  }
+
+  .qa-nav-cat-item .qa-nav-cat-note,
+  .qa-rss-feed,
+  .qa-favorite-button,
+  .qa-feed .qa-feed-icon {
+    background-color: var(--yellow-900);
+    color: var(--yellow-100);
+  }
+
+  .qa-feed .qa-feed-icon {
+    border-color: var(--yellow-800);
+  }
+
+  .donut-masthead,
+  .qa-part-a-list > h2 {
+    color: var(--gray-200);
+  }
+
+  .alert-info,
+  .qa-q-view-follows {
+    background-color: var(--gray-700);
+    color: var(--light-blue-200);
+    border-color: var(--light-blue-400);
+  }
+
+  .donut-error,
+  .qa-error,
+  .qa-q-view-flags {
+    background-color: var(--gray-700);
+    color: var(--red-200);
+    border-color: var(--red-400);
+  }
+
+  .qa-q-item-flags {
+    color: var(--red-400);
+  }
+
+  .qa-nav-sub .qa-nav-sub-list .qa-nav-sub-hot .qa-nav-sub-link {
+    /* We need `!important` here as the base theme uses it too. */
+    color: var(--red-400) !important;
+  }
+
+  .form-control,
+  .qa-form-light-button,
+  .qa-a-select-button,
+  .qa-suggest-next,
+  .wmd-input,
+  .wmd-preview pre,
+  .qa-q-view-content pre,
+  .qa-a-item-content pre,
+  .qa-nav-cat,
+  .dropdown-menu li,
+  .qa-nav-cat-list > li,
+  .qa-widget-side-low,
+  .qa-feed,
+  .qa-sidebar,
+  .navbar-nav > li > a.navbar-user-img,
+  .navbar-nav > li > a.navbar-login-button,
+  #login-dropdown-menu,
+  #login-dropdown-menu li .span-or,
+  .qa-nav-sub .qa-nav-sub-list > li.active > a,
+  .qa-nav-sub .qa-nav-sub-list > li.active > a:hover,
+  .qa-nav-sub .qa-nav-sub-list > li > a:hover,
+  .qa-nav-sub .qa-nav-sub-list > li > a:focus {
+    background-color: var(--gray-700);
+    border-color: var(--gray-600);
+    color: var(--gray-200);
+    box-shadow: none;
+  }
+
+  .qa-form-wide-button,
+  .qa-form-tall-button {
+    background-color: var(--light-blue-900);
+    color: var(--gray-200);
+  }
+
+  .navbar-nav > li > a.navbar-login-button:hover,
+  .navbar-nav > li > a.navbar-login-button:focus,
+  .qa-form-light-button:hover,
+  .qa-form-light-button:focus {
+    background-color: var(--gray-600);
+    border-color: var(--gray-500);
+    color: white;
+  }
+
+  #user-dropdown-menu,
+  .dropdown-menu > li > a {
+    opacity: 1;
+    background-color: var(--gray-700);
+    color: var(--gray-200);
+  }
+
+  .dropdown-menu > li > a:hover,
+  .dropdown-menu > li > a:focus {
+    color: white;
+    background-color: var(--gray-600);
+  }
+
+  .qa-search-button {
+    background-color: var(--gray-600);
+    border-color: var(--gray-500);
+  }
+
+  .navbar-nav > li > a.navbar-user-img:hover,
+  .navbar-nav > li > a.navbar-user-img:focus {
+    background-color: var(--gray-600);
+    border-color: var(--gray-500);
+  }
+
+  .qa-widget-side h2 {
+    /* The base CSS uses `!important`, so we have to use it too. */
+    border-color: var(--gray-600) !important;
+  }
+
+  .qa-a-unselect-button {
+    background-color: var(--green-800);
+    border-color: var(--green-700);
+    color: var(--gray-200);
+  }
+
+  .qa-a-selected-text {
+    color: var(--green-500);
+  }
+
+  .qa-form-light-button-answer {
+    background-color: var(--green-800);
+    border-color: var(--green-700);
+  }
+
+  .qa-form-light-button-delete {
+    background-color: var(--red-900);
+    border-color: var(--red-800);
+  }
+
+  .qa-voting,
+  .qa-a-count {
+    color: var(--gray-200);
+  }
+
+  blockquote,
+  .top-divider,
+  .donut-masthead .page-title,
+  .qa-q-list-item,
+  .qa-part-a-form .qa-a-form,
+  .qa-part-a-form .qa-a-form h2,
+  .qa-voting,
+  .qa-tag-link,
+  .qa-part-q-view,
+  .qa-a-list-item,
+  .qa-a-item-c-list,
+  .qa-template-user [class^="qa-part-form"],
+  .qa-nav-sub .qa-nav-sub-list,
+  .qa-form-wide-label,
+  .qa-form-wide-data,
+  .qa-template-admin .qa-q-item-avatar-meta,
+  .qa-q-view-c-list,
+  .qa-c-list-item,
+  .qa-sidebar hr,
+  .qa-part-a-list > h2,
+  .wmd-preview,
+  .qa-template-favorites .qa-q-item-avatar-meta {
+    border-color: var(--gray-600);
+  }
+
+  /* Since the button bar is made of images, `filter` is the only way out here. */
+  .wmd-button-bar {
+    filter: invert(90%) hue-rotate(180deg);
+  }
+
+  /* Pagination */
+
+  .qa-page-links-list > li > a,
+  .qa-page-links-list > .disabled > span,
+  .qa-page-links-list > .disabled > span:hover {
+    background-color: var(--gray-800);
+    border-color: var(--gray-600);
+    color: var(--light-blue-200);
+  }
+
+  .qa-page-links-list > .active > span,
+  .qa-page-links-list > .active > span:hover {
+    background-color: var(--light-blue-900);
+    border-color: var(--light-blue-900);
+  }
+
+  .qa-tag-link:hover,
+  .qa-page-links-list > li > a:hover,
+  .qa-page-links-list > li > a:focus {
+    background-color: var(--gray-700);
+    border-color: var(--gray-500);
+    color: var(--light-blue-200);
+  }
+
+  /* Answer counts */
+
+  .qa-a-count {
+    color: var(--green-500);
+    border-color: var(--green-700);
+  }
+
+  .qa-a-count-zero {
+    color: var(--red-400);
+    border-color: var(--red-900);
+  }
+
+  .qa-a-count-selected {
+    color: white;
+    background-color: var(--green-800);
+  }
+
+  /* Present on the admin interface. */
+
+  .list-group-item {
+    background-color: var(--gray-700);
+    border-color: var(--gray-600);
+  }
+
+  a.list-group-item {
+    color: var(--gray-200);
+  }
+
+  a.list-group-item:hover {
+    color: white;
+    background-color: var(--gray-600);
+  }
+}

@@ -56,6 +56,7 @@
             $css_paths = array(
                     'fonts'     => 'css/font-awesome.min.css?4.2.0',
                     'bootstrap' => 'css/bootstrap.min.css?3.3.5',
+                    'dark'      => 'css/dark.css?1',
             );
 
             if ( qa_opt( 'donut_activate_prod_mode' ) ) {
