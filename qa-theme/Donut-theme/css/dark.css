@@ -26,8 +26,8 @@
   body,
   .navbar,
   .navbar a {
-    background-color: var(--gray-800);
-    color: var(--gray-200);
+    background-color: var(--gray-800) !important;
+    color: var(--gray-200) !important;
   }
 
   .navbar,
@@ -37,15 +37,15 @@
   .qa-a-selected,
   .qa-template-user .qa-part-form-profile tbody#avatar .qa-avatar-image {
     /* Prevent white-to-black fade during loading. */
-    transition: none;
+    transition: none !important;
   }
 
   .qa-footer {
-    color: var(--gray-200);
+    color: var(--gray-200) !important;
   }
 
   .text-muted {
-    color: var(--gray-300);
+    color: var(--gray-300) !important;
   }
 
   a,
@@ -57,7 +57,7 @@
   .qa-q-view-follows a,
   .qa-footer a,
   .qa-footer a:visited {
-    color: var(--light-blue-300);
+    color: var(--light-blue-300) !important;
   }
 
   a:hover,
@@ -66,21 +66,21 @@
   .qa-footer a:focus,
   .qa-feed .qa-feed-link:hover,
   .qa-feed .qa-feed-link:focus {
-    color: var(--light-blue-200);
+    color: var(--light-blue-200) !important;
   }
 
   code {
-    background-color: var(--gray-700);
-    border-color: var(--gray-600);
-    color: var(--red-200);
+    background-color: var(--gray-700) !important;
+    border-color: var(--gray-600) !important;
+    color: var(--red-200) !important;
   }
 
   .navbar-nav > li > a,
   .navbar-nav > li > a:hover,
   .navbar-nav > li > a:active,
   .navbar-nav > li > a:focus {
-    background: none;
-    color: white;
+    background: none !important;
+    color: white !important;
   }
 
   .qa-template-user .qa-part-form-activity td span.qa-uf-user-points,
@@ -93,52 +93,54 @@
   .qa-template-user .qa-part-form-activity td span.qa-uf-user-downvotes,
   .qa-template-user .qa-part-form-activity td span.qa-uf-user-upvoteds,
   .qa-template-user .qa-part-form-activity td span.qa-uf-user-downvoteds {
-    color: var(--light-blue-300);
+    color: var(--light-blue-300) !important;
   }
 
   .qa-template-user .qa-part-form-profile tbody#avatar .qa-avatar-image,
-  .user-box-inner {
-    background-color: var(--gray-700);
-    border-color: var(--gray-600);
+  .user-box-inner,
+  .user-box-inner .user-avatar .qa-avatar-image {
+    background-color: var(--gray-700) !important;
+    border-color: var(--gray-600) !important;
   }
 
   .qa-nav-cat-item .qa-nav-cat-note,
   .qa-rss-feed,
   .qa-favorite-button,
   .qa-feed .qa-feed-icon {
-    background-color: var(--yellow-900);
-    color: var(--yellow-100);
+    background-color: var(--yellow-900) !important;
+    color: var(--yellow-100) !important;
   }
 
   .qa-feed .qa-feed-icon {
-    border-color: var(--yellow-800);
+    border-color: var(--yellow-800) !important;
   }
 
   .donut-masthead,
   .qa-part-a-list > h2 {
-    color: var(--gray-200);
+    color: var(--gray-200) !important;
   }
 
   .alert-info,
   .qa-q-view-follows {
-    background-color: var(--gray-700);
-    color: var(--light-blue-200);
-    border-color: var(--light-blue-400);
+    background-color: var(--gray-700) !important;
+    color: var(--light-blue-200) !important;
+    border-color: var(--light-blue-400) !important;
   }
 
   .donut-error,
   .qa-error,
   .qa-q-view-flags {
-    background-color: var(--gray-700);
-    color: var(--red-200);
-    border-color: var(--red-400);
+    background-color: var(--gray-700) !important;
+    color: var(--red-200) !important;
+    border-color: var(--red-400) !important;
   }
 
   .qa-q-item-flags {
-    color: var(--red-400);
+    color: var(--red-400) !important;
   }
 
-  .qa-nav-sub .qa-nav-sub-list .qa-nav-sub-hot .qa-nav-sub-link {
+  .qa-nav-sub .qa-nav-sub-list .qa-nav-sub-hot .qa-nav-sub-link,
+  .qa-form-tall-error {
     /* We need `!important` here as the base theme uses it too. */
     color: var(--red-400) !important;
   }
@@ -149,8 +151,11 @@
   .qa-suggest-next,
   .wmd-input,
   .wmd-preview pre,
+  .wmd-preview pre code,
   .qa-q-view-content pre,
+  .qa-q-view-content pre code,
   .qa-a-item-content pre,
+  .qa-a-item-content pre code,
   .qa-nav-cat,
   .dropdown-menu li,
   .qa-nav-cat-list > li,
@@ -165,49 +170,49 @@
   .qa-nav-sub .qa-nav-sub-list > li.active > a:hover,
   .qa-nav-sub .qa-nav-sub-list > li > a:hover,
   .qa-nav-sub .qa-nav-sub-list > li > a:focus {
-    background-color: var(--gray-700);
-    border-color: var(--gray-600);
-    color: var(--gray-200);
-    box-shadow: none;
+    background-color: var(--gray-700) !important;
+    border-color: var(--gray-600) !important;
+    color: var(--gray-200) !important;
+    box-shadow: none !important;
   }
 
   .qa-form-wide-button,
   .qa-form-tall-button {
-    background-color: var(--light-blue-900);
-    color: var(--gray-200);
+    background-color: var(--light-blue-900) !important;
+    color: var(--gray-200) !important;
   }
 
   .navbar-nav > li > a.navbar-login-button:hover,
   .navbar-nav > li > a.navbar-login-button:focus,
   .qa-form-light-button:hover,
   .qa-form-light-button:focus {
-    background-color: var(--gray-600);
-    border-color: var(--gray-500);
-    color: white;
+    background-color: var(--gray-600) !important;
+    border-color: var(--gray-500) !important;
+    color: white !important;
   }
 
   #user-dropdown-menu,
   .dropdown-menu > li > a {
     opacity: 1;
-    background-color: var(--gray-700);
-    color: var(--gray-200);
+    background-color: var(--gray-700) !important;
+    color: var(--gray-200) !important;
   }
 
   .dropdown-menu > li > a:hover,
   .dropdown-menu > li > a:focus {
-    color: white;
-    background-color: var(--gray-600);
+    color: white !important;
+    background-color: var(--gray-600) !important;
   }
 
   .qa-search-button {
-    background-color: var(--gray-600);
-    border-color: var(--gray-500);
+    background-color: var(--gray-600) !important;
+    border-color: var(--gray-500) !important;
   }
 
   .navbar-nav > li > a.navbar-user-img:hover,
   .navbar-nav > li > a.navbar-user-img:focus {
-    background-color: var(--gray-600);
-    border-color: var(--gray-500);
+    background-color: var(--gray-600) !important;
+    border-color: var(--gray-500) !important;
   }
 
   .qa-widget-side h2 {
@@ -216,41 +221,41 @@
   }
 
   .qa-a-select-button:hover {
-    color: var(--gray-200);
-    background-color: var(--gray-600);
-    border-color: var(--gray-500);
+    color: var(--gray-200) !important;
+    background-color: var(--gray-600) !important;
+    border-color: var(--gray-500) !important;
   }
 
   .qa-a-unselect-button:hover,
   .qa-a-selected:hover {
-    color: white;
-    background-color: var(--green-800);
-    border-color: var(--gray-200);
+    color: white !important;
+    background-color: var(--green-800) !important;
+    border-color: var(--gray-200) !important;
   }
 
   .qa-a-unselect-button {
-    background-color: var(--green-800);
-    border-color: var(--green-700);
-    color: var(--gray-200);
+    background-color: var(--green-800) !important;
+    border-color: var(--green-700) !important;
+    color: var(--gray-200) !important;
   }
 
   .qa-a-selected-text {
-    color: var(--green-500);
+    color: var(--green-500) !important;
   }
 
   .qa-form-light-button-answer {
-    background-color: var(--green-800);
-    border-color: var(--green-700);
+    background-color: var(--green-800) !important;
+    border-color: var(--green-700) !important;
   }
 
   .qa-form-light-button-delete {
-    background-color: var(--red-900);
-    border-color: var(--red-800);
+    background-color: var(--red-900) !important;
+    border-color: var(--red-800) !important;
   }
 
   .qa-voting,
   .qa-a-count {
-    color: var(--gray-200);
+    color: var(--gray-200) !important;
   }
 
   blockquote,
@@ -275,12 +280,12 @@
   .qa-part-a-list > h2,
   .wmd-preview,
   .qa-template-favorites .qa-q-item-avatar-meta {
-    border-color: var(--gray-600);
+    border-color: var(--gray-600) !important;
   }
 
   /* Since the button bar is made of images, `filter` is the only way out here. */
   .wmd-button-bar {
-    filter: invert(90%) hue-rotate(180deg);
+    filter: invert(90%) hue-rotate(180deg) !important;
   }
 
   /* Pagination */
@@ -288,55 +293,55 @@
   .qa-page-links-list > li > a,
   .qa-page-links-list > .disabled > span,
   .qa-page-links-list > .disabled > span:hover {
-    background-color: var(--gray-800);
-    border-color: var(--gray-600);
-    color: var(--light-blue-200);
+    background-color: var(--gray-800) !important;
+    border-color: var(--gray-600) !important;
+    color: var(--light-blue-200) !important;
   }
 
   .qa-page-links-list > .active > span,
   .qa-page-links-list > .active > span:hover {
-    background-color: var(--light-blue-900);
-    border-color: var(--light-blue-900);
+    background-color: var(--light-blue-900) !important;
+    border-color: var(--light-blue-900) !important;
   }
 
   .qa-tag-link:hover,
   .qa-page-links-list > li > a:hover,
   .qa-page-links-list > li > a:focus {
-    background-color: var(--gray-700);
-    border-color: var(--gray-500);
-    color: var(--light-blue-200);
+    background-color: var(--gray-700) !important;
+    border-color: var(--gray-500) !important;
+    color: var(--light-blue-200) !important;
   }
 
   /* Answer counts */
 
   .qa-a-count {
-    color: var(--green-500);
-    border-color: var(--green-700);
+    color: var(--green-500) !important;
+    border-color: var(--green-700) !important;
   }
 
   .qa-a-count-zero {
-    color: var(--red-400);
-    border-color: var(--red-900);
+    color: var(--red-400) !important;
+    border-color: var(--red-900) !important;
   }
 
   .qa-a-count-selected {
-    color: white;
-    background-color: var(--green-800);
+    color: white !important;
+    background-color: var(--green-800) !important;
   }
 
   /* Present on the admin interface. */
 
   .list-group-item {
-    background-color: var(--gray-700);
-    border-color: var(--gray-600);
+    background-color: var(--gray-700) !important;
+    border-color: var(--gray-600) !important;
   }
 
   a.list-group-item {
-    color: var(--gray-200);
+    color: var(--gray-200) !important;
   }
 
   a.list-group-item:hover {
-    color: white;
-    background-color: var(--gray-600);
+    color: white !important;
+    background-color: var(--gray-600) !important;
   }
 }
