@@ -34,7 +34,8 @@
   .navbar a,
   .qa-a-select-button,
   .qa-a-unselect-button,
-  .qa-a-selected {
+  .qa-a-selected,
+  .qa-template-user .qa-part-form-profile tbody#avatar .qa-avatar-image {
     /* Prevent white-to-black fade during loading. */
     transition: none;
   }
