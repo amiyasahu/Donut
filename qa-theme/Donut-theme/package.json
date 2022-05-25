@@ -8,7 +8,7 @@
   "author": "Amiya Sahu",
   "license": "GPLv2",
   "devDependencies": {
-    "grunt": "^1.2.1",
+    "grunt": "^1.5.3",
     "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
