@@ -16,7 +16,7 @@
     function donut_get_fa_icon( $icon )
     {
         if ( !empty( $icon ) ) {
-            return '<span class="fa fa-' . $icon . '"></span> ';
+            return '<span aria-hidden="true" class="fa fa-' . $icon . '"></span> ';
         } else {
             return '';
         }
